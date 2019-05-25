@@ -1,5 +1,4 @@
-use task1::solve;
-
 fn main() {
-    solve()
+    x = 5;
+    println!("x has the value {}", x);
 }

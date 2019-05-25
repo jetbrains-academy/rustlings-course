@@ -2,7 +2,7 @@
 <project version="4">
   <component name="StudySettings">
     <StudyTaskManager>
-      <option name="VERSION" value="13" />
+      <option name="VERSION" value="14" />
       <option name="myUserTests">
         <map />
       </option>
@@ -19,9 +19,10 @@
           </option>
           <option name="compatible" value="true" />
           <option name="courseMode" value="Course Creator" />
-          <option name="courseType" value="PyCharm" />
+          <option name="createDate" value="0" />
           <option name="customPresentableName" />
           <option name="description" value="Small exercises to get you used to reading and writing Rust code!" />
+          <option name="environment" value="" />
           <option name="fromZip" value="false" />
           <option name="id" value="0" />
           <option name="index" value="-1" />
@@ -30,7 +31,6 @@
           </option>
           <option name="language" value="Rust" />
           <option name="languageCode" value="en" />
-          <option name="loadSolutions" value="true" />
           <option name="name" value="Rustlings" />
           <option name="public" value="false" />
           <option name="sectionIds">
@@ -48,23 +48,24 @@
                 <option name="name" value="variables" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
-                <option name="taskList">
+                <option name="unitId" value="0" />
+                <option name="items">
                   <list>
                     <EduTask>
                       <option name="customPresentableName" />
-                      <option name="descriptionFormat" value="HTML" />
-                      <option name="descriptionText" value="&lt;html&gt;&#10;Make me compile!&#10;&lt;br&gt;&#10;&lt;br&gt;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  The declaration on line 5 is missing a keyword that is needed in Rust to create a new variable binding.&#10;&lt;/div&gt;&#10;&lt;/html&gt;" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="### Variables&#10;&#10;Here you'll learn about simple variables.&#10;&#10;#### Book Sections&#10;&#10;- [Variables and Mutability](https://doc.rust-lang.org/stable/book/ch03-01-variables-and-mutability.html)&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
                           <option name="type" value="STEPIK" />
                         </FeedbackLink>
                       </option>
+                      <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="task1" />
+                      <option name="name" value="introduction" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
-                      <option name="stepId" value="0" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="files">
                         <map>
@@ -74,28 +75,63 @@
                                 <option name="answerPlaceholders">
                                   <list />
                                 </option>
-                                <option name="highlightErrors" value="false" />
+                                <option name="highlightErrors" value="true" />
                                 <option name="name" value="Cargo.toml" />
-                                <option name="text" value="[package]&#10;name = &quot;task1&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="text" value="[package]&#10;name = &quot;readme&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
-                                <option name="userCreated" value="false" />
                                 <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
-                          <entry key="src/lib.rs">
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="Make me compile!&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  The declaration on line 2 is missing a keyword that is needed in Rust to create a new variable binding.&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="2" />
+                      <option name="name" value="task1" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="Cargo.toml">
                             <value>
                               <TaskFile>
                                 <option name="answerPlaceholders">
                                   <list />
                                 </option>
                                 <option name="highlightErrors" value="true" />
-                                <option name="name" value="src/lib.rs" />
-                                <option name="text" value="// put code of your task here&#10;" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;task1&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
-                                <option name="userCreated" value="false" />
                                 <option name="visible" value="true" />
                               </TaskFile>
                             </value>
@@ -111,24 +147,163 @@
                                 <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
-                                <option name="userCreated" value="false" />
                                 <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
-                          <entry key="tests/tests.rs">
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="Make me compile!&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  The compiler message is saying that Rust cannot infer the type that the variable binding `x` has with what is given here.&#10;&#10;  What happens if you annotate line 5 with a type annotation?&#10;&#10;  What if you give `x` a value?&#10;&#10;  What if you do both?&#10;&#10;  What type should `x` be, anyway?&#10;&#10;  What if `x` is the same type as 10? What if it's a different type?&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="3" />
+                      <option name="name" value="task2" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
                             <value>
                               <TaskFile>
                                 <option name="answerPlaceholders">
                                   <list />
                                 </option>
                                 <option name="highlightErrors" value="true" />
-                                <option name="name" value="tests/tests.rs" />
-                                <option name="text" value="#[test]&#10;fn test() {&#10;    assert!(false, &quot;Implement tests&quot;);&#10;}&#10;" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
                                 <option name="trackChanges" value="true" />
                                 <option name="trackLengths" value="true" />
-                                <option name="userCreated" value="false" />
-                                <option name="visible" value="false" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;task2&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="Make me compile!&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  In Rust, variable bindings are immutable by default.&#10;  But here we're trying to reassign a different value to `x`!&#10;  There's a keyword we can use to make a variable binding mutable instead.&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="4" />
+                      <option name="name" value="task3" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;task3&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="Make me compile!&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  Oops! In this exercise, we have a variable binding that we've created on line 5, and we're trying to use it on line 6, but we haven't given it a value.&#10;  We can't print out something that isn't there; try giving x a value!&#10;  This is an error that can cause bugs that's very easy to make in any programming language -- thankfully the Rust compiler has caught this for us!&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="5" />
+                      <option name="name" value="task4" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;task4&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
                               </TaskFile>
                             </value>
                           </entry>
@@ -138,7 +313,6 @@
                     </EduTask>
                   </list>
                 </option>
-                <option name="unitId" value="0" />
               </Lesson>
               <Lesson>
                 <option name="customPresentableName" />
@@ -147,10 +321,10 @@
                 <option name="name" value="if" />
                 <option name="stepikChangeStatus" value="Up to date" />
                 <option name="updateDate" value="0" />
-                <option name="taskList">
+                <option name="unitId" value="0" />
+                <option name="items">
                   <list />
                 </option>
-                <option name="unitId" value="0" />
               </Lesson>
               <Lesson>
                 <option name="customPresentableName" />
@@ -159,10 +333,10 @@
                 <option name="name" value="functions" />
                 <option name="stepikChangeStatus" value="Up to date" />
                 <option name="updateDate" value="0" />
-                <option name="taskList">
+                <option name="unitId" value="0" />
+                <option name="items">
                   <list />
                 </option>
-                <option name="unitId" value="0" />
               </Lesson>
               <Lesson>
                 <option name="customPresentableName" />
@@ -171,10 +345,10 @@
                 <option name="name" value="primitive_types" />
                 <option name="stepikChangeStatus" value="Up to date" />
                 <option name="updateDate" value="0" />
-                <option name="taskList">
+                <option name="unitId" value="0" />
+                <option name="items">
                   <list />
                 </option>
-                <option name="unitId" value="0" />
               </Lesson>
               <Lesson>
                 <option name="customPresentableName" />
@@ -183,10 +357,10 @@
                 <option name="name" value="tests" />
                 <option name="stepikChangeStatus" value="Up to date" />
                 <option name="updateDate" value="0" />
-                <option name="taskList">
+                <option name="unitId" value="0" />
+                <option name="items">
                   <list />
                 </option>
-                <option name="unitId" value="0" />
               </Lesson>
               <Lesson>
                 <option name="customPresentableName" />
@@ -195,10 +369,10 @@
                 <option name="name" value="strings" />
                 <option name="stepikChangeStatus" value="Up to date" />
                 <option name="updateDate" value="0" />
-                <option name="taskList">
+                <option name="unitId" value="0" />
+                <option name="items">
                   <list />
                 </option>
-                <option name="unitId" value="0" />
               </Lesson>
               <Lesson>
                 <option name="customPresentableName" />
@@ -207,10 +381,10 @@
                 <option name="name" value="modules" />
                 <option name="stepikChangeStatus" value="Up to date" />
                 <option name="updateDate" value="0" />
-                <option name="taskList">
+                <option name="unitId" value="0" />
+                <option name="items">
                   <list />
                 </option>
-                <option name="unitId" value="0" />
               </Lesson>
               <Lesson>
                 <option name="customPresentableName" />
@@ -219,10 +393,10 @@
                 <option name="name" value="macros" />
                 <option name="stepikChangeStatus" value="Up to date" />
                 <option name="updateDate" value="0" />
-                <option name="taskList">
+                <option name="unitId" value="0" />
+                <option name="items">
                   <list />
                 </option>
-                <option name="unitId" value="0" />
               </Lesson>
               <Lesson>
                 <option name="customPresentableName" />
@@ -231,10 +405,10 @@
                 <option name="name" value="move_semantics" />
                 <option name="stepikChangeStatus" value="Up to date" />
                 <option name="updateDate" value="0" />
-                <option name="taskList">
+                <option name="unitId" value="0" />
+                <option name="items">
                   <list />
                 </option>
-                <option name="unitId" value="0" />
               </Lesson>
               <Lesson>
                 <option name="customPresentableName" />
@@ -243,10 +417,10 @@
                 <option name="name" value="error_handling" />
                 <option name="stepikChangeStatus" value="Up to date" />
                 <option name="updateDate" value="0" />
-                <option name="taskList">
+                <option name="unitId" value="0" />
+                <option name="items">
                   <list />
                 </option>
-                <option name="unitId" value="0" />
               </Lesson>
               <Lesson>
                 <option name="customPresentableName" />
@@ -255,10 +429,10 @@
                 <option name="name" value="threads" />
                 <option name="stepikChangeStatus" value="Up to date" />
                 <option name="updateDate" value="0" />
-                <option name="taskList">
+                <option name="unitId" value="0" />
+                <option name="items">
                   <list />
                 </option>
-                <option name="unitId" value="0" />
               </Lesson>
               <Lesson>
                 <option name="customPresentableName" />
@@ -267,10 +441,10 @@
                 <option name="name" value="standard_library_types" />
                 <option name="stepikChangeStatus" value="Up to date" />
                 <option name="updateDate" value="0" />
-                <option name="taskList">
+                <option name="unitId" value="0" />
+                <option name="items">
                   <list />
                 </option>
-                <option name="unitId" value="0" />
               </Lesson>
             </list>
           </option>
