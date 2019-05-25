@@ -1446,11 +1446,168 @@
                 <option name="id" value="0" />
                 <option name="index" value="6" />
                 <option name="name" value="strings" />
-                <option name="stepikChangeStatus" value="Up to date" />
+                <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
                 <option name="items">
-                  <list />
+                  <list>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="### Strings&#10;&#10;Rust has two string types, a string slice (`&amp;str`) and an owned string (`String`).&#10;We're not going to dictate when you should use which one, but we'll show you how&#10;to identify and create them, as well as use them.&#10;&#10;#### Book Sections&#10;&#10;- [Strings](https://doc.rust-lang.org/stable/book/ch08-02-strings.html)&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="1" />
+                      <option name="name" value="intro" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;intro&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="Make me compile without changing the function signature!&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  The `current_favorite_color` function is currently returning a string slice with the `'static` lifetime.&#10;  We know this because the data of the string lives in our code itself -- it doesn't come from a file or user input or another program -- so it will live as long as our program lives.&#10;  But it is still a string slice.&#10;  There's one way to create a `String` by converting a string slice covered in the Strings chapter of the book, and another way that uses the `From` trait.&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="2" />
+                      <option name="name" value="strings1" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;strings1&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="Make me compile without changing the function signature!&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  Yes, it would be really easy to fix this by just changing the value bound to `word` to be a string slice instead of a `String`, wouldn't it??&#10;  There is a way to add one character to line 6, though, that will coerce the `String` into a string slice.&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="3" />
+                      <option name="name" value="strings2" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;strings2&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                  </list>
                 </option>
               </Lesson>
               <Lesson>
