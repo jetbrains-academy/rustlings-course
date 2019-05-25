@@ -63,7 +63,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="introduction" />
+                      <option name="name" value="intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -115,7 +115,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="task1" />
+                      <option name="name" value="variables1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -167,7 +167,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="3" />
-                      <option name="name" value="task2" />
+                      <option name="name" value="variables2" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -219,7 +219,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="4" />
-                      <option name="name" value="task3" />
+                      <option name="name" value="variables3" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -271,7 +271,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="5" />
-                      <option name="name" value="task4" />
+                      <option name="name" value="variables4" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -336,27 +336,12 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="introduction" />
+                      <option name="name" value="intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
                       <option name="files">
                         <map>
-                          <entry key="src/lib.rs">
-                            <value>
-                              <TaskFile>
-                                <option name="answerPlaceholders">
-                                  <list />
-                                </option>
-                                <option name="highlightErrors" value="false" />
-                                <option name="name" value="src/lib.rs" />
-                                <option name="text" value="// put code of your task here&#10;" />
-                                <option name="trackChanges" value="true" />
-                                <option name="trackLengths" value="true" />
-                                <option name="visible" value="true" />
-                              </TaskFile>
-                            </value>
-                          </entry>
                           <entry key="src/main.rs">
                             <value>
                               <TaskFile>
@@ -372,28 +357,13 @@
                               </TaskFile>
                             </value>
                           </entry>
-                          <entry key="tests/tests.rs">
-                            <value>
-                              <TaskFile>
-                                <option name="answerPlaceholders">
-                                  <list />
-                                </option>
-                                <option name="highlightErrors" value="false" />
-                                <option name="name" value="tests/tests.rs" />
-                                <option name="text" value="#[test]&#10;fn test() {&#10;    assert!(false, &quot;Implement tests&quot;);&#10;}&#10;" />
-                                <option name="trackChanges" value="true" />
-                                <option name="trackLengths" value="true" />
-                                <option name="visible" value="false" />
-                              </TaskFile>
-                            </value>
-                          </entry>
                           <entry key="Cargo.toml">
                             <value>
                               <TaskFile>
                                 <option name="answerPlaceholders">
                                   <list />
                                 </option>
-                                <option name="highlightErrors" value="false" />
+                                <option name="highlightErrors" value="true" />
                                 <option name="name" value="Cargo.toml" />
                                 <option name="text" value="[package]&#10;name = &quot;introduction&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
                                 <option name="trackChanges" value="true" />
@@ -418,7 +388,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="task1" />
+                      <option name="name" value="if1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -481,11 +451,324 @@
                 <option name="id" value="0" />
                 <option name="index" value="3" />
                 <option name="name" value="functions" />
-                <option name="stepikChangeStatus" value="Up to date" />
+                <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
                 <option name="items">
-                  <list />
+                  <list>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="### Functions&#10;&#10;Here, you'll learn how to write functions and how Rust's compiler can trace things way back.&#10;&#10;#### Book Sections&#10;&#10;- [How Functions Work](https://doc.rust-lang.org/stable/book/ch03-03-how-functions-work.html)&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="1" />
+                      <option name="name" value="intro" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;introduction&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="Make me compile!&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  This main function is calling a function that it expects to exist, but the function doesn't exist.&#10;  It expects this function to have the name `call_me`.&#10;  It expects this function to not take any arguments and not return a value.&#10;  Sounds a lot like `main`, doesn't it?&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="2" />
+                      <option name="name" value="functions1" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;task1&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="Make me compile!&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  Rust requires that all parts of a function's signature have type annotations, but `call_me` is missing the type annotation of `num`.&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="3" />
+                      <option name="name" value="functions2" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;task2&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="Make me compile!&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  This time, the function *declaration* is okay, but there's something wrong with the place where we're calling the function.&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="4" />
+                      <option name="name" value="functions3" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;task3&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="Make me compile!&#10;&#10;This store is having a sale where if the price is an even number, you get 10 (money unit) off, but if it's an odd number, it's 3 (money unit) less.&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  The error message points to line 12 and says it expects a type after the `-&gt;`.&#10;  This is where the function's return type should be -- take a look at the `is_even` function for an example!&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="5" />
+                      <option name="name" value="functions4" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;task&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="Make me compile!&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  This is a really common error that can be fixed by removing one character.&#10;&#10;  It happens because Rust distinguishes between expressions and statements: expressions return a value based on its operand, and statements simply return a () type which behaves just like `void` in C/C++ language.&#10;&#10;  We want to return a value of `i32` type from the `square` function, but it is returning a `()` type...&#10;&#10;  They are not the same. There are two solutions:&#10;  1. Add a `return` ahead of `num * num;`&#10;  2. remove `;`, make it to be `num * num`&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="6" />
+                      <option name="name" value="functions5" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;task5&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                  </list>
                 </option>
               </Lesson>
               <Lesson>
