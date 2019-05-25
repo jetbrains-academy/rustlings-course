@@ -1579,7 +1579,7 @@
                                 <option name="answerPlaceholders">
                                   <list />
                                 </option>
-                                <option name="highlightErrors" value="false" />
+                                <option name="highlightErrors" value="true" />
                                 <option name="name" value="src/main.rs" />
                                 <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
                                 <option name="trackChanges" value="true" />
@@ -1615,11 +1615,228 @@
                 <option name="id" value="0" />
                 <option name="index" value="7" />
                 <option name="name" value="modules" />
-                <option name="stepikChangeStatus" value="Up to date" />
+                <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
                 <option name="items">
-                  <list />
+                  <list>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="### Modules&#10;&#10;In this section we'll give you an introduction to Rust's module system.&#10;&#10;#### Book Sections&#10;&#10;- [The Module System](https://doc.rust-lang.org/stable/book/ch07-02-modules-and-use-to-control-scope-and-privacy.html)&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="1" />
+                      <option name="name" value="intro" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;intro&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;Write your task text here.&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  Hints can be added anywhere in task text: type &quot;hint&quot; and press Tab.&#10;&lt;/div&gt;&#10;&lt;/html&gt;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="2" />
+                      <option name="name" value="modules1" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/lib.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/lib.rs" />
+                                <option name="text" value="// put code of your task here&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="tests/tests.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="tests/tests.rs" />
+                                <option name="text" value="#[test]&#10;fn test() {&#10;    assert!(false, &quot;Implement tests&quot;);&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="false" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;modules1&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="&lt;html&gt;&#10;Write your task text here.&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  Hints can be added anywhere in task text: type &quot;hint&quot; and press Tab.&#10;&lt;/div&gt;&#10;&lt;/html&gt;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="3" />
+                      <option name="name" value="modules2" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/lib.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/lib.rs" />
+                                <option name="text" value="// put code of your task here&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="tests/tests.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="tests/tests.rs" />
+                                <option name="text" value="#[test]&#10;fn test() {&#10;    assert!(false, &quot;Implement tests&quot;);&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="false" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;modules2&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                  </list>
                 </option>
               </Lesson>
               <Lesson>
