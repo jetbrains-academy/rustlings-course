@@ -784,7 +784,7 @@
                     <EduTask>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="MD" />
-                      <option name="descriptionText" value="### Primitive Types&#10;&#10;Rust has a couple of basic types that are directly implemented into the&#10;compiler. In this section, we'll go through the most important ones.&#10;&#10;#### Book Sections&#10;&#10;- [Data Types](https://doc.rust-lang.org/stable/book/ch03-02-data-types.html)&#10;" />
+                      <option name="descriptionText" value="### Primitive Types&#10;&#10;Rust has a couple of basic types that are directly implemented into the compiler.&#10;In this section, we'll go through the most important ones.&#10;&#10;#### Book Sections&#10;&#10;- [Data Types](https://doc.rust-lang.org/stable/book/ch03-02-data-types.html)&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -1150,7 +1150,7 @@
                     <EduTask>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="MD" />
-                      <option name="descriptionText" value="&lt;html&gt;&#10;Write your task text here.&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  Hints can be added anywhere in task text: type &quot;hint&quot; and press Tab.&#10;&lt;/div&gt;&#10;&lt;/html&gt;" />
+                      <option name="descriptionText" value="Use a tuple index to access the second element of `numbers`.&#10;&#10;You can put this right into the `println!`.&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  While you could use a destructuring `let` for the tuple here, try indexing into it instead, as explained in the last example of the Data Types -&gt; The Tuple Type section of the book:&#10;  https://doc.rust-lang.org/stable/book/ch03-02-data-types.html#the-tuple-type&#10;&#10;  Now you have another tool in your toolbox!&#10;&lt;/div&gt;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -1225,11 +1225,220 @@
                 <option name="id" value="0" />
                 <option name="index" value="5" />
                 <option name="name" value="tests" />
-                <option name="stepikChangeStatus" value="Up to date" />
+                <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
                 <option name="items">
-                  <list />
+                  <list>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="### Tests&#10;&#10;Going out of order from the book to cover tests -- many of the following exercises will ask you to make tests pass!&#10;&#10;#### Book Sections&#10;&#10;- [Writing Tests](https://doc.rust-lang.org/stable/book/ch11-01-writing-tests.html)&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="1" />
+                      <option name="name" value="intro" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;intro&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="Tests are important to ensure that your code does what you think it should do.&#10;&#10;This test has a problem with it -- make the test compile! Make the test pass!&#10;Make the test fail!&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  You don't even need to write any code to test -- you can just test values and run that, even though you wouldn't do that in real life :)&#10;  `assert!` is a macro that needs an argument.&#10;  Depending on the value of the argument, `assert!` will do nothing (in which case the test will pass) or `assert!` will panic (in which case the test will fail).&#10;  So try giving different values  to `assert!` and see which ones compile, which ones pass, and which ones fail :)&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="2" />
+                      <option name="name" value="tests1" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/lib.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/lib.rs" />
+                                <option name="text" value="// put code of your task here&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;tests1&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="This test has a problem with it -- make the test compile!&#10;Make the test pass!&#10;Make the test fail!&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  Like the previous exercise, you don't need to write any code to get this test to compile and run.&#10;  `assert_eq!` is a macro that takes two arguments and compares them.&#10;  Try giving it two values that are equal!&#10;  Try giving it two arguments that are different!&#10;  Try giving it two values that are of different types!&#10;  Try switching which argument comes first and which comes second!&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="3" />
+                      <option name="name" value="tests2" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/lib.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/lib.rs" />
+                                <option name="text" value="// put code of your task here&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;tests2&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="This test isn't testing our function -- make it do that in such a way that the test passes.&#10;Then write a second test that tests whether we get the result we expect to get when we call `is_even(5)`.&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  You can call a function right where you're passing arguments to `assert!` -- so you could do something like `assert!(having_fun())`.&#10;  If you want to check that you indeed get false, you can negate the result of what you're doing using `!`, like `assert!(!having_fun())`.&#10;&lt;/div&gt;&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="4" />
+                      <option name="name" value="tests3" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/lib.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/lib.rs" />
+                                <option name="text" value="// put code of your task here&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;tests3&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                  </list>
                 </option>
               </Lesson>
               <Lesson>
