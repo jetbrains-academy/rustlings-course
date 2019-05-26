@@ -9,7 +9,6 @@ What we want to do is: if we call the `parse` function on a string that is not a
 There are at least two ways to implement this that are both correct -- but one is a lot shorter!
 Scroll down for hints to both ways.
 
-Write your task text here.
 <div class="hint">
   One way to handle this is using a `match` statement on `item_quantity.parse::<i32>()` where the cases are `Ok(something)` and `Err(something)`.
   This pattern is very common in Rust, though, so there's a `?` operator that does pretty much what you would make that match statement do for you!

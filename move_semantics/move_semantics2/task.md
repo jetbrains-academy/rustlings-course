@@ -1,7 +1,7 @@
-Make me compile without changing line 10!
+Make me compile without changing line 7!
 
 <div class="hint">
-  So `vec0` is being *moved* into the function `fill_vec` when we call it on line 7, which means it gets dropped at the end of `fill_vec`, which means we can't use `vec0` again on line 10 (or anywhere else in `main` after the `fill_vec` call for that matter).
+  So `vec0` is being *moved* into the function `fill_vec` when we call it on line 4, which means it gets dropped at the end of `fill_vec`, which means we can't use `vec0` again on line 7 (or anywhere else in `main` after the `fill_vec` call for that matter).
   We could fix this in a few ways, try them all!
 
   1. Make another, separate version of the data that's in `vec0` and pass that to `fill_vec` instead.

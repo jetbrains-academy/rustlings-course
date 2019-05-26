@@ -1,6 +1,6 @@
 Make this compile!
 
-The idea is the thread spawned on line 19 is completing jobs while the main thread is monitoring progress until 10 jobs are completed.
+The idea is the thread spawned on line 12 is completing jobs while the main thread is monitoring progress until 10 jobs are completed.
 If you see 6 lines of "waiting..." and the program ends without timing out the playground, you've got it :)
 
 <div class="hint">
