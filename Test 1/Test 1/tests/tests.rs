@@ -1,4 +1,4 @@
-use test_1::calculateprice;
+use test1::calculateprice;
 
 #[test]
 fn verify_test() {

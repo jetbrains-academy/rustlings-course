@@ -1,4 +1,5 @@
-// Tests that verify your `divide` function implementation
+use iterator3::{divide, DivisionError, NotDivisibleError};
+
 #[test]
 fn test_success() {
     assert_eq!(divide(81, 9), Ok(9));
@@ -8,7 +9,7 @@ fn test_success() {
 fn test_not_divisible() {
     assert_eq!(
         divide(81, 6),
-        Err(DivisionError::NotDivisible(NotDivisibleError{
+        Err(DivisionError::NotDivisible(NotDivisibleError {
             dividend: 81,
             divisor: 6
         }))
