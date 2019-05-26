@@ -775,6 +775,86 @@
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="4" />
+                <option name="name" value="Test 1" />
+                <option name="stepikChangeStatus" value="Content changed" />
+                <option name="updateDate" value="0" />
+                <option name="unitId" value="0" />
+                <option name="items">
+                  <list>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="This is a test for the following sections:&#10;- Variables&#10;- Functions&#10;&#10;Mary is buying apples.&#10;One apple usually costs 2 dollars, but if you buy more than 40 at once, each apple only costs 1!&#10;Write a function that calculates the price of an order of apples given the order amount.&#10;&#10;No hints this time!&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="1" />
+                      <option name="name" value="Test 1" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/lib.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/lib.rs" />
+                                <option name="text" value="// put code of your task here&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="tests/tests.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="tests/tests.rs" />
+                                <option name="text" value="#[test]&#10;fn test() {&#10;    assert!(false, &quot;Implement tests&quot;);&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="false" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;test_1&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                  </list>
+                </option>
+              </Lesson>
+              <Lesson>
+                <option name="customPresentableName" />
+                <option name="id" value="0" />
+                <option name="index" value="5" />
                 <option name="name" value="Primitive Types" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
@@ -1223,7 +1303,7 @@
               <Lesson>
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
-                <option name="index" value="5" />
+                <option name="index" value="6" />
                 <option name="name" value="Tests" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
@@ -1444,7 +1524,72 @@
               <Lesson>
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
-                <option name="index" value="6" />
+                <option name="index" value="7" />
+                <option name="name" value="Test 2" />
+                <option name="stepikChangeStatus" value="Content changed" />
+                <option name="updateDate" value="0" />
+                <option name="unitId" value="0" />
+                <option name="items">
+                  <list>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="This is a test for the following sections:&#10;- Tests&#10;&#10;This test isn't testing our function -- make it do that in such a way that the test passes.&#10;Then write a second test that tests that we get the result we expect to get when we call `times_two` with a negative number.&#10;&#10;No hints, you can do this :)&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="1" />
+                      <option name="name" value="Test 2" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/lib.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/lib.rs" />
+                                <option name="text" value="// put code of your task here&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;test_2&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                  </list>
+                </option>
+              </Lesson>
+              <Lesson>
+                <option name="customPresentableName" />
+                <option name="id" value="0" />
+                <option name="index" value="8" />
                 <option name="name" value="Strings" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
@@ -1613,7 +1758,72 @@
               <Lesson>
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
-                <option name="index" value="7" />
+                <option name="index" value="9" />
+                <option name="name" value="Test 3" />
+                <option name="stepikChangeStatus" value="Content changed" />
+                <option name="updateDate" value="0" />
+                <option name="unitId" value="0" />
+                <option name="items">
+                  <list>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="This is a test for the following sections:&#10;- Strings&#10;&#10;Ok, here are a bunch of values -- some are `Strings`, some are `&amp;strs`.&#10;Your task is to call one of these two functions on each value depending on what you think each value is.&#10;That is, add either `string_slice` or `string` before the parentheses on each line.&#10;If you're right, it will compile!&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="1" />
+                      <option name="name" value="Test 3" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;test_3&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                  </list>
+                </option>
+              </Lesson>
+              <Lesson>
+                <option name="customPresentableName" />
+                <option name="id" value="0" />
+                <option name="index" value="10" />
                 <option name="name" value="Modules" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
@@ -1782,7 +1992,7 @@
               <Lesson>
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
-                <option name="index" value="8" />
+                <option name="index" value="11" />
                 <option name="name" value="Macros" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
@@ -2055,7 +2265,102 @@
               <Lesson>
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
-                <option name="index" value="9" />
+                <option name="index" value="12" />
+                <option name="name" value="Test 4" />
+                <option name="stepikChangeStatus" value="Content changed" />
+                <option name="updateDate" value="0" />
+                <option name="unitId" value="0" />
+                <option name="items">
+                  <list>
+                    <EduTask>
+                      <option name="customPresentableName" />
+                      <option name="descriptionFormat" value="MD" />
+                      <option name="descriptionText" value="This test covers the sections:&#10;- Modules&#10;- Macros&#10;&#10;Write a macro that passes the test! No hints this time, you can do it!&#10;" />
+                      <option name="feedbackLink">
+                        <FeedbackLink>
+                          <option name="link" />
+                          <option name="type" value="STEPIK" />
+                        </FeedbackLink>
+                      </option>
+                      <option name="id" value="0" />
+                      <option name="index" value="1" />
+                      <option name="name" value="Test 4" />
+                      <option name="record" value="-1" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepikChangeStatus" value="Up to date" />
+                      <option name="files">
+                        <map>
+                          <entry key="src/lib.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/lib.rs" />
+                                <option name="text" value="// put code of your task here&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="src/main.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="src/main.rs" />
+                                <option name="text" value="fn main() {&#10;    // put you code here to launch it&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="tests/tests.rs">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="tests/tests.rs" />
+                                <option name="text" value="#[test]&#10;fn test() {&#10;    assert!(false, &quot;Implement tests&quot;);&#10;}&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="false" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Cargo.toml">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list />
+                                </option>
+                                <option name="highlightErrors" value="false" />
+                                <option name="name" value="Cargo.toml" />
+                                <option name="text" value="[package]&#10;name = &quot;test_4&quot;&#10;version = &quot;0.1.0&quot;&#10;edition = &quot;2018&quot;&#10;" />
+                                <option name="trackChanges" value="true" />
+                                <option name="trackLengths" value="true" />
+                                <option name="visible" value="true" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                      <option name="updateDate" value="0" />
+                    </EduTask>
+                  </list>
+                </option>
+              </Lesson>
+              <Lesson>
+                <option name="customPresentableName" />
+                <option name="id" value="0" />
+                <option name="index" value="13" />
                 <option name="name" value="Move Semantics" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
@@ -2328,7 +2633,7 @@
               <Lesson>
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
-                <option name="index" value="10" />
+                <option name="index" value="14" />
                 <option name="name" value="Error Handling" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
@@ -2765,7 +3070,7 @@
               <Lesson>
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
-                <option name="index" value="11" />
+                <option name="index" value="15" />
                 <option name="name" value="Threads" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
@@ -2882,7 +3187,7 @@
               <Lesson>
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
-                <option name="index" value="12" />
+                <option name="index" value="16" />
                 <option name="name" value="Standard Library Types" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
