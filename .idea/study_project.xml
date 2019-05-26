@@ -45,7 +45,7 @@
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="1" />
-                <option name="name" value="variables" />
+                <option name="name" value="Variables" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
@@ -63,7 +63,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="intro" />
+                      <option name="name" value="Intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -115,7 +115,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="variables1" />
+                      <option name="name" value="Variables 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -167,7 +167,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="3" />
-                      <option name="name" value="variables2" />
+                      <option name="name" value="Variables 2" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -219,7 +219,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="4" />
-                      <option name="name" value="variables3" />
+                      <option name="name" value="Variables 3" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -271,7 +271,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="5" />
-                      <option name="name" value="variables4" />
+                      <option name="name" value="Variables 4" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -318,7 +318,7 @@
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="2" />
-                <option name="name" value="if" />
+                <option name="name" value="If" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
@@ -336,7 +336,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="intro" />
+                      <option name="name" value="Intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -388,7 +388,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="if1" />
+                      <option name="name" value="If 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -450,7 +450,7 @@
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="3" />
-                <option name="name" value="functions" />
+                <option name="name" value="Functions" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
@@ -468,7 +468,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="intro" />
+                      <option name="name" value="Intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -520,7 +520,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="functions1" />
+                      <option name="name" value="Functions 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -572,7 +572,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="3" />
-                      <option name="name" value="functions2" />
+                      <option name="name" value="Functions 2" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -624,7 +624,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="4" />
-                      <option name="name" value="functions3" />
+                      <option name="name" value="Functions 3" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -676,7 +676,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="5" />
-                      <option name="name" value="functions4" />
+                      <option name="name" value="Functions 4" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -728,7 +728,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="6" />
-                      <option name="name" value="functions5" />
+                      <option name="name" value="Functions 5" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -775,7 +775,7 @@
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="4" />
-                <option name="name" value="primitive_types" />
+                <option name="name" value="Primitive Types" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
@@ -793,7 +793,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="intro" />
+                      <option name="name" value="Intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -845,7 +845,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="primitive_types1" />
+                      <option name="name" value="Primitive Types 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -897,7 +897,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="3" />
-                      <option name="name" value="primitive_types2" />
+                      <option name="name" value="Primitive Types 2" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -949,7 +949,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="4" />
-                      <option name="name" value="primitive_types3" />
+                      <option name="name" value="Primitive Types 3" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1019,7 +1019,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="5" />
-                      <option name="name" value="primitive_types4" />
+                      <option name="name" value="Primitive Types 4" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1089,7 +1089,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="6" />
-                      <option name="name" value="primitive_types5" />
+                      <option name="name" value="Primitive Types 5" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1159,7 +1159,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="7" />
-                      <option name="name" value="primitive_types6" />
+                      <option name="name" value="Primitive Types 6" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1224,7 +1224,7 @@
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="5" />
-                <option name="name" value="tests" />
+                <option name="name" value="Tests" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
@@ -1242,7 +1242,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="intro" />
+                      <option name="name" value="Intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1294,7 +1294,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="tests1" />
+                      <option name="name" value="Tests 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1346,7 +1346,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="3" />
-                      <option name="name" value="tests2" />
+                      <option name="name" value="Tests 2" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1398,7 +1398,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="4" />
-                      <option name="name" value="tests3" />
+                      <option name="name" value="Tests 3" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1445,7 +1445,7 @@
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="6" />
-                <option name="name" value="strings" />
+                <option name="name" value="Strings" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
@@ -1463,7 +1463,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="intro" />
+                      <option name="name" value="Intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1515,7 +1515,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="strings1" />
+                      <option name="name" value="Strings 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1567,7 +1567,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="3" />
-                      <option name="name" value="strings2" />
+                      <option name="name" value="Strings 2" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1614,7 +1614,7 @@
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="7" />
-                <option name="name" value="modules" />
+                <option name="name" value="Modules" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
@@ -1632,7 +1632,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="intro" />
+                      <option name="name" value="Intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1684,7 +1684,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="modules1" />
+                      <option name="name" value="Modules 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1736,7 +1736,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="3" />
-                      <option name="name" value="modules2" />
+                      <option name="name" value="Modules 2" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1783,7 +1783,7 @@
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="8" />
-                <option name="name" value="macros" />
+                <option name="name" value="Macros" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
@@ -1801,7 +1801,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="intro" />
+                      <option name="name" value="Intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1853,7 +1853,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="macros1" />
+                      <option name="name" value="Macros 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1905,7 +1905,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="3" />
-                      <option name="name" value="macros2" />
+                      <option name="name" value="Macros 2" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -1957,7 +1957,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="4" />
-                      <option name="name" value="macros3" />
+                      <option name="name" value="Macros 3" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2009,7 +2009,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="5" />
-                      <option name="name" value="macros4" />
+                      <option name="name" value="Macros 4" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2056,7 +2056,7 @@
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="9" />
-                <option name="name" value="move_semantics" />
+                <option name="name" value="Move Semantics" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
@@ -2074,7 +2074,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="intro" />
+                      <option name="name" value="Intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2126,7 +2126,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="move_semantics1" />
+                      <option name="name" value="Move Semantics 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2178,7 +2178,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="3" />
-                      <option name="name" value="move_semantics2" />
+                      <option name="name" value="Move Semantics 2" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2230,7 +2230,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="4" />
-                      <option name="name" value="move_semantics3" />
+                      <option name="name" value="Move Semantics 3" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2282,7 +2282,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="5" />
-                      <option name="name" value="move_semantics4" />
+                      <option name="name" value="Move Semantics 4" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2329,7 +2329,7 @@
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="10" />
-                <option name="name" value="error_handling" />
+                <option name="name" value="Error Handling" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
@@ -2347,7 +2347,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="intro" />
+                      <option name="name" value="Intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2399,7 +2399,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="errors1" />
+                      <option name="name" value="Errors 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2466,7 +2466,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="3" />
-                      <option name="name" value="errors2" />
+                      <option name="name" value="Errors 2" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2533,7 +2533,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="4" />
-                      <option name="name" value="errors3" />
+                      <option name="name" value="Errors 3" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2585,7 +2585,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="5" />
-                      <option name="name" value="errorsn" />
+                      <option name="name" value="Errors n" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2652,7 +2652,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="6" />
-                      <option name="name" value="option1" />
+                      <option name="name" value="Option 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2704,7 +2704,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="7" />
-                      <option name="name" value="result1" />
+                      <option name="name" value="Result 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2766,7 +2766,7 @@
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="11" />
-                <option name="name" value="threads" />
+                <option name="name" value="Threads" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
@@ -2784,7 +2784,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="intro" />
+                      <option name="name" value="Intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2827,7 +2827,7 @@
                     <EduTask>
                       <option name="customPresentableName" />
                       <option name="descriptionFormat" value="MD" />
-                      <option name="descriptionText" value="Make this compile!&#10;&#10;The idea is the thread spawned on line 19 is completing jobs while the main thread is monitoring progress until 10 jobs are completed.&#10;If you see 6 lines of &quot;waiting...&quot; and the program ends without timing out the playground, you've got it :)&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  `Arc` is an Atomic Reference Counted pointer that allows safe, shared access to **immutable** data. But we want to *change* the number of `jobs_completed` so we'll need to also use another type that will only allow one thread to mutate the data at a time.&#10;  Take a look at this section of the book:&#10;  https://doc.rust-lang.org/stable/book/second-edition/ch16-03-shared-state.html#atomic-reference-counting-with-arct&#10;  and keep scrolling if you'd like more hints :)&#10;&lt;/div&gt;&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  Do you now have an `Arc` `Mutex` `JobStatus` at the beginning of main? Like:&#10;&#10;  ```rust&#10;  let status = Arc::new(Mutex::new(JobStatus { jobs_completed: 0 }));&#10;  ```&#10;  Similar to the code in the example in the book that happens after the text that says &quot;We can use Arc&lt;T&gt; to fix this.&quot;.&#10;  If not, give that a try!&#10;  If you do and would like more hints, keep scrolling!!&#10;&lt;/div&gt;&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  Make sure neither of your threads are holding onto the lock of the mutex while they are sleeping, since this will prevent the other thread from being allowed to get the lock. Locks are automatically released when they go out of scope.&#10;&lt;/div&gt;&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  Ok, so, real talk, this was actually tricky for *me* to do too.&#10;  And I could see a lot of different problems you might run into, so at this point I'm not sure which one you've hit :)&#10;  Please see a few possible answers on https://github.com/carols10cents/rustlings/issues/3 -- mine is a little more complicated because I decided I wanted to see the number of jobs currently done when I was checking the status.&#10;&#10;  Please open an issue if you're still running into a problem that these hints are not helping you with, or if you've looked at the sample answers and don't understand why they work and yours doesn't.&#10;&#10;  If you've learned from the sample solutions, I encourage you to come back to this exercise and try it again in a few days to reinforce what you've learned :)&#10;&lt;/div&gt;&#10;" />
+                      <option name="descriptionText" value="Make this compile!&#10;&#10;The idea is the thread spawned on line 12 is completing jobs while the main thread is monitoring progress until 10 jobs are completed.&#10;If you see 6 lines of &quot;waiting...&quot; and the program ends without timing out the playground, you've got it :)&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  `Arc` is an Atomic Reference Counted pointer that allows safe, shared access to **immutable** data. But we want to *change* the number of `jobs_completed` so we'll need to also use another type that will only allow one thread to mutate the data at a time.&#10;  Take a look at this section of the book:&#10;  https://doc.rust-lang.org/stable/book/second-edition/ch16-03-shared-state.html#atomic-reference-counting-with-arct&#10;  and keep scrolling if you'd like more hints :)&#10;&lt;/div&gt;&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  Do you now have an `Arc` `Mutex` `JobStatus` at the beginning of main? Like:&#10;&#10;  ```rust&#10;  let status = Arc::new(Mutex::new(JobStatus { jobs_completed: 0 }));&#10;  ```&#10;  Similar to the code in the example in the book that happens after the text that says &quot;We can use Arc&lt;T&gt; to fix this.&quot;.&#10;  If not, give that a try!&#10;  If you do and would like more hints, keep scrolling!!&#10;&lt;/div&gt;&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  Make sure neither of your threads are holding onto the lock of the mutex while they are sleeping, since this will prevent the other thread from being allowed to get the lock. Locks are automatically released when they go out of scope.&#10;&lt;/div&gt;&#10;&#10;&lt;div class=&quot;hint&quot;&gt;&#10;  Ok, so, real talk, this was actually tricky for *me* to do too.&#10;  And I could see a lot of different problems you might run into, so at this point I'm not sure which one you've hit :)&#10;  Please see a few possible answers on https://github.com/carols10cents/rustlings/issues/3 -- mine is a little more complicated because I decided I wanted to see the number of jobs currently done when I was checking the status.&#10;&#10;  Please open an issue if you're still running into a problem that these hints are not helping you with, or if you've looked at the sample answers and don't understand why they work and yours doesn't.&#10;&#10;  If you've learned from the sample solutions, I encourage you to come back to this exercise and try it again in a few days to reinforce what you've learned :)&#10;&lt;/div&gt;&#10;" />
                       <option name="feedbackLink">
                         <FeedbackLink>
                           <option name="link" />
@@ -2836,7 +2836,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="threads1" />
+                      <option name="name" value="Threads 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2883,7 +2883,7 @@
                 <option name="customPresentableName" />
                 <option name="id" value="0" />
                 <option name="index" value="12" />
-                <option name="name" value="standard_library_types" />
+                <option name="name" value="Standard Library Types" />
                 <option name="stepikChangeStatus" value="Content changed" />
                 <option name="updateDate" value="0" />
                 <option name="unitId" value="0" />
@@ -2901,7 +2901,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="1" />
-                      <option name="name" value="intro" />
+                      <option name="name" value="Intro" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -2953,7 +2953,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="2" />
-                      <option name="name" value="arc1" />
+                      <option name="name" value="Arc 1" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -3023,7 +3023,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="3" />
-                      <option name="name" value="iterator3" />
+                      <option name="name" value="Iterator 3" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
@@ -3090,7 +3090,7 @@
                       </option>
                       <option name="id" value="0" />
                       <option name="index" value="4" />
-                      <option name="name" value="iterators4" />
+                      <option name="name" value="Iterators 4" />
                       <option name="record" value="-1" />
                       <option name="status" value="Unchecked" />
                       <option name="stepikChangeStatus" value="Up to date" />
