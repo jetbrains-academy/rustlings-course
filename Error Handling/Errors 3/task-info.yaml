@@ -1,0 +1,6 @@
+type: edu
+files:
+- name: Cargo.toml
+  visible: true
+- name: src/main.rs
+  visible: true

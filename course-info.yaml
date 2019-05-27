@@ -1,0 +1,21 @@
+title: Rustlings
+language: English
+summary: Small exercises to get you used to reading and writing Rust code!
+programming_language: Rust
+content:
+- Variables
+- If
+- Functions
+- Test 1
+- Primitive Types
+- Tests
+- Test 2
+- Strings
+- Test 3
+- Modules
+- Macros
+- Test 4
+- Move Semantics
+- Error Handling
+- Threads
+- Standard Library Types
