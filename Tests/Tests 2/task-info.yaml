@@ -1,6 +1,6 @@
 type: edu
 files:
-- name: src/lib.rs
-  visible: true
 - name: Cargo.toml
+  visible: false
+- name: src/lib.rs
   visible: true
