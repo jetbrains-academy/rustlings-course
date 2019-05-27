@@ -1,0 +1,72 @@
+[workspace]
+
+members = [
+    "Variables/Intro",
+    "Variables/Variables 1",
+    "Variables/Variables 2",
+    "Variables/Variables 3",
+    "Variables/Variables 4",
+
+    "If/Intro",
+    "If/If 1",
+
+    "Funcitons/Intro",
+    "Funcitons/Funcitons 1",
+    "Funcitons/Funcitons 2",
+    "Funcitons/Funcitons 3",
+    "Funcitons/Funcitons 4",
+    "Funcitons/Funcitons 5",
+
+    "Test 1/Test 1",
+
+    "Primitive Types/Intro",
+    "Primitive Types/Primitive Types 1",
+    "Primitive Types/Primitive Types 2",
+    "Primitive Types/Primitive Types 3",
+    "Primitive Types/Primitive Types 4",
+    "Primitive Types/Primitive Types 5",
+    "Primitive Types/Primitive Types 6",
+
+    "Tests/Intro",
+    "Tests/Tests 1",
+    "Tests/Tests 2",
+    "Tests/Tests 3",
+
+    "Test 2/Test 2",
+
+    "Strings/Intro",
+    "Strings/Strings 1",
+    "Strings/Strings 2",
+
+    "Test 3/Test 3",
+
+    "Macros/Intro",
+    "Macros/Macros 1",
+    "Macros/Macros 2",
+    "Macros/Macros 3",
+    "Macros/Macros 4",
+
+    "Test 4/Test 4",
+
+    "Move Semantics/Intro",
+    "Move Semantics/Move Semantics 1",
+    "Move Semantics/Move Semantics 2",
+    "Move Semantics/Move Semantics 3",
+    "Move Semantics/Move Semantics 4",
+
+    "Error Handling/Intro",
+    "Error Handling/Errors 1",
+    "Error Handling/Errors 1",
+    "Error Handling/Errors 1",
+    "Error Handling/Errors n",
+    "Error Handling/Option 1",
+    "Error Handling/Result 1",
+
+    "Threads/Intro",
+    "Threads/Threads 1",
+
+    "Standard Libraty Types/Intro",
+    "Standard Libraty Types/Arc 1",
+    "Standard Libraty Types/Iterator 3",
+    "Standard Libraty Types/Iterators 4",
+]
