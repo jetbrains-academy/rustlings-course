@@ -1,6 +1,5 @@
-Make me compile!
+## Task 2
 
-<div class="hint">
   The compiler message is saying that Rust cannot infer the type that the variable binding `x` has with what is given here.
 
   What happens if you annotate line 2 with a type annotation?
@@ -12,4 +11,3 @@ Make me compile!
   What type should `x` be, anyway?
 
   What if `x` is the same type as 10? What if it's a different type?
-</div>

@@ -1,4 +1,4 @@
-Make me compile!
+### Task 4
 
 This store is having a sale where if the price is an even number, you get 10 (money unit) off, but if it's an odd number, it's 3 (money unit) less.
 

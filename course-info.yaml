@@ -3,11 +3,13 @@ language: English
 summary: Small exercises to get you used to reading and writing Rust code!
 programming_language: Rust
 content:
+- Getting started
+- Programming a Guessing Game
 - Variables
-- If
+- Data Types
 - Functions
 - Test 1
-- Primitive Types
+- If
 - Tests
 - Test 2
 - Strings

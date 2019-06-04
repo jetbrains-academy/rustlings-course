@@ -5,6 +5,6 @@ files:
 - name: src/main.rs
   visible: true
   placeholders:
-    - offset: 124
-      length: 9
-      placeholder_text: type here
+  - offset: 124
+    length: 9
+    placeholder_text: type here

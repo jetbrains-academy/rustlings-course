@@ -1,9 +1,12 @@
+## Task 1
+
 Complete this function to return the bigger number!
 
 Do not use:
-- `return`
-- another function call
-- additional variables
+
+* `return`
+* another function call
+* additional variables
 
 <div class="hint">
   It's possible to do this in one line if you would like!
