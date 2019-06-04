@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Allowing Multiple Guesses with Looping/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Allowing Multiple Guesses with Looping/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Allowing Multiple Guesses with Looping/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Allowing Multiple Guesses with Looping/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Getting started/Installation/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Getting started/Installation/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Getting started/Installation/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Getting started/Installation/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Getting started/Hello World/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Getting started/Hello World/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Getting started/Hello World/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Getting started/Hello World/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Programming a Guesssing Game/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Programming a Guesssing Game/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Programming a Guesssing Game/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Programming a Guesssing Game/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Generating a Secret Number/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Generating a Secret Number/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Generating a Secret Number/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Generating a Secret Number/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Comparing the Guess to the Secret Number/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Comparing the Guess to the Secret Number/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Comparing the Guess to the Secret Number/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Comparing the Guess to the Secret Number/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Storing Values with Variables/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Storing Values with Variables/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Storing Values with Variables/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Storing Values with Variables/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Intro/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Intro/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Intro/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Intro/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables and Mutability/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables and Mutability/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables and Mutability/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables and Mutability/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Differences Between Variables and Constants/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Differences Between Variables and Constants/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Differences Between Variables and Constants/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Differences Between Variables and Constants/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Shadowing/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Shadowing/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Shadowing/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Shadowing/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 2/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 2/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 2/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 3/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 3/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 3/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 4/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 4/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 4/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Variables/Variables 4/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Scalar Types/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Scalar Types/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Scalar Types/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Scalar Types/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 2/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 2/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 2/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Compound Types/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Compound Types/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Compound Types/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Compound Types/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 3/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 3/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 3/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 4/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 4/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 4/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 4/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 5/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 5/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 5/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 5/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 6/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 6/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 6/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 6/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Intro/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Intro/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Intro/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Intro/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Statements and Expressions/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Statements and Expressions/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Statements and Expressions/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Statements and Expressions/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 2/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 2/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 2/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 3/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 3/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 3/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 4/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 4/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 4/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 4/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 5/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 5/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 5/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Functions/Functions 5/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 1/Test 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 1/Test 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 1/Test 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 1/Test 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/If/Intro/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/If/Intro/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/If/Intro/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/If/Intro/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/If/else if/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/If/else if/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/If/else if/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/If/else if/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/If/Repetition with Loops/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/If/Repetition with Loops/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/If/Repetition with Loops/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/If/Repetition with Loops/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/If/If 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/If/If 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/If/If 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/If/If 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Intro/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Intro/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Intro/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Intro/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Tests 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Tests 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Tests 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Tests 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Tests 2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Tests 2/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Tests 2/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Tests 2/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Tests 3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Tests 3/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Tests 3/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Tests/Tests 3/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 2/Test 2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 2/Test 2/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 2/Test 2/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 2/Test 2/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings/Intro/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings/Intro/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings/Intro/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings/Intro/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings/Strings 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings/Strings 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings/Strings 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings/Strings 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings/Strings 2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings/Strings 2/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings/Strings 2/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Strings/Strings 2/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 3/Test 3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 3/Test 3/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 3/Test 3/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 3/Test 3/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Modules/Intro/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Modules/Intro/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Modules/Intro/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Modules/Intro/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Modules/Modules 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Modules/Modules 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Modules/Modules 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Modules/Modules 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Modules/Modules 2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Modules/Modules 2/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Modules/Modules 2/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Modules/Modules 2/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Intro/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Intro/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Intro/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Intro/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 2/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 2/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 2/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 3/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 3/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 3/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 4/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 4/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 4/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Macros/Macros 4/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 4/Test 4/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 4/Test 4/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 4/Test 4/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Test 4/Test 4/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Intro/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Intro/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Intro/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Intro/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 2/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 2/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 2/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 3/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 3/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 3/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 4/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 4/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 4/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 4/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Intro/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Intro/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Intro/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Intro/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors 2/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors 2/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors 2/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors 2/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors 3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors 3/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors 3/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors 3/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors n/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors n/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors n/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Errors n/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Option 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Option 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Option 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Option 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Result 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Result 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Result 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Error Handling/Result 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Threads/Intro/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Threads/Intro/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Threads/Intro/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Threads/Intro/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Threads/Threads 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Threads/Threads 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Threads/Threads 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Threads/Threads 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Intro/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Intro/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Intro/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Intro/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Arc 1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Arc 1/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Arc 1/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Arc 1/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Iterator 3/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Iterator 3/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Iterator 3/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Iterator 3/benches" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Iterators 4/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Iterators 4/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Iterators 4/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/Standard Library Types/Iterators 4/benches" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/Data Types/Compound Types/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 3/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 4/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 5/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Data Types/Primitive Types 6/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Data Types/Scalar Types/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Error Handling/Errors 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Error Handling/Errors 2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Error Handling/Errors 3/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Error Handling/Errors n/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Error Handling/Intro/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Error Handling/Option 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Error Handling/Result 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Functions/Functions 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Functions/Functions 2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Functions/Functions 3/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Functions/Functions 4/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Functions/Functions 5/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Functions/Intro/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Functions/Statements and Expressions/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Getting started/Hello World/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Getting started/Installation/target" />
+      <excludeFolder url="file://$MODULE_DIR$/If/If 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/If/Intro/target" />
+      <excludeFolder url="file://$MODULE_DIR$/If/Repetition with Loops/target" />
+      <excludeFolder url="file://$MODULE_DIR$/If/else if/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Macros/Intro/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Macros/Macros 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Macros/Macros 2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Macros/Macros 3/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Macros/Macros 4/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Modules/Intro/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Modules/Modules 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Modules/Modules 2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Move Semantics/Intro/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 3/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Move Semantics/Move Semantics 4/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Allowing Multiple Guesses with Looping/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Comparing the Guess to the Secret Number/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Generating a Secret Number/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Programming a Guesssing Game/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Programming a Guessing Game/Storing Values with Variables/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Standard Library Types/Arc 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Standard Library Types/Intro/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Standard Library Types/Iterator 3/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Standard Library Types/Iterators 4/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Strings/Intro/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Strings/Strings 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Strings/Strings 2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Test 1/Test 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Test 2/Test 2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Test 3/Test 3/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Test 4/Test 4/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Tests/Intro/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Tests/Tests 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Tests/Tests 2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Tests/Tests 3/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Threads/Intro/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Threads/Threads 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Variables/Differences Between Variables and Constants/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Variables/Intro/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Variables/Shadowing/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Variables/Variables 1/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Variables/Variables 2/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Variables/Variables 3/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Variables/Variables 4/target" />
+      <excludeFolder url="file://$MODULE_DIR$/Variables/Variables and Mutability/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
