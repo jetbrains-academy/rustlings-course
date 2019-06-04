@@ -1,0 +1,1 @@
+/Users/ilnur.galimov/IdeaProjects/rustlings-course/Programming\ a\ Guessing\ Game/Comparing\ the\ Guess\ to\ the\ Secret\ Number/target/debug/processing_a_guess.dSYM: /Users/ilnur.galimov/IdeaProjects/rustlings-course/Programming\ a\ Guessing\ Game/Comparing\ the\ Guess\ to\ the\ Secret\ Number/src/main.rs

@@ -1,0 +1,4 @@
+[package]
+name = "differences_between_variables_and_constants"
+version = "0.1.0"
+edition = "2018"

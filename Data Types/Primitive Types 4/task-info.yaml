@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: Cargo.toml
+  visible: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 63
+    length: 8
+    placeholder_text: TODO

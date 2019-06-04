@@ -1,0 +1,1 @@
+/Users/ilnur.galimov/IdeaProjects/rustlings-course/If/If\ 1/target/debug/if1.dSYM: /Users/ilnur.galimov/IdeaProjects/rustlings-course/If/If\ 1/src/lib.rs /Users/ilnur.galimov/IdeaProjects/rustlings-course/If/If\ 1/src/main.rs

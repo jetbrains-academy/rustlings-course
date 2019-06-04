@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 261
+    placeholder_text: TODO
+    dependency:
+      lesson: Programming a Guessing Game
+      task: Programming a Guesssing Game
+      file: src/main.rs
+      placeholder: 1
+      is_visible: false
+- name: Cargo.toml
+  visible: true

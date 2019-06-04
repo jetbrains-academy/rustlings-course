@@ -1,0 +1,1 @@
+/Users/ilnur.galimov/IdeaProjects/rustlings-course/Variables/Variables\ 4/target/debug/variables4-ce426e936f3ed910.dSYM: /Users/ilnur.galimov/IdeaProjects/rustlings-course/Variables/Variables\ 4/src/main.rs

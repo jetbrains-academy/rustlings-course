@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 397
+    placeholder_text: Put your code here to launch it
+    dependency:
+      lesson: Programming a Guessing Game
+      task: Storing Values with Variables
+      file: src/main.rs
+      placeholder: 1
+      is_visible: false
+- name: Cargo.toml
+  visible: true
