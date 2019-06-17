@@ -1,7 +1,0 @@
-type: framework
-content:
-- Programming a Guesssing Game
-- Generating a Secret Number
-- Comparing the Guess to the Secret Number
-- Allowing Multiple Guesses with Looping
-- Storing Values with Variables

@@ -1,6 +1,0 @@
-type: edu
-files:
-- name: Cargo.toml
-  visible: false
-- name: src/lib.rs
-  visible: true
