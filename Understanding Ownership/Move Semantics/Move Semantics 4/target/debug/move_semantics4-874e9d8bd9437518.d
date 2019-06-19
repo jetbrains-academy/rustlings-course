@@ -1,0 +1,1 @@
+/Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Move\ Semantics/Move\ Semantics\ 4/target/debug/move_semantics4-874e9d8bd9437518.dSYM: /Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Move\ Semantics/Move\ Semantics\ 4/src/main.rs

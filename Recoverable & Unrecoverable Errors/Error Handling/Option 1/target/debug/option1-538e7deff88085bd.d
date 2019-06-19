@@ -1,0 +1,1 @@
+/Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Error\ Handling/Option\ 1/target/debug/option1-538e7deff88085bd.dSYM: /Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Error\ Handling/Option\ 1/src/main.rs

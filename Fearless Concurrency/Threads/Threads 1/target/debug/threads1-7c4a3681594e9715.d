@@ -1,0 +1,1 @@
+/Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Threads/Threads\ 1/target/debug/threads1-7c4a3681594e9715.dSYM: /Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Threads/Threads\ 1/src/main.rs

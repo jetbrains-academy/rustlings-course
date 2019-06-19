@@ -1,0 +1,1 @@
+/Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Macros/Macros\ 2/target/debug/macros2-80868536268451b7.dSYM: /Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Macros/Macros\ 2/src/main.rs

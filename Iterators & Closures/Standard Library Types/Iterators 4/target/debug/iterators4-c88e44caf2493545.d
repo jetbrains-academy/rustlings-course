@@ -1,0 +1,1 @@
+/Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Standard\ Library\ Types/Iterators\ 4/target/debug/iterators4-c88e44caf2493545: /Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Standard\ Library\ Types/Iterators\ 4/src/lib.rs

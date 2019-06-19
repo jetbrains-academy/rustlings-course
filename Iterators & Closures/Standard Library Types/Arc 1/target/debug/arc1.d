@@ -1,0 +1,1 @@
+/Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Standard\ Library\ Types/Arc\ 1/target/debug/arc1.dSYM: /Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Standard\ Library\ Types/Arc\ 1/src/main.rs

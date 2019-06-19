@@ -1,0 +1,1 @@
+/Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Modules/Modules\ 2/target/debug/modules2-f754bc51d9c0a7b5.dSYM: /Users/ilnur.galimov/IdeaProjects/rustlings-course-remastered/Modules/Modules\ 2/src/main.rs
