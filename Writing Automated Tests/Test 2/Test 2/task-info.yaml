@@ -1,0 +1,13 @@
+type: edu
+files:
+- name: Cargo.toml
+  visible: false
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 184
+    length: 2
+    placeholder_text: '?'
+  - offset: 261
+    length: 30
+    placeholder_text: write an assert for `times_two(-4)`
