@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 16
-    length: 26
+    length: 27
     placeholder_text: // put you code here to launch it
 - name: Cargo.toml
   visible: true
