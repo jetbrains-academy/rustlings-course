@@ -1,6 +1,6 @@
 ## Hello, World!
 
-Now that you’ve installed Rust, let’s write your first Rust program. It’s traditional when learning a new language to write a little program that prints the text `Hello, world!` to the screen, so we’ll do the same here!
+Now, let’s write your first Rust program. It’s traditional when learning a new language to write a little program that prints the text `Hello, world!` to the screen, so we’ll do the same here!
 
 You can see the **Editor** window in the left. This is your sandbox and you can test your code here.
 The `main.rs` file has the following lines:
@@ -9,18 +9,17 @@ The `main.rs` file has the following lines:
 fn main() {
     // put you code here to launch it
 }
-
 ``` 
-Now let's replace these lines with the code in Listing 1-1:
+Now let's replace these lines with the code:
 
 ```rust
 fn main() {
     println!("Hello, world!");
 }
 ```
-##### Listing 1-1: A program that prints Hello, world!
+##### Example: A program that prints Hello, world!
 
-To run this code click on **Run** button in the **Task Description** window.
+To run this code click on **Run** icon at the left-upper corner of the editor. Click **Check** button in the **Task Description** window to run the tests checking the correctness of the solution provided.
 
 If `Hello, world!` did print, congratulations! You’ve officially written a Rust program. That makes you a Rust programmer—welcome!
 
