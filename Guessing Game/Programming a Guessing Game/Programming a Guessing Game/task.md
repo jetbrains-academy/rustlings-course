@@ -2,30 +2,20 @@ Let’s jump into Rust by working through a hands-on project together! This chap
 
 We’ll implement a classic beginner programming problem: a guessing game. Here’s how it works: the program will generate a random integer between 1 and 100. It will then prompt the player to enter a guess. After a guess is entered, the program will indicate whether the guess is too low or too high. If the guess is correct, the game will print a congratulatory message and exit.
 
-### Processing a Guess
+### Getting a Guess
 
-The first part of the guessing game program will ask for user input, process that input, and check that the input is in the expected form. To start, we’ll allow the player to input a guess. Enter the code in Listing 2-1 into _src/main.rs_.
+The first part of the guessing game program will ask for user input, process that input, and check that the input is in the expected form. To start, we’ll allow the player to input a guess.
 
 ```rust
 use std::io;
 
 fn main() {
     println!("Guess the number!");
-
-    println!("Please input your guess.");
-
-    let mut guess = String::new();
-
-    io::stdin().read_line(&mut guess)
-        .expect("Failed to read line");
-
-    println!("You guessed: {}", guess);
 }
 ```
+##### Code that asks for a guess from the user
 
-##### Listing 2-1: Code that gets a guess from the user and prints it
-
-This code contains a lot of information, so let’s go over it line by line. To obtain user input and then print the result as output, we need to bring the `io` (input/output) library into scope. The `io` library comes from the standard library (which is known as `std`):
+To obtain user input and then print the result as output, we need to bring the `io` (input/output) library into scope. The `io` library comes from the standard library (which is known as `std`):
 
 ```rust
 use std::io;
@@ -33,7 +23,7 @@ use std::io;
 
 By default, Rust brings only a few types into the scope of every program in _[the prelude](https://doc.rust-lang.org/stable/std/prelude/index.html)_. If a type you want to use isn’t in the prelude, you have to bring that type into scope explicitly with a `use` statement. Using the `std::io` library provides you with a number of useful features, including the ability to accept user input.
 
-As you saw in Lesson 1, the main function is the entry point into the program:
+As you saw in Introduction Lesson, the main function is the entry point into the program:
 
 ```rust
 fn main() {
@@ -45,10 +35,8 @@ As you also learned in Lesson 1, `println!` is a macro that prints a string to t
 
 ```rust
 println!("Guess the number!");
-
-println!("Please input your guess.");
 ```
 
-This code is printing a prompt stating what the game is and requesting input from the user.
+This code is printing a prompt stating what the game is. Let's add one more message to ask the user for a guess. Fill in the placeholder in the _src/mains.rs_ to print two lines: "Guess the number!" and "Please input your guess."
 
 _You can refer to the following chapter in the Rust Programming Language Book: [Processing a Guess](https://doc.rust-lang.org/stable/book/ch02-00-guessing-game-tutorial.html#processing-a-guess)_
