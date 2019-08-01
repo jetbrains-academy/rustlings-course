@@ -3,8 +3,10 @@ files:
 - name: src/main.rs
   visible: true
   placeholders:
-  - offset: 0
-    length: 261
-    placeholder_text: Put your code here to launch it
+  - offset: 30
+    length: 73
+    placeholder_text: //put your code here
 - name: Cargo.toml
   visible: true
+- name: tests/tests.rs
+  visible: false
