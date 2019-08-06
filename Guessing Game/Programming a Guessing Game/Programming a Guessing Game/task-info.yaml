@@ -4,8 +4,11 @@ files:
   visible: true
   placeholders:
   - offset: 30
-    length: 73
-    placeholder_text: //put your code here
+    length: 30
+    placeholder_text: //put the code here to print the game introduction message
+  - offset: 66
+    length: 37
+    placeholder_text: //type the code in here to ask the user for a guess
 - name: Cargo.toml
   visible: true
 - name: tests/tests.rs
