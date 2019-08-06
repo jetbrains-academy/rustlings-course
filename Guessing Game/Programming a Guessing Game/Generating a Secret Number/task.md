@@ -14,7 +14,7 @@ rand = "0.3.14"
 
 In the _Cargo.toml_ file, everything that follows a header is part of a section that continues until another section starts. The `[dependencies]` section is where you tell Cargo which external crates your project depends on and which versions of those crates you require. In this case, we’ll specify the `rand` crate with the semantic version specifier `0.3.14`. Cargo understands [Semantic Versioning](http://semver.org/) (sometimes called _SemVer_), which is a standard for writing version numbers. The number 0.3.14 is actually shorthand for `^0.3.14`, which means “any version that has a public API compatible with version 0.3.14.”
 
-Now, without changing any of the code, let’s build the project, as shown in Listing 2-2.
+Now, without changing any of the code, let’s build the project, as shown in the example below. You could either type $ cargo build into the terminal, or select Build -> Build Project option from the menu. 
 
 ```text
 $ cargo build
@@ -27,7 +27,7 @@ $ cargo build
     Finished dev [unoptimized + debuginfo] target(s) in 2.53 secs
 ```
 
-##### Listing 2-2: The output from running cargo build after adding the rand crate as a dependency
+##### Example of the output from running cargo build after adding the rand crate as a dependency
 
 You may see different version numbers (but they will all be compatible with the code, thanks to SemVer!), and the lines may be in a different order.
 
@@ -79,38 +79,19 @@ There’s a lot more to say about [Cargo](http://doc.crates.io/) and [its ecosys
 
 ### Generating a Random Number
 
-Now that you’ve added the `rand` crate to _Cargo.toml_, let’s start using `rand`. The next step is to update src/main.rs, as shown in Listing 2-3.
+Now that you’ve added the `rand` crate to _Cargo.toml_, let’s start using `rand`. The next step is to update src/main.rs.
 
 ```rust
-
-use std::io;
-use rand::Rng;
-
-fn main() {
-    println!("Guess the number!");
-
-    let secret_number = rand::thread_rng().gen_range(1, 101);
-
-    println!("The secret number is: {}", secret_number);
-
-    println!("Please input your guess.");
-
-    let mut guess = String::new();
-
-    io::stdin().read_line(&mut guess)
-        .expect("Failed to read line");
-
-    println!("You guessed: {}", guess);
-}
+rand::thread_rng().gen_range(1, 101);
 ```
 
-##### Listing 2-3: Adding code to generate a random number
+##### A code to generate a random number from 1 to 100
 
-First, we add a `use` line: `use rand::Rng`. The `Rng` trait defines methods that random number generators implement, and this trait must be in scope for us to use those methods.
+Also, we need to add a `use` line: `use rand::Rng`. The `Rng` trait defines methods that random number generators implement, and this trait must be in scope for us to use those methods.
 
-Next, we’re adding two lines in the middle. The `rand::thread_rng` function will give us the particular random number generator that we’re going to use: one that is local to the current thread of execution and seeded by the operating system. Then we call the `gen_range` method on the random number generator. This method is defined by the `Rng` trait that we brought into scope with the `use rand::Rng` statement. The gen_range method takes two numbers as arguments and generates a random number between them. It’s inclusive on the lower bound but exclusive on the upper bound, so we need to specify `1` and `101` to request a number between 1 and 100.
+The `rand::thread_rng` function will give us the particular random number generator that we’re going to use: one that is local to the current thread of execution and seeded by the operating system. Then we call the `gen_range` method on the random number generator. This method is defined by the `Rng` trait that we brought into scope with the `use rand::Rng` statement. The gen_range method takes two numbers as arguments and generates a random number between them. It’s inclusive on the lower bound but exclusive on the upper bound, so we need to specify `1` and `101` to request a number between 1 and 100. Let's store the number generated in a variable and print it after with a message: "The secret number is:&#160;".
 
-  > Note: You won’t just know which traits to use and which methods and functions to call from a crate. Instructions for using a crate are in each crate’s documentation. Another neat feature of Cargo is that you can run the cargo doc --open command, which will build documentation provided by all of your dependencies locally and open it in your browser. If you’re interested in other functionality in the rand crate, for example, run cargo doc --open and click rand in the sidebar on the left.
+  > Note: You won’t just know which traits to use and which methods and functions to call from a crate. Instructions for using a crate are in each crate’s documentation. Another neat feature of Cargo is that you can run the cargo doc --open command, which will build documentation provided by all of your dependencies locally and open it in your browser. If you’re interested in other functionality in the rand crate, for example, run cargo doc --open and click rand in the sidebar on the left. You can also move your courser on a method or a field and press ctrl + q to fetch the documentation inside the editor. 
 
 The second line that we added to the middle of the code prints the secret number. This is useful while we’re developing the program to be able to test it, but we’ll delete it from the final version. It’s not much of a game if the program prints the answer as soon as it starts!
 
@@ -136,4 +117,4 @@ You guessed: 7
 
 You should get different random numbers, and they should all be numbers between 1 and 100. Great job!
 
-_You can refer to the following chapter in the Rust Programming Language Book:[Generating a Secret Number](https://doc.rust-lang.org/stable/book/ch02-00-guessing-game-tutorial.html#generating-a-secret-number)_
+_You can refer to the following chapter in the Rust Programming Language Book: [Generating a Secret Number](https://doc.rust-lang.org/stable/book/ch02-00-guessing-game-tutorial.html#generating-a-secret-number)_
