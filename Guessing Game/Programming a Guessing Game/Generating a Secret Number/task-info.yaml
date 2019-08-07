@@ -42,3 +42,5 @@ files:
       geneerated
 - name: Cargo.toml
   visible: true
+- name: tests/tests.rs
+  visible: false
