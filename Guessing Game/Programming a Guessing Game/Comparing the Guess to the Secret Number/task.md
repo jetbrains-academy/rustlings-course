@@ -1,4 +1,4 @@
-Now that we have user input and a random number, we can compare them. That step is shown in Listing 2-4. Note that this code won’t compile quite yet, as we will explain.
+Now that we have user input and a random number, we can compare them. Look at the example snippet below. Note that this code won’t compile in our program quite yet, as we will explain.
 
 ```rust
 use std::io;
@@ -9,27 +9,27 @@ fn main() {
 
     // ---snip---
 
-    println!("You guessed: {}", guess);
+    let mut number: i32 = 50;
 
-    match guess.cmp(&secret_number) {
+    match number.cmp(&secret_number) {
         Ordering::Less => println!("Too small!"),
         Ordering::Greater => println!("Too big!"),
-        Ordering::Equal => println!("You win!"),
+        Ordering::Equal => println!("Too equal!"),
     }
 }
 ```
 
-##### Listing 2-4: Handling the possible return values of comparing two numbers
+##### Example of handling the possible return values of comparing two numbers
 
 The first new bit here is another `use` statement, bringing a type called `std::cmp::Ordering` into scope from the standard library. Like `Result`, `Ordering` is another enum, but the variants for `Ordering` are `Less`, `Greater`, and `Equal`. These are the three outcomes that are possible when you compare two values.
 
-Then we add five new lines at the bottom that use the `Ordering` type. The `cmp` method compares two values and can be called on anything that can be compared. It takes a reference to whatever you want to compare with: here it’s comparing the `guess` to the `secret_number`. Then it returns a variant of the `Ordering` enum we brought into scope with the `use` statement. We use a `match` expression to decide what to do next based on which variant of `Ordering` was returned from the call to `cmp` with the values in `guess` and `secret_number`.
+Then we add five new lines at the bottom that use the `Ordering` type. The `cmp` method compares two values and can be called on anything that can be compared. It takes a reference to whatever you want to compare with: here it’s comparing the `number` to the `secret_number`. Then it returns a variant of the `Ordering` enum we brought into scope with the `use` statement. We use a `match` expression to decide what to do next based on which variant of `Ordering` was returned from the call to `cmp` with the values in `number` and `secret_number`.
 
 A `match` expression is made up of _arms_. An arm consists of a _pattern_ and the code that should be run if the value given to the beginning of the `match` expression fits that arm’s pattern. Rust takes the value given to `match` and looks through each arm’s pattern in turn. The `match` construct and patterns are powerful features in Rust that let you express a variety of situations your code might encounter and make sure that you handle them all. 
 
 Let’s walk through an example of what would happen with the `match` expression used here. Say that the user has guessed 50 and the randomly generated secret number this time is 38. When the code compares 50 to 38, the `cmp` method will return `Ordering::Greater`, because 50 is greater than 38. The `match` expression gets the `Ordering::Greater` value and starts checking each arm’s pattern. It looks at the first arm’s pattern, `Ordering::Less`, and sees that the value `Ordering::Greater` does not match `Ordering::Less`, so it ignores the code in that arm and moves to the next arm. The next arm’s pattern, `Ordering::Greater`, does match `Ordering::Greater`! The associated code in that arm will execute and print `Too big!` to the screen. The match expression ends because it has no need to look at the last arm in this scenario.
 
-However, the code in Listing 2-4 won’t compile yet. Let’s try it:
+However, if we try to insert the code from the example snippet to our program and change the `number` to the `guess`, it won’t compile yet. Let’s fill up the last placeholder and try to run it (Note: run, not check the task):
 
 ```text
 error[E0308]: mismatched types
@@ -50,29 +50,6 @@ error: Could not compile `processing_a_guess`
 The core of the error states that there are _mismatched types_. Rust has a strong, static type system. However, it also has type inference. When we wrote `let mut guess = String::new()`, Rust was able to infer that `guess` should be a `String` and didn’t make us write the type. The `secret_number`, on the other hand, is a number type. A few number types can have a value between 1 and 100: `i32`, a 32-bit number; `u32`, an unsigned 32-bit number; `i64`, a 64-bit number; as well as others. Rust defaults to an `i32`, which is the type of `secret_number` unless you add type information elsewhere that would cause Rust to infer a different numerical type. The reason for the error is that Rust cannot compare a string and a number type.
 
 Ultimately, we want to convert the `String` the program reads as input into a real number type so we can compare it numerically to the secret number. We can do that by adding the following two lines to the `main` function body:
-
-```rust
-// --snip--
-
-    let mut guess = String::new();
-
-    io::stdin().read_line(&mut guess)
-        .expect("Failed to read line");
-
-    let guess: u32 = guess.trim().parse()
-        .expect("Please type a number!");
-
-    println!("You guessed: {}", guess);
-
-    match guess.cmp(&secret_number) {
-        Ordering::Less => println!("Too small!"),
-        Ordering::Greater => println!("Too big!"),
-        Ordering::Equal => println!("You win!"),
-    }
-}
-```
-
-The two new lines are:
 
 ```rust
 let guess: u32 = guess.trim().parse()
@@ -102,7 +79,7 @@ Too big!
 
 Nice! Even though spaces were added before the guess, the program still figured out that the user guessed 76. Run the program a few times to verify the different behavior with different kinds of input: guess the number correctly, guess a number that is too high, and guess a number that is too low.
 
-We have most of the game working now, but the user can make only one guess. Let’s change that by adding a loop!
+We have most of the game working now, but the user can make only one guess. Let’s change that by adding a loop in the next task!
 
 _You can refer to the following chapter in the Rust Programming Language Book:
 [Generating a Secret Number](https://doc.rust-lang.org/stable/book/ch02-00-guessing-game-tutorial.html#generating-a-secret-number)_
