@@ -74,59 +74,72 @@ fn prints_intro_text_and_returns_a_number5() {
 #[test]
 fn generates_different_random_numbers() {
     //Arrange
-    //TODO: here are even two unwraps in a row, that's dangerous
-    let actual_command = escargot::CargoBuild::new()
-        .bin("processing_a_guess_3")
-        .run()
-        .unwrap()
-        .command()
-        .stdin(Stdio::piped())
-        .stdout(Stdio::piped())
-        .spawn();
 
-    let actual = match actual_command {
-        //TODO: Change the message
-        Err(why) => panic!("couldn't start main.rs: {}", why),
-        Ok(process) => process,
-    };
+    let mut secret_numbers :Vec<i32> = Vec::new();
 
-    //Act
-    match actual.stdin.unwrap().write_all("5".as_bytes()) {
-        //TODO: process this message, it would be uninformative for the student
-        Err(why) => panic!("couldn't write to stdin: {}",
-                           why),
-        Ok(_) => {},
+    for i in 0..5  {
+        //TODO: here are even two unwraps in a row, that's dangerous
+        let actual_command = escargot::CargoBuild::new()
+            .bin("processing_a_guess_3")
+            .run()
+            .unwrap()
+            .command()
+            .stdin(Stdio::piped())
+            .stdout(Stdio::piped())
+            .spawn();
+
+        let actual = match actual_command {
+            //TODO: Change the message
+            Err(why) => panic!("couldn't start main.rs: {}", why),
+            Ok(process) => process,
+        };
+
+        //Act
+        match actual.stdin.unwrap().write_all("5".as_bytes()) {
+            //TODO: process this message, it would be uninformative for the student
+            Err(why) => panic!("couldn't write to stdin: {}",
+                               why),
+            Ok(_) => {},
+        }
+
+        let mut actual_output = String::new();
+        match actual.stdout.unwrap().read_to_string(&mut actual_output) {
+            //TODO: process this message, it would be uninformative for the student
+            Err(why) => panic!("couldn't read stdout: {}",
+                               why),
+            Ok(_) => {},
+        }
+        //TODO: recover from an incorrect output
+        let actual_as_string_ptr = &actual_output;
+        let expected_secret_number_message = "The secret number is:";
+
+        //let mut secret_number_line_begins: usize =  actual_as_str_ptr.rfind(expected_secret_number_message).;
+
+        let index: usize = match  actual_as_string_ptr.rfind(expected_secret_number_message) {
+            Some(number) => number,
+            None => {panic!("Could not find the secret number")}
+        };
+        std::panic::set_hook(Box::new(|panic_info|
+            report_students_error(panic_info)
+        ));
+
+        //TODO: get rid of yet another magic numbers and unwraps - 21 is the distance from the start of "The secret number is:" to its end,
+        // 25 is the number after the message and possibly whitespaces or new line symbol, which are supposed to be removed by trim()
+        let actual_secret_number: i32 = match actual_as_string_ptr.get(index+21..index+25).unwrap().trim().parse() {
+            Ok(number) => number,
+            Err(err) => actual_as_string_ptr.get(index+21..index+24).unwrap().trim().parse().unwrap()
+        };
+        secret_numbers.push(actual_secret_number);
     }
 
-    let mut actual_output = String::new();
-    match actual.stdout.unwrap().read_to_string(&mut actual_output) {
-        //TODO: process this message, it would be uninformative for the student
-        Err(why) => panic!("couldn't read stdout: {}",
-                           why),
-        Ok(_) => {},
-    }
-    //TODO: recover from an incorrect output
-    let actual_as_string = &actual_output;
-    let expected_intro = "Guess the number!";
-    let expected_secret_number_message = "The secret number is:";
-    let expected_guess_request = "Please input your guess";
-    let expected_guess_response = "You guessed: 5";
-    std::panic::set_hook(Box::new(|panic_info|
-        report_students_error(panic_info)
-    ));
-
-//    let actual_secret_number: i32 = match actual_as_string.find(expected_secret_number_message) {
-//        Some(number) => {
-//             actual_as_string.get(number..number+3).unwrap().parse().unwrap()
-//        }
-//        None => {panic!("Secret number not found in the output.")}
-//    };
-
+    let mut one_of_the_secret_numbers = secret_numbers.pop();
+    secret_numbers.retain(|&x| Some(x) == one_of_the_secret_numbers);
+    let mut another_one_of_the_secret_numbers = secret_numbers.pop();
+    secret_numbers.retain(|&x| Some(x) == another_one_of_the_secret_numbers);
     //Assert
-    match actual_as_string.as_str().rfind(expected_secret_number_message) {
-        Some(number) => assert_eq!(number, 2),
-        None => panic!("NO")
-    };
+    //It is supposed to be assert instead of assert_eq, as the student do not need compared outputs, they are uninformative
+    assert!(secret_numbers.pop() == None, "Generated sequence of the secret numbers contained 3 or more equal ones. \
+    Check out your secret number generation code, and try rerunning the check.");
 
     //Teardown
     std::panic::take_hook();
