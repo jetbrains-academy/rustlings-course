@@ -4,8 +4,8 @@ files:
   visible: true
   placeholders:
   - offset: 30
-    length: 73
-    placeholder_text: //The code should be entered in the previous task
+    length: 30
+    placeholder_text: //The code should be entered in a previous task
     dependency:
       section: Guessing Game
       lesson: Programming a Guessing Game
@@ -17,6 +17,16 @@ files:
     length: 150
     placeholder_text: //put your code here to read the input, store it as a variable
       and print it back to user
+  - offset: 66
+    length: 37
+    placeholder_text: //The code should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Programming a Guessing Game
+      file: src/main.rs
+      placeholder: 2
+      is_visible: false
 - name: Cargo.toml
   visible: true
 - name: tests/tests.rs
