@@ -64,6 +64,8 @@ The `parse` [method on strings](https://doc.rust-lang.org/stable/std/primitive.s
 
 The call to `parse` could easily cause an error. If, for example, the string contained `A★%`, there would be no way to convert that to a number. Because it might fail, the `parse` method returns a `Result` type, much as the `read_line` method does (discussed earlier in [“Handling Potential Failure with the Result Type”](https://doc.rust-lang.org/stable/book/ch02-00-guessing-game-tutorial.html#handling-potential-failure-with-the-result-type)). We’ll treat this `Result` the same way by using the `expect` method again. If `parse` returns an `Err` `Result` variant because it couldn’t create a number from the string, the `expect` call will crash the game and print the message we give it. If `parse` can successfully convert the string to a number, it will return the `Ok` variant of `Result`, and `expect` will return the number that we want from the `Ok` value.
 
+Also, we probably should change the output for the correct guess to, "You win!" to congratulate the user.
+
 Let’s run the program now!
 
 ```text
