@@ -16,6 +16,10 @@ files:
   - offset: 81
     length: 57
     placeholder_text: //Type here the code to generate a random number from 1 to 100
+  - offset: 144
+    length: 52
+    placeholder_text: //Type here the code to print the message about the random number
+      geneerated
   - offset: 202
     length: 37
     placeholder_text: //The code should be completed in a previous task
@@ -27,7 +31,7 @@ files:
       placeholder: 2
       is_visible: false
   - offset: 245
-    length: 150
+    length: 109
     placeholder_text: //the code should be completed in a previous stage
     dependency:
       section: Guessing Game
@@ -36,10 +40,16 @@ files:
       file: src/main.rs
       placeholder: 3
       is_visible: false
-  - offset: 144
-    length: 52
-    placeholder_text: //Type here the code to print the message about the random number
-      geneerated
+  - offset: 360
+    length: 35
+    placeholder_text: //the code should be completed in a previous stage
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Storing Values with Variables
+      file: src/main.rs
+      placeholder: 4
+      is_visible: false
 - name: Cargo.toml
   visible: true
 - name: tests/tests.rs

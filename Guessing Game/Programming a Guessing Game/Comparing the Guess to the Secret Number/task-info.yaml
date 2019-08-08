@@ -3,14 +3,71 @@ files:
 - name: src/main.rs
   visible: true
   placeholders:
-  - offset: 0
-    length: 701
-    placeholder_text: Put your code here to launch it
+  - offset: 69
+    length: 30
+    placeholder_text: //the code should be completed in a previous task
     dependency:
+      section: Guessing Game
       lesson: Programming a Guessing Game
       task: Generating a Secret Number
       file: src/main.rs
       placeholder: 1
       is_visible: false
+  - offset: 105
+    length: 57
+    placeholder_text: //the code should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Generating a Secret Number
+      file: src/main.rs
+      placeholder: 2
+      is_visible: false
+  - offset: 168
+    length: 52
+    placeholder_text: //the code should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Generating a Secret Number
+      file: src/main.rs
+      placeholder: 3
+      is_visible: false
+  - offset: 226
+    length: 37
+    placeholder_text: //the code should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Generating a Secret Number
+      file: src/main.rs
+      placeholder: 4
+      is_visible: false
+  - offset: 269
+    length: 109
+    placeholder_text: //the code should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Generating a Secret Number
+      file: src/main.rs
+      placeholder: 5
+      is_visible: false
+  - offset: 384
+    length: 79
+    placeholder_text: //fill in the code to parse the input into an integer
+  - offset: 469
+    length: 35
+    placeholder_text: //the code should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Generating a Secret Number
+      file: src/main.rs
+      placeholder: 6
+      is_visible: false
+  - offset: 510
+    length: 189
+    placeholder_text: //fill in the code to match the guess with the secret number
 - name: Cargo.toml
   visible: true

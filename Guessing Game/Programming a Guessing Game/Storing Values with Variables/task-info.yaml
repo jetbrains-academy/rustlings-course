@@ -13,10 +13,6 @@ files:
       file: src/main.rs
       placeholder: 1
       is_visible: false
-  - offset: 109
-    length: 150
-    placeholder_text: //put your code here to read the input, store it as a variable
-      and print it back to user
   - offset: 66
     length: 37
     placeholder_text: //The code should be completed in a previous task
@@ -27,6 +23,12 @@ files:
       file: src/main.rs
       placeholder: 2
       is_visible: false
+  - offset: 109
+    length: 109
+    placeholder_text: //put your code here to read the input and store it as a variable
+  - offset: 224
+    length: 35
+    placeholder_text: //print the input back to user with an appropriate message
 - name: Cargo.toml
   visible: true
 - name: tests/tests.rs
