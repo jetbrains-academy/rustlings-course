@@ -49,17 +49,10 @@ Typing `quit` actually quits the game, but so will any other non-number input. H
 Let’s program the game to quit when the user wins by adding a `break` statement:
 
 ```rust
-// --snip--
-
-        match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too small!"),
-            Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => {
-                println!("You win!");
-                break;
-            }
-        }
-    }
+// --snip--        
+Ordering::Equal => {
+    println!("You win!");
+    break;
 }
 ```
 
@@ -85,7 +78,7 @@ println!("You guessed: {}", guess);
 // --snip--
 ```
 
-##### Listing 2-5: Ignoring a non-number guess and asking for another guess instead of crashing the program
+##### Example of ignoring a non-number guess and asking for another guess instead of crashing the program
 
 Switching from an `expect` call to a `match` expression is how you generally move from crashing on an error to handling the error. Remember that `parse` returns a `Result` type and `Result` is an enum that has the variants `Ok` or `Err`. We’re using a `match` expression here, as we did with the `Ordering` result of the `cmp` method.
 
@@ -116,46 +109,8 @@ You win!
 Process finished with exit code 0
 ```
 
-Awesome! With one tiny final tweak, we will finish the guessing game. Recall that the program is still printing the secret number. That worked well for testing, but it ruins the game. Let’s delete the println! that outputs the secret number. Listing 2-6 shows the final code.
+Awesome! With one tiny final tweak, we will finish the guessing game. Recall that the program is still printing the secret number. That worked well for testing, but it ruins the game. Let’s delete the println! that outputs the secret number.
 
-```rust
-use std::io;
-use std::cmp::Ordering;
-use rand::Rng;
-
-fn main() {
-    println!("Guess the number!");
-
-    let secret_number = rand::thread_rng().gen_range(1, 101);
-
-    loop {
-        println!("Please input your guess.");
-
-        let mut guess = String::new();
-
-        io::stdin().read_line(&mut guess)
-            .expect("Failed to read line");
-
-        let guess: u32 = match guess.trim().parse() {
-            Ok(num) => num,
-            Err(_) => continue,
-        };
-
-        println!("You guessed: {}", guess);
-
-        match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too small!"),
-            Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => {
-                println!("You win!");
-                break;
-            }
-        }
-    }
-}
-```
-
-##### Listing 2-6: Complete guessing game code
 
 ### Summary
 
