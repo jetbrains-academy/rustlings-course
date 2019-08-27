@@ -71,3 +71,5 @@ files:
     placeholder_text: //fill in the code to match the guess with the secret number
 - name: Cargo.toml
   visible: true
+- name: tests/tests.rs
+  visible: false
