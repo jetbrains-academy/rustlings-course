@@ -3,14 +3,110 @@ files:
 - name: src/main.rs
   visible: true
   placeholders:
-  - offset: 0
-    length: 796
-    placeholder_text: Put your code here to launch it
+  - offset: 69
+    length: 30
+    placeholder_text: //this should be completed in a previous task
     dependency:
+      section: Guessing Game
       lesson: Programming a Guessing Game
       task: Comparing the Guess to the Secret Number
       file: src/main.rs
       placeholder: 1
       is_visible: false
+  - offset: 105
+    length: 57
+    placeholder_text: //this should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Comparing the Guess to the Secret Number
+      file: src/main.rs
+      placeholder: 2
+      is_visible: false
+  - offset: 168
+    length: 6
+    placeholder_text: //you should start the loop here
+  - offset: 183
+    length: 37
+    placeholder_text: //this should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Comparing the Guess to the Secret Number
+      file: src/main.rs
+      placeholder: 4
+      is_visible: false
+  - offset: 230
+    length: 117
+    placeholder_text: //this should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Comparing the Guess to the Secret Number
+      file: src/main.rs
+      placeholder: 5
+      is_visible: false
+  - offset: 483
+    length: 35
+    placeholder_text: //this should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Comparing the Guess to the Secret Number
+      file: src/main.rs
+      placeholder: 7
+      is_visible: false
+  - offset: 528
+    length: 33
+    placeholder_text: //this should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Comparing the Guess to the Secret Number
+      file: src/main.rs
+      placeholder: 8
+      is_visible: false
+  - offset: 574
+    length: 41
+    placeholder_text: //this should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Comparing the Guess to the Secret Number
+      file: src/main.rs
+      placeholder: 9
+      is_visible: false
+  - offset: 628
+    length: 42
+    placeholder_text: //this should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Comparing the Guess to the Secret Number
+      file: src/main.rs
+      placeholder: 10
+      is_visible: false
+  - offset: 683
+    length: 95
+    placeholder_text: //complete the Equal arm here - it should print the win-message
+      and break the loop
+  - offset: 787
+    length: 1
+    placeholder_text: //this should be completed in a previous task
+    dependency:
+      section: Guessing Game
+      lesson: Programming a Guessing Game
+      task: Comparing the Guess to the Secret Number
+      file: src/main.rs
+      placeholder: 12
+      is_visible: false
+  - offset: 793
+    length: 1
+    placeholder_text: //you should close the loop here
+  - offset: 357
+    length: 116
+    placeholder_text: //you should parse the guess here and match if it is a number
 - name: Cargo.toml
   visible: true
+- name: tests/tests.rs
+  visible: false

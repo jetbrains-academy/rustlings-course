@@ -67,8 +67,21 @@ files:
       placeholder: 6
       is_visible: false
   - offset: 510
-    length: 189
-    placeholder_text: //fill in the code to match the guess with the secret number
+    length: 33
+    placeholder_text: //start the match expression here to compare the guess variable
+      with the secret number
+  - offset: 552
+    length: 41
+    placeholder_text: //put the Less arm here
+  - offset: 602
+    length: 42
+    placeholder_text: //put the Greater arm here
+  - offset: 653
+    length: 40
+    placeholder_text: //put the Equal arm here
+  - offset: 698
+    length: 1
+    placeholder_text: //don't forget to close the match expression
 - name: Cargo.toml
   visible: true
 - name: tests/tests.rs
