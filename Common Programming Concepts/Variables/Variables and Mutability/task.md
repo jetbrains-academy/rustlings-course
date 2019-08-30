@@ -4,7 +4,7 @@ Let's talk about simple variables.
 
 In Rust, by default variables are immutable. This is one of many nudges Rust gives you to write your code in a way that takes advantage of the safety and easy concurrency that Rust offers. However, you still have the option to make your variables mutable. Let’s explore how and why Rust encourages you to favor immutability and why sometimes you might want to opt out.
 
-When a variable is immutable, once a value is bound to a name, you can’t change that value. To illustrate this, let’s modify the main.rs file by replacing its code with the following code that won’t compile just yet:
+When a variable is immutable, once a value is bound to a name, you can’t change that value. Take a look at the main.rs file, its code won’t compile just yet:
 
 ```rust
 fn main() {
@@ -14,6 +14,7 @@ fn main() {
        println!("The value of x is: {}", x);
    }
 ```
+
 
 Run the program by clicking **Run** button.
 
