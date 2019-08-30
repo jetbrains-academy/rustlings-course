@@ -7,4 +7,4 @@ files:
   placeholders:
   - offset: 16
     length: 3
-    placeholder_text: TODO
+    placeholder_text: '//TODO:'
