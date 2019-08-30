@@ -2,7 +2,7 @@ extern crate escargot;
 
 use std::panic::{PanicInfo};
 use std::{fmt, ptr};
-use std::io::{BufWriter, Write, Read, BufReader};
+use std::io::{BufWriter, Write, Read, BufReader, LineWriter, BufRead};
 use std::process::Stdio;
 use std::borrow::{Borrow, BorrowMut};
 
@@ -17,12 +17,13 @@ fn report_students_error(info: &std::panic::PanicInfo) {
     }
 }
 
+
 #[test]
-fn prints_intro_text_and_returns_a_number5() {
+fn returns_correct_responses_while_iterating_up_from_0() {
     //Arrange
     //TODO: here are even two unwraps in a row, that's dangerous
     let actual_command = escargot::CargoBuild::new()
-        .bin("processing_a_guess_4")
+        .bin("processing_a_guess_5")
         .run()
         .unwrap()
         .command()
@@ -30,212 +31,71 @@ fn prints_intro_text_and_returns_a_number5() {
         .stdout(Stdio::piped())
         .spawn();
 
-    let actual = match actual_command {
+    let mut actual = match actual_command {
         //TODO: Change the message
         Err(why) => panic!("couldn't start main.rs: {}", why),
         Ok(process) => process,
     };
 
     //Act
-    match actual.stdin.unwrap().write_all("5".as_bytes()) {
-        //TODO: process this message, it would be uninformative for the student
-        Err(why) => panic!("couldn't write to stdin: {}",
-                           why),
-        Ok(_) => {},
-    }
-
-    let mut actual_output = String::new();
-    match actual.stdout.unwrap().read_to_string(&mut actual_output) {
-        //TODO: process this message, it would be uninformative for the student
-        Err(why) => panic!("couldn't read stdout: {}",
-                           why),
-        Ok(_) => {},
-    }
-    //TODO: recover from an incorrect output
-    let actual_as_string = &actual_output;
-    let expected_intro = "Guess the number!";
-    let expected_secret_number_message = "The secret number is:";
-    let expected_guess_request = "Please input your guess";
-    let expected_guess_response = "You guessed: 5";
-    let expected_one_of_too_big = "Too big!";
-    let expected_one_of_too_small = "Too small!";
-    let expected_one_of_you_win = "You win!";
+    //Creating the buffers
+    let mut actual_stdout = BufReader::new(actual.stdout.unwrap());
+    let mut actual_stdin = LineWriter::new(actual.stdin.unwrap());
     std::panic::set_hook(Box::new(|panic_info|
         report_students_error(panic_info)
     ));
 
-    //Assert
-    assert!(actual_as_string.contains(expected_intro), "The game introduction line is missing");
-    assert!(actual_as_string.contains(expected_secret_number_message), "The message about the secret number generated is missing");
-    assert!(actual_as_string.contains(expected_guess_request), "The request for a user to enter a guess is missing");
-    assert!(actual_as_string.contains(expected_guess_response), "The line returning the guess is missing, or the guess returned does not match the guess entered.");
-    assert!(actual_as_string.contains(expected_one_of_too_big) || actual_as_string.contains(expected_one_of_too_small) || actual_as_string.contains(expected_one_of_you_win), "You should provide the outcome of the comparison back to the user.");
+    //Reading "Guess the number!"
+    actual_stdout.read_line(&mut String::new());
 
-    //Teardown
-    std::panic::take_hook();
-}
+    let mut guess_counter = 1;
+    loop {
+        let mut actual_response_before_guess = String::new();
+        let mut you_guessed_string = String::new();
+        let mut actual_response_before_win = String::new();
 
-#[test]
-fn generates_different_random_numbers() {
-    //Arrange
+        let mut guess = format!{"{}\n", guess_counter};
 
-    let mut secret_numbers :Vec<i32> = Vec::new();
-
-    for i in 0..5  {
-        //TODO: here are even two unwraps in a row, that's dangerous
-        let actual_command = escargot::CargoBuild::new()
-            .bin("processing_a_guess_4")
-            .run()
-            .unwrap()
-            .command()
-            .stdin(Stdio::piped())
-            .stdout(Stdio::piped())
-            .spawn();
-
-        let actual = match actual_command {
-            //TODO: Change the message
-            Err(why) => panic!("couldn't start main.rs: {}", why),
-            Ok(process) => process,
-        };
-
-        //Act
-        match actual.stdin.unwrap().write_all("5".as_bytes()) {
-            //TODO: process this message, it would be uninformative for the student
-            Err(why) => panic!("couldn't write to stdin: {}",
-                               why),
-            Ok(_) => {},
+        //Reading Please input your guess
+        //TODO: check the message
+        actual_stdout.read_line(&mut actual_response_before_guess);
+        //Writing a guess
+        actual_stdin.write((&(guess)).as_bytes()).unwrap();
+        //Reading You guessed: guess
+        //TODO: check the message
+        actual_stdout.read_line(&mut you_guessed_string);
+        //Reading the comparison result
+        actual_stdout.read_line(&mut actual_response_before_win);
+        //Breaking the loop on you win
+        if actual_response_before_win.contains("You win!\n") {
+            //Checking we are still in range 1..100
+            assert!(guess_counter < 101, "Could not win in 100 guesses");
+            break;
         }
-
-        let mut actual_output = String::new();
-        match actual.stdout.unwrap().read_to_string(&mut actual_output) {
-            //TODO: process this message, it would be uninformative for the student
-            Err(why) => panic!("couldn't read stdout: {}",
-                               why),
-            Ok(_) => {},
+        else {
+            //Checking we are still in range 1..100
+            assert!(guess_counter < 101, "Could not win in 100 guesses");
+            //Checking that the guess is not too big
+            assert_ne!(actual_response_before_win, "Too big!\n", "There was a \"Too big!\"\
+            message for a guess smaller than the secret number");
+            //Checking that the guess is too small
+            assert_eq!(actual_response_before_win, "Too small!\n", "There was no \
+                                \"Too small!\" response for a guess smaller than the secret number ");
         }
-        //TODO: recover from an incorrect output
-        let actual_as_string_ptr = &actual_output;
-        let expected_secret_number_message = "The secret number is:";
+        guess_counter += 1;
 
-        //let mut secret_number_line_begins: usize =  actual_as_str_ptr.rfind(expected_secret_number_message).;
-
-        let index: usize = match  actual_as_string_ptr.rfind(expected_secret_number_message) {
-            Some(number) => number,
-            None => {panic!("Could not find the secret number")}
-        };
-        std::panic::set_hook(Box::new(|panic_info|
-            report_students_error(panic_info)
-        ));
-
-        //TODO: get rid of yet another magic numbers and unwraps - 21 is the distance from the start of "The secret number is:" to its end,
-        // 25 is the number after the message and possibly whitespaces or new line symbol, which are supposed to be removed by trim()
-        let actual_secret_number: i32 = match actual_as_string_ptr.get(index+21..index+25).unwrap().trim().parse() {
-            Ok(number) => number,
-            Err(err) => actual_as_string_ptr.get(index+21..index+24).unwrap().trim().parse().unwrap()
-        };
-        secret_numbers.push(actual_secret_number);
     }
-
-    let mut one_of_the_secret_numbers = secret_numbers.pop();
-    secret_numbers.retain(|&x| Some(x) == one_of_the_secret_numbers);
-    let mut another_one_of_the_secret_numbers = secret_numbers.pop();
-    secret_numbers.retain(|&x| Some(x) == another_one_of_the_secret_numbers);
-    //Assert
-    //It is supposed to be assert instead of assert_eq, as the student do not need compared outputs, they are uninformative
-    assert!(secret_numbers.pop() == None, "Generated sequence of the secret numbers contained 3 or more equal ones. \
-    Check out your secret number generation code, and try rerunning the check.");
 
     //Teardown
     std::panic::take_hook();
 }
 
 #[test]
-fn prints_error_if_failed_to_read_input() {
-    //TODO: here are even two unwraps in a row, that's dangerous
-    let actual_command = escargot::CargoBuild::new()
-        .bin("processing_a_guess_4")
-        .run()
-        .unwrap()
-        .command()
-        .stdin(Stdio::piped())
-        .stderr(Stdio::piped())
-        .spawn();
-
-    let actual = match actual_command {
-        //TODO: Change the message
-        Err(why) => panic!("couldn't start main.rs: {}", why),
-        Ok(process) => process,
-    };
-
-    let zero_bytes : &[u8] =  &[0xAC];
-    match actual.stdin.unwrap().write_all(zero_bytes) {
-        //TODO: process this message, it would be uninformative for the student
-        Err(why) => panic!("couldn't write to stdin: {}",
-                           why),
-        Ok(_) => {},
-    }
-    let mut actual_error = String::new();
-    match actual.stderr.unwrap().read_to_string(&mut actual_error) {
-        //TODO: process this message, it would be uninformative for the student
-        Err(why) => panic!("couldn't read stderr: {}",
-                           why),
-        Ok(_) => {},
-    }
-    //TODO: recover from an incorrect error
-    let expected  = "Failed to read line";
-    std::panic::set_hook(Box::new(|panic_info|
-        report_students_error(panic_info)
-    ));
-    assert!(actual_error.contains(expected), "The output in case of an absent input was incorrect.\n The program should return \"Failed to read line\".");
-    std::panic::take_hook();
-}
-
-#[test]
-fn prints_error_if_input_is_nan() {
-    //TODO: here are even two unwraps in a row, that's dangerous
-    let actual_command = escargot::CargoBuild::new()
-        .bin("processing_a_guess_4")
-        .run()
-        .unwrap()
-        .command()
-        .stdin(Stdio::piped())
-        .stderr(Stdio::piped())
-        .spawn();
-
-    let actual = match actual_command {
-        //TODO: Change the message
-        Err(why) => panic!("couldn't start main.rs: {}", why),
-        Ok(process) => process,
-    };
-
-    match actual.stdin.unwrap().write_all("A".as_bytes()) {
-        //TODO: process this message, it would be uninformative for the student
-        Err(why) => panic!("couldn't write to stdin: {}",
-                           why),
-        Ok(_) => {},
-    }
-    let mut actual_error = String::new();
-    match actual.stderr.unwrap().read_to_string(&mut actual_error) {
-        //TODO: process this message, it would be uninformative for the student
-        Err(why) => panic!("couldn't read stderr: {}",
-                           why),
-        Ok(_) => {},
-    }
-    //TODO: recover from an incorrect error
-    let expected  = "Please type a number!";
-    std::panic::set_hook(Box::new(|panic_info|
-        report_students_error(panic_info)
-    ));
-    assert!(actual_error.contains(expected), "The output in case of a NaN input was incorrect.\n The program should return \"Please type a number!\".");
-    std::panic::take_hook();
-}
-
-#[test]
-fn provides_correct_to_big_response() {
+fn returns_correct_responses_while_iterating_down_from_100() {
     //Arrange
     //TODO: here are even two unwraps in a row, that's dangerous
     let actual_command = escargot::CargoBuild::new()
-        .bin("processing_a_guess_4")
+        .bin("processing_a_guess_5")
         .run()
         .unwrap()
         .command()
@@ -243,183 +103,58 @@ fn provides_correct_to_big_response() {
         .stdout(Stdio::piped())
         .spawn();
 
-    let actual = match actual_command {
+    let mut actual = match actual_command {
         //TODO: Change the message
         Err(why) => panic!("couldn't start main.rs: {}", why),
         Ok(process) => process,
     };
 
     //Act
-    let mut actual_output_before_guess = String::new();
-    let mut actual_stdout = actual.stdout.unwrap();
-    actual_stdout.borrow_mut().take(50).read_to_string(&mut actual_output_before_guess);
-    //TODO: recover from an incorrect output
-    let actual_as_string_ptr = &actual_output_before_guess;
-    let expected_secret_number_message = "The secret number is:";
-
-    //let mut secret_number_line_begins: usize =  actual_as_str_ptr.rfind(expected_secret_number_message).;
-
-    let index: usize = match  actual_as_string_ptr.rfind(expected_secret_number_message) {
-        Some(number) => number,
-        None => {panic!("Could not find the secret number")}
-    };
+    //Creating the buffers
+    let mut actual_stdout = BufReader::new(actual.stdout.unwrap());
+    let mut actual_stdin = LineWriter::new(actual.stdin.unwrap());
     std::panic::set_hook(Box::new(|panic_info|
         report_students_error(panic_info)
     ));
 
-    //TODO: get rid of yet another magic numbers and unwraps - 21 is the distance from the start of "The secret number is:" to its end,
-    // 25 is the number after the message and possibly whitespaces or new line symbol, which are supposed to be removed by trim()
-    let actual_secret_number: i32 = match actual_as_string_ptr.get(index+21..index+25).unwrap().trim().parse() {
-        Ok(number) => number,
-        Err(err) => actual_as_string_ptr.get(index+21..index+24).unwrap().trim().parse().unwrap()
-    };
+    //Reading "Guess the number!"
+    actual_stdout.read_line(&mut String::new());
 
-    let big_guess = actual_secret_number + 1;
+    let mut guess_counter = 100;
+    loop {
+        let mut actual_response_before_guess = String::new();
+        let mut you_guessed_string = String::new();
+        let mut actual_response_before_win = String::new();
 
-    match actual.stdin.unwrap().write_all((&(big_guess.to_string())).as_bytes()) {
-        //TODO: process this message, it would be uninformative for the student
-        Err(why) => panic!("couldn't write to stdin: {}",
-                           why),
-        Ok(_) => {},
+        let mut guess = format!{"{}\n", guess_counter};
+
+        //Reading Please input your guess
+        actual_stdout.read_line(&mut actual_response_before_guess);
+        //Writing a guess
+        actual_stdin.write((&(guess)).as_bytes()).unwrap();
+        //Reading You guessed: guess
+        actual_stdout.read_line(&mut you_guessed_string);
+        //Reading the comparison result
+        actual_stdout.read_line(&mut actual_response_before_win);
+        //Breaking the loop on you win
+        if actual_response_before_win.contains("You win!\n") {
+            //Checking we are still in range 1..100
+            assert!(guess_counter > 0, "Could not win in 100 guesses");
+            break;
+        }
+        else {
+            //Checking we are still in range 1..100
+            assert!(guess_counter > 0, "Could not win in 100 guesses");
+            //Checking that the guess is too small
+            assert_ne!(actual_response_before_win, "Too small!\n", "There was a \
+                                \"Too small!\" response for a guess bigger than the secret number ");
+            //Checking that the guess is not too big
+            assert_eq!(actual_response_before_win, "Too big!\n", "There was no \"Too big!\"\
+            message for a guess bigger than the secret number");
+        }
+        guess_counter -= 1;
+
     }
-
-    let mut actual_output_after_guess = String::new();
-    actual_stdout.read_to_string(&mut actual_output_after_guess);
-    //TODO: recover from an incorrect output
-
-    //Assert
-    //It is supposed to be assert instead of assert_eq, as the student do not need compared outputs, they are uninformative
-    assert!(actual_output_after_guess.contains("Too big!"), "Incorrect output for a guess bigger then the secret number - it should be \"Too big!\"");
-
-    //Teardown
-    std::panic::take_hook();
-}
-
-#[test]
-fn provides_correct_to_small_response() {
-    //Arrange
-    //TODO: here are even two unwraps in a row, that's dangerous
-    let actual_command = escargot::CargoBuild::new()
-        .bin("processing_a_guess_4")
-        .run()
-        .unwrap()
-        .command()
-        .stdin(Stdio::piped())
-        .stdout(Stdio::piped())
-        .spawn();
-
-    let actual = match actual_command {
-        //TODO: Change the message
-        Err(why) => panic!("couldn't start main.rs: {}", why),
-        Ok(process) => process,
-    };
-
-    //Act
-    let mut actual_output_before_guess = String::new();
-    let mut actual_stdout = actual.stdout.unwrap();
-    actual_stdout.borrow_mut().take(50).read_to_string(&mut actual_output_before_guess);
-    //TODO: recover from an incorrect output
-    let actual_as_string_ptr = &actual_output_before_guess;
-    let expected_secret_number_message = "The secret number is:";
-
-    //let mut secret_number_line_begins: usize =  actual_as_str_ptr.rfind(expected_secret_number_message).;
-
-    let index: usize = match  actual_as_string_ptr.rfind(expected_secret_number_message) {
-        Some(number) => number,
-        None => {panic!("Could not find the secret number")}
-    };
-    std::panic::set_hook(Box::new(|panic_info|
-        report_students_error(panic_info)
-    ));
-
-    //TODO: get rid of yet another magic numbers and unwraps - 21 is the distance from the start of "The secret number is:" to its end,
-    // 25 is the number after the message and possibly whitespaces or new line symbol, which are supposed to be removed by trim()
-    let actual_secret_number: i32 = match actual_as_string_ptr.get(index+21..index+25).unwrap().trim().parse() {
-        Ok(number) => number,
-        Err(err) => actual_as_string_ptr.get(index+21..index+24).unwrap().trim().parse().unwrap()
-    };
-
-    let small_guess = actual_secret_number - 1;
-
-    match actual.stdin.unwrap().write_all((&(small_guess.to_string())).as_bytes()) {
-        //TODO: process this message, it would be uninformative for the student
-        Err(why) => panic!("couldn't write to stdin: {}",
-                           why),
-        Ok(_) => {},
-    }
-
-    let mut actual_output_after_guess = String::new();
-    actual_stdout.read_to_string(&mut actual_output_after_guess);
-    //TODO: recover from an incorrect output
-
-    //Assert
-    //It is supposed to be assert instead of assert_eq, as the student do not need compared outputs, they are uninformative
-    assert!(actual_output_after_guess.contains("Too small!"), "Incorrect output for a guess samller then the secret number - it should be \"Too small!\"");
-
-    //Teardown
-    std::panic::take_hook();
-}
-
-#[test]
-fn provides_correct_to_equal_response() {
-    //Arrange
-    //TODO: here are even two unwraps in a row, that's dangerous
-    let actual_command = escargot::CargoBuild::new()
-        .bin("processing_a_guess_4")
-        .run()
-        .unwrap()
-        .command()
-        .stdin(Stdio::piped())
-        .stdout(Stdio::piped())
-        .spawn();
-
-    let actual = match actual_command {
-        //TODO: Change the message
-        Err(why) => panic!("couldn't start main.rs: {}", why),
-        Ok(process) => process,
-    };
-
-    //Act
-    let mut actual_output_before_guess = String::new();
-    let mut actual_stdout = actual.stdout.unwrap();
-    actual_stdout.borrow_mut().take(50).read_to_string(&mut actual_output_before_guess);
-    //TODO: recover from an incorrect output
-    let actual_as_string_ptr = &actual_output_before_guess;
-    let expected_secret_number_message = "The secret number is:";
-
-    //let mut secret_number_line_begins: usize =  actual_as_str_ptr.rfind(expected_secret_number_message).;
-
-    let index: usize = match  actual_as_string_ptr.rfind(expected_secret_number_message) {
-        Some(number) => number,
-        None => {panic!("Could not find the secret number")}
-    };
-    std::panic::set_hook(Box::new(|panic_info|
-        report_students_error(panic_info)
-    ));
-
-    //TODO: get rid of yet another magic numbers and unwraps - 21 is the distance from the start of "The secret number is:" to its end,
-    // 25 is the number after the message and possibly whitespaces or new line symbol, which are supposed to be removed by trim()
-    let actual_secret_number: i32 = match actual_as_string_ptr.get(index+21..index+25).unwrap().trim().parse() {
-        Ok(number) => number,
-        Err(err) => actual_as_string_ptr.get(index+21..index+24).unwrap().trim().parse().unwrap()
-    };
-
-    let equal_guess = actual_secret_number;
-
-    match actual.stdin.unwrap().write_all((&(equal_guess.to_string())).as_bytes()) {
-        //TODO: process this message, it would be uninformative for the student
-        Err(why) => panic!("couldn't write to stdin: {}",
-                           why),
-        Ok(_) => {},
-    }
-
-    let mut actual_output_after_guess = String::new();
-    actual_stdout.read_to_string(&mut actual_output_after_guess);
-    //TODO: recover from an incorrect output
-
-    //Assert
-    //It is supposed to be assert instead of assert_eq, as the student do not need compared outputs, they are uninformative
-    assert!(actual_output_after_guess.contains("You win!"), "Incorrect output for a guess equal to the secret number - it should be \"You win!\"");
 
     //Teardown
     std::panic::take_hook();

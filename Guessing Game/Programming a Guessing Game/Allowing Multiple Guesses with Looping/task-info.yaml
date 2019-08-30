@@ -46,6 +46,9 @@ files:
       file: src/main.rs
       placeholder: 5
       is_visible: false
+  - offset: 357
+    length: 116
+    placeholder_text: //you should parse the guess here and match if it is a number
   - offset: 483
     length: 35
     placeholder_text: //this should be completed in a previous task
@@ -103,9 +106,6 @@ files:
   - offset: 793
     length: 1
     placeholder_text: //you should close the loop here
-  - offset: 357
-    length: 116
-    placeholder_text: //you should parse the guess here and match if it is a number
 - name: Cargo.toml
   visible: true
 - name: tests/tests.rs
