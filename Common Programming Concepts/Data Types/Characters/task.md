@@ -1,4 +1,4 @@
-## Task 2
+## Characters
 
 Fill in the rest of the line that has code missing!
 
