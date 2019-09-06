@@ -1,4 +1,4 @@
-## Task 3
+## Arrays
 
 Create an array with at least 100 elements.
 

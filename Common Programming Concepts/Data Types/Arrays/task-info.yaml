@@ -6,5 +6,5 @@ files:
   visible: true
   placeholders:
   - offset: 24
-    length: 9
+    length: 51
     placeholder_text: type here
