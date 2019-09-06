@@ -1,4 +1,4 @@
 [package]
-name = "primitive_types1"
+name = "boolean"
 version = "0.1.0"
 edition = "2018"
