@@ -16,6 +16,7 @@ Here’s an example of a constant declaration where the constant’s name is MAX
 const MAX_POINTS: u32 = 100_000;
 ```
 
+
 Constants are valid for the entire time a program runs, within the scope they were declared in, making them a useful choice for values in your application domain that multiple parts of the program might need to know about, such as the maximum number of points any player of a game is allowed to earn or the speed of light.
 
 Naming hardcoded values used throughout your program as constants is useful in conveying the meaning of that value to future maintainers of the code. It also helps to have only one place in your code you would need to change if the hardcoded value needed to be updated in the future.
