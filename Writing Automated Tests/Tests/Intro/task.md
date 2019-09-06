@@ -29,6 +29,7 @@ Let's modify the _src/lib.rs_ file. Its content should look like Listing 11-1.
     }
 ```
 
+
 ##### Listing 11-1: The test module and function generated automatically by cargo new
 
 For now, let’s ignore the top two lines and focus on the function to see how it works. Note the `#[test]` annotation before the `fn` line: this attribute indicates this is a test function, so the test runner knows to treat this function as a test. We could also have non-test functions in the `tests` module to help set up common scenarios or perform common operations, so we need to indicate which functions are tests by using the `#[test]` attribute.
