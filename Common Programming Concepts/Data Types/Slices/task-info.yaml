@@ -6,5 +6,5 @@ files:
   visible: true
   placeholders:
   - offset: 63
-    length: 8
-    placeholder_text: TODO
+    length: 9
+    placeholder_text: //type the invocation of the slice here
