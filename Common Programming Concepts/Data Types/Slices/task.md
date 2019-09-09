@@ -1,4 +1,4 @@
-## Task 4
+## Arrays
 
 Get a slice out of Array so that the `if` statement returns `true`.
 
