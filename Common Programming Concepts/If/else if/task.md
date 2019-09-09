@@ -48,7 +48,7 @@ fn main() {
     println!("The value of number is: {}", number);
 }
 ```
-##### Listing 3-2: Assigning the result of an if expression to a variable
+##### Example of assigning the result of an if expression to a variable
 
 The `number` variable will be bound to a value based on the outcome of the `if` expression. Run this code to see what happens:
 
