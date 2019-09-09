@@ -30,7 +30,7 @@ Let's modify the _src/lib.rs_ file. Its content should look like Listing 11-1.
 ```
 
 
-##### Listing 11-1: The test module and function generated automatically by cargo new
+##### Example of a test module and a function generated automatically by cargo new
 
 For now, let’s ignore the top two lines and focus on the function to see how it works. Note the `#[test]` annotation before the `fn` line: this attribute indicates this is a test function, so the test runner knows to treat this function as a test. We could also have non-test functions in the `tests` module to help set up common scenarios or perform common operations, so we need to indicate which functions are tests by using the `#[test]` attribute.
 
@@ -51,7 +51,7 @@ test tests::it_works ... ok
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 ```
 
-##### Listing 11-2: The output from running the automatically generated test
+##### Example of an output from running the automatically generated test
 
 Cargo compiled and ran the test. After the `Compiling`, `Finished`, and `Running` lines is the line `running 1 test`. The next line shows the name of the generated test function, called `it_works`, and the result of running that test, `ok`. The overall summary of running the tests appears next. The text `test result: ok.` means that all the tests passed, and the portion that reads `1 passed; 0 failed` totals the number of tests that passed or failed.
 
@@ -103,7 +103,7 @@ Let’s add another test, but this time we’ll make a test that fails! Tests fa
     }
 ```
 
-##### Listing 11-3: Adding a second test that will fail because we call the panic! macro
+##### Example of how adding a second test that will fail because we call the panic! macro
 
 Run the tests again using `cargo test`. The output should look like Listing 11-4, which shows that our `exploration` test passed and `another` failed.
 ```text
@@ -118,7 +118,7 @@ test tests::another ... FAILED
 test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
 ```
 
-##### Listing 11-4: Test results when one test passes and one test fails
+##### Example of the test results when one test passes and one test fails
 
 Instead of `ok`, the line `test tests::another` shows `FAILED`. Two new sections appear between the individual results and the summary: the first section displays the detailed reason for each test failure. In this case, `another` failed because it `panicked at 'Make this test fail'`, which happened on line 10 in the _src/lib.rs_ file. The next section lists just the names of all the failing tests, which is useful when there are lots of tests and lots of detailed failing test output. We can use the name of a failing test to run just that test to more easily debug it; we’ll talk more about ways to run tests in the [“Controlling How Tests Are Run”](ch11-02-running-tests.html#controlling-how-tests-are-run) section.
 
@@ -146,7 +146,7 @@ In Chapter 5, Listing 5-15, we used a `Rectangle` struct and a `can_hold` method
     }
 ```
 
-##### Listing 11-5: Using the `Rectangle` struct and its `can_hold` method from Chapter 5
+##### Example of using the `Rectangle` struct and its `can_hold` method from Chapter Using Structs to Structure Related Data
 
 The `can_hold` method returns a Boolean, which means it’s a perfect use case for the `assert!` macro. In Listing 11-6, we write a test that exercises the `can_hold` method by creating a `Rectangle` instance that has a width of 8 and a height of 7 and asserting that it can hold another `Rectangle` instance that has a width of 5 and a height of 1.
 
@@ -165,7 +165,7 @@ The `can_hold` method returns a Boolean, which means it’s a perfect use case f
     }
 ```
 
-##### Listing 11-6: A test for `can_hold` that checks whether a larger rectangle can indeed hold a smaller rectangle
+##### Example of a test for `can_hold` that checks whether a larger rectangle can indeed hold a smaller rectangle
 
 Note that we’ve added a new line inside the `tests` module: `use super::*;`. The `tests` module is a regular module that follows the usual visibility rules we covered in Chapter 7 in the [“Modules as the Privacy Boundary”](ch07-02-defining-modules-to-control-scope-and-privacy.html) section. Because the `tests` module is an inner module, we need to bring the code under test in the outer module into the scope of the inner module. We use a glob here so anything we define in the outer module is available to this `tests` module.
 
@@ -273,7 +273,7 @@ In Listing 11-7, we write a function named `add_two` that adds `2` to its parame
     }
 ```
 
-##### Listing 11-7: Testing the function add_two using the assert_eq! macro
+##### Example of testing the function add_two using the assert_eq! macro
 
 Let’s check that it passes!
 
