@@ -7,4 +7,4 @@ files:
   placeholders:
   - offset: 30
     length: 12
-    placeholder_text: TODO
+    placeholder_text: //insert the function declaration here

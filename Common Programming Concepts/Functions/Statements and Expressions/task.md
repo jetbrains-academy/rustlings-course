@@ -11,7 +11,7 @@ fn main() {
     let y = 6;
 }
 ```
-##### Listing 3-1: A main function declaration containing one statement
+##### Example of a main function declaration containing one statement
 
 Function definitions are also statements; the entire preceding example is a statement in itself.
 
