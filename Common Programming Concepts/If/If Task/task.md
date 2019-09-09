@@ -1,4 +1,4 @@
-## Task 1
+## If Task
 
 Complete this function to return the bigger number!
 
