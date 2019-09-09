@@ -1,4 +1,4 @@
-##Test 1
+##Calculate Price
 
 This is a test for the following sections:
 - Variables
