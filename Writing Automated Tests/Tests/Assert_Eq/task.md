@@ -1,4 +1,4 @@
-## Task 2
+## assert_eq!
 
 This test has a problem with it -- make the test compile!
 Make the test pass!

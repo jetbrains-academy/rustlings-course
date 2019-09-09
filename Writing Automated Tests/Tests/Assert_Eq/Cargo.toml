@@ -1,4 +1,4 @@
 [package]
-name = "tests2"
+name = "assert_eq"
 version = "0.1.0"
 edition = "2018"

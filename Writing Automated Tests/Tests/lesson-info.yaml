@@ -1,6 +1,6 @@
 content:
 - Intro
 - Adding Custom Failure Messages
-- Tests 1
-- Tests 2
+- Assert
+- Assert_Eq
 - Tests 3
