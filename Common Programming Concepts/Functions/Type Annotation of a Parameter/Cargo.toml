@@ -1,4 +1,4 @@
 [package]
-name = "functions2"
+name = "type_annotation_of_a_parameter"
 version = "0.1.0"
 edition = "2018"
