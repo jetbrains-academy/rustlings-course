@@ -1,4 +1,4 @@
 [package]
-name = "functions3"
+name = "passing_an_argument"
 version = "0.1.0"
 edition = "2018"
