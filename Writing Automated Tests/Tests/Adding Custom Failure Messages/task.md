@@ -111,7 +111,7 @@ Listing 11-8 shows a test that checks that the error conditions of `Guess::new` 
     }
 ```
 
-###### Listing 11-8: Testing that a condition will cause a panic!
+###### Example of testing that a condition will cause a panic!
 
 We place the `#[should_panic]` attribute after the `#[test]` attribute and before the test function it applies to. Let’s look at the result when this test passes:
 
@@ -189,7 +189,7 @@ Tests that use `should_panic` can be imprecise because they only indicate that t
     }
 ```
 
-##### Listing 11-9: Testing that a condition will cause a panic! with a particular panic message
+##### Example of testing that a condition will cause a panic! with a particular panic message
 
 This test will pass because the value we put in the `should_panic` attribute’s `expected` parameter is a substring of the message that the `Guess::new` function panics with. We could have specified the entire panic message that we expect, which in this case would be `Guess value must be less than or equal to 100, got 200.` What you choose to specify in the expected parameter for `should_panic` depends on how much of the panic message is unique or dynamic and how precise you want your test to be. In this case, a substring of the panic message is enough to ensure that the code in the test function executes the `else if value > 100` case.
 
