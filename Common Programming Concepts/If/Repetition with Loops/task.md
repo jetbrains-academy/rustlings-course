@@ -64,7 +64,7 @@ fn main() {
     println!("LIFTOFF!!!");
 }
 ```
-##### Listing 3-3: Using a while loop to run code while a condition holds true
+##### Example of using a while loop to run code while a condition holds true
 
 This construct eliminates a lot of nesting that would be necessary if you used `loop`, `if`, `else`, and `break`, and it’s clearer. While a condition holds true, the code runs; otherwise, it exits the loop.
 
@@ -84,7 +84,7 @@ fn main() {
     }
 }
 ```
-##### Listing 3-4: Looping through each element of a collection using a while loop
+##### Example of looping through each element of a collection using a while loop
 
 Here, the code counts up through the elements in the array. It starts at index `0`, and then loops until it reaches the final index in the array (that is, when `index < 5` is no longer true). Running this code will print every element in the array:
 
@@ -115,7 +115,7 @@ fn main() {
     }
 }
 ```
-##### Listing 3-5: Looping through each element of a collection using a for loop
+##### Example ooping through each element of a collection using a for loop
 
 When we run this code, we’ll see the same output as in Listing 3-4. More importantly, we’ve now increased the safety of the code and eliminated the chance of bugs that might result from going beyond the end of the array or not going far enough and missing some items.
 
