@@ -7,4 +7,6 @@ files:
   placeholders:
   - offset: 81
     length: 9
-    placeholder_text: TODO
+    placeholder_text: /*Access the second element of the tuple here using tuple index*/
+- name: tests/tests.rs
+  visible: false

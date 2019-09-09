@@ -23,7 +23,7 @@ members = [
     "Common Programming Concepts/Data Types/Arrays",
     "Common Programming Concepts/Data Types/Slices",
     "Common Programming Concepts/Data Types/Tuples",
-    "Common Programming Concepts/Data Types/Primitive Types 6",
+    "Common Programming Concepts/Data Types/Tuple Index",
     "Common Programming Concepts/Functions/Intro",
     "Common Programming Concepts/Functions/Statements and Expressions",
     "Common Programming Concepts/Functions/Functions 1",
