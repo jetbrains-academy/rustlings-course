@@ -1,4 +1,4 @@
-## Test  2
+## Times Two Tests
 
 This is a test for the following sections:
 * Tests

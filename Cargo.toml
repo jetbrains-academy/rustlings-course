@@ -41,7 +41,7 @@ members = [
     "Writing Automated Tests/Tests/Assert",
     "Writing Automated Tests/Tests/Assert_Eq",
     "Writing Automated Tests/Tests/Testing Task",
-    "Writing Automated Tests/Test 2/Test 2",
+    "Writing Automated Tests/Tests Test/Times Two Tests",
     "Common Collections/Strings/Intro",
     "Common Collections/Strings/Strings 1",
     "Common Collections/Strings/Strings 2",

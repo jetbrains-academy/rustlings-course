@@ -7,7 +7,7 @@ files:
   placeholders:
   - offset: 184
     length: 2
-    placeholder_text: '?'
+    placeholder_text: /*insert the value we assume to get from the times_two function*/
   - offset: 261
     length: 30
-    placeholder_text: write an assert for `times_two(-4)`
+    placeholder_text: /*write an assert for `times_two(-4)`*/
