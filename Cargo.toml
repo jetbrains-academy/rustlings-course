@@ -43,7 +43,7 @@ members = [
     "Writing Automated Tests/Tests/Testing Task",
     "Writing Automated Tests/Tests Test/Times Two Tests",
     "Common Collections/Strings/Intro",
-    "Common Collections/Strings/Strings 1",
+    "Common Collections/Strings/Returning a String",
     "Common Collections/Strings/Strings 2",
     "Common Collections/Test 3/Test 3",
     "Modules & Macros/Modules/Intro",

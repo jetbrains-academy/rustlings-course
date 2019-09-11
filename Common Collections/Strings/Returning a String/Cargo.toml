@@ -1,4 +1,4 @@
 [package]
-name = "strings1"
+name = "returning_a_string"
 version = "0.1.0"
 edition = "2018"
