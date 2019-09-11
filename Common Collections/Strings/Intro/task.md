@@ -20,7 +20,7 @@ Many of the same operations available with `Vec<T>` are available with `String` 
     let mut s = String::new();
 ```
 
-##### Listing 8-11: Creating a new, empty String
+##### Example of creating a new, empty String
 
 This line creates a new empty string called `s`, which we can then load data into. Often, we’ll have some initial data that we want to start the string with. For that, we use the `to_string` method, which is available on any type that implements the `Display` trait, as string literals do. Listing 8-12 shows two examples.
 
@@ -33,7 +33,7 @@ This line creates a new empty string called `s`, which we can then load data int
     let s = "initial contents".to_string();
 ```
 
-##### Listing 8-12: Using the to_string method to create a String from a string literal
+##### Example of using the to_string method to create a String from a string literal
 
 This code creates a string containing `initial contents`.
 
@@ -43,7 +43,7 @@ We can also use the function `String::from` to create a `String` from a string l
     let s = String::from("initial contents");
 ```
 
-##### Listing 8-13: Using the String::from function to create a String from a string literal
+##### Example of using the String::from function to create a String from a string literal
 
 Because strings are used for so many things, we can use many different generic APIs for strings, providing us with a lot of options. Some of them can seem redundant, but they all have their place! In this case, `String::from` and `to_string` do the same thing, so which you choose is a matter of style.
 
@@ -63,7 +63,7 @@ Remember that strings are UTF-8 encoded, so we can include any properly encoded 
     let hello = String::from("Hola");
 ```
 
-##### Listing 8-14: Storing greetings in different languages in strings
+##### Example of storing greetings in different languages in strings
 
 All of these are valid `String` values.
 
@@ -80,7 +80,7 @@ We can grow a `String` by using the `push_str` method to append a string slice, 
     s.push_str("bar");
 ```
 
-##### Listing 8-15: Appending a string slice to a String using the push_str method
+##### Example of appending a string slice to a String using the push_str method
 
 After these two lines, `s` will contain `foobar`. The `push_str` method takes a string slice because we don’t necessarily want to take ownership of the parameter. For example, the code in Listing 8-16 shows that it would be unfortunate if we weren’t able to use `s2` after appending its contents to `s1`.
 
