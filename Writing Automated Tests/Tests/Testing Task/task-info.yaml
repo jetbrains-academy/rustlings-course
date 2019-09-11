@@ -5,6 +5,9 @@ files:
 - name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 140
-    length: 121
-    placeholder_text: TODO
+  - offset: 148
+    length: 20
+    placeholder_text: //insert the assertion here
+  - offset: 225
+    length: 30
+    placeholder_text: //insert the assertion here
