@@ -45,7 +45,7 @@ members = [
     "Common Collections/Strings/Intro",
     "Common Collections/Strings/Returning a String",
     "Common Collections/Strings/String Slice",
-    "Common Collections/Test 3/Test 3",
+    "Common Collections/String Test/Strings and &strs",
     "Modules & Macros/Modules/Intro",
     "Modules & Macros/Modules/Paths for Referring to an Item in the Module Tree",
     "Modules & Macros/Modules/Bringing Paths into Scope with the use Keyword",
