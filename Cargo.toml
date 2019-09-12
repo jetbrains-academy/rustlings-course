@@ -44,7 +44,7 @@ members = [
     "Writing Automated Tests/Tests Test/Times Two Tests",
     "Common Collections/Strings/Intro",
     "Common Collections/Strings/Returning a String",
-    "Common Collections/Strings/Strings 2",
+    "Common Collections/Strings/String Slice",
     "Common Collections/Test 3/Test 3",
     "Modules & Macros/Modules/Intro",
     "Modules & Macros/Modules/Paths for Referring to an Item in the Module Tree",

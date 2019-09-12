@@ -1,4 +1,4 @@
 [package]
-name = "strings2"
+name = "string_slice"
 version = "0.1.0"
 edition = "2018"
