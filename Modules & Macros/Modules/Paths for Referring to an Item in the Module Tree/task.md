@@ -84,9 +84,9 @@ Let’s return to the error in Listing 7-4 that told us the `hosting` module is 
     }
 ```
 
-##### Listing 7-5: Declaring the hosting module as pub to use it from eat_at_restaurant
+##### Declaring the hosting module as pub to use it from eat_at_restaurant
 
-Unfortunately, the code in Listing 7-5 still results in an error, as shown in Listing 7-6.
+Unfortunately, the code still results in an error, as shown below.
 
 ```text
 Compiling Test_Rust_Project v0.1.0
@@ -103,13 +103,13 @@ error[E0603]: function `add_to_waitlist` is private
    |                              ^^^^^^^^^^^^^^^                            ^^^^^^^^^^^^^^^
 ```
 
-##### Listing 7-6: Compiler errors from building the code in Listing 7-5
+##### Compiler errors from building the code above
 
 What happened? Adding the `pub` keyword in front of `mod hosting` makes the module public. With this change, if we can access `front_of_house`, we can access `hosting`. But the _contents_ of `hosting` are still private; making the module public doesn’t make its contents public. The `pub` keyword on a module only lets code in its ancestor modules refer to it.
 
-The errors in Listing 7-6 say that the `add_to_waitlist` function is private. The privacy rules apply to structs, enums, functions, and methods as well as modules.
+The errors say that the `add_to_waitlist` function is private. The privacy rules apply to structs, enums, functions, and methods as well as modules.
 
-Let’s also make the `add_to_waitlist` function public by adding the `pub` keyword before its definition, as in Listing 7-7.
+Let’s also make the `add_to_waitlist` function public by adding the `pub` keyword before its definition, as shown below.
 
 ```rust
     mod front_of_house {
@@ -127,7 +127,7 @@ Let’s also make the `add_to_waitlist` function public by adding the `pub` keyw
     }
 ```
 
-##### Listing 7-7: Adding the pub keyword to mod hosting and fn add_to_waitlist lets us call the function from eat_at_restaurant
+##### Adding the pub keyword to mod hosting and fn add_to_waitlist lets us call the function from eat_at_restaurant
 
 Now the code will compile! Let’s look at the absolute and the relative path, and double-check why adding the `pub` keyword lets us use these paths in `add_to_waitlist` with respect to the privacy rules.
 
@@ -139,7 +139,7 @@ In the relative path, the logic is the same as the absolute path except for the 
 
 We can also construct relative paths that begin in the parent module by using `super` at the start of the path. This is like starting a filesystem path with the `..` syntax. Why would we want to do this?
 
-Consider the code in Listing 7-8 that models the situation in which a chef fixes an incorrect order and personally brings it out to the customer. The function `fix_incorrect_order` calls the function `serve_order` by specifying the path to `serve_order` starting with `super`:
+Consider the code below that models the situation in which a chef fixes an incorrect order and personally brings it out to the customer. The function `fix_incorrect_order` calls the function `serve_order` by specifying the path to `serve_order` starting with `super`:
 
 ```rust
     fn serve_order() {}
@@ -154,13 +154,13 @@ Consider the code in Listing 7-8 that models the situation in which a chef fixes
     }
 ```
 
-##### Listing 7-8: Calling a function using a relative path starting with super
+##### Calling a function using a relative path starting with super
 
 The `fix_incorrect_order` function is in the `back_of_house` module, so we can use `super` to go to the parent module of `back_of_house`, which in this case is `crate`, the root. From there, we look for `serve_order` and find it. Success! We think the `back_of_house` module and the `serve_order` function are likely to stay in the same relationship to each other and get moved together should we decide to reorganize the crate’s module tree. Therefore, we used `super` so we’ll have fewer places to update code in the future if this code gets moved to a different module.
 
 ### Making Structs and Enums Public
 
-We can also use `pub` to designate structs and enums as public, but there are a few extra details. If we use `pub` before a struct definition, we make the struct public, but the struct’s fields will still be private. We can make each field public or not on a case-by-case basis. In Listing 7-9, we’ve defined a public `back_of_house::Breakfast` struct with a public `toast` field but a private `seasonal_fruit` field. This models the case in a restaurant where the customer can pick the type of bread that comes with a meal, but the chef decides which fruit accompanies the meal based on what’s in season and in stock. The available fruit changes quickly, so customers can’t choose the fruit or even see which fruit they’ll get.
+We can also use `pub` to designate structs and enums as public, but there are a few extra details. If we use `pub` before a struct definition, we make the struct public, but the struct’s fields will still be private. We can make each field public or not on a case-by-case basis. In example below, we’ve defined a public `back_of_house::Breakfast` struct with a public `toast` field but a private `seasonal_fruit` field. This models the case in a restaurant where the customer can pick the type of bread that comes with a meal, but the chef decides which fruit accompanies the meal based on what’s in season and in stock. The available fruit changes quickly, so customers can’t choose the fruit or even see which fruit they’ll get.
 
 ```rust
     mod back_of_house {
@@ -192,7 +192,7 @@ We can also use `pub` to designate structs and enums as public, but there are a 
     }
 ```
 
-##### Listing 7-9: A struct with some public fields and some private fields
+##### A struct with some public fields and some private fields
 
 Because the `toast` field in the `back_of_house::Breakfast` struct is public, in `eat_at_restaurant` we can write and read to the `toast` field using dot notation. Notice that we can’t use the `seasonal_fruit` field in `eat_at_restaurant` because `seasonal_fruit` is private. Try uncommenting the line modifying the `seasonal_fruit` field value to see what error you get!
 
@@ -214,7 +214,7 @@ In contrast, if we make an enum public, all of its variants are then public. We 
     }
 ```
 
-##### Listing 7-10: Designating an enum as public makes all its variants public
+##### Designating an enum as public makes all its variants public
 
 Because we made the `Appetizer` enum public, we can use the `Soup` and `Salad` variants in `eat_at_restaurant`. Enums aren’t very useful unless their variants are public; it would be annoying to have to annotate all enum variants with `pub` in every case, so the default for enum variants is to be public. Structs are often useful without their fields being public, so struct fields follow the general rule of everything being private by default unless annotated with `pub`.
 
