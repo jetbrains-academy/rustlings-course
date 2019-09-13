@@ -50,7 +50,7 @@ members = [
     "Modules & Macros/Modules/Paths for Referring to an Item in the Module Tree",
     "Modules & Macros/Modules/Bringing Paths into Scope with the use Keyword",
     "Modules & Macros/Modules/Separating Modules into Different Files",
-    "Modules & Macros/Modules/Modules 1",
+    "Modules & Macros/Modules/Public Modifier",
     "Modules & Macros/Modules/Modules 2",
     "Modules & Macros/Macros/Intro",
     "Modules & Macros/Macros/Macros 1",
