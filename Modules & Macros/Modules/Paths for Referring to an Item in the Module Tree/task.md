@@ -27,7 +27,7 @@ Let’s return to the example in Listing 7-1\. How do we call the `add_to_waitli
     }
 ```
 
-##### Listing 7-3: Calling the add_to_waitlist function using absolute and relative paths</span>
+##### Example of calling the add_to_waitlist function using absolute and relative paths</span>
 
 The first time we call the `add_to_waitlist` function in `eat_at_restaurant`, we use an absolute path. The `add_to_waitlist` function is defined in the same crate as `eat_at_restaurant`, which means we can use the `crate` keyword to start an absolute path.
 
@@ -54,7 +54,7 @@ error[E0603]: module `hosting` is private
    |                     ^^^^^^^
 ```
 
-##### Listing 7-4: Compiler errors from building the code in Listing 7-3
+##### Compiler errors from building the code from the example above
 
 The error messages say that module `hosting` is private. In other words, we have the correct paths for the `hosting` module and the `add_to_waitlist` function, but Rust won’t let us use them because it doesn’t have access to the private sections.
 
