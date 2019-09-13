@@ -2,7 +2,7 @@
 
 So far, all the examples in this chapter defined multiple modules in one file. When modules get large, you might want to move their definitions to a separate file to make the code easier to navigate.
 
-For example, let’s start from the code in Listing 7-17 and move the `front_of_house` module to its own file _src/front_of_house.rs_ by changing the crate root file so it contains the code shown in Listing 7-21\. In this case, the crate root file is _src/lib.rs_, but this procedure also works with binary crates whose crate root file is _src/main.rs_.
+For example, let’s start from the code we used in a the previous task and move the `front_of_house` module to its own file _src/front_of_house.rs_ by changing the crate root file so it contains the code shown below. In this case, the crate root file is _src/lib.rs_, but this procedure also works with binary crates whose crate root file is _src/main.rs_.
 
 ```rust
     mod front_of_house;
@@ -16,9 +16,9 @@ For example, let’s start from the code in Listing 7-17 and move the `front_of_
     }
 ```
 
-##### Listing 7-21: Declaring the front_of_house module whose body will be in _src/front_of_house.rs_
+##### Declaring the front_of_house module whose body will be in _src/front_of_house.rs_
 
-And _src/front_of_house.rs_ gets the definitions from the body of the `front_of_house` module, as shown in Listing 7-22.
+And _src/front_of_house.rs_ gets the definitions from the body of the `front_of_house` module, as shown below.
 
 <span class="filename">Filename: src/front_of_house.rs</span>
 
@@ -28,7 +28,7 @@ And _src/front_of_house.rs_ gets the definitions from the body of the `front_of_
     }
 ```
 
-##### Listing 7-22: Definitions inside the front_of_house module in _src/front_of_house.rs_
+##### Definitions inside the front_of_house module in _src/front_of_house.rs_
 
 Using a semicolon after `mod front_of_house` rather than using a block tells Rust to load the contents of the module from another file with the same name as the module. To continue with our example and extract the `hosting` module to its own file as well, we change _src/front_of_house.rs_ to contain only the declaration of the `hosting` module:
 
