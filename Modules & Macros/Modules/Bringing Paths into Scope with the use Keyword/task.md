@@ -1,8 +1,8 @@
 ## Bringing Paths into Scope with the use Keyword
 
-It might seem like the paths we’ve written to call functions so far are inconveniently long and repetitive. For example, in Listing 7-7, whether we chose the absolute or relative path to the `add_to_waitlist` function, every time we wanted to call `add_to_waitlist` we had to specify `front_of_house` and `hosting` too. Fortunately, there’s a way to simplify this process. We can bring a path into a scope once and then call the items in that path as if they’re local items with the `use` keyword.
+It might seem like the paths we’ve written to call functions so far are inconveniently long and repetitive. For example, in one of the examples from the "Paths for Referring to an Item in the Module Tree", whether we chose the absolute or relative path to the `add_to_waitlist` function, every time we wanted to call `add_to_waitlist` we had to specify `front_of_house` and `hosting` too. Fortunately, there’s a way to simplify this process. We can bring a path into a scope once and then call the items in that path as if they’re local items with the `use` keyword.
 
-In Listing 7-11, we bring the `crate::front_of_house::hosting` module into the scope of the `eat_at_restaurant` function so we only have to specify `hosting::add_to_waitlist` to call the `add_to_waitlist` function in `eat_at_restaurant`.
+In the example below, we bring the `crate::front_of_house::hosting` module into the scope of the `eat_at_restaurant` function so we only have to specify `hosting::add_to_waitlist` to call the `add_to_waitlist` function in `eat_at_restaurant`.
 
 ```rust
     mod front_of_house {
@@ -20,11 +20,11 @@ In Listing 7-11, we bring the `crate::front_of_house::hosting` module into the s
     }
 ```
 
-##### Listing 7-11: Bringing a module into scope with use
+##### Bringing a module into scope with use
 
 Adding `use` and a path in a scope is similar to creating a symbolic link in the filesystem. By adding `use crate::front_of_house::hosting` in the crate root, `hosting` is now a valid name in that scope, just as though the `hosting` module had been defined in the crate root. Paths brought into scope with `use` also check privacy, like any other paths.
 
-Specifying a relative path with `use` is slightly different. Instead of starting from a name in the current scope, we must start the path given to `use` with the keyword `self`. Listing 7-12 shows how to specify a relative path to get the same behavior as Listing 7-11.
+Specifying a relative path with `use` is slightly different. Instead of starting from a name in the current scope, we must start the path given to `use` with the keyword `self`. The example below shows how to specify a relative path to get the same behavior as in the code above.
 
 ```rust
     mod front_of_house {
@@ -42,13 +42,13 @@ Specifying a relative path with `use` is slightly different. Instead of starting
     }
 ```
 
-##### Listing 7-12: Bringing a module into scope with use and a relative path starting with self
+##### Bringing a module into scope with use and a relative path starting with self
 
 Note that using `self` in this way might not be necessary in the future; it’s an inconsistency in the language that Rust developers are working to eliminate.
 
 ### Creating Idiomatic use Paths
 
-In Listing 7-11, you might have wondered why we specified `use crate::front_of_house::hosting` and then called `hosting::add_to_waitlist` in `eat_at_restaurant` rather than specifying the `use` path all the way out to the `add_to_waitlist` function to achieve the same result, as in Listing 7-13.
+In the first code snippet, you might have wondered why we specified `use crate::front_of_house::hosting` and then called `hosting::add_to_waitlist` in `eat_at_restaurant` rather than specifying the `use` path all the way out to the `add_to_waitlist` function to achieve the same result, as in the snippet below.
 
 ```rust
     mod front_of_house {
@@ -66,11 +66,11 @@ In Listing 7-11, you might have wondered why we specified `use crate::front_of_h
     }
 ```
 
-##### Listing 7-13: Bringing the add_to_waitlist function into scope with use, which is unidiomatic
+##### Bringing the add_to_waitlist function into scope with use, which is unidiomatic
 
-Although both Listing 7-11 and 7-13 accomplish the same task, Listing 7-11 is the idiomatic way to bring a function into scope with `use`. Bringing the function’s parent module into scope with `use` so we have to specify the parent module when calling the function makes it clear that the function isn’t locally defined while still minimizing repetition of the full path. The code in Listing 7-13 is unclear as to where `add_to_waitlist` is defined.
+Although both snippets accomplish the same task, the first one is the idiomatic way to bring a function into scope with `use`. Bringing the function’s parent module into scope with `use` so we have to specify the parent module when calling the function makes it clear that the function isn’t locally defined while still minimizing repetition of the full path. The code in the last snippet is unclear as to where `add_to_waitlist` is defined.
 
-On the other hand, when bringing in structs, enums, and other items with `use`, it’s idiomatic to specify the full path. Listing 7-14 shows the idiomatic way to bring the standard library’s `HashMap` struct into the scope of a binary crate.
+On the other hand, when bringing in structs, enums, and other items with `use`, it’s idiomatic to specify the full path. The example below shows the idiomatic way to bring the standard library’s `HashMap` struct into the scope of a binary crate.
 
 ```rust
     use std::collections::HashMap;
@@ -81,11 +81,11 @@ On the other hand, when bringing in structs, enums, and other items with `use`, 
     }
 ```
 
-##### Listing 7-14: Bringing HashMap into scope in an idiomatic way
+##### Bringing HashMap into scope in an idiomatic way
 
 There’s no strong reason behind this idiom: it’s just the convention that has emerged, and folks have gotten used to reading and writing Rust code this way.
 
-The exception to this idiom is if we’re bringing two items with the same name into scope with `use` statements, because Rust doesn’t allow that. Listing 7-15 shows how to bring two `Result` types into scope that have the same name but different parent modules and how to refer to them.
+The exception to this idiom is if we’re bringing two items with the same name into scope with `use` statements, because Rust doesn’t allow that. Listing The example below shows how to bring two `Result` types into scope that have the same name but different parent modules and how to refer to them.
 
 ```rust
     use std::fmt;
@@ -98,13 +98,13 @@ The exception to this idiom is if we’re bringing two items with the same name 
     }
 ```
 
-##### Listing 7-15: Bringing two types with the same name into the same scope requires using their parent modules.
+#####  Bringing two types with the same name into the same scope requires using their parent modules.
 
 As you can see, using the parent modules distinguishes the two `Result` types. If instead we specified `use std::fmt::Result` and `use std::io::Result`, we’d have two `Result` types in the same scope and Rust wouldn’t know which one we meant when we used `Result`. Try it and see what compiler error you get!
 
 ### Providing New Names with the `as` Keyword
 
-There’s another solution to the problem of bringing two types of the same name into the same scope with `use`: after the path, we can specify `as` and a new local name, or alias, for the type. Listing 7-16 shows another way to write the code in Listing 7-15 by renaming one of the two `Result` types using `as`.
+There’s another solution to the problem of bringing two types of the same name into the same scope with `use`: after the path, we can specify `as` and a new local name, or alias, for the type. The next example shows another way to write the code for importing by renaming one of the two `Result` types using `as`.
 
 ```rust
     use std::fmt::Result;
@@ -117,15 +117,15 @@ There’s another solution to the problem of bringing two types of the same name
     }
 ```
 
-##### Listing 7-16: Renaming a type when it’s brought into scope with the as keyword
+##### Renaming a type when it’s brought into scope with the as keyword
 
-In the second `use` statement, we chose the new name `IoResult` for the `std::io::Result` type, which won’t conflict with the `Result` from `std::fmt` that we’ve also brought into scope. Listing 7-15 and Listing 7-16 are considered idiomatic, so the choice is up to you!
+In the second `use` statement, we chose the new name `IoResult` for the `std::io::Result` type, which won’t conflict with the `Result` from `std::fmt` that we’ve also brought into scope. Both of the above examples are considered idiomatic, so the choice is up to you!
 
 ### Re-exporting Names with `pub use`
 
 When we bring a name into scope with the `use` keyword, the name available in the new scope is private. To enable the code that calls our code to refer to that name as if it had been defined in that code’s scope, we can combine `pub` and `use`. This technique is called _re-exporting_ because we’re bringing an item into scope but also making that item available for others to bring into their scope.
 
-Listing 7-17 shows the code in Listing 7-11 with `use` in the root module changed to `pub use`.
+The next example shows the code from the beginning of the task with `use` in the root module changed to `pub use`.
 
 ```rust
     mod front_of_house {
@@ -143,7 +143,7 @@ Listing 7-17 shows the code in Listing 7-11 with `use` in the root module change
     }
 ```
 
-##### Listing 7-17: Making a name available for any code to use from a new scope with pub use
+##### Making a name available for any code to use from a new scope with pub use
 
 By using `pub use`, external code can now call the `add_to_waitlist` function using `hosting::add_to_waitlist`. If we hadn’t specified `pub use`, the `eat_at_restaurant` function could call `hosting::add_to_waitlist` in its scope but external code couldn’t take advantage of this new path.
 
@@ -151,7 +151,7 @@ Re-exporting is useful when the internal structure of your code is different tha
 
 ### Using External Packages
 
-In Chapter 2, we programmed a guessing game project that used an external package called `rand` to get random numbers. To use `rand` in our project, we added this line to _Cargo.toml_:
+In the "Guessing Game" Chapter, we programmed a guessing game project that used an external package called `rand` to get random numbers. To use `rand` in our project, we added this line to _Cargo.toml_:
 
 ```toml
     [dependencies]
@@ -160,7 +160,7 @@ In Chapter 2, we programmed a guessing game project that used an external packag
 
 Adding `rand` as a dependency in _Cargo.toml_ tells Cargo to download the `rand` package and any dependencies from _https://crates.io_ and make `rand` available to our project.
 
-Then, to bring `rand` definitions into the scope of our package, we added a `use` line starting with the name of the package, `rand`, and listing the items we wanted to bring into scope. Recall that in the section [“Generating a Random Number”](ch02-00-guessing-game-tutorial.html#generating-a-random-number) in Chapter 2, we brought the `Rng` trait into scope and called the `rand::thread_rng` function:
+Then, to bring `rand` definitions into the scope of our package, we added a `use` line starting with the name of the package, `rand`, and listing the items we wanted to bring into scope. Recall that in the section [“Generating a Random Number”](ch02-00-guessing-game-tutorial.html#generating-a-random-number) in the "Guessing Game" Chapter, we brought the `Rng` trait into scope and called the `rand::thread_rng` function:
 
 ```rust
     use rand::Rng;
@@ -196,26 +196,26 @@ Instead, we can use nested paths to bring the same items into scope in one line.
     // ---snip---
 ```
 
-##### Listing 7-18: Specifying a nested path to bring multiple items with the same prefix into scope
+##### Specifying a nested path to bring multiple items with the same prefix into scope
 
 In bigger programs, bringing many items into scope from the same package or module using nested paths can reduce the number of separate `use` statements needed by a lot!
 
-We can use a nested path at any level in a path, which is useful when combining two `use` statements that share a subpath. For example, Listing 7-19 shows two `use` statements: one that brings `std::io` into scope and one that brings `std::io::Write` into scope.
+We can use a nested path at any level in a path, which is useful when combining two `use` statements that share a subpath. For example, the snippet below shows two `use` statements: one that brings `std::io` into scope and one that brings `std::io::Write` into scope.
 
 ```rust
     use std::io;
     use std::io::Write;
 ```
 
-##### Listing 7-19: Two use statements where one is a subpath of the other
+##### Two use statements where one is a subpath of the other
 
-The common part of these two paths is `std::io`, and that’s the complete first path. To merge these two paths into one `use` statement, we can use `self` in the nested path, as shown in Listing 7-20.
+The common part of these two paths is `std::io`, and that’s the complete first path. To merge these two paths into one `use` statement, we can use `self` in the nested path, as shown in the example below.
 
 ```rust
     use std::io::{self, Write};
 ```
 
-##### Listing 7-20: Combining the paths in Listing 7-19 into one use statement
+##### Combining the paths into one use statement
 
 This line brings `std::io` and `std::io::Write` into scope.
 
