@@ -1,4 +1,7 @@
 [package]
-name = "modules1"
+name = "public_modifier"
 version = "0.1.0"
 edition = "2018"
+
+[dependencies]
+escargot = "0.5"

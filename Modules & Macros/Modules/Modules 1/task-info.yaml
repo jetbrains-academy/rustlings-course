@@ -1,6 +1,12 @@
-type: theory
+type: edu
 files:
 - name: Cargo.toml
   visible: false
 - name: src/main.rs
   visible: true
+  placeholders:
+  - offset: 26
+    length: 4
+    placeholder_text: /*insert the keyword here to make the function public*/
+- name: tests/tests.rs
+  visible: false
