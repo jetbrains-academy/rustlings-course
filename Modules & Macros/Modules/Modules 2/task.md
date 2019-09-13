@@ -1,4 +1,4 @@
-##Task 2
+## Public Modifier 2
 
 Make me compile!
 
