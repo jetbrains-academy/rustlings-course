@@ -1,4 +1,4 @@
-use errors1::generate_nametag_text;
+use returning_result::generate_nametag_text;
 
 #[test]
 fn generates_nametag_text_for_a_nonempty_name() {
