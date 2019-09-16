@@ -61,7 +61,7 @@ members = [
     "Understanding Ownership/Move Semantics/Intro",
     "Understanding Ownership/Move Semantics/References and Borrowing",
     "Understanding Ownership/Move Semantics/The Slice Type",
-    "Understanding Ownership/Move Semantics/Move Semantics 1",
+    "Understanding Ownership/Move Semantics/Mutable",
     "Understanding Ownership/Move Semantics/Move Semantics 2",
     "Understanding Ownership/Move Semantics/Move Semantics 3",
     "Understanding Ownership/Move Semantics/Move Semantics 4",
