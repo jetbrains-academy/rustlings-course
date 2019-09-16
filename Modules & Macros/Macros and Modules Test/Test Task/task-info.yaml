@@ -1,0 +1,10 @@
+type: edu
+files:
+- name: Cargo.toml
+  visible: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 76
+    placeholder_text: /*declare your macro here*/

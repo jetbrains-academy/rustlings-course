@@ -57,7 +57,7 @@ members = [
     "Modules & Macros/Macros/Declaring a Macro",
     "Modules & Macros/Macros/Outside of Module",
     "Modules & Macros/Macros/Macro Arms",
-    "Modules & Macros/Test 4/Test 4",
+    "Modules & Macros/Macros and Modules Test/Test Task",
     "Understanding Ownership/Move Semantics/Intro",
     "Understanding Ownership/Move Semantics/References and Borrowing",
     "Understanding Ownership/Move Semantics/The Slice Type",

@@ -1,4 +1,4 @@
-## Test 4
+## Macros and Modules Test
 
 This test covers the sections:
 * Modules
