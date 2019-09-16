@@ -1,4 +1,4 @@
-use errors2::total_cost;
+use matching_result::total_cost;
 
 #[test]
 fn item_quantity_is_a_valid_number() {
