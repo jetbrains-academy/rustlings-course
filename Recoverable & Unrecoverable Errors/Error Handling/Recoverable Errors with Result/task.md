@@ -13,7 +13,7 @@ Recall from [“Handling Potential Failure with the `Result` Type”](ch02-00-gu
 
 The `T` and `E` are generic type parameters: we’ll discuss generics in more detail in Chapter 10\. What you need to know right now is that `T` represents the type of the value that will be returned in a success case within the `Ok` variant, and `E` represents the type of the error that will be returned in a failure case within the `Err` variant. Because `Result` has these generic type parameters, we can use the `Result` type and the functions that the standard library has defined on it in many different situations where the successful value and error value we want to return may differ.
 
-Let’s call a function that returns a `Result` value because the function could fail. In Listing 9-3 we try to open a file.
+Let’s call a function that returns a `Result` value because the function could fail. In the code snippet below we try to open a file.
 
 ```rust
     use std::fs::File;
@@ -23,7 +23,7 @@ Let’s call a function that returns a `Result` value because the function could
     }
 ```
 
-##### Listing 9-3: Opening a file
+##### Opening a file
 
 How do we know `File::open` returns a `Result`? We could look at the [standard library API documentation](../std/index.html), or we could ask the compiler! If we give `f` a type annotation that we know is _not_ the return type of the function and then try to compile the code, the compiler will tell us that the types don’t match. The error message will then tell us what the type of `f` _is_. Let’s try it! We know that the return type of `File::open` isn’t of type `u32`, so let’s change the `let f` statement to this:
 
@@ -51,7 +51,7 @@ This return type means the call to `File::open` might succeed and return a file 
 
 In the case where `File::open` succeeds, the value in the variable `f` will be an instance of `Ok` that contains a file handle. In the case where it fails, the value in `f` will be an instance of `Err` that contains more information about the kind of error that happened.
 
-We need to add to the code in Listing 9-3 to take different actions depending on the value `File::open` returns. Listing 9-4 shows one way to handle the `Result` using a basic tool, the `match` expression that we discussed in Chapter 6.
+We need to add to the code in the code snippet above to take different actions depending on the value `File::open` returns. The following code snippet shows one way to handle the `Result` using a basic tool, the `match` expression that we discussed in Chapter 6.
 
 ```rust
     use std::fs::File;
@@ -68,7 +68,7 @@ We need to add to the code in Listing 9-3 to take different actions depending on
     }
 ```
 
-##### Listing 9-4: Using a match expression to handle the Result variants that might be returned
+##### Using a match expression to handle the Result variants that might be returned
 
 Note that, like the `Option` enum, the `Result` enum and its variants have been brought into scope by the prelude, so we don’t need to specify `Result::` before the `Ok` and `Err` variants in the `match` arms.
 
@@ -85,7 +85,7 @@ As usual, this output tells us exactly what has gone wrong.
 
 ### Matching on Different Errors
 
-The code in Listing 9-4 will `panic!` no matter why `File::open` failed. What we want to do instead is take different actions for different failure reasons: if `File::open` failed because the file doesn’t exist, we want to create the file and return the handle to the new file. If `File::open` failed for any other reason—for example, because we didn’t have permission to open the file—we still want the code to `panic!` in the same way as it did in Listing 9-4\. Look at Listing 9-5, which adds an inner `match` expression.
+The code in the next example will `panic!` no matter why `File::open` failed. What we want to do instead is take different actions for different failure reasons: if `File::open` failed because the file doesn’t exist, we want to create the file and return the handle to the new file. If `File::open` failed for any other reason—for example, because we didn’t have permission to open the file—we still want the code to `panic!` in the same way as it did in the previous snippet. Look at the following code, which adds an inner `match` expression.
 
 ```rust
     use std::fs::File;
@@ -107,13 +107,13 @@ The code in Listing 9-4 will `panic!` no matter why `File::open` failed. What we
     }
 ```
 
-##### Listing 9-5: Handling different kinds of errors in different ways
+##### Handling different kinds of errors in different ways
 
 The type of the value that `File::open` returns inside the `Err` variant is `io::Error`, which is a struct provided by the standard library. This struct has a method `kind` that we can call to get an `io::ErrorKind` value. The enum `io::ErrorKind` is provided by the standard library and has variants representing the different kinds of errors that might result from an `io` operation. The variant we want to use is `ErrorKind::NotFound`, which indicates the file we’re trying to open doesn’t exist yet. So we match on `f`, but we also have an inner match on `error.kind()`.
 
 The condition we want to check in the inner match is whether the value returned by `error.kind()` is the `NotFound` variant of the `ErrorKind` enum. If it is, we try to create the file with `File::create`. However, because `File::create` could also fail, we need a second arm in the inner `match` expression. When the file can’t be created, a different error message is printed. The second arm of the outer `match` stays the same, so the program panics on any error besides the missing file error.
 
-That’s a lot of `match`! The `match` expression is very useful but also very much a primitive. In Chapter 13, you’ll learn about closures; the `Result<T, E>` type has many methods that accept a closure and are implemented using `match` expressions. Using those methods will make your code more concise. A more seasoned Rustacean might write this code instead of Listing 9-5:
+That’s a lot of `match`! The `match` expression is very useful but also very much a primitive. In Chapter 13, you’ll learn about closures; the `Result<T, E>` type has many methods that accept a closure and are implemented using `match` expressions. Using those methods will make your code more concise. A more seasoned Rustacean might write this code instead of the previous one:
 
 ```rust
     use std::fs::File;
@@ -132,11 +132,11 @@ That’s a lot of `match`! The `match` expression is very useful but also very m
     }
 ```
 
-Although this code has the same behavior as Listing 9-5, it doesn’t contain any `match` expressions and is cleaner to read. Come back to this example after you’ve read Chapter 13, and look up the `unwrap_or_else` method in the standard library documentation. Many more of these methods can clean up huge nested `match` expressions when you’re dealing with errors.
+Although this code has the same behavior as the previous one, it doesn’t contain any `match` expressions and is cleaner to read. Come back to this example after you’ve read Chapter 13, and look up the `unwrap_or_else` method in the standard library documentation. Many more of these methods can clean up huge nested `match` expressions when you’re dealing with errors.
 
 ### Shortcuts for Panic on Error: `unwrap` and `expect`
 
-Using `match` works well enough, but it can be a bit verbose and doesn’t always communicate intent well. The `Result<T, E>` type has many helper methods defined on it to do various tasks. One of those methods, called `unwrap`, is a shortcut method that is implemented just like the `match` expression we wrote in Listing 9-4\. If the `Result` value is the `Ok` variant, `unwrap` will return the value inside the `Ok`. If the `Result` is the `Err` variant, `unwrap` will call the `panic!` macro for us. Here is an example of `unwrap` in action:
+Using `match` works well enough, but it can be a bit verbose and doesn’t always communicate intent well. The `Result<T, E>` type has many helper methods defined on it to do various tasks. One of those methods, called `unwrap`, is a shortcut method that is implemented just like the `match` expression we wrote in "Using a match expression to handle the Result variants that might be returned". If the `Result` value is the `Ok` variant, `unwrap` will return the value inside the `Ok`. If the `Result` is the `Err` variant, `unwrap` will call the `panic!` macro for us. Here is an example of `unwrap` in action:
 
 ```rust
     use std::fs::File;
@@ -177,7 +177,7 @@ Because this error message starts with the text we specified, `Failed to open he
 
 When you’re writing a function whose implementation calls something that might fail, instead of handling the error within this function, you can return the error to the calling code so that it can decide what to do. This is known as _propagating_ the error and gives more control to the calling code, where there might be more information or logic that dictates how the error should be handled than what you have available in the context of your code.
 
-For example, Listing 9-6 shows a function that reads a username from a file. If the file doesn’t exist or can’t be read, this function will return those errors to the code that called this function.
+For example, the code snippet below shows a function that reads a username from a file. If the file doesn’t exist or can’t be read, this function will return those errors to the code that called this function.
 
 ```rust
     use std::io;
@@ -201,11 +201,11 @@ For example, Listing 9-6 shows a function that reads a username from a file. If 
     }
 ```
 
-##### Listing 9-6: A function that returns errors to the calling code using `match`
+##### A function that returns errors to the calling code using `match`
 
 This function can be written in a much shorter way, but we’re going to start by doing a lot of it manually in order to explore error handling; at the end, we’ll show the shorter way. Let’s look at the return type of the function first: `Result<String, io::Error>`. This means the function is returning a value of the type `Result<T, E>` where the generic parameter `T` has been filled in with the concrete type `String` and the generic type `E` has been filled in with the concrete type `io::Error`. If this function succeeds without any problems, the code that calls this function will receive an `Ok` value that holds a `String`—the username that this function read from the file. If this function encounters any problems, the code that calls this function will receive an `Err` value that holds an instance of `io::Error` that contains more information about what the problems were. We chose `io::Error` as the return type of this function because that happens to be the type of the error value returned from both of the operations we’re calling in this function’s body that might fail: the `File::open` function and the `read_to_string` method.
 
-The body of the function starts by calling the `File::open` function. Then we handle the `Result` value returned with a `match` similar to the `match` in Listing 9-4, only instead of calling `panic!` in the `Err` case, we return early from this function and pass the error value from `File::open` back to the calling code as this function’s error value. If `File::open` succeeds, we store the file handle in the variable `f` and continue.
+The body of the function starts by calling the `File::open` function. Then we handle the `Result` value returned with a `match` similar to the `match` in the "Using a match expression to handle the Result variants that might be returned", only instead of calling `panic!` in the `Err` case, we return early from this function and pass the error value from `File::open` back to the calling code as this function’s error value. If `File::open` succeeds, we store the file handle in the variable `f` and continue.
 
 Then we create a new `String` in variable `s` and call the `read_to_string` method on the file handle in `f` to read the contents of the file into `s`. The `read_to_string` method also returns a `Result` because it might fail, even though `File::open` succeeded. So we need another `match` to handle that `Result`: if `read_to_string` succeeds, then our function has succeeded, and we return the username from the file that’s now in `s` wrapped in an `Ok`. If `read_to_string` fails, we return the error value in the same way that we returned the error value in the `match` that handled the return value of `File::open`. However, we don’t need to explicitly say `return`, because this is the last expression in the function.
 
@@ -215,7 +215,7 @@ This pattern of propagating errors is so common in Rust that Rust provides the q
 
 #### A Shortcut for Propagating Errors: the ? Operator
 
-Listing 9-7 shows an implementation of `read_username_from_file` that has the same functionality as it had in Listing 9-6, but this implementation uses the `?` operator.
+The code snippet below shows an implementation of `read_username_from_file` that has the same functionality as it had in the previous example, but this implementation uses the `?` operator.
 
 ```rust
     use std::io;
@@ -230,15 +230,15 @@ Listing 9-7 shows an implementation of `read_username_from_file` that has the sa
     }
 ```
 
-##### Listing 9-7: A function that returns errors to the calling code using the ? operator
+##### A function that returns errors to the calling code using the ? operator
 
-The `?` placed after a `Result` value is defined to work in almost the same way as the `match` expressions we defined to handle the `Result` values in Listing 9-6. If the value of the `Result` is an `Ok`, the value inside the `Ok` will get returned from this expression, and the program will continue. If the value is an `Err`, the `Err` will be returned from the whole function as if we had used the `return` keyword so the error value gets propagated to the calling code.
+The `?` placed after a `Result` value is defined to work in almost the same way as the `match` expressions we defined to handle the `Result` values in the example causing error on match. If the value of the `Result` is an `Ok`, the value inside the `Ok` will get returned from this expression, and the program will continue. If the value is an `Err`, the `Err` will be returned from the whole function as if we had used the `return` keyword so the error value gets propagated to the calling code.
 
-There is a difference between what the `match` expression from Listing 9-6 and the `?` operator do: error values that have the `?` operator called on them go through the `from` function, defined in the `From` trait in the standard library, which is used to convert errors from one type into another. When the `?` operator calls the `from` function, the error type received is converted into the error type defined in the return type of the current function. This is useful when a function returns one error type to represent all the ways a function might fail, even if parts might fail for many different reasons. As long as each error type implements the `from` function to define how to convert itself to the returned error type, the `?` operator takes care of the conversion automatically.
+There is a difference between what the `match` expression from that example and the `?` operator do: error values that have the `?` operator called on them go through the `from` function, defined in the `From` trait in the standard library, which is used to convert errors from one type into another. When the `?` operator calls the `from` function, the error type received is converted into the error type defined in the return type of the current function. This is useful when a function returns one error type to represent all the ways a function might fail, even if parts might fail for many different reasons. As long as each error type implements the `from` function to define how to convert itself to the returned error type, the `?` operator takes care of the conversion automatically.
 
-In the context of Listing 9-7, the `?` at the end of the `File::open` call will return the value inside an `Ok` to the variable `f`. If an error occurs, the `?` operator will return early out of the whole function and give any `Err` value to the calling code. The same thing applies to the `?` at the end of the `read_to_string` call.
+In the context of the last snippet, the `?` at the end of the `File::open` call will return the value inside an `Ok` to the variable `f`. If an error occurs, the `?` operator will return early out of the whole function and give any `Err` value to the calling code. The same thing applies to the `?` at the end of the `read_to_string` call.
 
-The `?` operator eliminates a lot of boilerplate and makes this function’s implementation simpler. We could even shorten this code further by chaining method calls immediately after the `?`, as shown in Listing 9-8.
+The `?` operator eliminates a lot of boilerplate and makes this function’s implementation simpler. We could even shorten this code further by chaining method calls immediately after the `?`, as shown in the following example.
 
 ```rust
     use std::io;
@@ -254,11 +254,11 @@ The `?` operator eliminates a lot of boilerplate and makes this function’s imp
     }
 ```
 
-##### Listing 9-8: Chaining method calls after the ? operator
+##### Chaining method calls after the ? operator
 
-We’ve moved the creation of the new `String` in `s` to the beginning of the function; that part hasn’t changed. Instead of creating a variable `f`, we’ve chained the call to `read_to_string` directly onto the result of `File::open("hello.txt")?`. We still have a `?` at the end of the `read_to_string` call, and we still return an `Ok` value containing the username in `s` when both `File::open` and `read_to_string` succeed rather than returning errors. The functionality is again the same as in Listing 9-6 and Listing 9-7; this is just a different, more ergonomic way to write it.
+We’ve moved the creation of the new `String` in `s` to the beginning of the function; that part hasn’t changed. Instead of creating a variable `f`, we’ve chained the call to `read_to_string` directly onto the result of `File::open("hello.txt")?`. We still have a `?` at the end of the `read_to_string` call, and we still return an `Ok` value containing the username in `s` when both `File::open` and `read_to_string` succeed rather than returning errors. The functionality is again the same as in previous examples; this is just a different, more ergonomic way to write it.
 
-Speaking of different ways to write this function, Listing 9-9 shows that there’s a way to make this even shorter.
+Speaking of different ways to write this function, the code snippet below shows that there’s a way to make this even shorter.
 
 ```rust
     use std::io;
@@ -269,13 +269,13 @@ Speaking of different ways to write this function, Listing 9-9 shows that there�
     }
 ```
 
-##### Listing 9-9: Using fs::read_to_string instead of opening and then reading the file
+##### Using fs::read_to_string instead of opening and then reading the file
 
 Reading a file into a string is a fairly common operation, so Rust provides the convenient `fs::read_to_string` function that opens the file, creates a new `String`, reads the contents of the file, puts the contents into that `String`, and returns it. Of course, using `fs::read_to_string` doesn’t give us the opportunity to explain all the error handling, so we did it the longer way first.
 
 #### The ? Operator Can Only Be Used in Functions That Return Result
 
-The `?` operator can only be used in functions that have a return type of `Result`, because it is defined to work in the same way as the `match` expression we defined in Listing 9-6\. The part of the `match` that requires a return type of `Result` is `return Err(e)`, so the return type of the function must be a `Result` to be compatible with this `return`.
+The `?` operator can only be used in functions that have a return type of `Result`, because it is defined to work in the same way as the `match` expression we defined in the example with code causing error on match. The part of the `match` that requires a return type of `Result` is `return Err(e)`, so the return type of the function must be a `Result` to be compatible with this `return`.
 
 Let’s look at what happens if we use the `?` operator in the `main` function, which you’ll recall has a return type of `()`:
 
