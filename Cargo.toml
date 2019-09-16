@@ -55,7 +55,7 @@ members = [
     "Modules & Macros/Macros/Intro",
     "Modules & Macros/Macros/Calling a Macro",
     "Modules & Macros/Macros/Declaring a Macro",
-    "Modules & Macros/Macros/Macros 3",
+    "Modules & Macros/Macros/Outside of Module",
     "Modules & Macros/Macros/Macros 4",
     "Modules & Macros/Test 4/Test 4",
     "Understanding Ownership/Move Semantics/Intro",

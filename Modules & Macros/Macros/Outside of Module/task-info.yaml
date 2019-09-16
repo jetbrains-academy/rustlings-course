@@ -1,4 +1,4 @@
-type: theory
+type: edu
 files:
 - name: Cargo.toml
   visible: false
@@ -7,4 +7,4 @@ files:
   placeholders:
   - offset: 0
     length: 12
-    placeholder_text: TODO
+    placeholder_text: //TODO
