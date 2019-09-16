@@ -29,11 +29,11 @@ fn prints_the_second_number_is() {
         .stdout;
     //TODO: recover from an incorrect output
     let actual_as_string = std::str::from_utf8(&actual).unwrap();
-    let expected_output  = "favorite snacks: Pear and Cucumber";
+    let expected_output  = "favorite snacks: Pear and Cucumber\n";
     std::panic::set_hook(Box::new(|panic_info|
         report_students_error(panic_info)
     ));
-    assert_eq!(actual_as_string.contains, expected_output, "The output provided is not equal to the expected one.\n");
+    assert_eq!(actual_as_string, expected_output, "The output provided is not equal to the expected one.\n");
     std::panic::take_hook();
 }
 
