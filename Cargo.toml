@@ -64,7 +64,7 @@ members = [
     "Understanding Ownership/Move Semantics/Mutable",
     "Understanding Ownership/Move Semantics/Borrow",
     "Understanding Ownership/Move Semantics/Mutable Argument",
-    "Understanding Ownership/Move Semantics/Move Semantics 4",
+    "Understanding Ownership/Move Semantics/Without Arguments",
     "Recoverable & Unrecoverable Errors/Error Handling/Intro",
     "Recoverable & Unrecoverable Errors/Error Handling/Recoverable Errors with Result",
     "Recoverable & Unrecoverable Errors/Error Handling/Generic Data Types",

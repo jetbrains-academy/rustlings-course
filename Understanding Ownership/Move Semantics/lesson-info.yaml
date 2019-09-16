@@ -5,4 +5,4 @@ content:
 - Mutable
 - Borrow
 - Mutable Argument
-- Move Semantics 4
+- Without Arguments

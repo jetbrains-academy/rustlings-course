@@ -1,0 +1,21 @@
+type: edu
+files:
+- name: Cargo.toml
+  visible: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 16
+    length: 29
+    placeholder_text: let vec0 = Vec::new();
+  - offset: 75
+    length: 34
+    placeholder_text: vec0
+  - offset: 378
+    length: 22
+    placeholder_text: //The vector declaration should be here
+  - offset: 420
+    length: 4
+    placeholder_text: vec /*assign the created variable here*/
+- name: tests/tests.rs
+  visible: false
