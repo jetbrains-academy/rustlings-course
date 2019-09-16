@@ -1,4 +1,4 @@
-## Task 2
+## Matching Result
 
 Say we're writing a game where you can buy items with tokens.
 All items cost 5 tokens, and whenever you purchase items there is a processing fee of 1 token.
