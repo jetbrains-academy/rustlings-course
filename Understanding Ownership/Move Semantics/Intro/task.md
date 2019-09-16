@@ -49,7 +49,7 @@ As a first example of ownership, we’ll look at the _scope_ of some variables. 
     let s = "hello"
 ```
 
-The variable `s` refers to a string literal, where the value of the string is hardcoded into the text of our program. The variable is valid from the point at which it’s declared until the end of the current _scope_. Listing 4-1 has comments annotating where the variable `s` is valid.
+The variable `s` refers to a string literal, where the value of the string is hardcoded into the text of our program. The variable is valid from the point at which it’s declared until the end of the current _scope_. The code snippet below has comments annotating where the variable `s` is valid.
 
 ```rust
     {                      // s is not valid here, it’s not yet declared
@@ -59,7 +59,7 @@ The variable `s` refers to a string literal, where the value of the string is ha
     }                      // this scope is now over, and s is no longer valid
 ```
 
-##### Listing 4-1: A variable and the scope in which it is valid
+##### A variable and the scope in which it is valid
 
 In other words, there are two important points in time here:
 
@@ -107,7 +107,7 @@ That first part is done by us: when we call `String::from`, its implementation r
 
 However, the second part is different. In languages with a _garbage collector (GC)_, the GC keeps track and cleans up memory that isn’t being used anymore, and we don’t need to think about it. Without a GC, it’s our responsibility to identify when memory is no longer being used and call code to explicitly return it, just as we did to request it. Doing this correctly has historically been a difficult programming problem. If we forget, we’ll waste memory. If we do it too early, we’ll have an invalid variable. If we do it twice, that’s a bug too. We need to pair exactly one `allocate` with exactly one `free`.
 
-Rust takes a different path: the memory is automatically returned once the variable that owns it goes out of scope. Here’s a version of our scope example from Listing 4-1 using a `String` instead of a string literal:
+Rust takes a different path: the memory is automatically returned once the variable that owns it goes out of scope. Here’s a version of our scope example from code snippet above using a `String` instead of a string literal:
 
 ```rust
     {
@@ -126,14 +126,14 @@ This pattern has a profound impact on the way Rust code is written. It may seem 
 
 #### Ways Variables and Data Interact: Move
 
-Multiple variables can interact with the same data in different ways in Rust. Let’s look at an example using an integer in Listing 4-2.
+Multiple variables can interact with the same data in different ways in Rust. Let’s look at an example using an integer in the code snippet below.
 
 ```rust
     let x = 5;
     let y = x;
 ```
 
-##### Listing 4-2: Assigning the integer value of variable x to y
+##### Assigning the integer value of variable x to y
 
 We can probably guess what this is doing: “bind the value `5` to `x`; then make a copy of the value in `x` and bind it to `y`.” We now have two variables, `x` and `y`, and both equal `5`. This is indeed what is happening, because integers are simple values with a known, fixed size, and these two `5` values are pushed onto the stack.
 
@@ -146,27 +146,27 @@ Now let’s look at the `String` version:
 
 This looks very similar to the previous code, so we might assume that the way it works would be the same: that is, the second line would make a copy of the value in `s1` and bind it to `s2`. But this isn’t quite what happens.
 
-Take a look at Figure 4-1 to see what is happening to `String` under the covers. A `String` is made up of three parts, shown on the left: a pointer to the memory that holds the contents of the string, a length, and a capacity. This group of data is stored on the stack. On the right is the memory on the heap that holds the contents.
+Take a look at Figure 1 to see what is happening to `String` under the covers. A `String` is made up of three parts, shown on the left: a pointer to the memory that holds the contents of the string, a length, and a capacity. This group of data is stored on the stack. On the right is the memory on the heap that holds the contents.
 
 <img alt="String in memory" src="https://doc.rust-lang.org/stable/book/img/trpl04-01.svg" class="center" style="width: 50%;">
 
-##### Figure 4-1: Representation in memory of a String holding the value "hello" bound to s1
+##### Figure 1: Representation in memory of a String holding the value "hello" bound to s1
 
 The length is how much memory, in bytes, the contents of the `String` is currently using. The capacity is the total amount of memory, in bytes, that the `String` has received from the operating system. The difference between length and capacity matters, but not in this context, so for now, it’s fine to ignore the capacity.
 
-When we assign `s1` to `s2`, the `String` data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the data representation in memory looks like Figure 4-2.
+When we assign `s1` to `s2`, the `String` data is copied, meaning we copy the pointer, the length, and the capacity that are on the stack. We do not copy the data on the heap that the pointer refers to. In other words, the data representation in memory looks like Figure 2.
 
 <img alt="s1 and s2 pointing to the same value" src="https://doc.rust-lang.org/stable/book/img/trpl04-02.svg" class="center" style="width: 50%;">
 
-##### Figure 4-2: Representation in memory of the variable s2 that has a copy of the pointer, length, and capacity of s1
+##### Figure 2: Representation in memory of the variable s2 that has a copy of the pointer, length, and capacity of s1
 
-The representation does _not_ look like Figure 4-3, which is what memory would look like if Rust instead copied the heap data as well. If Rust did this, the operation `s2 = s1` could be very expensive in terms of runtime performance if the data on the heap were large.
+The representation does _not_ look like Figure 3, which is what memory would look like if Rust instead copied the heap data as well. If Rust did this, the operation `s2 = s1` could be very expensive in terms of runtime performance if the data on the heap were large.
 
 <img alt="s1 and s2 to two places" src="https://doc.rust-lang.org/stable/book/img/trpl04-03.svg" class="center" style="width: 50%;">
 
-##### Figure 4-3: Another possibility for what s2 = s1 might do if Rust copied the heap data as well
+##### Figure 3: Another possibility for what s2 = s1 might do if Rust copied the heap data as well
 
-Earlier, we said that when a variable goes out of scope, Rust automatically calls the `drop` function and cleans up the heap memory for that variable. But Figure 4-2 shows both data pointers pointing to the same location. This is a problem: when `s2` and `s1` go out of scope, they will both try to free the same memory. This is known as a _double free_ error and is one of the memory safety bugs we mentioned previously. Freeing memory twice can lead to memory corruption, which can potentially lead to security vulnerabilities.
+Earlier, we said that when a variable goes out of scope, Rust automatically calls the `drop` function and cleans up the heap memory for that variable. But Figure 2 shows both data pointers pointing to the same location. This is a problem: when `s2` and `s1` go out of scope, they will both try to free the same memory. This is known as a _double free_ error and is one of the memory safety bugs we mentioned previously. Freeing memory twice can lead to memory corruption, which can potentially lead to security vulnerabilities.
 
 To ensure memory safety, there’s one more detail to what happens in this situation in Rust. Instead of trying to copy the allocated memory, Rust considers `s1` to no longer be valid and, therefore, Rust doesn’t need to free anything when `s1` goes out of scope. Check out what happens when you try to use `s1` after `s2` is created; it won’t work:
 
@@ -193,11 +193,11 @@ You’ll get an error like this because Rust prevents you from using the invalid
       not implement the `Copy` trait
 ```
 
-If you’ve heard the terms _shallow copy_ and _deep copy_ while working with other languages, the concept of copying the pointer, length, and capacity without copying the data probably sounds like making a shallow copy. But because Rust also invalidates the first variable, instead of being called a shallow copy, it’s known as a _move_. In this example, we would say that `s1` was _moved_ into `s2`. So what actually happens is shown in Figure 4-4.
+If you’ve heard the terms _shallow copy_ and _deep copy_ while working with other languages, the concept of copying the pointer, length, and capacity without copying the data probably sounds like making a shallow copy. But because Rust also invalidates the first variable, instead of being called a shallow copy, it’s known as a _move_. In this example, we would say that `s1` was _moved_ into `s2`. So what actually happens is shown in Figure 4.
 
 <img alt="s1 moved to s2" src="https://doc.rust-lang.org/stable/book/img/trpl04-04.svg" class="center" style="width: 50%;">
 
-##### Figure 4-4: Representation in memory after `s1` has been invalidated
+##### Figure 4: Representation in memory after `s1` has been invalidated
 
 That solves our problem! With only `s2` valid, when it goes out of scope, it alone will free the memory, and we’re done.
 
@@ -216,13 +216,13 @@ Here’s an example of the `clone` method in action:
     println!("s1 = {}, s2 = {}", s1, s2);
 ```
 
-This works just fine and explicitly produces the behavior shown in Figure 4-3, where the heap data _does_ get copied.
+This works just fine and explicitly produces the behavior shown in Figure 3, where the heap data _does_ get copied.
 
 When you see a call to `clone`, you know that some arbitrary code is being executed and that code may be expensive. It’s a visual indicator that something different is going on.
 
 #### Stack-Only Data: Copy
 
-There’s another wrinkle we haven’t talked about yet. This code using integers, part of which was shown in Listing 4-2, works and is valid:
+There’s another wrinkle we haven’t talked about yet. This code using integers, part of which was shown in the "Assigning the integer value of variable x to y" snippet, works and is valid:
 
 ```rust
     let x = 5;
@@ -247,7 +247,7 @@ So what types are `Copy`? You can check the documentation for the given type to 
 
 ### Ownership and Functions
 
-The semantics for passing a value to a function are similar to those for assigning a value to a variable. Passing a variable to a function will move or copy, just as assignment does. Listing 4-3 has an example with some annotations showing where variables go into and out of scope.
+The semantics for passing a value to a function are similar to those for assigning a value to a variable. Passing a variable to a function will move or copy, just as assignment does. The example below has an example with some annotations showing where variables go into and out of scope.
 
 ```rust
     fn main() {
@@ -275,13 +275,13 @@ The semantics for passing a value to a function are similar to those for assigni
     } // Here, some_integer goes out of scope. Nothing special happens.
 ```
 
-##### Listing 4-3: Functions with ownership and scope annotated
+##### Functions with ownership and scope annotated
 
 If we tried to use `s` after the call to `takes_ownership`, Rust would throw a compile-time error. These static checks protect us from mistakes. Try adding code to `main` that uses `s` and `x` to see where you can use them and where the ownership rules prevent you from doing so.
 
 ### Return Values and Scope
 
-Returning values can also transfer ownership. Listing 4-4 is an example with similar annotations to those in Listing 4-3.
+Returning values can also transfer ownership. The code snippet below is an example with similar annotations to those in the previous snippet.
 
 ```rust
     fn main() {
@@ -315,13 +315,13 @@ Returning values can also transfer ownership. Listing 4-4 is an example with sim
     }
 ```
 
-##### Listing 4-4: Transferring ownership of return values
+##### Transferring ownership of return values
 
 The ownership of a variable follows the same pattern every time: assigning a value to another variable moves it. When a variable that includes data on the heap goes out of scope, the value will be cleaned up by `drop` unless the data has been moved to be owned by another variable.
 
 Taking ownership and then returning ownership with every function is a bit tedious. What if we want to let a function use a value but not take ownership? It’s quite annoying that anything we pass in also needs to be passed back if we want to use it again, in addition to any data resulting from the body of the function that we might want to return as well.
 
-It’s possible to return multiple values using a tuple, as shown in Listing 4-5.
+It’s possible to return multiple values using a tuple, as shown in the snippet below.
 
 ```rust
     fn main() {
@@ -339,7 +339,7 @@ It’s possible to return multiple values using a tuple, as shown in Listing 4-5
     }
 ```
 
-##### Listing 4-5: Returning ownership of parameters
+##### Returning ownership of parameters
 
 But this is too much ceremony and a lot of work for a concept that should be common. Luckily for us, Rust has a feature for this concept, called _references_.
 
