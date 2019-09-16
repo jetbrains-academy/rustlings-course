@@ -4,3 +4,16 @@ files:
   visible: false
 - name: src/main.rs
   visible: true
+  placeholders:
+  - offset: 70
+    length: 27
+    placeholder_text: /*you could replace vec0 with another variable*/
+  - offset: 127
+    length: 7
+    placeholder_text: vec_0 /*and put it here*/
+  - offset: 415
+    length: 9
+    placeholder_text: /*you could borrow this value*/
+  - offset: 486
+    length: 27
+    placeholder_text: vec /*and then you don't have to return anything here*/

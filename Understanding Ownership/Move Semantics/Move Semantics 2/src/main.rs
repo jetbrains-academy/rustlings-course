@@ -1,7 +1,11 @@
+use std::borrow::Borrow;
+
 fn main() {
     let vec0 = Vec::new();
 
-    let mut vec1 = fill_vec(vec0);
+    let vec_aux = vec0.clone();
+
+    let mut vec1 = fill_vec(vec_aux);
 
     // Do not change the following line!
     println!("{} has length {} content `{:?}`", "vec0", vec0.len(), vec0);
@@ -12,11 +16,11 @@ fn main() {
 }
 
 fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
-    let mut vec = vec;
+    let mut vec = vec.borrow();
 
     vec.push(22);
     vec.push(44);
     vec.push(66);
 
-    vec
+    //No need to return a value
 }
