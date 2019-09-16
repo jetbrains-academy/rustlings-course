@@ -1,4 +1,4 @@
-## Task 2
+## Declaring a Macro
 
 Make me compile!
 

@@ -1,6 +1,16 @@
-type: theory
+type: edu
 files:
 - name: Cargo.toml
   visible: false
 - name: src/main.rs
   visible: true
+  placeholders:
+  - offset: 207
+    length: 30
+    placeholder_text: /*the main function declaration should be below the macro declaration*/
+  - offset: 0
+    length: 118
+    placeholder_text: |-
+      fn main() {
+          my_macro!();
+      }
