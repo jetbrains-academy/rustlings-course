@@ -1,6 +1,6 @@
 ## References and Borrowing
 
-The issue with the tuple code in Listing 4-5 is that we have to return the `String` to the calling function so we can still use the `String` after the call to `calculate_length`, because the `String` was moved into `calculate_length`.
+The issue with the tuple code in the previous task is that we have to return the `String` to the calling function so we can still use the `String` after the call to `calculate_length`, because the `String` was moved into `calculate_length`.
 
 Here is how you would define and use a `calculate_length` function that has a reference to an object as a parameter instead of taking ownership of the value:
 
@@ -20,11 +20,11 @@ Here is how you would define and use a `calculate_length` function that has a re
 
 First, notice that all the tuple code in the variable declaration and the function return value is gone. Second, note that we pass `&s1` into `calculate_length` and, in its definition, we take `&String` rather than `String`.
 
-These ampersands are _references_, and they allow you to refer to some value without taking ownership of it. Figure 4-5 shows a diagram.
+These ampersands are _references_, and they allow you to refer to some value without taking ownership of it. Figure 5 shows a diagram.
 
 <img alt="&amp;String s pointing at String s1" src="https://doc.rust-lang.org/stable/book/img/trpl04-05.svg" class="center">
 
-##### Figure 4-5: A diagram of &String s pointing at String s1
+##### Figure 5: A diagram of &String s pointing at String s1
 
 > Note: The opposite of referencing by using `&` is _dereferencing_, which is accomplished with the dereference operator, `*`. We’ll see some uses of the dereference operator in Chapter 8 and discuss details of dereferencing in Chapter 15.
 
@@ -51,7 +51,7 @@ The scope in which the variable `s` is valid is the same as any function paramet
 
 We call having references as function parameters _borrowing_. As in real life, if a person owns something, you can borrow it from them. When you’re done, you have to give it back.
 
-So what happens if we try to modify something we’re borrowing? Try the code in Listing 4-6\. Spoiler alert: it doesn’t work!
+So what happens if we try to modify something we’re borrowing? Try the code in the code snippet below. Spoiler alert: it doesn’t work!
 
 ```rust
     fn main() {
@@ -65,7 +65,7 @@ So what happens if we try to modify something we’re borrowing? Try the code in
     }
 ```
 
-##### Listing 4-6: Attempting to modify a borrowed value
+##### Attempting to modify a borrowed value
 
 Here’s the error:
 
@@ -83,7 +83,7 @@ Just as variables are immutable by default, so are references. We’re not allow
 
 ### Mutable References
 
-We can fix the error in the code from Listing 4-6 with just a small tweak:
+We can fix the error in the code from the snippet above with just a small tweak:
 
 ```rust
     fn main() {
