@@ -2,7 +2,7 @@ content:
 - Intro
 - Recoverable Errors with Result
 - Generic Data Types
-- Errors 1
+- Returning Result
 - Errors 2
 - Errors 3
 - Errors n

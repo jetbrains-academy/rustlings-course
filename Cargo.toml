@@ -68,7 +68,7 @@ members = [
     "Recoverable & Unrecoverable Errors/Error Handling/Intro",
     "Recoverable & Unrecoverable Errors/Error Handling/Recoverable Errors with Result",
     "Recoverable & Unrecoverable Errors/Error Handling/Generic Data Types",
-    "Recoverable & Unrecoverable Errors/Error Handling/Errors 1",
+    "Recoverable & Unrecoverable Errors/Error Handling/Returning Result",
     "Recoverable & Unrecoverable Errors/Error Handling/Errors 2",
     "Recoverable & Unrecoverable Errors/Error Handling/Errors 3",
     "Recoverable & Unrecoverable Errors/Error Handling/Errors n",
