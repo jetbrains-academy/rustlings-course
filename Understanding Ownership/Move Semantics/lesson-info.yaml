@@ -4,5 +4,5 @@ content:
 - The Slice Type
 - Mutable
 - Borrow
-- Move Semantics 3
+- Mutable Argument
 - Move Semantics 4
