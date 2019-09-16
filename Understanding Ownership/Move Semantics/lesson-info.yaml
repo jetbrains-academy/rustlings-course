@@ -3,6 +3,6 @@ content:
 - References and Borrowing
 - The Slice Type
 - Mutable
-- Move Semantics 2
+- Borrow
 - Move Semantics 3
 - Move Semantics 4

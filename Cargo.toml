@@ -62,7 +62,7 @@ members = [
     "Understanding Ownership/Move Semantics/References and Borrowing",
     "Understanding Ownership/Move Semantics/The Slice Type",
     "Understanding Ownership/Move Semantics/Mutable",
-    "Understanding Ownership/Move Semantics/Move Semantics 2",
+    "Understanding Ownership/Move Semantics/Borrow",
     "Understanding Ownership/Move Semantics/Move Semantics 3",
     "Understanding Ownership/Move Semantics/Move Semantics 4",
     "Recoverable & Unrecoverable Errors/Error Handling/Intro",

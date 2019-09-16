@@ -1,4 +1,4 @@
 [package]
-name = "move_semantics2"
+name = "borrow"
 version = "0.1.0"
 edition = "2018"
