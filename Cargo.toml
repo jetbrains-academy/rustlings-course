@@ -56,7 +56,7 @@ members = [
     "Modules & Macros/Macros/Calling a Macro",
     "Modules & Macros/Macros/Declaring a Macro",
     "Modules & Macros/Macros/Outside of Module",
-    "Modules & Macros/Macros/Macros 4",
+    "Modules & Macros/Macros/Macro Arms",
     "Modules & Macros/Test 4/Test 4",
     "Understanding Ownership/Move Semantics/Intro",
     "Understanding Ownership/Move Semantics/References and Borrowing",
