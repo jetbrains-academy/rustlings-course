@@ -32,7 +32,7 @@ To define a macro, you use the `macro_rules!` construct. Let’s explore how to 
 
 We could also use the `vec!` macro to make a vector of two integers or a vector of five string slices. We wouldn’t be able to use a function to do the same because we wouldn’t know the number or type of values up front.
 
-Listing 19-36 shows a slightly simplified definition of the `vec!` macro.
+The code snippet below shows a slightly simplified definition of the `vec!` macro.
 
 ```rust
     #[macro_export]
@@ -49,7 +49,7 @@ Listing 19-36 shows a slightly simplified definition of the `vec!` macro.
     }
 ```
 
-##### Listing 19-36: A simplified version of the vec! macro definition
+##### A simplified version of the vec! macro definition
 
 > Note: The actual definition of the `vec!` macro in the standard library includes code to preallocate the correct amount of memory up front. That code is an optimization that we don’t include here to make the example simpler.
 
@@ -59,7 +59,7 @@ We then start the macro definition with `macro_rules!` and the name of the macro
 
 The structure in the `vec!` body is similar to the structure of a `match` expression. Here we have one arm with the pattern `( $( $x:expr ),* )`, followed by `=>` and the block of code associated with this pattern. If the pattern matches, the associated block of code will be emitted. Given that this is the only pattern in this macro, there is only one valid way to match; any other pattern will result in an error. More complex macros will have more than one arm.
 
-Valid pattern syntax in macro definitions is different than the pattern syntax covered in Chapter 18 because macro patterns are matched against Rust code structure rather than values. Let’s walk through what the pattern pieces in Listing 19-36 mean; for the full macro pattern syntax, see [the reference](../reference/macros.html).
+Valid pattern syntax in macro definitions is different than the pattern syntax covered in Chapter 18 because macro patterns are matched against Rust code structure rather than values. Let’s walk through what the pattern pieces in in the code snippet above mean; for the full macro pattern syntax, see [the reference](../reference/macros.html).
 
 First, a set of parentheses encompasses the whole pattern. A dollar sign (`<main) is next, followed by a set of parentheses that captures values that match the pattern within the parentheses for use in the replacement code. Within `$()` is `$x:expr`, which matches any Rust expression and gives the expression the name `$x`.
 
@@ -87,7 +87,7 @@ The second form of macros is _procedural macros_, which act more like functions 
 
 The three kinds of procedural macros: custom derive, attribute-like, and function-like, all work in a similar fashion.
 
-When creating procedural macros, the definitions must reside in their own crate with a special crate type. This is for complex technical reasons that we hope to eliminate in the future. Using procedural macros looks like the code in Listing 19-37, where `some_attribute` is a placeholder for using a specific macro.
+When creating procedural macros, the definitions must reside in their own crate with a special crate type. This is for complex technical reasons that we hope to eliminate in the future. Using procedural macros looks like the code in the example below, where `some_attribute` is a placeholder for using a specific macro.
 
 ```rust
     use proc_macro;
@@ -97,7 +97,7 @@ When creating procedural macros, the definitions must reside in their own crate 
     }
 ```
 
-##### Listing 19-37: An example of using a procedural macro
+##### An example of using a procedural macro
 
 The function that defines a procedural macro takes a `TokenStream` as an input and produces a `TokenStream` as an output. The `TokenStream` type is defined by the `proc_macro` crate that is included with Rust and represents a sequence of tokens. This is the core of the macro: the source code that the macro is operating on makes up the input `TokenStream`, and the code the macro produces is the output `TokenStream`. The function also has an attribute attached to it that specifies which kind of procedural macro we’re creating. We can have multiple kinds of procedural macros in the same crate.
 
@@ -105,7 +105,7 @@ Let’s look at the different kinds of procedural macros. We’ll start with a c
 
 ### How to Write a Custom `derive` Macro
 
-Let’s create a crate named `hello_macro` that defines a trait named `HelloMacro` with one associated function named `hello_macro`. Rather than making our crate users implement the `HelloMacro` trait for each of their types, we’ll provide a procedural macro so users can annotate their type with `#[derive(HelloMacro)]` to get a default implementation of the `hello_macro` function. The default implementation will print `Hello, Macro! My name is TypeName!` where `TypeName` is the name of the type on which this trait has been defined. In other words, we’ll write a crate that enables another programmer to write code like Listing 19-38 using our crate.
+Let’s create a crate named `hello_macro` that defines a trait named `HelloMacro` with one associated function named `hello_macro`. Rather than making our crate users implement the `HelloMacro` trait for each of their types, we’ll provide a procedural macro so users can annotate their type with `#[derive(HelloMacro)]` to get a default implementation of the `hello_macro` function. The default implementation will print `Hello, Macro! My name is TypeName!` where `TypeName` is the name of the type on which this trait has been defined. In other words, we’ll write a crate that enables another programmer to write code like the one below using our crate.
 
 ```rust
     use hello_macro::HelloMacro;
@@ -119,7 +119,7 @@ Let’s create a crate named `hello_macro` that defines a trait named `HelloMacr
     }
 ```
 
-##### Listing 19-38: The code a user of our crate will be able to write when using our procedural macro
+##### The code a user of our crate will be able to write when using our procedural macro
 
 This code will print `Hello, Macro! My name is Pancakes!` when we’re done. The first step is to make a new library crate, like this:
 
@@ -176,7 +176,7 @@ We need to declare the `hello_macro_derive` crate as a procedural macro crate. W
     quote = "0.6.3"
 ```
 
-To start defining the procedural macro, place the code in Listing 19-39 into your _src/lib.rs_ file for the `hello_macro_derive` crate. Note that this code won’t compile until we add a definition for the `impl_hello_macro` function.
+To start defining the procedural macro, place the code in the snippet below into your _src/lib.rs_ file for the `hello_macro_derive` crate. Note that this code won’t compile until we add a definition for the `impl_hello_macro` function.
 
 ```rust
     extern crate proc_macro;
@@ -196,7 +196,7 @@ To start defining the procedural macro, place the code in Listing 19-39 into you
     }
 ```
 
-##### Listing 19-39: Code that most procedural macro crates will require in order to process Rust code
+##### Code that most procedural macro crates will require in order to process Rust code
 
 Notice that we’ve split the code into the `hello_macro_derive` function responsible for parsing the `TokenStream` and the `impl_hello_macro` function responsible for transforming the syntax tree: this makes writing a procedural macro more convenient. The code in the outer function (`hello_macro_derive` in this case) will be the same for almost every procedural macro crate you see or create. The code you specify in the body of the inner function (`impl_hello_macro` in this case) will be different depending on your procedural macro’s purpose.
 
@@ -206,7 +206,7 @@ The `syn` crate parses Rust code from a string into a data structure that we can
 
 The `hello_macro_derive` function will be called when a user of our library specifies `#[derive(HelloMacro)]` on a type. This is possible because we’ve annotated the `hello_macro_derive` function here with `proc_macro_derive` and specified the name, `HelloMacro`, which matches our trait name; this is the convention most procedural macros follow.
 
-The `hello_macro_derive` function first converts the `input` from a `TokenStream` to a data structure that we can then interpret and perform operations on. This is where `syn` comes into play. The `parse` function in `syn` takes a `TokenStream` and returns a `DeriveInput` struct representing the parsed Rust code. Listing 19-40 shows the relevant parts of the `DeriveInput` struct we get from parsing the `struct Pancakes;` string:
+The `hello_macro_derive` function first converts the `input` from a `TokenStream` to a data structure that we can then interpret and perform operations on. This is where `syn` comes into play. The `parse` function in `syn` takes a `TokenStream` and returns a `DeriveInput` struct representing the parsed Rust code. The example below shows the relevant parts of the `DeriveInput` struct we get from parsing the `struct Pancakes;` string:
 
 ```rust
     DeriveInput {
@@ -228,7 +228,7 @@ The `hello_macro_derive` function first converts the `input` from a `TokenStream
     }
 ```
 
-##### Listing 19-40: The DeriveInput instance we get when parsing the code that has the macro’s attribute in Listing 19-38
+##### The DeriveInput instance we get when parsing the code that has the macro’s attribute in "The code a user of our crate will be able to write when using our procedural macro" snippet above
 
 The fields of this struct show that the Rust code we’ve parsed is a unit struct with the `ident` (identifier, meaning the name) of `Pancakes`. There are more fields on this struct for describing all sorts of Rust code; check the [`syn` documentation for `DeriveInput`](https://docs.rs/syn/0.14.4/syn/struct.DeriveInput.html) for more information.
 
@@ -236,7 +236,7 @@ Soon we’ll define the `impl_hello_macro` function, which is where we’ll buil
 
 You might have noticed that we’re calling `unwrap` to cause the `hello_macro_derive` function to panic if the call to the `syn::parse` function fails here. It’s necessary for our procedural macro to panic on errors because `proc_macro_derive` functions must return `TokenStream` rather than `Result` to conform to the procedural macro API. We’ve simplified this example by using `unwrap`; in production code, you should provide more specific error messages about what went wrong by using `panic!` or `expect`.
 
-Now that we have the code to turn the annotated Rust code from a `TokenStream` into a `DeriveInput` instance, let’s generate the code that implements the `HelloMacro` trait on the annotated type, as shown in Listing 19-41.
+Now that we have the code to turn the annotated Rust code from a `TokenStream` into a `DeriveInput` instance, let’s generate the code that implements the `HelloMacro` trait on the annotated type, as shown in the code snippet below.
 
 ```rust
     fn impl_hello_macro(ast: &syn::DeriveInput) -> TokenStream {
@@ -252,9 +252,9 @@ Now that we have the code to turn the annotated Rust code from a `TokenStream` i
     }
 ```
 
-##### Listing 19-41: Implementing the HelloMacro trait using the parsed Rust code
+##### Implementing the HelloMacro trait using the parsed Rust code
 
-We get an `Ident` struct instance containing the name (identifier) of the annotated type using `ast.ident`. The struct in Listing 19-40 shows that when we run the `impl_hello_macro` function on the code in Listing 19-38, the `ident` we get will have the `ident` field with a value of `"Pancakes"`. Thus, the `name` variable in Listing 19-41 will contain an `Ident` struct instance that, when printed, will be the string `"Pancakes"`, the name of the struct in Listing 19-38.
+We get an `Ident` struct instance containing the name (identifier) of the annotated type using `ast.ident`. The struct in the snippet with DeriveInput instance shows that when we run the `impl_hello_macro` function on the code in the example with the procedural macro, the `ident` we get will have the `ident` field with a value of `"Pancakes"`. Thus, the `name` variable in the snippet above will contain an `Ident` struct instance that, when printed, will be the string `"Pancakes"`, the name of the struct in the example with the procedural macro.
 
 The `quote!` macro lets us define the Rust code that we want to return. The compiler expects something different to the direct result of the `quote!` macro’s execution, so we need to convert it to a `TokenStream`. We do this by calling the `into` method, which consumes this intermediate representation and returns a value of the required `TokenStream` type.
 
@@ -264,7 +264,7 @@ We want our procedural macro to generate an implementation of our `HelloMacro` t
 
 The `stringify!` macro used here is built into Rust. It takes a Rust expression, such as `1 + 2`, and at compile time turns the expression into a string literal, such as `"1 + 2"`. This is different than `format!` or `println!`, macros which evaluate the expression and then turn the result into a `String`. There is a possibility that the `#name` input might be an expression to print literally, so we use `stringify!`. Using `stringify!` also saves an allocation by converting `#name` to a string literal at compile time.
 
-At this point, `cargo build` should complete successfully in both `hello_macro` and `hello_macro_derive`. Let’s hook up these crates to the code in Listing 19-38 to see the procedural macro in action! Create a new binary project in your _projects_ directory using `cargo new pancakes`. We need to add `hello_macro` and `hello_macro_derive` as dependencies in the `pancakes` crate’s _Cargo.toml_. If you’re publishing your versions of `hello_macro` and `hello_macro_derive` to _https://crates.io/_, they would be regular dependencies; if not, you can specify them as `path` dependencies as follows:
+At this point, `cargo build` should complete successfully in both `hello_macro` and `hello_macro_derive`. Let’s hook up these crates to the code in the example with the procedural macro to see the procedural macro in action! Create a new binary project in your _projects_ directory using `cargo new pancakes`. We need to add `hello_macro` and `hello_macro_derive` as dependencies in the `pancakes` crate’s _Cargo.toml_. If you’re publishing your versions of `hello_macro` and `hello_macro_derive` to _https://crates.io/_, they would be regular dependencies; if not, you can specify them as `path` dependencies as follows:
 
 ```toml
     [dependencies]
@@ -272,7 +272,7 @@ At this point, `cargo build` should complete successfully in both `hello_macro` 
     hello_macro_derive = { path = "../hello_macro/hello_macro_derive" }
 ```
 
-Put the code in Listing 19-38 into _src/main.rs_, and run `cargo run`: it should print `Hello, Macro! My name is Pancakes!` The implementation of the `HelloMacro` trait from the procedural macro was included without the `pancakes` crate needing to implement it; the `#[derive(HelloMacro)]` added the trait implementation.
+Put the code in the example with the procedural macro into _src/main.rs_, and run `cargo run`: it should print `Hello, Macro! My name is Pancakes!` The implementation of the `HelloMacro` trait from the procedural macro was included without the `pancakes` crate needing to implement it; the `#[derive(HelloMacro)]` added the trait implementation.
 
 Next, let’s explore how the other kinds of procedural macros differ from custom derive macros.
 
