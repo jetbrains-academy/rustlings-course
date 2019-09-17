@@ -22,7 +22,7 @@ Management of mutexes can be incredibly tricky to get right, which is why so man
 
 #### The API of Mutex<T>
 
-As an example of how to use a mutex, let’s start by using a mutex in a single-threaded context, as shown in Listing 16-12:
+As an example of how to use a mutex, let’s start by using a mutex in a single-threaded context, as shown below:
 
 ```rust
     use std::sync::Mutex;
@@ -39,7 +39,7 @@ As an example of how to use a mutex, let’s start by using a mutex in a single-
     }
 ```
 
-##### Listing 16-12: Exploring the API of Mutex<T> in a single-threaded context for simplicity
+##### Exploring the API of Mutex<T> in a single-threaded context for simplicity
 
 As with many types, we create a `Mutex<T>` using the associated function `new`. To access the data inside the mutex, we use the `lock` method to acquire the lock. This call will block the current thread so it can’t do any work until it’s our turn to have the lock.
 
@@ -47,13 +47,13 @@ The call to `lock` would fail if another thread holding the lock panicked. In th
 
 After we’ve acquired the lock, we can treat the return value, named `num` in this case, as a mutable reference to the data inside. The type system ensures that we acquire a lock before using the value in `m`: `Mutex<i32>` is not an `i32`, so we _must_ acquire the lock to be able to use the `i32` value. We can’t forget; the type system won’t let us access the inner `i32` otherwise.
 
-As you might suspect, `Mutex<T>` is a smart pointer. More accurately, the call to `lock` _returns_ a smart pointer called `MutexGuard`, wrapped in a `LockResult` that we handled with the call to `unwrap`. The `MutexGuard` smart pointer implements `Deref` to point at our inner data; the smart pointer also has a `Drop` implementation that releases the lock automatically when a `MutexGuard` goes out of scope, which happens at the end of the inner scope in Listing 16-12\. As a result, we don’t risk forgetting to release the lock and blocking the mutex from being used by other threads because the lock release happens automatically.
+As you might suspect, `Mutex<T>` is a smart pointer. More accurately, the call to `lock` _returns_ a smart pointer called `MutexGuard`, wrapped in a `LockResult` that we handled with the call to `unwrap`. The `MutexGuard` smart pointer implements `Deref` to point at our inner data; the smart pointer also has a `Drop` implementation that releases the lock automatically when a `MutexGuard` goes out of scope, which happens at the end of the inner scope in the previous code snippet. As a result, we don’t risk forgetting to release the lock and blocking the mutex from being used by other threads because the lock release happens automatically.
 
 After dropping the lock, we can print the mutex value and see that we were able to change the inner `i32` to 6.
 
 #### Sharing a Mutex<T> Between Multiple Threads
 
-Now, let’s try to share a value between multiple threads using `Mutex<T>`. We’ll spin up 10 threads and have them each increment a counter value by 1, so the counter goes from 0 to 10\. Note that the next few examples will have compiler errors, and we’ll use those errors to learn more about using `Mutex<T>` and how Rust helps us use it correctly. Listing 16-13 has our starting example:
+Now, let’s try to share a value between multiple threads using `Mutex<T>`. We’ll spin up 10 threads and have them each increment a counter value by 1, so the counter goes from 0 to 10\. Note that the next few examples will have compiler errors, and we’ll use those errors to learn more about using `Mutex<T>` and how Rust helps us use it correctly. The following code has our starting example:
 
 ```rust
     use std::sync::Mutex;
@@ -80,11 +80,11 @@ Now, let’s try to share a value between multiple threads using `Mutex<T>`. We�
     }
 ```
 
-##### Listing 16-13: Ten threads each increment a counter guarded by a Mutex<T>
+##### Ten threads each increment a counter guarded by a Mutex<T>
 
-We create a `counter` variable to hold an `i32` inside a `Mutex<T>`, as we did in Listing 16-12. Next, we create 10 threads by iterating over a range of numbers. We use `thread::spawn` and give all the threads the same closure, one that moves the counter into the thread, acquires a lock on the `Mutex<T>` by calling the `lock` method, and then adds 1 to the value in the mutex. When a thread finishes running its closure, `num` will go out of scope and release the lock so another thread can acquire it.
+We create a `counter` variable to hold an `i32` inside a `Mutex<T>`, as we did in the first example. Next, we create 10 threads by iterating over a range of numbers. We use `thread::spawn` and give all the threads the same closure, one that moves the counter into the thread, acquires a lock on the `Mutex<T>` by calling the `lock` method, and then adds 1 to the value in the mutex. When a thread finishes running its closure, `num` will go out of scope and release the lock so another thread can acquire it.
 
-In the main thread, we collect all the join handles. Then, as we did in Listing 16-2, we call `join` on each handle to make sure all the threads finish. At that point, the main thread will acquire the lock and print the result of this program.
+In the main thread, we collect all the join handles. Then we call `join` on each handle to make sure all the threads finish. At that point, the main thread will acquire the lock and print the result of this program.
 
 We hinted that this example wouldn’t compile. Now let’s find out why!
 
@@ -117,7 +117,7 @@ We hinted that this example wouldn’t compile. Now let’s find out why!
 
 The error message states that the `counter` value is moved into the closure and then captured when we call `lock`. That description sounds like what we wanted, but it’s not allowed!
 
-Let’s figure this out by simplifying the program. Instead of making 10 threads in a `for` loop, let’s just make two threads without a loop and see what happens. Replace the first `for` loop in Listing 16-13 with this code instead:
+Let’s figure this out by simplifying the program. Instead of making 10 threads in a `for` loop, let’s just make two threads without a loop and see what happens. Replace the first `for` loop from the snippet above with this code instead:
 
 ```rust
     use std::sync::Mutex;
@@ -183,7 +183,7 @@ Aha! The first error message indicates that `counter` is moved into the closure 
 
 ### Multiple Ownership with Multiple Threads
 
-In Chapter 15, we gave a value multiple owners by using the smart pointer `Rc<T>` to create a reference counted value. Let’s do the same here and see what happens. We’ll wrap the `Mutex<T>` in `Rc<T>` in Listing 16-14 and clone the `Rc<T>` before moving ownership to the thread. Now that we’ve seen the errors, we’ll also switch back to using the `for` loop, and we’ll keep the `move` keyword with the closure.
+In Chapter 15, we gave a value multiple owners by using the smart pointer `Rc<T>` to create a reference counted value. Let’s do the same here and see what happens. We’ll wrap the `Mutex<T>` in `Rc<T>` in the following example and clone the `Rc<T>` before moving ownership to the thread. Now that we’ve seen the errors, we’ll also switch back to using the `for` loop, and we’ll keep the `move` keyword with the closure.
 
 ```rust
     use std::rc::Rc;
@@ -212,7 +212,7 @@ In Chapter 15, we gave a value multiple owners by using the smart pointer `Rc<T>
     }
 ```
 
-##### Listing 16-14: Attempting to use Rc<T> to allow multiple threads to own the Mutex<T>
+##### Attempting to use Rc<T> to allow multiple threads to own the Mutex<T>
 
 Once again, we compile and get... different errors! The compiler is teaching us a lot.
 
@@ -244,7 +244,7 @@ Fortunately, `Arc<T>` _is_ a type like `Rc<T>` that is safe to use in concurrent
 
 You might then wonder why all primitive types aren’t atomic and why standard library types aren’t implemented to use `Arc<T>` by default. The reason is that thread safety comes with a performance penalty that you only want to pay when you really need to. If you’re just performing operations on values within a single thread, your code can run faster if it doesn’t have to enforce the guarantees atomics provide.
 
-Let’s return to our example: `Arc<T>` and `Rc<T>` have the same API, so we fix our program by changing the `use` line, the call to `new`, and the call to `clone`. The code in Listing 16-15 will finally compile and run:
+Let’s return to our example: `Arc<T>` and `Rc<T>` have the same API, so we fix our program by changing the `use` line, the call to `new`, and the call to `clone`. The following code will finally compile and run:
 
 ```rust
     use std::sync::{Mutex, Arc};
@@ -272,7 +272,7 @@ Let’s return to our example: `Arc<T>` and `Rc<T>` have the same API, so we fix
     }
 ```
 
-##### Listing 16-15: Using an Arc<T> to wrap the Mutex<T> to be able to share ownership across multiple threads
+##### Using an Arc<T> to wrap the Mutex<T> to be able to share ownership across multiple threads
 
 This code will print the following:
 
