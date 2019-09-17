@@ -1,4 +1,4 @@
-type: theory
+type: edu
 files:
 - name: Cargo.toml
   visible: false
@@ -6,5 +6,10 @@ files:
   visible: true
   placeholders:
   - offset: 124
-    length: 0
-    placeholder_text: type here
+    length: 17
+    placeholder_text: /*it should be an Arc from the numbers*/
+  - offset: 215
+    length: 43
+    placeholder_text: /*declare child_numbers*/
+- name: tests/tests.rs
+  visible: false
