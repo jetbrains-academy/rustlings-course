@@ -1,4 +1,4 @@
-## Task 4
+## Multiple Errors
 
 This is a bigger error exercise than the previous ones!
 You can do it! :)

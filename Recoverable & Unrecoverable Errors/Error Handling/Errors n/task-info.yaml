@@ -4,5 +4,18 @@ files:
   visible: false
 - name: src/lib.rs
   visible: true
+  placeholders:
+  - offset: 187
+    length: 17
+    placeholder_text: ???
+  - offset: 268
+    length: 1
+    placeholder_text: /*something could go wrong here*/
+  - offset: 309
+    length: 1
+    placeholder_text: /*something could go wrong here*/
+  - offset: 361
+    length: 1
+    placeholder_text: /*something could go wrong here*/
 - name: tests/tests.rs
   visible: false

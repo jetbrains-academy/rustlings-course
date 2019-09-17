@@ -5,7 +5,7 @@ use std::io;
 #[test]
 fn test_success() {
     let x = test_with_str("42\n");
-    assert_eq!(PositiveNonzeroInteger(42), x.unwrap());
+    assert_eq!(PositiveNonzeroInteger::new(42), Ok(x.unwrap()));
 }
 
 #[test]
