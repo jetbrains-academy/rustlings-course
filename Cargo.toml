@@ -71,7 +71,7 @@ members = [
     "Recoverable & Unrecoverable Errors/Error Handling/Returning Result",
     "Recoverable & Unrecoverable Errors/Error Handling/Matching Result",
     "Recoverable & Unrecoverable Errors/Error Handling/Matching Result 2",
-    "Recoverable & Unrecoverable Errors/Error Handling/Errors n",
+    "Recoverable & Unrecoverable Errors/Error Handling/Multiple Errors",
     "Recoverable & Unrecoverable Errors/Error Handling/Option 1",
     "Recoverable & Unrecoverable Errors/Error Handling/Result 1",
     "Fearless Concurrency/Threads/Intro",
