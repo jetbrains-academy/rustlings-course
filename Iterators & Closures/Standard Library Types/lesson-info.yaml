@@ -3,4 +3,4 @@ content:
 - Shared-State Concurrency
 - Arc
 - Iterator
-- Iterators 4
+- Factorial
