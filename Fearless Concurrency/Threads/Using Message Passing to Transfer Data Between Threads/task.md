@@ -8,7 +8,7 @@ A channel in programming has two halves: a transmitter and a receiver. The trans
 
 Here, we’ll work up to a program that has one thread to generate values and send them down a channel, and another thread that will receive the values and print them out. We’ll be sending simple values between threads using a channel to illustrate the feature. Once you’re familiar with the technique, you could use channels to implement a chat system or a system where many threads perform parts of a calculation and send the parts to one thread that aggregates the results.
 
-First, in Listing 16-6, we’ll create a channel but not do anything with it. Note that this won’t compile yet because Rust can’t tell what type of values we want to send over the channel.
+First, in the example below, we’ll create a channel but not do anything with it. Note that this won’t compile yet because Rust can’t tell what type of values we want to send over the channel.
 
 ```rust
     use std::sync::mpsc;
@@ -18,13 +18,13 @@ First, in Listing 16-6, we’ll create a channel but not do anything with it. No
     }
 ```
 
-##### Listing 16-6: Creating a channel and assigning the two halves to tx and rx
+##### Creating a channel and assigning the two halves to tx and rx
 
 We create a new channel using the `mpsc::channel` function; `mpsc` stands for _multiple producer, single consumer_. In short, the way Rust’s standard library implements channels means a channel can have multiple _sending_ ends that produce values but only one _receiving_ end that consumes those values. Imagine multiple streams flowing together into one big river: everything sent down any of the streams will end up in one river at the end. We’ll start with a single producer for now, but we’ll add multiple producers when we get this example working.
 
 The `mpsc::channel` function returns a tuple, the first element of which is the sending end and the second element is the receiving end. The abbreviations `tx` and `rx` are traditionally used in many fields for _transmitter_ and _receiver_ respectively, so we name our variables as such to indicate each end. We’re using a `let` statement with a pattern that destructures the tuples; we’ll discuss the use of patterns in `let` statements and destructuring in Chapter 18\. Using a `let` statement this way is a convenient approach to extract the pieces of the tuple returned by `mpsc::channel`.
 
-Let’s move the transmitting end into a spawned thread and have it send one string so the spawned thread is communicating with the main thread, as shown in Listing 16-7\. This is like putting a rubber duck in the river upstream or sending a chat message from one thread to another.
+Let’s move the transmitting end into a spawned thread and have it send one string so the spawned thread is communicating with the main thread, as shown in the code snippet below. This is like putting a rubber duck in the river upstream or sending a chat message from one thread to another.
 
 ```rust
     use std::thread;
@@ -40,13 +40,13 @@ Let’s move the transmitting end into a spawned thread and have it send one str
     }
 ```
 
-##### Listing 16-7: Moving tx to a spawned thread and sending “hi”
+##### Moving tx to a spawned thread and sending “hi”
 
 Again, we’re using `thread::spawn` to create a new thread and then using `move` to move `tx` into the closure so the spawned thread owns `tx`. The spawned thread needs to own the transmitting end of the channel to be able to send messages through the channel.
 
 The transmitting end has a `send` method that takes the value we want to send. The `send` method returns a `Result<T, E>` type, so if the receiving end has already been dropped and there’s nowhere to send a value, the send operation will return an error. In this example, we’re calling `unwrap` to panic in case of an error. But in a real application, we would handle it properly: return to Chapter 9 to review strategies for proper error handling.
 
-In Listing 16-8, we’ll get the value from the receiving end of the channel in the main thread. This is like retrieving the rubber duck from the water at the end of the river or like getting a chat message.
+In the next example, we’ll get the value from the receiving end of the channel in the main thread. This is like retrieving the rubber duck from the water at the end of the river or like getting a chat message.
 
 ```rust
     use std::thread;
@@ -65,7 +65,7 @@ In Listing 16-8, we’ll get the value from the receiving end of the channel in 
     }
 ```
 
-##### Listing 16-8: Receiving the value “hi” in the main thread and printing it
+##### Receiving the value “hi” in the main thread and printing it
 
 The receiving end of a channel has two useful methods: `recv` and `try_recv`. We’re using `recv`, short for _receive_, which will block the main thread’s execution and wait until a value is sent down the channel. Once a value is sent, `recv` will return it in a `Result<T, E>`. When the sending end of the channel closes, `recv` will return an error to signal that no more values will be coming.
 
@@ -73,7 +73,7 @@ The `try_recv` method doesn’t block, but will instead return a `Result<T, E>` 
 
 We’ve used `recv` in this example for simplicity; we don’t have any other work for the main thread to do other than wait for messages, so blocking the main thread is appropriate.
 
-When we run the code in Listing 16-8, we’ll see the value printed from the main thread:
+When we run the code in the snippet below, we’ll see the value printed from the main thread:
 
 ```text
     Got: hi
@@ -83,7 +83,7 @@ Perfect!
 
 ### Channels and Ownership Transference
 
-The ownership rules play a vital role in message sending because they help you write safe, concurrent code. Preventing errors in concurrent programming is the advantage of thinking about ownership throughout your Rust programs. Let’s do an experiment to show how channels and ownership work together to prevent problems: we’ll try to use a `val` value in the spawned thread _after_ we’ve sent it down the channel. Try compiling the code in Listing 16-9 to see why this code isn’t allowed:
+The ownership rules play a vital role in message sending because they help you write safe, concurrent code. Preventing errors in concurrent programming is the advantage of thinking about ownership throughout your Rust programs. Let’s do an experiment to show how channels and ownership work together to prevent problems: we’ll try to use a `val` value in the spawned thread _after_ we’ve sent it down the channel. Try compiling the code in the next example to see why this code isn’t allowed:
 
 ```rust
     use std::thread;
@@ -103,9 +103,9 @@ The ownership rules play a vital role in message sending because they help you w
     }
 ```
 
-##### Listing 16-9: Attempting to use val after we’ve sent it down the channel
+##### Attempting to use val after we’ve sent it down the channel
 
-Here, we try to print `val` after we’ve sent it down the channel via `tx.send`. Allowing this would be a bad idea: once the value has been sent to another thread, that thread could modify or drop it before we try to use the value again. Potentially, the other thread’s modifications could cause errors or unexpected results due to inconsistent or nonexistent data. However, Rust gives us an error if we try to compile the code in Listing 16-9:
+Here, we try to print `val` after we’ve sent it down the channel via `tx.send`. Allowing this would be a bad idea: once the value has been sent to another thread, that thread could modify or drop it before we try to use the value again. Potentially, the other thread’s modifications could cause errors or unexpected results due to inconsistent or nonexistent data. However, Rust gives us an error if we try to compile the code in the example below:
 
 ```text
     error[E0382]: use of moved value: `val`
@@ -124,7 +124,7 @@ Our concurrency mistake has caused a compile time error. The `send` function tak
 
 ### Sending Multiple Values and Seeing the Receiver Waiting
 
-The code in Listing 16-8 compiled and ran, but it didn’t clearly show us that two separate threads were talking to each other over the channel. In Listing 16-10 we’ve made some modifications that will prove the code in Listing 16-8 is running concurrently: the spawned thread will now send multiple messages and pause for a second between each message.
+The code in the snippet about receiving "hi" in the main thread compiled and ran, but it didn’t clearly show us that two separate threads were talking to each other over the channel. In the following snippet we’ve made some modifications that will prove that code is running concurrently: the spawned thread will now send multiple messages and pause for a second between each message.
 
 ```rust
     use std::thread;
@@ -154,13 +154,13 @@ The code in Listing 16-8 compiled and ran, but it didn’t clearly show us that 
     }
 ```
 
-##### Listing 16-10: Sending multiple messages and pausing between each
+##### Sending multiple messages and pausing between each
 
 This time, the spawned thread has a vector of strings that we want to send to the main thread. We iterate over them, sending each individually, and pause between each by calling the `thread::sleep` function with a `Duration` value of 1 second.
 
 In the main thread, we’re not calling the `recv` function explicitly anymore: instead, we’re treating `rx` as an iterator. For each value received, we’re printing it. When the channel is closed, iteration will end.
 
-When running the code in Listing 16-10, you should see the following output with a 1-second pause in between each line:
+When running the code in the last example, you should see the following output with a 1-second pause in between each line:
 
 ```text
     Got: hi
@@ -173,7 +173,7 @@ Because we don’t have any code that pauses or delays in the `for` loop in the 
 
 ### Creating Multiple Producers by Cloning the Transmitter
 
-Earlier we mentioned that `mpsc` was an acronym for _multiple producer, single consumer_. Let’s put `mpsc` to use and expand the code in Listing 16-10 to create multiple threads that all send values to the same receiver. We can do so by cloning the transmitting half of the channel, as shown in Listing 16-11:
+Earlier we mentioned that `mpsc` was an acronym for _multiple producer, single consumer_. Let’s put `mpsc` to use and expand the code in the previous snippet to create multiple threads that all send values to the same receiver. We can do so by cloning the transmitting half of the channel, as shown below:
 
 ```rust
     // --snip--
@@ -216,7 +216,7 @@ Earlier we mentioned that `mpsc` was an acronym for _multiple producer, single c
     // --snip--
 ```
 
-##### Listing 16-11: Sending multiple messages from multiple producers
+##### Sending multiple messages from multiple producers
 
 This time, before we create the first spawned thread, we call `clone` on the sending end of the channel. This will give us a new sending handle we can pass to the first spawned thread. We pass the original sending end of the channel to a second spawned thread. This gives us two threads, each sending different messages to the receiving end of the channel.
 
