@@ -2,4 +2,4 @@ content:
 - Intro
 - Using Message Passing to Transfer Data Between Threads
 - Extensible Concurrency with the Sync and Send Traits
-- Threads 1
+- Threads Task

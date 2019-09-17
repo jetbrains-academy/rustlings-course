@@ -77,7 +77,7 @@ members = [
     "Fearless Concurrency/Threads/Intro",
     "Fearless Concurrency/Threads/Using Message Passing to Transfer Data Between Threads",
     "Fearless Concurrency/Threads/Extensible Concurrency with the Sync and Send Traits",
-    "Fearless Concurrency/Threads/Threads 1",
+    "Fearless Concurrency/Threads/Threads Task",
     "Iterators & Closures/Standard Library Types/Intro",
     "Iterators & Closures/Standard Library Types/Shared-State Concurrency",
     "Iterators & Closures/Standard Library Types/Arc 1",
