@@ -1,7 +1,7 @@
 fn main() {
     //This line should be deleted
 
-    let mut vec1 = fill_vec(/*this argument should be delted*/);
+    let mut vec1 = fill_vec(/*this argument should be deleted*/);
 
     println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
 

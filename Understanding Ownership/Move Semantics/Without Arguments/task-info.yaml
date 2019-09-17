@@ -9,12 +9,12 @@ files:
     length: 29
     placeholder_text: let vec0 = Vec::new();
   - offset: 75
-    length: 34
+    length: 35
     placeholder_text: vec0
-  - offset: 378
+  - offset: 379
     length: 22
     placeholder_text: //The vector declaration should be here
-  - offset: 420
+  - offset: 421
     length: 4
     placeholder_text: vec /*assign the created variable here*/
 - name: tests/tests.rs
