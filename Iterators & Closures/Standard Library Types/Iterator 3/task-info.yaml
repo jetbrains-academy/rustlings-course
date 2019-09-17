@@ -4,5 +4,15 @@ files:
   visible: false
 - name: src/lib.rs
   visible: true
+  placeholders:
+  - offset: 427
+    length: 209
+    placeholder_text: /*implement the function here*/
+  - offset: 918
+    length: 48
+    placeholder_text: //fill in the correct expression for x here
+  - offset: 1215
+    length: 50
+    placeholder_text: //fill in the correct expression for x here
 - name: tests/tests.rs
   visible: false
