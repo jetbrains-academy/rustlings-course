@@ -6,10 +6,10 @@ content:
 - Introduction
 - Guessing Game
 - Common Programming Concepts
-- Writing Automated Tests
-- Common Collections
-- Modules & Macros
 - Understanding Ownership
+- Modules & Macros
+- Common Collections
 - Recoverable & Unrecoverable Errors
-- Fearless Concurrency
+- Writing Automated Tests
 - Iterators & Closures
+- Fearless Concurrency
