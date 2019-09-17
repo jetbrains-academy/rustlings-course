@@ -4,7 +4,6 @@ summary: Small exercises to get you used to reading and writing Rust code!
 programming_language: Rust
 content:
 - Introduction
-- Guessing Game
 - Common Programming Concepts
 - Understanding Ownership
 - Modules & Macros
