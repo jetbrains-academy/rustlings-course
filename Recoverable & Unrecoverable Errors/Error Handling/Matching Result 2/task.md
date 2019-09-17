@@ -1,4 +1,4 @@
-## Task 3
+## Matching Result 2
 
 This is a program that is trying to use a completed version of the `total_cost` function from the previous exercise.
 It's not working though -- we can't use the `?` operator in the `main()` function! Why not?
