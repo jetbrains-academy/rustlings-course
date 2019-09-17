@@ -1,3 +1,5 @@
+use std::cmp::Ordering;
+
 #[derive(PartialEq, Debug)]
 pub struct PositiveNonzeroInteger(u64);
 
@@ -9,6 +11,14 @@ pub enum CreationError {
 
 impl PositiveNonzeroInteger {
     pub fn new(value: i64) -> Result<PositiveNonzeroInteger, CreationError> {
-        Ok(PositiveNonzeroInteger(value as u64))
+        if value > 0 {
+            Ok(PositiveNonzeroInteger(value as u64))
+        }
+        else if value < 0 {
+            Err(CreationError::Negative)
+        }
+        else {
+            Err(CreationError::Zero)
+        }
     }
 }

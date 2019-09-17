@@ -4,5 +4,12 @@ files:
   visible: false
 - name: src/lib.rs
   visible: true
+  placeholders:
+  - offset: 366
+    length: 142
+    placeholder_text: /*here could be the othere arms of the comparison*/
+  - offset: 290
+    length: 14
+    placeholder_text: /*here could be the expression to compare if the value is appropriate*/
 - name: tests/tests.rs
   visible: false
