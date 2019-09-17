@@ -81,6 +81,6 @@ members = [
     "Iterators & Closures/Standard Library Types/Intro",
     "Iterators & Closures/Standard Library Types/Shared-State Concurrency",
     "Iterators & Closures/Standard Library Types/Arc",
-    "Iterators & Closures/Standard Library Types/Iterator 3",
+    "Iterators & Closures/Standard Library Types/Iterator",
     "Iterators & Closures/Standard Library Types/Iterators 4"    
 ]

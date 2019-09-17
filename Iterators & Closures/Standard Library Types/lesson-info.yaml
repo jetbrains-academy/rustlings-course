@@ -2,5 +2,5 @@ content:
 - Intro
 - Shared-State Concurrency
 - Arc
-- Iterator 3
+- Iterator
 - Iterators 4
