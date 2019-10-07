@@ -1,8 +1,0 @@
-[package]
-name = "processing_a_guess_5"
-version = "0.1.0"
-edition = "2018"
-
-[dependencies]
-escargot = "0.5"
-rand = "0.3.14"
