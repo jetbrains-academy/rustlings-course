@@ -3,11 +3,6 @@
 members = [
     "Introduction/Getting started/Installation",
     "Introduction/Getting started/Hello World",
-    "Guessing Game/Programming a Guessing Game/Programming a Guessing Game",
-    "Guessing Game/Programming a Guessing Game/Storing Values with Variables",
-    "Guessing Game/Programming a Guessing Game/Generating a Secret Number",
-    "Guessing Game/Programming a Guessing Game/Comparing the Guess to the Secret Number",
-    "Guessing Game/Programming a Guessing Game/Allowing Multiple Guesses with Looping",
     "Common Programming Concepts/Variables/Intro",
     "Common Programming Concepts/Variables/Variables and Mutability",
     "Common Programming Concepts/Variables/Variables 1",
