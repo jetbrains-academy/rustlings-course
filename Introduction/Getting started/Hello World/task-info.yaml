@@ -7,6 +7,6 @@ files:
     length: 26
     placeholder_text: // put you code here to launch it
 - name: Cargo.toml
-  visible: true
+  visible: false
 - name: tests/tests.rs
   visible: false

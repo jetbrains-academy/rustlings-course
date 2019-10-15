@@ -6,9 +6,9 @@ content:
 - Introduction
 - Common Programming Concepts
 - Understanding Ownership
-- Modules & Macros
+- Modules and Macros
 - Common Collections
-- Recoverable & Unrecoverable Errors
+- Recoverable and Unrecoverable Errors
 - Writing Automated Tests
-- Iterators & Closures
+- Iterators and Closures
 - Fearless Concurrency
