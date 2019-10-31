@@ -1,4 +1,4 @@
-## Task 1
+## Returning a String
 
 Make me compile without changing the function signature!
 

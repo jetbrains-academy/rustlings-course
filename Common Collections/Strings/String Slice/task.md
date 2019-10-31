@@ -1,4 +1,4 @@
-## Task 2
+## String Slice
 
 Make me compile without changing the function signature!
 

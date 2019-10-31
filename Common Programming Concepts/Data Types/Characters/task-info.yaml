@@ -1,4 +1,4 @@
-type: theory
+type: edu
 files:
 - name: Cargo.toml
   visible: false
