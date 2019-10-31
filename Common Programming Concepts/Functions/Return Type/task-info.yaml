@@ -1,6 +1,10 @@
-type: theory
+type: edu
 files:
 - name: Cargo.toml
   visible: false
 - name: src/main.rs
   visible: true
+  placeholders:
+  - offset: 140
+    length: 3
+    placeholder_text: /*put a type here*/

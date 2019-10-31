@@ -1,4 +1,4 @@
-## Task 2
+## Variable Type
 
 Make me compile!
 

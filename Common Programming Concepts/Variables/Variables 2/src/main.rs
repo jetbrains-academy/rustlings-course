@@ -1,5 +1,5 @@
 fn main() {
-    let x;
+    let x: u32 = 8;
     if x == 10 {
         println!("Ten!");
     } else {
