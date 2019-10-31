@@ -11,11 +11,7 @@ In this lesson and throughout the course, we’ll show some commands used in the
      
 ### Verification of Rust installation
 
-The EduTools platform provides you with all of the tools you might need to complete this course and start writing in Rust.
-
-Anyway, if you ever need to set up the environment in a system lacking IntelliJ platform below are few advices what you should check before the work.
-
-You can skip them for now and return in a case of need.
+You need to set up the environment in a system below are few things which you should check before the work.
 
 <details><summary>Verification of rustup</summary>
 
