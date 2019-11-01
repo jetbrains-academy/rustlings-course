@@ -59,7 +59,7 @@ We then start the macro definition with `macro_rules!` and the name of the macro
 
 The structure in the `vec!` body is similar to the structure of a `match` expression. Here we have one arm with the pattern `( $( $x:expr ),* )`, followed by `=>` and the block of code associated with this pattern. If the pattern matches, the associated block of code will be emitted. Given that this is the only pattern in this macro, there is only one valid way to match; any other pattern will result in an error. More complex macros will have more than one arm.
 
-Valid pattern syntax in macro definitions is different than the pattern syntax covered in Chapter 18 because macro patterns are matched against Rust code structure rather than values. Let’s walk through what the pattern pieces in in the code snippet above mean; for the full macro pattern syntax, see [the reference](../reference/macros.html).
+Valid pattern syntax in macro definitions is different than the pattern syntax covered in Chapter 18 because macro patterns are matched against Rust code structure rather than values. Let’s walk through what the pattern pieces in in the code snippet above mean; for the full macro pattern syntax, see [the reference](https://doc.rust-lang.org/1.30.0/book/first-edition/macros.html).
 
 First, a set of parentheses encompasses the whole pattern. A dollar sign (`<main) is next, followed by a set of parentheses that captures values that match the pattern within the parentheses for use in the replacement code. Within `$()` is `$x:expr`, which matches any Rust expression and gives the expression the name `$x`.
 
@@ -298,7 +298,7 @@ Other than that, attribute-like macros work the same way as custom derive macros
 
 ### Function-like macros
 
-Function-like macros define macros that look like function calls. Similarly to `macro_rules!` macros, they’re more flexible than functions in that they can take an unknown number of arguments, for example. However, `macro_rules!` macros can only be defined using the match-like syntax we discussed in the section [“Declarative Macros with `macro_rules!` for General Metaprogramming”](ch19-06-macros.html#declarative-macros-with-macro_rules-for-general-metaprogramming) earlier. Function-like macros take a `TokenStream` parameter and their definition manipulates that `TokenStream` using Rust code as the other two types of procedural macros do. An example of a function-like macro is an `sql!` macro that might be called like so:
+Function-like macros define macros that look like function calls. Similarly to `macro_rules!` macros, they’re more flexible than functions in that they can take an unknown number of arguments, for example. However, `macro_rules!` macros can only be defined using the match-like syntax we discussed in the section [“Declarative Macros with `macro_rules!` for General Metaprogramming”](https://doc.rust-lang.org/stable/book/ch19-06-macros.html#declarative-macros-with-macro_rules-for-general-metaprogramming) earlier. Function-like macros take a `TokenStream` parameter and their definition manipulates that `TokenStream` using Rust code as the other two types of procedural macros do. An example of a function-like macro is an `sql!` macro that might be called like so:
 
 ```rust
     let sql = sql!(SELECT * FROM posts WHERE id=1);

@@ -2,7 +2,7 @@
 
 Most errors aren’t serious enough to require the program to stop entirely. Sometimes, when a function fails, it’s for a reason that you can easily interpret and respond to. For example, if you try to open a file and that operation fails because the file doesn’t exist, you might want to create the file instead of terminating the process.
 
-Recall from [“Handling Potential Failure with the `Result` Type”](ch02-00-guessing-game-tutorial.html#handling-potential-failure-with-the-result-type) in Chapter 2 that the `Result` enum is defined as having two variants, `Ok` and `Err`, as follows:
+Recall from [“Handling Potential Failure with the `Result` Type”](https://doc.rust-lang.org/stable/book/ch02-00-guessing-game-tutorial.html#handling-potential-failure-with-the-result-type) in Chapter 2 that the `Result` enum is defined as having two variants, `Ok` and `Err`, as follows:
 
 ```rust
     enum Result<T, E> {
@@ -25,7 +25,7 @@ Let’s call a function that returns a `Result` value because the function could
 
 ##### Opening a file
 
-How do we know `File::open` returns a `Result`? We could look at the [standard library API documentation](../std/index.html), or we could ask the compiler! If we give `f` a type annotation that we know is _not_ the return type of the function and then try to compile the code, the compiler will tell us that the types don’t match. The error message will then tell us what the type of `f` _is_. Let’s try it! We know that the return type of `File::open` isn’t of type `u32`, so let’s change the `let f` statement to this:
+How do we know `File::open` returns a `Result`? We could look at the [standard library API documentation](https://doc.rust-lang.org/std/index.html), or we could ask the compiler! If we give `f` a type annotation that we know is _not_ the return type of the function and then try to compile the code, the compiler will tell us that the types don’t match. The error message will then tell us what the type of `f` _is_. Let’s try it! We know that the return type of `File::open` isn’t of type `u32`, so let’s change the `let f` statement to this:
 
 ```rust
     let f: u32 = File::open("hello.txt");
@@ -317,7 +317,7 @@ The `main` function is special, and there are restrictions on what its return ty
     }
 ```
 
-The `Box<dyn Error>` type is called a _trait object_, which we’ll talk about in the [“Using Trait Objects that Allow for Values of Different Types”](ch17-02-trait-objects.html#using-trait-objects-that-allow-for-values-of-different-types) section in Chapter 17\. For now, you can read `Box<dyn Error>` to mean “any kind of error.” Using `?` in a `main` function with this return type is allowed.
+The `Box<dyn Error>` type is called a _trait object_, which we’ll talk about in the [“Using Trait Objects that Allow for Values of Different Types”](https://doc.rust-lang.org/stable/book/ch17-02-trait-objects.html#using-trait-objects-that-allow-for-values-of-different-types) section in Chapter 17\. For now, you can read `Box<dyn Error>` to mean “any kind of error.” Using `?` in a `main` function with this return type is allowed.
 
 Now that we’ve discussed the details of calling `panic!` or returning `Result`, let’s return to the topic of how to decide which is appropriate to use in which cases.
 

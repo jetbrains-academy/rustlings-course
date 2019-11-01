@@ -12,9 +12,8 @@ There are at least two ways to implement this that are both correct -- but one i
 Scroll down for hints to both ways.
 
 <div class="hint">
-  One way to handle this is using a `match` statement on `item_quantity.parse::<i32>()` where the cases are `Ok(something)` and `Err(something)`.
+  One way to handle this is using a `match` statement on `item_quantity.parse::()` where the cases are `Ok(something)` and `Err(something)`.
   This pattern is very common in Rust, though, so there's a `?` operator that does pretty much what you would make that match statement do for you!
-  Take a look at this section of the Error Handling chapter:
-  https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator
+  Take a look at  <a href="https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator">this section of the Error Handling chapter</a>
   and give it a try!
 </div>

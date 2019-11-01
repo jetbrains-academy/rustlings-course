@@ -11,6 +11,9 @@ files:
   - offset: 140
     length: 7
     placeholder_text: vec_0 /*and put it here*/
+  - offset: 378
+    length: 4
+    placeholder_text: /*if you gonna modify the argument, it should be mutable*/
   - offset: 397
     length: 11
     placeholder_text: -> Vec<i32> /*if you are not returning a value, here should
@@ -21,6 +24,3 @@ files:
   - offset: 504
     length: 10
     placeholder_text: vec /*and then you don't have to return anything here*/
-  - offset: 378
-    length: 4
-    placeholder_text: /*if you gonna modify the argument, it should be mutable*/
