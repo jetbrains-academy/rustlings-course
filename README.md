@@ -1,6 +1,4 @@
-# JavaScript for Beginners [![official JetBrains project](http://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
-
-# rustlings 🦀❤️
+# rustlings [![official JetBrains project](http://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 
 Greetings and welcome to `rustlings`.
 This project contains small exercises to get you used to reading and writing Rust code.
