@@ -8,3 +8,5 @@ files:
   - offset: 106
     length: 1
     placeholder_text: /*coerce the String into a string slice here*/
+- name: tests/tests.rs
+  visible: false

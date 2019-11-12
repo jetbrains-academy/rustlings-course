@@ -8,3 +8,5 @@ files:
   - offset: 118
     length: 6
     placeholder_text: /*you could type here*/
+- name: tests/tests.rs
+  visible: false

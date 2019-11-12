@@ -8,3 +8,5 @@ files:
   - offset: 85
     length: 4
     placeholder_text: /*insert a correct assertion to pass the task*/
+- name: tests/tests.rs
+  visible: false

@@ -8,3 +8,5 @@ files:
   - offset: 21
     length: 9
     placeholder_text: /*insert here missing part(s)*/
+- name: tests/tests.rs
+  visible: false

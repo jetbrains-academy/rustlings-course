@@ -8,3 +8,5 @@ files:
   - offset: 79
     length: 4
     placeholder_text: /*smth is missing here*/
+- name: tests/tests.rs
+  visible: false
