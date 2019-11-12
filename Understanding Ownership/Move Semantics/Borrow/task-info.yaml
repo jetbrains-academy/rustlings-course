@@ -24,3 +24,5 @@ files:
   - offset: 504
     length: 10
     placeholder_text: vec /*and then you don't have to return anything here*/
+- name: tests/tests.rs
+  visible: false

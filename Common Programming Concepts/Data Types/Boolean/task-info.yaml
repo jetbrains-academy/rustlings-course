@@ -9,3 +9,5 @@ files:
     length: 19
     placeholder_text: // Finish the rest of this line like the example! Or make it
       be false!
+- name: tests/tests.rs
+  visible: false
