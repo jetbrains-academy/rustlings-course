@@ -7,7 +7,7 @@ Let’s start your Rust journey! There’s a lot to learn, but every journey sta
 
 ### Command Line Notation
 
-In this lesson and throughout the course, we’ll show some commands used in the terminal. Lines that you should enter in a terminal all start with `$`. You don’t need to type in the `$` character; it indicates the start of each command. Lines that don’t start with `$` typically show the output of the previous command. Additionally, PowerShell-specific examples will use `>` rather than `$`.
+In this lesson and throughout the course, we’ll show some commands used in the terminal. Lines that you should enter in a terminal all start with `$`. You don’t need to type in the `$` character; it indicates the start of each command. Lines that don’t start with `$` typically show the output of the previous command. Additionally, PowerShell-specific examples will use <code>&gt;</code> rather than `$`.
      
 ### Verification of Rust installation
 
