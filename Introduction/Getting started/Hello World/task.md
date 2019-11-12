@@ -10,12 +10,10 @@ fn main() {
     // put you code here to launch it
 }
 ``` 
-Now let's replace these lines with the code:
+Now let's replace the line inside the main function with the code:
 
 ```rust
-fn main() {
     println!("Hello, world!");
-}
 ```
 ##### Example: A program that prints Hello, world!
 
