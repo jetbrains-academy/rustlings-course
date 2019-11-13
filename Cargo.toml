@@ -1,6 +1,7 @@
 [workspace]
 
 members = [
+    "Introduction/Getting started/About",
     "Introduction/Getting started/Installation",
     "Introduction/Getting started/Hello World",
     "Common Programming Concepts/Variables/Intro",
