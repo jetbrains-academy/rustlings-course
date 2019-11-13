@@ -11,3 +11,5 @@ files:
   - offset: 225
     length: 30
     placeholder_text: //insert the assertion here
+- name: tests/tests.rs
+  visible: false

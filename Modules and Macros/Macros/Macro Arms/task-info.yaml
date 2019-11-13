@@ -8,3 +8,5 @@ files:
   - offset: 82
     length: 1
     placeholder_text: /*separate the "macro arms" here*/
+- name: tests/tests.rs
+  visible: false

@@ -8,3 +8,5 @@ files:
   - offset: 24
     length: 1
     placeholder_text: TODO
+- name: tests/tests.rs
+  visible: false

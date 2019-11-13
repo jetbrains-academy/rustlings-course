@@ -8,3 +8,5 @@ files:
   - offset: 0
     length: 76
     placeholder_text: /*declare your macro here*/
+- name: tests/tests.rs
+  visible: false

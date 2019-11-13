@@ -8,3 +8,5 @@ files:
   - offset: 154
     length: 86
     placeholder_text: '?'
+- name: tests/tests.rs
+  visible: false

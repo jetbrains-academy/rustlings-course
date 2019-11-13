@@ -11,3 +11,5 @@ files:
   - offset: 261
     length: 30
     placeholder_text: /*write an assert for `times_two(-4)`*/
+- name: tests/tests.rs
+  visible: false

@@ -8,3 +8,5 @@ files:
   - offset: 30
     length: 12
     placeholder_text: //insert the function declaration here
+- name: tests/tests.rs
+  visible: false
