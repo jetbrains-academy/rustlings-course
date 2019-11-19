@@ -19,10 +19,10 @@ fn prints_the_second_number_is() {
     let expected_number = "2";
     let expected_number_err_1 = "1";
     let expected_number_err_3 = "3";
-    assert!(actual_as_string.contains(expected_the_second_number_is), "\"The second number is\" line is missing from the output.\n");
-    assert!(!actual_as_string.contains(expected_number_err_1), "The number is incorrect, seems you have printed the first element.\n");
-    assert!(!actual_as_string.contains(expected_number_err_3), "The number is incorrect, seems you have printed the third element.\n");
-    assert!(actual_as_string.contains(expected_number), "The expected second element of the tuple is missing from the output \n");
+    assert!(actual_as_string.contains(expected_the_second_number_is), "\"The second number is\" line is missing from the output.");
+    assert!(!actual_as_string.contains(expected_number_err_1), "The number is incorrect, seems you have printed the first element.");
+    assert!(!actual_as_string.contains(expected_number_err_3), "The number is incorrect, seems you have printed the third element.");
+    assert!(actual_as_string.contains(expected_number), "The expected second element of the tuple is missing from the output ");
 }
 
 

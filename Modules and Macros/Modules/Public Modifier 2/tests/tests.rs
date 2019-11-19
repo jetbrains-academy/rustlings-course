@@ -12,7 +12,7 @@ fn prints_the_second_number_is() {
     //TODO: recover from an incorrect output
     let actual_as_string = std::str::from_utf8(&actual).unwrap();
     let expected_output  = "favorite snacks: Pear and Cucumber\n";
-    assert_eq!(actual_as_string, expected_output, "The output provided is not equal to the expected one.\n");
+    assert_eq!(actual_as_string, expected_output, "The output provided is not equal to the expected one.");
 }
 
 

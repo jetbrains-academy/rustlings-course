@@ -22,14 +22,14 @@ fn prints_the_second_number_is() {
     let expected_happy_monday = "Happy Tuesday!";
     let expected_my_shift_key_is_sticky = "my shift key is sticky";
 
-    assert!(actual_as_string.contains(expected_blue), "The output is missing the line \"blue\"\n");
-    assert!(actual_as_string.contains(expected_red), "The output is missing the line \"red\"\n");
-    assert!(actual_as_string.contains(expected_hi), "The output is missing the line \"hi\"\n");
-    assert!(actual_as_string.contains(expected_rust_is_fun), "The output is missing the line \"rust_is_fun\"\n");
-    assert!(actual_as_string.contains(expected_nice_weather), "The output is missing the line \"nice weather\"\n");
-    assert!(actual_as_string.contains(expected_interpolation_station), "The output is missing the line \"Interpolation Station\"\n");
-    assert!(actual_as_string.contains(expected_a), "The output is missing the line \"a\"\n");
-    assert!(actual_as_string.contains(expected_hello_there), "The output is missing the line \"hello there\"\n");
-    assert!(actual_as_string.contains(expected_happy_monday), "The output is missing the line \"Happy Monday!\"\n");
-    assert!(actual_as_string.contains(expected_my_shift_key_is_sticky), "The output is missing the line \"my shift key is sticky\"\n");
+    assert!(actual_as_string.contains(expected_blue), "The output is missing the line \"blue\"");
+    assert!(actual_as_string.contains(expected_red), "The output is missing the line \"red\"");
+    assert!(actual_as_string.contains(expected_hi), "The output is missing the line \"hi\"");
+    assert!(actual_as_string.contains(expected_rust_is_fun), "The output is missing the line \"rust_is_fun\"");
+    assert!(actual_as_string.contains(expected_nice_weather), "The output is missing the line \"nice weather\"");
+    assert!(actual_as_string.contains(expected_interpolation_station), "The output is missing the line \"Interpolation Station\"");
+    assert!(actual_as_string.contains(expected_a), "The output is missing the line \"a\"");
+    assert!(actual_as_string.contains(expected_hello_there), "The output is missing the line \"hello there\"");
+    assert!(actual_as_string.contains(expected_happy_monday), "The output is missing the line \"Happy Monday!\"");
+    assert!(actual_as_string.contains(expected_my_shift_key_is_sticky), "The output is missing the line \"my shift key is sticky\"");
 }

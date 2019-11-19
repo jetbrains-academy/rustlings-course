@@ -12,7 +12,7 @@ fn prints_the_second_number_is() {
     //TODO: recover from an incorrect output
     let actual_as_string = std::str::from_utf8(&actual).unwrap();
     let expected_sausage  = "sausage!";
-    assert!(actual_as_string.contains(expected_sausage), "The sausage line is missing from the output.\n");
+    assert!(actual_as_string.contains(expected_sausage), "The sausage line is missing from the output.");
 }
 
 
