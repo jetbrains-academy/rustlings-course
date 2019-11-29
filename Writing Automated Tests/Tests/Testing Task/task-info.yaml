@@ -7,9 +7,9 @@ files:
 - name: tests/tests.rs
   visible: true
   placeholders:
-  - offset: 106
-    length: 20
-    placeholder_text: //insert the assertion here
-  - offset: 183
-    length: 30
-    placeholder_text: //insert the assertion here
+  - offset: 122
+    length: 1
+    placeholder_text: /*insert the parameter for the assertion here*/
+  - offset: 202
+    length: 1
+    placeholder_text: /*insert the parameter for the assertion here*/
