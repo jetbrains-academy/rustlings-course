@@ -4,12 +4,12 @@ files:
   visible: false
 - name: src/lib.rs
   visible: true
+- name: tests/tests.rs
+  visible: true
   placeholders:
-  - offset: 184
+  - offset: 151
     length: 2
     placeholder_text: /*insert the value we assume to get from the times_two function*/
-  - offset: 261
+  - offset: 228
     length: 30
     placeholder_text: /*write an assert for `times_two(-4)`*/
-- name: tests/tests.rs
-  visible: false

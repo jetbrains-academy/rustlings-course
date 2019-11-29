@@ -4,12 +4,12 @@ files:
   visible: false
 - name: src/lib.rs
   visible: true
+- name: tests/tests.rs
+  visible: true
   placeholders:
-  - offset: 148
+  - offset: 106
     length: 20
     placeholder_text: //insert the assertion here
-  - offset: 225
+  - offset: 183
     length: 30
     placeholder_text: //insert the assertion here
-- name: tests/tests.rs
-  visible: false
