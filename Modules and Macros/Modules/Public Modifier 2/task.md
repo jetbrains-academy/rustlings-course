@@ -1,4 +1,4 @@
-## Public Modifier 2
+## Public Variable Modifier
 
 Make me compile!
 

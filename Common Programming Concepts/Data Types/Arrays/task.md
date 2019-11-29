@@ -11,4 +11,4 @@ Create an array with at least 100 elements.
   ```
 </div>
 
-Bonus: what are some other things you could have that would return true for `a.len() >= 100`?
+Bonus: what are some other things you could have that would return true for `a.len()` <code>&gt;</code>`= 100`?

@@ -1,4 +1,4 @@
-## Task 3
+## Factorial
 
 Complete this function to return factorial of num.
 

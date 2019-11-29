@@ -1,4 +1,4 @@
-## Task 2
+## Iterator
 
 This is a bigger exercise than most of the others!
 You can do it!

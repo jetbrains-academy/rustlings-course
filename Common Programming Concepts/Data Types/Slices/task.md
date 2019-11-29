@@ -1,4 +1,4 @@
-## Arrays
+## Slices
 
 Get a slice out of Array so that the `if` statement returns `true`.
 

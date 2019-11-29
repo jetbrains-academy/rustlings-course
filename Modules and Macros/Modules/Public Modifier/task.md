@@ -1,4 +1,4 @@
-## Public Modifier
+## Public Function Modifier
 
 Make me compile!
 
