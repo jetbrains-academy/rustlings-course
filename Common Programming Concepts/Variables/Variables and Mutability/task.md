@@ -13,7 +13,7 @@ let foo = bar;
 ```
 
 This line creates a new variable named `foo` and binds it to the value of the `bar` variable.
-
+This is inserted to test update from stepik correctness
 In Rust, by default variables are immutable. This is one of many nudges Rust gives you to write your code in a way that takes advantage of the safety and easy concurrency that Rust offers. However, you still have the option to make your variables mutable. Let’s explore how and why Rust encourages you to favor immutability and why sometimes you might want to opt out.
 
 When a variable is immutable, once a value is bound to a name, you can’t change that value. Take a look at the main.rs file, its code won’t compile just yet:

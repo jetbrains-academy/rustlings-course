@@ -1,7 +1,7 @@
 ## Slices
 
 Get a slice out of Array so that the `if` statement returns `true`.
-
+This is inserted to test update from stepik correctness
 <div class="hint">
   Take a look at the Understanding Ownership -> Slices -> Other Slices section of the book:
   https://doc.rust-lang.org/book/ch04-03-slices.html

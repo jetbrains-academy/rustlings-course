@@ -8,4 +8,6 @@ fn main() {
     } else {
         println!("Not quite what I was expecting... I see: {:?}", nice_slice);
     }
+
+    //This is inserted to test update from stepik correctness
 }
