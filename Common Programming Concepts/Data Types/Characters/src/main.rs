@@ -1,5 +1,4 @@
 fn main() {
-
     let my_first_initial = 'C';
     if my_first_initial.is_alphabetic() {
         println!("Alphabetical!");
