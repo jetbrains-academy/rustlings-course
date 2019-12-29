@@ -56,9 +56,9 @@ It’s also worth noting that the condition in this code must be a `bool`. If th
 fn main() {
     let number = 3;
 
-   if number {
+    if number {
         println!("number was three");
-   }
+    }
 }
 ```
 
