@@ -131,7 +131,7 @@ So far we’ve worked only with numbers, but Rust supports letters too. Rust’s
 fn main() {
     let c = 'z';
     let z = 'ℤ';
-    let heart_eyed_cat = '😻';
+    let heart = '❤';
 }
 ```
 
