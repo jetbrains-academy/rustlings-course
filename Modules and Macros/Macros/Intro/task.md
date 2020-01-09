@@ -61,7 +61,7 @@ The structure in the `vec!` body is similar to the structure of a `match` expres
 
 Valid pattern syntax in macro definitions is different than the pattern syntax covered in Chapter 18 because macro patterns are matched against Rust code structure rather than values. Let’s walk through what the pattern pieces in in the code snippet above mean; for the full macro pattern syntax, see [the reference](https://doc.rust-lang.org/1.30.0/book/first-edition/macros.html).
 
-First, a set of parentheses encompasses the whole pattern. A dollar sign (`<main) is next, followed by a set of parentheses that captures values that match the pattern within the parentheses for use in the replacement code. Within `$()` is `$x:expr`, which matches any Rust expression and gives the expression the name `$x`.
+First, a set of parentheses encompasses the whole pattern. A dollar sign (`<main>`) is next, followed by a set of parentheses that captures values that match the pattern within the parentheses for use in the replacement code. Within `$()` is `$x:expr`, which matches any Rust expression and gives the expression the name `$x`.
 
 The comma following `$()` indicates that a literal comma separator character could optionally appear after the code that matches the code in `$()`. The `*` specifies that the pattern matches zero or more of whatever precedes the `*`.
 
