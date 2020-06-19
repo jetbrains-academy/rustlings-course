@@ -247,11 +247,7 @@ What would happen if we used `&hello[0..1]`? The answer: Rust would panic at run
 
 You should use ranges to create string slices with caution, because doing so can crash your program.
 
-[
-
 ### Methods for Iterating Over Strings
-
-](ch08-02-strings.html#methods-for-iterating-over-strings)
 
 Fortunately, you can access elements in a string in other ways.
 
