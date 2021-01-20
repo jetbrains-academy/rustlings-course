@@ -2,7 +2,7 @@
 
 Every value in Rust is of a certain _data type_, which tells Rust what kind of data is being specified so it knows how to work with that data. We’ll look at two data type subsets: scalar and compound.
 
-Keep in mind that Rust is a _statically typed language_, which means that it must know the types of all variables at compile time. The compiler can usually infer what type we want to use based on the value and how we use it. In cases when many types are possible, such as when we convert a `String` to a numeric type using `parse` we must add a type annotation, like this:
+Keep in mind that Rust is a _statically typed language_, which means that it must know the types of all variables at compile time. The compiler can usually infer what type we want to use based on the value and how we use it. In cases when many types are possible, such as when we converted a `String` to a numeric type using `parse` we must add a type annotation, like this:
 
 ```rust
 let guess: u32 = "42".parse().expect("Not a number!");
@@ -29,7 +29,7 @@ A _scalar_ type represents a single value. Rust has four primary scalar types: i
 
 #### Integer Types
 
-An _integer_ is a number without a fractional component. We used one integer type in Lesson 2, the `u32` type. This type declaration indicates that the value it’s associated with should be an unsigned integer (signed integer types start with `i`, instead of `u`) that takes up 32 bits of space. Table 3-1 shows the built-in integer types in Rust. Each variant in the Signed and Unsigned columns (for example, i16) can be used to declare the type of an integer value.
+An _integer_ is a number without a fractional component. We used one integer type in Lesson 2, the `u32` type. This type declaration indicates that the value it’s associated with should be an unsigned integer (signed integer types start with `i`, instead of `u`) that takes up 32 bits of space. Table below shows the built-in integer types in Rust. Each variant in the Signed and Unsigned columns (for example, i16) can be used to declare the type of an integer value.
 
 | Length  | Signed | Unsigned |
 |---------|--------|----------|
@@ -40,7 +40,7 @@ An _integer_ is a number without a fractional component. We used one integer typ
 | 128-bit | i128   | u128     |
 | arch    | isize  | usize    |
 
-##### Table 3-1: Integer Types in Rust
+##### Table: Integer Types in Rust
 
 Each variant can be either signed or unsigned and has an explicit size. _Signed_ and _unsigned_ refer to whether it’s possible for the number to be negative or positive—in other words, whether the number needs to have a sign with it (signed) or whether it will only ever be positive and can therefore be represented without a sign (unsigned). It’s like writing numbers on paper: when the sign matters, a number is shown with a plus sign or a minus sign; however, when it’s safe to assume the number is positive, it’s shown with no sign. Signed numbers are stored using [two’s complement](https://en.wikipedia.org/wiki/Two%27s_complement) representation.
 
@@ -48,7 +48,7 @@ Each signed variant can store numbers from -($2^{n-1}$) to $2^{n - 1}$-1 inclusi
 
 Additionally, the `isize` and `usize` types depend on the kind of computer your program is running on: 64 bits if you’re on a 64-bit architecture and 32 bits if you’re on a 32-bit architecture.
 
-You can write integer literals in any of the forms shown in Table 3-2. Note that all number literals except the byte literal allow a type suffix, such as `57u8`, and `_` as a visual separator, such as `1_000`.
+You can write integer literals in any of the forms shown in Table below. Note that all number literals except the byte literal allow a type suffix, such as `57u8`, and `_` as a visual separator, such as `1_000`.
 
 |Number literals|	Example  |
 |---------------|------------|
@@ -58,7 +58,7 @@ You can write integer literals in any of the forms shown in Table 3-2. Note that
 |Binary 	    | 0b1111_0000|
 |Byte (u8 only) |	b'A'     |
 
-##### Table 3-2: Integer Literals in Rust
+##### Table: Integer Literals in Rust
 
 So how do you know which type of integer to use? If you’re unsure, Rust’s defaults are generally good choices, and integer types default to `i32`: this type is generally the fastest, even on 64-bit systems. The primary situation in which you’d use `isize` or `usize` is when indexing some sort of collection.
 
