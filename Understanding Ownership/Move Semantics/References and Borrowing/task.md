@@ -51,7 +51,7 @@ The scope in which the variable `s` is valid is the same as any function paramet
 
 We call having references as function parameters _borrowing_. As in real life, if a person owns something, you can borrow it from them. When you’re done, you have to give it back.
 
-So what happens if we try to modify something we’re borrowing? Try the code in the code snippet below. Spoiler alert: it doesn’t work!
+    So what happens if we try to modify something we’re borrowing? Try the code in the code snippet below. Spoiler alert: it doesn’t work!
 
 ```rust
     fn main() {
@@ -70,13 +70,13 @@ So what happens if we try to modify something we’re borrowing? Try the code in
 Here’s the error:
 
 ```text
-    error[E0596]: cannot borrow immutable borrowed content `*some_string` as mutable
-     --> error.rs:8:5
-      |
-    7 | fn change(some_string: &String) {
-      |                        ------- use `&mut String` here to make mutable
-    8 |     some_string.push_str(", world");
-      |     ^^^^^^^^^^^ cannot borrow as mutable
+    error[E0596]: cannot borrow `*some_string` as mutable, as it is behind a `&` reference
+ --> src/main.rs:8:5
+  |
+7 | fn change(some_string: &String) {
+  |                        ------- help: consider changing this to be a mutable reference: `&mut String`
+8 |     some_string.push_str(", world");
+  |     ^^^^^^^^^^^ `some_string` is a `&` reference, so the data it refers to cannot be borrowed as mutable
 ```
 
 Just as variables are immutable by default, so are references. We’re not allowed to modify something we have a reference to.
@@ -218,14 +218,17 @@ Here’s the error:
 
 ```text
     error[E0106]: missing lifetime specifier
-     --> main.rs:5:16
-      |
-    5 | fn dangle() -> &String {
-      |                ^ expected lifetime parameter
-      |
-      = help: this function's return type contains a borrowed value, but there is
-      no value for it to be borrowed from
-      = help: consider giving it a 'static lifetime
+ --> src/main.rs:5:16
+  |
+5 | fn dangle() -> &String {
+  |                ^ expected named lifetime parameter
+  |
+  = help: this function's return type contains a borrowed value, but there is no value for it to be borrowed from
+help: consider using the `'static` lifetime
+  |
+5 | fn dangle() -> &'static String {
+  |                ^^^^^^^^
+
 ```
 
 This error message refers to a feature we haven’t covered yet: lifetimes. We’ll discuss lifetimes in detail in Chapter 10\. But, if you disregard the parts about lifetimes, the message does contain the key to why this code is a problem:
