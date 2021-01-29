@@ -7,6 +7,6 @@ files:
   placeholders:
   - offset: 21
     length: 5
-    placeholder_text: TODO
+    placeholder_text: ': i32'
 - name: tests/tests.rs
   visible: false
