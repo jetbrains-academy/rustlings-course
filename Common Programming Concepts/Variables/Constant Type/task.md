@@ -1,4 +1,4 @@
-## ???
+## Constant Type
 
 Make me compile!
 
