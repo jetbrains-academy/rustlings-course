@@ -5,7 +5,7 @@ files:
   placeholders:
   - offset: 91
     length: 3
-    placeholder_text: /* TODO */
+    placeholder_text: /* Something missing here! */
 - name: Cargo.toml
   visible: true
 - name: tests/tests.rs
