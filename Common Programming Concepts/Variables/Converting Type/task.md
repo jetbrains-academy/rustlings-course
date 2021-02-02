@@ -1,9 +1,9 @@
-## Mutable Variable Binding
+## Converting Type
 
 Make me compile!
 
 <div class="hint">
-  In variables3 we already learned how to make an immutable variable mutable
+  In Mutable Variable Binding we already learned how to make an immutable variable mutable
 using a special keyword. Unfortunately this doesn't help us much in this exercise
 because we want to assign a different typed value to an existing variable. Sometimes
 you may also like to reuse existing variable names because you are just converting
