@@ -7,12 +7,12 @@ files:
 - name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 47
+  - offset: 22
     length: 17
     placeholder_text: /* TODO */
-  - offset: 66
+  - offset: 41
     length: 6
     placeholder_text: /*TODO*/
-  - offset: 79
-    length: 162
-    placeholder_text: // TODO
+  - offset: 54
+    length: 94
+    placeholder_text: /*write your solution here*/

@@ -5,7 +5,7 @@ members = [
     "Common Programming Concepts/Variables/*/",
     "Common Programming Concepts/Data Types/*/",
     "Common Programming Concepts/Functions/*/",
-    "Common Programming Concepts/Variables and Functions Test/*/",
+    "Common Programming Concepts/Variables, Functions and If Test/*/",
     "Common Programming Concepts/If/*/",
     "Writing Automated Tests/Tests/*/",
     "Writing Automated Tests/Tests Test/*/",
