@@ -14,5 +14,5 @@ files:
     length: 6
     placeholder_text: /*TODO*/
   - offset: 54
-    length: 101
+    length: 94
     placeholder_text: /*write your solution here*/
