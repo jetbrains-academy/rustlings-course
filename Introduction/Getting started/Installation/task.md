@@ -10,6 +10,9 @@ Let’s start your Rust journey! There’s a lot to learn, but every journey sta
 In this lesson and throughout the course, we’ll show some commands used in the terminal. Lines that you should enter in a terminal all start with `$`. You don’t need to type in the `$` character; it indicates the start of each command. Lines that don’t start with `$` typically show the output of the previous command. Additionally, PowerShell-specific examples will use <code>&gt;</code> rather than `$`.
      
 ### Rust Installation
+
+You need to set up the environment in the system, below are few things which you should do before the work.
+
 #### Unix
 1. In Terminal run the command to download Rust toolchain installer:
 ```text
@@ -30,9 +33,6 @@ $ source $HOME/.cargo/env
 4. Setup Rust toolchain (press "Setup toolchain" in the pop-up "No Rust toolchain configured").
 5. You're good to go!
 
-### Verification of Rust installation
-
-You need to set up the environment in a system below are few things which you should check before the work.
 
 #### Verification of rustup
 
