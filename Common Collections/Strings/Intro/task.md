@@ -168,13 +168,13 @@ In many other programming languages, accessing individual characters in a string
 This code will result in the following error:
 
 ```text
-error[E0277]: the trait bound `std::string::String: std::ops::Index<{integer}>` is not satisfied
-     -->
-      |
-    3 |     let h = s1[0];
-      |             ^^^^^ the type `std::string::String` cannot be indexed by `{integer}`
-      |
-      = help: the trait `std::ops::Index<{integer}>` is not implemented for `std::string::String`
+error[E0277]: the type `String` cannot be indexed by `{integer}`
+ --> src/main.rs:3:13
+  |
+3 |     let h = s1[0];
+  |             ^^^^^ `String` cannot be indexed by `{integer}`
+  |
+  = help: the trait `Index<{integer}>` is not implemented for `String`
 ```
 
 The error and the note tell the story: Rust strings don’t support indexing. But why not? To answer that question, we need to discuss how Rust stores strings in memory.
