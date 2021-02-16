@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 118
+    length: 21
+    placeholder_text: Declare your vector here
+- name: Cargo.toml
+  visible: true
+- name: tests/tests.rs
+  visible: false
