@@ -7,14 +7,14 @@ Let’s start your Rust journey! There’s a lot to learn, but every journey sta
 
 ### Command Line Notation
 
-In this lesson and throughout the course, we’ll show some commands used in the terminal. Lines that you should enter in a terminal all start with `$`. You don’t need to type in the `$` character; it indicates the start of each command. Lines that don’t start with `$` typically show the output of the previous command. Additionally, PowerShell-specific examples will use <code>&gt;</code> rather than `$`.
-     
+In this lesson and throughout the course, we’ll show you some commands used in the terminal. Lines that you should enter in the terminal all start with `$`. You don’t need to type in the `$` sign – it just indicates the start of each command. Lines that don’t start with `$` typically show the output of the previous command. Additionally, PowerShell-specific examples will use <code>&gt;</code> rather than `$`.
+
 ### Rust Installation
 
-You need to set up the environment in the system, below are few things which you should do before the work.
+First, you need to set up the environment on your computer; below are a few things which you need to do before you start working.
 
 #### Unix
-1. In Terminal run the command to download Rust toolchain installer:
+1. In Terminal, run the following command to download Rust toolchain installer:
 ```text
 $ curl https://sh.rustup.rs -sSf | sh
 ```
@@ -23,14 +23,14 @@ $ curl https://sh.rustup.rs -sSf | sh
 $ source $HOME/.cargo/env
 ```
 3. Restart your IDE.
-4. Setup Rust toolchain (press "Setup toolchain" in the pop-up "No Rust toolchain configured").
+4. Set up Rust toolchain (press "Setup toolchain" in the pop-up "No Rust toolchain configured").
 5. You're good to go!
 
 #### Windows
-1. Download rustup installer from https://win.rustup.rs/x86_64.
+1. Download the rustup installer from https://win.rustup.rs/x86_64.
 2. Run it and follow the onscreen instructions.
 3. Restart your IDE.
-4. Setup Rust toolchain (press "Setup toolchain" in the pop-up "No Rust toolchain configured").
+4. Set up Rust toolchain (press "Setup toolchain" in the pop-up "No Rust toolchain configured").
 5. You're good to go!
 
 
