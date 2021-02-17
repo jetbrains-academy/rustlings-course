@@ -6,3 +6,6 @@ fn main() {
         (a, v)
     }
 }
+
+//fn array_and_vec() {
+//}
