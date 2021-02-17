@@ -1,0 +1,15 @@
+type: edu
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 121
+    length: 15
+    placeholder_text: Declare your hash map here
+  - offset: 247
+    length: 89
+    placeholder_text: Put more fruits in your basket here!
+- name: Cargo.toml
+  visible: true
+- name: tests/tests.rs
+  visible: false
