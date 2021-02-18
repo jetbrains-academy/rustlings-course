@@ -10,6 +10,7 @@ content:
 - Introduction
 - Common Programming Concepts
 - Understanding Ownership
+- Structs
 - Modules and Macros
 - Common Collections
 - Recoverable and Unrecoverable Errors
