@@ -234,8 +234,8 @@ namespaces created by modules. We’ll discuss modules in the chapter "Modules a
 
 ### Multiple `impl` Blocks
 
-Each struct is allowed to have multiple `impl` blocks. For example, Listing
-5-15 is equivalent to the code shown below, which has each method
+Each struct is allowed to have multiple `impl` blocks. For example, the listing
+"Implementing the `can_hold` method on `Rectangle` that takes another `Rectangle` instance as a parameter" is equivalent to the code shown below, which has each method
 in its own `impl` block.
 
 ```rust
@@ -252,7 +252,7 @@ impl Rectangle {
 }
 ```
 
-#### Rewriting Listing 5-15 using multiple `impl` blocks
+#### Rewriting the listing "Implementing the `can_hold` method on `Rectangle` that takes another `Rectangle` instance as a parameter" using multiple `impl` blocks
 
 There’s no reason to separate these methods into multiple `impl` blocks here,
 but this is valid syntax. We’ll see a case in which multiple `impl` blocks are
