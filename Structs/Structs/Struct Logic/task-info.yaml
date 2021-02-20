@@ -1,0 +1,18 @@
+type: edu
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 332
+    length: 9
+    placeholder_text: Something goes here...
+  - offset: 609
+    length: 63
+    placeholder_text: Something goes here...
+  - offset: 753
+    length: 45
+    placeholder_text: Something goes here...
+- name: Cargo.toml
+  visible: true
+- name: tests/tests.rs
+  visible: false
