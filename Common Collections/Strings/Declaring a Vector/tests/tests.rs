@@ -1,20 +1,19 @@
-//#[test]
-//fn if_compiles() {
+use declaring_a_vector::array_and_vec;
+
+#[test]
+fn if_compiles() {
     //Mocking test to run only the compiler's checker
-    //assert!(true);
-//}
-
-
-#[cfg(test)]
-mod tests {
-    use declaring_a_vector::array_and_vec;
-
-    #[test]
-    fn if_compiles() {
-        //Mocking test to run only the compiler's checker
-        assert!(true);
-    }
-    fn is_correct() {
-        assert!(array_and_vec(????));
-    }
+    assert!(true);
 }
+
+#[test]
+fn test_array_and_vec_similarity() {
+    let (a, v) = array_and_vec();
+    assert_eq!(a, v[..]);
+}
+
+
+
+//fn is_correct() {
+  //  assert_eq!(array_and_vec(????));
+//}

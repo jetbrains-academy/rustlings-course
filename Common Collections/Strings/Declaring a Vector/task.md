@@ -6,10 +6,10 @@ Make the code compile and pass the test!
 
 <div class="hint">In Rust, there are two ways to define a Vector.
 
-1. One way is to use the `Vec::new()` function to create a new vector
-  and fill it with the `push()` method.
+One way is to use the `Vec::new()` function to create a new vector
+  and fill it with the `push()` method.</div></li>
 
-2. The second way, which is simpler is to use the `vec![]` macro and
+<div class="hint">The second way, which is simpler is to use the `vec![]` macro and
   define your elements inside the square brackets.</div></li>
    
 <div class="hint"> Check this chapter: https://doc.rust-lang.org/stable/book/ch08-01-vectors.html of the Rust book to learn more.</div></li>
