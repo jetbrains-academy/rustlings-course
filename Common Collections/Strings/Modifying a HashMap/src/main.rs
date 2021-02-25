@@ -1,26 +1,44 @@
+use std::collections::HashMap;
+
+#[derive(Hash, PartialEq, Eq)]
+enum Fruit {
+    Apple,
+    Banana,
+    Mango,
+    Lichi,
+    Pineapple,
+}
+
 fn main() {
-    use std::collections::HashMap;
+    fn get_fruit_basket() -> HashMap<Fruit, u32> {
+        let mut basket = HashMap::<Fruit, u32>::new();
+        basket.insert(Fruit::Apple, 4);
+        basket.insert(Fruit::Mango, 2);
+        basket.insert(Fruit::Lichi, 5);
 
-    #[derive(Hash, PartialEq, Eq)]
-    enum Fruit {
-        Apple,
-        Banana,
-        Mango,
-        Lichi,
-        Pineapple,
+        basket
     }
+    let mut basket = get_fruit_basket();
+    let b = fruit_basket(&mut basket);
+    println!("Basket: {:?}", b);
 
-    fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
-        let fruit_kinds = vec![
-            Fruit::Apple,
-            Fruit::Banana,
-            Fruit::Mango,
-            Fruit::Lichi,
-            Fruit::Pineapple,
-        ];
+    //for (Fruit, value) in &basket {
+      //  println!("{}: {}", Fruit, value);
+    //}
+}
 
-        for fruit in fruit_kinds {
-            basket.entry(Fruit::from(fruit)).or_insert(6);
-        }
+
+fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
+    let fruit_kinds = vec![
+        Fruit::Apple,
+        Fruit::Banana,
+        Fruit::Mango,
+        Fruit::Lichi,
+        Fruit::Pineapple,
+    ];
+
+    for fruit in fruit_kinds {
+        basket.entry(Fruit::from(fruit)).or_insert(6);
     }
 }
+
