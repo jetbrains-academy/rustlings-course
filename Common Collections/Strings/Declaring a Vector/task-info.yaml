@@ -3,7 +3,7 @@ files:
 - name: src/main.rs
   visible: true
   placeholders:
-  - offset: 257
+  - offset: 218
     length: 11
     placeholder_text: Declare your vector here
 - name: Cargo.toml
