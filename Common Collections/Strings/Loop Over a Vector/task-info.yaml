@@ -3,7 +3,7 @@ files:
 - name: src/main.rs
   visible: true
   placeholders:
-  - offset: 103
+  - offset: 234
     length: 8
     placeholder_text: Fill this up so that each element in the Vec `v` is multiplied
       by 2.
