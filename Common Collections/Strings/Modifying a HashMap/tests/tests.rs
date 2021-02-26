@@ -1,11 +1,13 @@
 use std::collections::HashMap;
 use modifying_a_hashmap::*;
+use std::collections::hash_map::RandomState;
 
-fn get_fruit_basket() -> HashMap<Fruit, u32> {
-    let mut basket = HashMap::<Fruit, u32>::new();
-    basket.insert(Fruit::Apple, 4);
-    basket.insert(Fruit::Mango, 2);
-    basket.insert(Fruit::Lichi, 5);
+
+fn get_fruit_basket() -> HashMap<modifying_a_hashmap::Fruit, u32, RandomState> {
+    let mut basket = HashMap::<modifying_a_hashmap::Fruit, u32>::new();
+    basket.insert(modifying_a_hashmap::Fruit::Apple, 4);
+    basket.insert(modifying_a_hashmap::Fruit::Mango, 2);
+    basket.insert(modifying_a_hashmap::Fruit::Lichi, 5);
 
     basket
 }
@@ -14,9 +16,9 @@ fn get_fruit_basket() -> HashMap<Fruit, u32> {
 fn test_given_fruits_are_not_modified() {
     let mut basket = get_fruit_basket();
     fruit_basket(&mut basket);
-    assert_eq!(*basket.get(&Fruit::Apple).unwrap(), 4);
-    assert_eq!(*basket.get(&Fruit::Mango).unwrap(), 2);
-    assert_eq!(*basket.get(&Fruit::Lichi).unwrap(), 5);
+    assert_eq!(*basket.get(&modifying_a_hashmap::Fruit::Apple).unwrap(), 4);
+    assert_eq!(*basket.get(&modifying_a_hashmap::Fruit::Mango).unwrap(), 2);
+    assert_eq!(*basket.get(&modifying_a_hashmap::Fruit::Lichi).unwrap(), 5);
 }
 
 #[test]
