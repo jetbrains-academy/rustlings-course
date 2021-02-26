@@ -2,12 +2,14 @@ type: edu
 files:
 - name: src/main.rs
   visible: true
-  placeholders:
-  - offset: 234
-    length: 8
-    placeholder_text: Fill this up so that each element in the Vec `v` is multiplied
-      by 2.
 - name: Cargo.toml
   visible: true
 - name: tests/tests.rs
   visible: false
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 83
+    length: 8
+    placeholder_text: Fill this up so that each element in the Vec `v` is multiplied
+      by 2.
