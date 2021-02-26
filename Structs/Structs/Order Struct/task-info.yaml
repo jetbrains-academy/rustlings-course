@@ -6,3 +6,9 @@ files:
   visible: true
 - name: tests/tests.rs
   visible: false
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 569
+    length: 125
+    placeholder_text: Create your own order using the update syntax and template above!
