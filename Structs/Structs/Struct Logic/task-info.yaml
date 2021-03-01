@@ -16,3 +16,5 @@ files:
   visible: true
 - name: tests/tests.rs
   visible: false
+- name: src/lib.rs
+  visible: true
