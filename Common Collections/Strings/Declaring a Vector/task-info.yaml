@@ -11,4 +11,4 @@ files:
   placeholders:
   - offset: 108
     length: 11
-    placeholder_text: Declare your vector here
+    placeholder_text: // Declare your vector here

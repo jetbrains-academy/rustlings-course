@@ -11,5 +11,5 @@ files:
   placeholders:
   - offset: 83
     length: 8
-    placeholder_text: Fill this up so that each element in the Vec `v` is multiplied
+    placeholder_text: // Fill this up so that each element in the Vec `v` is multiplied
       by 2.
