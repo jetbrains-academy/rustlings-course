@@ -10,7 +10,7 @@ least five.
 Make yur code compile and pass the tests!
 
 <div class="hint"> Take a look at the return type of the function to figure out
-  the type for the `basket`.</div></li>
+  the type for the <code>basket</code>.</div></li>
 
 <div class="hint">Number of fruits should be at least 5. And you have to put
   at least three different types of fruits.</div></li>
