@@ -43,7 +43,6 @@ impl State {
     }
 }
 
-
 pub fn test_match_message_call() -> State {
     let mut state = State {
         quit: false,
