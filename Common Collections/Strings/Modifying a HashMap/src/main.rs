@@ -13,8 +13,8 @@ fn main() {
         basket
     }
     let mut basket = get_fruit_basket();
-    let b = fruit_basket(&mut basket);
-    println!("Basket: {:?}", b);
+    fruit_basket(&mut basket);
+    println!("Basket: {:?}", basket);
 
 }
 

@@ -2,6 +2,7 @@ use std::collections::HashMap;
 
 
 #[derive(Hash, PartialEq, Eq)]
+#[derive(Debug)]
 pub enum Fruit {
     Apple,
     Banana,
