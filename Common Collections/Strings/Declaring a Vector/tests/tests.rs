@@ -11,9 +11,3 @@ fn test_array_and_vec_similarity() {
     let (a, v) = array_and_vec();
     assert_eq!(a, v[..]);
 }
-
-
-
-//fn is_correct() {
-  //  assert_eq!(array_and_vec(????));
-//}
