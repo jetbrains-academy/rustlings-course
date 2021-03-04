@@ -15,6 +15,7 @@ members = [
     "Modules and Macros/Macros/*/",
     "Modules and Macros/Macros and Modules Test/*/",
     "Understanding Ownership/Move Semantics/*/",
+    "Type Conversions/Type Conversions/*/",
     "Recoverable and Unrecoverable Errors/Error Handling/*/",
     "Fearless Concurrency/Threads/*/",
     "Iterators and Closures/Standard Library Types/*/"

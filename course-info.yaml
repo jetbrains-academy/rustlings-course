@@ -12,6 +12,7 @@ content:
 - Understanding Ownership
 - Modules and Macros
 - Common Collections
+- Type Conversions
 - Recoverable and Unrecoverable Errors
 - Writing Automated Tests
 - Iterators and Closures
