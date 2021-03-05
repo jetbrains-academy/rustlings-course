@@ -1,0 +1,19 @@
+type: edu
+files:
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 41
+    length: 79
+    placeholder_text: '// TODO: implement the message variant types based on their
+      usage below'
+  - offset: 651
+    length: 273
+    placeholder_text: '// TODO: create a match expression to process the different
+      message variants'
+- name: Cargo.toml
+  visible: true
+- name: tests/tests.rs
+  visible: false
+- name: src/main.rs
+  visible: true
