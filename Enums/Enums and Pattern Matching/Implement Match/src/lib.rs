@@ -1,3 +1,5 @@
+
+#[derive(Debug)]
 pub enum Message {
     ChangeColor(i32, i32, i32),
     Echo(String),
@@ -5,6 +7,7 @@ pub enum Message {
     Quit,
 }
 
+#[derive(Debug)]
 pub struct Point {
     pub x: u8,
     pub y: u8,
@@ -33,7 +36,7 @@ impl State {
         self.position = p;
     }
 
-    fn process(&mut self, message: Message) {
+    pub fn process(&mut self, message: Message) {
         match message {
             Message::ChangeColor(r, g, b) => self.change_color((r as u8, g as u8, b as u8)),
             Message::Echo(s) => self.echo(s),
