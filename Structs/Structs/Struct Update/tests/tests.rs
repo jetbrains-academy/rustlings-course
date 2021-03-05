@@ -1,5 +1,5 @@
-use order_struct::your_order;
-use order_struct::create_order_template;
+use struct_update::your_order;
+use struct_update::create_order_template;
 
 
 #[test]

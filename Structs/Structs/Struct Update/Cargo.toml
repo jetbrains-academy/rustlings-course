@@ -1,4 +1,4 @@
 [package]
-name = "order_struct"
+name = "struct_update"
 version = "0.1.0"
 edition = "2018"

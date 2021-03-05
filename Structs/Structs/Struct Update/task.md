@@ -1,6 +1,6 @@
 ## Address all the TODOs to make the tests pass!
 
-Complete the TODO field to make the tests pass!
+Complete the TODO field to make the tests pass! Create your instance of `Order` that will derive field values from the provided template, but use the string "Hacker in Rust" as a value for `name` and 1 for `count`.
 
 <div class="hint">
 Creating instances of structs is easy, all you need to do is assign some values to its fields.
