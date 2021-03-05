@@ -11,4 +11,5 @@ files:
   placeholders:
   - offset: 569
     length: 125
-    placeholder_text: Create your own order using the update syntax and template above!
+    placeholder_text: // Create your own order using the update syntax and template
+      above!

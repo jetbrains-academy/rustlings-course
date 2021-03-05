@@ -9,16 +9,16 @@ files:
   placeholders:
   - offset: 288
     length: 9
-    placeholder_text: Something goes here
-  - offset: 529
-    length: 53
-    placeholder_text: Something goes here
-  - offset: 641
-    length: 3
-    placeholder_text: Add return type
-  - offset: 655
-    length: 45
-    placeholder_text: Something goes here
+    placeholder_text: // Something goes here
   - offset: 514
     length: 5
-    placeholder_text: Something goes here
+    placeholder_text: // Add return type
+  - offset: 529
+    length: 53
+    placeholder_text: // Something goes here
+  - offset: 641
+    length: 3
+    placeholder_text: // Add return type
+  - offset: 655
+    length: 45
+    placeholder_text: // Something goes here
