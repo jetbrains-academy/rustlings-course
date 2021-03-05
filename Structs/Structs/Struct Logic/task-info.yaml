@@ -22,3 +22,5 @@ files:
   - offset: 655
     length: 45
     placeholder_text: // Something goes here
+- name: src/main.rs
+  visible: true

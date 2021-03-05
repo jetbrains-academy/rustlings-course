@@ -17,5 +17,5 @@ For calculate_transport_fees: Bigger is more expensive usually, we don't have si
 </div>
 
 <div class="hint">
-Have a look in The Book, to find out more about method implementations: https://doc.rust-lang.org/book/ch05-03-method-syntax.html"""
+Have a look in <a href="https://doc.rust-lang.org/book/ch05-03-method-syntax.html">The Book</a> to find out more about method implementations. 
 </div>
