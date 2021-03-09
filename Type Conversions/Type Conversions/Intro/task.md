@@ -17,4 +17,4 @@ These should be the main ways ***within the standard library*** to convert data 
 
 #### Rust Book Sections
 
-These are not directly covered in the book, but the standard library has great documentation for [conversions here](https://doc.rust-lang.org/std/convert/index.html). The `FromStr` trait is also covered [here](https://doc.rust-lang.org/std/str/trait.FromStr.html).
+These are not directly covered in the book, but the standard library has a great documentation for [conversions here](https://doc.rust-lang.org/std/convert/index.html). The `FromStr` trait is also covered [here](https://doc.rust-lang.org/std/str/trait.FromStr.html).
