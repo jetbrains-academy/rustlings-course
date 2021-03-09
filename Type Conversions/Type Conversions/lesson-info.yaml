@@ -1,7 +1,8 @@
 content:
 - Intro
-- AsRef and AsMut
-- From Into
-- FromStr
-- Try From Into
 - Using As
+- From Into
+- Try From Into
+- AsRef and AsMut
+- FromStr
+
