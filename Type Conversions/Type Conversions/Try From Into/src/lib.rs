@@ -39,7 +39,7 @@ impl TryFrom<&[i16]> for Color {
     type Error = String;
     fn try_from(slice: &[i16]) -> Result<Self, Self::Error> {
         if slice.len() != 3 {
-            return Err(String::from("slice must has 3 numbers for rgb"));
+            return Err(String::from("the slice must have exactly 3 numbers for rgb"));
         }
         (slice[0], slice[1], slice[2]).try_into()
     }
