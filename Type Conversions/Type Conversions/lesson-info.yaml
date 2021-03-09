@@ -3,3 +3,4 @@ content:
 - AsRef and AsMut
 - From Into
 - FromStr
+- Try From Into

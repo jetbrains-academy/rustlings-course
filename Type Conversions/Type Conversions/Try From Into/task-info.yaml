@@ -1,0 +1,20 @@
+type: edu
+files:
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 906
+    length: 18
+    placeholder_text: // Write your code here
+  - offset: 1086
+    length: 155
+    placeholder_text: // Write your code here
+  - offset: 313
+    length: 429
+    placeholder_text: // Write your code here
+- name: src/main.rs
+  visible: true
+- name: Cargo.toml
+  visible: true
+- name: tests/tests.rs
+  visible: false
