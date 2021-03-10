@@ -11,6 +11,7 @@ content:
 - Common Programming Concepts
 - Understanding Ownership
 - Structs
+- Enums
 - Modules and Macros
 - Common Collections
 - Recoverable and Unrecoverable Errors

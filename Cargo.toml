@@ -12,6 +12,7 @@ members = [
     "Common Collections/Strings/*/",
     "Common Collections/String Test/*/",
     "Structs/Structs/*/",
+    "Enums/Enums and Pattern Matching/*/",
     "Modules and Macros/Modules/*/",
     "Modules and Macros/Macros/*/",
     "Modules and Macros/Macros and Modules Test/*/",
