@@ -1,4 +1,4 @@
 [package]
-name = "generic_data_types"
+name = "traits"
 version = "0.1.0"
 edition = "2018"
