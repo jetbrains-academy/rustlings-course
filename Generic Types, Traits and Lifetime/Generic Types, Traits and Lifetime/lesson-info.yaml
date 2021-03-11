@@ -4,3 +4,4 @@ content:
 - Traits
 - Lifetime Syntax
 - Generics in Vec
+- Generics in Structs
