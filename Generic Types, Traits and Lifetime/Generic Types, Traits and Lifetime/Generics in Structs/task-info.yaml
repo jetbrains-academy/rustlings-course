@@ -18,9 +18,9 @@ files:
   - offset: 88
     length: 1
     placeholder_text: u32
-- name: src/main.rs
-  visible: true
 - name: Cargo.toml
   visible: true
 - name: tests/tests.rs
   visible: false
+- name: src/main.rs
+  visible: true
