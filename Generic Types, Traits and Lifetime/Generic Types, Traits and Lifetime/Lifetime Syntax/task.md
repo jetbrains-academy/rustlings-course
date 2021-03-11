@@ -326,8 +326,6 @@ assignment of the value to the `result` variable inside the scope with
 scope, after the inner scope has ended. The code below will not
 compile.
 
-<span class="filename">Filename: src/main.rs</span>
-
 ```rust,ignore,does_not_compile
 fn main() {
     let string1 = String::from("long string is long");
@@ -401,7 +399,6 @@ to a value created within this function, which would be a dangling reference
 because the value will go out of scope at the end of the function. Consider
 this attempted implementation of the `longest` function that won’t compile:
 
-<span class="filename">Filename: src/main.rs</span>
 
 ```rust,ignore,does_not_compile
 fn longest<'a>(x: &str, y: &str) -> &'a str {
