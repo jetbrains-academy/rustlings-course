@@ -1,4 +1,4 @@
-use implement_a_trait::*;
+use string_trait::*;
 
 #[test]
 fn is_foo_bar() {
