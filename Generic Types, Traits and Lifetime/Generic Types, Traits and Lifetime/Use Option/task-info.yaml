@@ -11,7 +11,7 @@ files:
     placeholder_text: 99
   - offset: 207
     length: 15
-    placeholder_text: // Something goes here
+    placeholder_text: /* Something goes here */
   - offset: 370
     length: 19
     placeholder_text: number_to_add
