@@ -6,3 +6,4 @@ content:
 - Generics in Vec
 - Generics in Structs
 - Trait Bound Syntax
+- Use Option
