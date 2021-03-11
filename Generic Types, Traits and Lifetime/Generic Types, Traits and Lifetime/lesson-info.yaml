@@ -3,4 +3,4 @@ content:
 - Generic Data Types
 - Traits
 - Lifetime Syntax
-- Use Generic Type
+- Generics in Vec

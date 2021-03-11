@@ -1,4 +1,4 @@
 [package]
-name = "use_generic_type"
+name = "generics_in_vec"
 version = "0.1.0"
 edition = "2018"
