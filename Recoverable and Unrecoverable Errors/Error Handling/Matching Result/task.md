@@ -12,7 +12,7 @@ There are at least two ways to implement this that are both correct -- but one i
 Scroll down for hints to both ways.
 
 <div class="hint">
-  One way to handle this is using a <code>match</code>match statement on <code>item_quantity.parse::&lt i32 &gt()</code> where the cases are <code>Ok(something)</code> and <code>Err(something)</code>.
+  One way to handle this is using a <code>match</code>match statement on <code>item_quantity.parse::&lt;i32&gt()</code> where the cases are <code>Ok(something)</code> and <code>Err(something)</code>.
   This pattern is very common in Rust, though, so there's a <code>?</code> operator that does pretty much what you would make that match statement do for you!
   Take a look at  <a href="https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator">this section of the Error Handling chapter</a>
   and give it a try!
