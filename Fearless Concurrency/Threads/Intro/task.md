@@ -201,8 +201,7 @@ Notice in the snippet about creating a thread that the closure we pass to `threa
 The closure uses `v`, so it will capture `v` and make it part of the closure’s environment. Because `thread::spawn` runs this closure in a new thread, we should be able to access `v` inside that new thread. But when we compile this example, we get the following error:
 
 ```text
-    error[E0373]: closure may outlive the current function, but it borrows `v`,
-    which is owned by the current function
+    error[E0373]: closure may outlive the current function, but it borrows `v`, which is owned by the current function
      --> src/main.rs:6:32
       |
     6 |     let handle = thread::spawn(|| {
@@ -210,8 +209,15 @@ The closure uses `v`, so it will capture `v` and make it part of the closure’s
     7 |         println!("Here's a vector: {:?}", v);
       |                                           - `v` is borrowed here
       |
-    help: to force the closure to take ownership of `v` (and any other referenced
-    variables), use the `move` keyword
+    note: function requires argument type to outlive `'static`
+     --> src/main.rs:6:18
+      |
+    6 |       let handle = thread::spawn(|| {
+      |  __________________^
+    7 | |         println!("Here's a vector: {:?}", v);
+    8 | |     });
+      | |______^
+    help: to force the closure to take ownership of `v` (and any other referenced variables), use the `move` keyword
       |
     6 |     let handle = thread::spawn(move || {
       |                                ^^^^^^^
@@ -275,14 +281,16 @@ What would happen to the code in the snippet about the thread with a closure whe
     error[E0382]: use of moved value: `v`
       --> src/main.rs:10:10
        |
+    4  |     let v = vec![1, 2, 3];
+       |         - move occurs because `v` has type `Vec<i32>`, which does not implement the `Copy` trait
+    5  | 
     6  |     let handle = thread::spawn(move || {
-       |                                ------- value moved (into closure) here
+       |                                ------- value moved into closure here
+    7  |         println!("Here's a vector: {:?}", v);
+       |                                           - variable moved due to use in closure
     ...
     10 |     drop(v); // oh no!
        |          ^ value used here after move
-       |
-       = note: move occurs because `v` has type `std::vec::Vec<i32>`, which does
-       not implement the `Copy` trait
 ```
 
 Rust’s ownership rules have saved us again! We got an error from the code in the code about passing a vector between threads because Rust was being conservative and only borrowing `v` for the thread, which meant the main thread could theoretically invalidate the spawned thread’s reference. By telling Rust to move ownership of `v` to the spawned thread, we’re guaranteeing Rust that the main thread won’t use `v` anymore. If we change the example about using a closure in the same way, we’re then violating the ownership rules when we try to use `v` in the main thread. The `move` keyword overrides Rust’s conservative default of borrowing; it doesn’t let us violate the ownership rules.
