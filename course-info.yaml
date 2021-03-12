@@ -16,6 +16,8 @@ content:
 - Common Collections
 - Type Conversions
 - Recoverable and Unrecoverable Errors
+- Generic Types, Traits and Lifetime
 - Writing Automated Tests
 - Iterators and Closures
 - Fearless Concurrency
+
