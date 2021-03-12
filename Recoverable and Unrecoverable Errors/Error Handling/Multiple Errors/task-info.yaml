@@ -5,16 +5,16 @@ files:
 - name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 187
-    length: 17
+  - offset: 191
+    length: 21
     placeholder_text: ???
-  - offset: 268
+  - offset: 276
     length: 1
     placeholder_text: /*something could go wrong here*/
-  - offset: 309
+  - offset: 317
     length: 1
     placeholder_text: /*something could go wrong here*/
-  - offset: 361
+  - offset: 369
     length: 1
     placeholder_text: /*something could go wrong here*/
 - name: tests/tests.rs
