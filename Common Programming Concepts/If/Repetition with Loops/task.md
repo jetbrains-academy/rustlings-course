@@ -18,7 +18,25 @@ fn main() {
  }
 ```
 
-When we run this program, we’ll see `again!` printed over and over continuously until we stop the program manually. Press ⌘F2 to interrupt a program that is stuck in a continual loop.
+When we run this program, we’ll see `again!` printed over and over continuously until we stop the program manually. Press ⌘F2 to interrupt a program that is stuck in a continual loop. Most terminals support a keyboard shortcut,
+<span class="keystroke">ctrl-c</span>, to interrupt a program that is stuck in
+a continual loop:
+
+```console
+$ cargo run
+   Compiling loops v0.1.0 (file:///projects/loops)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.29s
+     Running `target/debug/loops`
+again!
+again!
+again!
+again!
+^Cagain!
+```
+The symbol `^C` represents where you pressed <span class="keystroke">ctrl-c
+</span>. You may or may not see the word `again!` printed after the `^C`,
+depending on where the code was in the loop when it received the interrupt
+signal.
 
 Fortunately, Rust provides another, more reliable way to break out of a loop. You can place the `break` keyword within the loop to tell the program when to stop executing the loop.
 
@@ -91,7 +109,7 @@ Here, the code counts up through the elements in the array. It starts at index `
 ```text
 $ cargo run
    Compiling loops v0.1.0 (file:///projects/loops)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.32 secs
+    Finished dev [unoptimized + debuginfo] target(s) in 0.32s
      Running `target/debug/loops`
 the value is: 10
 the value is: 20
@@ -115,13 +133,13 @@ fn main() {
     }
 }
 ```
-##### Example ooping through each element of a collection using a for loop
+##### Example of looping through each element of a collection using a for loop
 
-When we run this code, we’ll see the same output as in Listing 3-4. More importantly, we’ve now increased the safety of the code and eliminated the chance of bugs that might result from going beyond the end of the array or not going far enough and missing some items.
+When we run this code, we’ll see the same output as in the previous code snippet. More importantly, we’ve now increased the safety of the code and eliminated the chance of bugs that might result from going beyond the end of the array or not going far enough and missing some items.
 
-For example, in the code in Listing 3-4, if you removed an item from the `a` array but forgot to update the condition to `while index < 4`, the code would panic. Using the `for` loop, you wouldn’t need to remember to change any other code if you changed the number of values in the array.
+For example, in the previous code snipeet, if you changed the definition of the `a` array to have four elements but forgot to update the condition to `while index < 4`, the code would panic. Using the `for` loop, you wouldn’t need to remember to change any other code if you changed the number of values in the array.
 
-The safety and conciseness of `for` loops make them the most commonly used loop construct in Rust. Even in situations in which you want to run some code a certain number of times, as in the countdown example that used a `while` loop in Listing 3-3, most Rustaceans would use a `for` loop. The way to do that would be to use a `Range`, which is a type provided by the standard library that generates all numbers in sequence starting from one number and ending before another number.
+The safety and conciseness of `for` loops make them the most commonly used loop construct in Rust. Even in situations in which you want to run some code a certain number of times, as in the countdown example that used a `while` loop in "Example of using a while loop to run code while a condition holds true", most Rustaceans would use a `for` loop. The way to do that would be to use a `Range`, which is a type provided by the standard library that generates all numbers in sequence starting from one number and ending before another number.
 
 Here’s what the countdown would look like using a `for` loop and another method we’ve not yet talked about, `rev`, to reverse the range:
 
