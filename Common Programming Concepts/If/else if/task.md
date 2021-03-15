@@ -34,7 +34,7 @@ Using too many `else if` expressions can clutter your code, so if you have more 
 
 ### Using if in a let Statement
 
-Because `if` is an expression, we can use it on the right side of a `let` statement, as in Listing 3-2:
+Because `if` is an expression, we can use it on the right side of a `let` statement, as shown below:
 
 ```rust
 fn main() {
@@ -56,7 +56,7 @@ $ cargo run
 The value of number is: 5
 ```
 
-Remember that blocks of code evaluate to the last expression in them, and numbers by themselves are also expressions. In this case, the value of the whole `if` expression depends on which block of code executes. This means the values that have the potential to be results from each arm of the `if` must be the same type; in Listing 3-2, the results of both the `if` arm and the `else` arm were `i32` integers. If the types are mismatched, as in the following example, we’ll get an error:
+Remember that blocks of code evaluate to the last expression in them, and numbers by themselves are also expressions. In this case, the value of the whole `if` expression depends on which block of code executes. This means the values that have the potential to be results from each arm of the `if` must be the same type; in the previous code snippet, the results of both the `if` arm and the `else` arm were `i32` integers. If the types are mismatched, as in the following example, we’ll get an error:
 
 ```rust
 fn main() {
