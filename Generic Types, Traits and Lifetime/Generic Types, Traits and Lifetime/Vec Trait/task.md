@@ -14,4 +14,4 @@ you can do this!
 <div class="hint">Notice how the trait takes ownership of <code>self</code>, and returns <code>Self</code>.
 Try mutating the incoming string vector.</div>
 <div class="hint">Vectors provide suitable methods for adding an element at the end. See
-the documentation at: <a>https://doc.rust-lang.org/std/vec/struct.Vec.html</a></div>
+the documentation at: <a href="https://doc.rust-lang.org/std/vec/struct.Vec.html">https://doc.rust-lang.org/std/vec/struct.Vec.html</a></div>
