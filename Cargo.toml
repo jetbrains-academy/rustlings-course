@@ -16,7 +16,7 @@ members = [
     "Enums/Enums and Pattern Matching/*/",
     "Modules and Macros/Modules/*/",
     "Modules and Macros/Macros/*/",
-    "Modules and Macros/Macros and Modules Test/*/",
+    "Modules and Macros/Modules and Macros Test/*/",
     "Understanding Ownership/Move Semantics/*/",
     "Type Conversions/Type Conversions/*/",
     "Recoverable and Unrecoverable Errors/Error Handling/*/",
