@@ -1,4 +1,4 @@
-## Macros and Modules Test
+## Implement a Macro
 
 This test covers the sections:
 * Modules
