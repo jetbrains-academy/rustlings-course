@@ -1,0 +1,4 @@
+[package]
+name = "to_panic_or_not_to_panic"
+version = "0.1.0"
+edition = "2018"
