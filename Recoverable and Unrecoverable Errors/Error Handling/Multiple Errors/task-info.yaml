@@ -5,17 +5,17 @@ files:
 - name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 652
-    length: 1
-    placeholder_text: /*something could go wrong here*/
-  - offset: 693
-    length: 1
-    placeholder_text: /*something could go wrong here*/
-  - offset: 745
-    length: 1
-    placeholder_text: /*something could go wrong here*/
   - offset: 191
     length: 22
     placeholder_text: /* ??? */
+  - offset: 276
+    length: 1
+    placeholder_text: /*something could go wrong here*/
+  - offset: 317
+    length: 1
+    placeholder_text: /*something could go wrong here*/
+  - offset: 369
+    length: 1
+    placeholder_text: /*something could go wrong here*/
 - name: tests/tests.rs
   visible: false
