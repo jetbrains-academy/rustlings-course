@@ -35,7 +35,7 @@ can be returned from the same function because all errors act the same
 since they all implement the <code>error::Error</code> trait.
 
 Check out this section of the book:
-<a>https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator</a>
+<a href="">https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator </a>
 </div>
 
 <div class="hint">
@@ -51,5 +51,5 @@ get a warning if you don't handle a <code>Result</code> that you get in your
 function. 
 
 Read more about that in the <code>std::result</code> module docs:
-<a>https://doc.rust-lang.org/std/result/#results-must-be-used</a>
+<a  href="">https://doc.rust-lang.org/std/result/#results-must-be-used </a>
 </div>
