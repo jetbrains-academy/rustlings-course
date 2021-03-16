@@ -69,10 +69,9 @@ error[E0308]: mismatched types
  --> src/main.rs:4:8
   |
 4 |     if number {
-  |        ^^^^^^ expected bool, found integral variable
-  |
-  = note: expected type `bool`
-             found type `{integer}`
+  |        ^^^^^^ expected `bool`, found integer
+
+error: aborting due to previous error
 ```
 
 The error indicates that Rust expected a `bool` but got an integer. Unlike languages such as Ruby and JavaScript, Rust will not automatically try to convert non-Boolean types to a Boolean. You must be explicit and always provide `if` with a Boolean as its condition. If we want the `if` code block to run only when a number is not equal to `0`, for example, we can change the `if` expression to the following:
