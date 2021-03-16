@@ -14,6 +14,6 @@ Constants types must also always be annotated.
 </div>
 
 <div class="hint">
-Read more about constants under 'Differences Between Variables and Constants' in the book's section 'Variables and Mutability':
-https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#differences-between-variables-and-constants
+Read more about constants under 'Differences Between Variables and Constants' in the book's section
+<a href="https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#differences-between-variables-and-constants">'Variables and Mutability'</a> 
 </div>
