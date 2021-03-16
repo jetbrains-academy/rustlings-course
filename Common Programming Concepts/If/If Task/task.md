@@ -14,9 +14,11 @@ Do not use:
   Some similar examples from other languages:
   - In C(++) this would be: `a > b ? a : b`
   - In Python this would be:  `a if a > b else b`
-
+</div>
+<div class="hint">
   Remember in Rust that:
-  - the `if` condition does not need to be surrounded by parentheses
-  - `if` / `else` conditionals are expressions
-  - Each condition is followed by a `{}` block.
+
+  * the <code>if</code> condition does not need to be surrounded by parentheses
+  * <code>if</code> / <code>else</code> conditionals are expressions
+  * Each condition is followed by a <code>{}</code> block.
 </div>
