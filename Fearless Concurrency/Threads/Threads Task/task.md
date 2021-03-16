@@ -2,12 +2,11 @@
 
 Make this compile!
 
-The idea is the thread spawned on line 12 is completing jobs while the main thread is monitoring progress until 10 jobs are completed.
-If you see 6 lines of "waiting..." and the program ends without timing out the playground, you've got it :)
+The idea is the thread spawned on line 12 is completing jobs while the main thread is monitoring progress until 10 jobs are completed. Because of the difference between the spawned threads' sleep time, and the waiting threads sleep time, when you see 6 lines of "waiting..." and the program ends without timing out the playground, you've got it :)
 
 <div class="hint">
   `Arc` is an Atomic Reference Counted pointer that allows safe, shared access to **immutable** data. But we want to *change* the number of `jobs_completed` so we'll need to also use another type that will only allow one thread to mutate the data at a time.
-  Take a look at <a href ="https://doc.rust-lang.org/stable/book/ch16-03-shared-state.html">this section of the book</a>
+  Take a look at <a href ="https://doc.rust-lang.org/stable/book/ch16-03-shared-state.html#atomic-reference-counting-with-arct">this section of the book</a>
   and keep scrolling if you'd like more hints :)
 </div>
 
