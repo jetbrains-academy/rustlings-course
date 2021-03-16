@@ -1,7 +1,6 @@
 content:
 - Intro
 - Recoverable Errors with Result
-- To Panic or Not to Panic
 - Generic Data Types
 - Returning Result
 - Matching Result
