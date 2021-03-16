@@ -18,7 +18,8 @@ fn main() {
  }
 ```
 
-When we run this program, we’ll see `again!` printed over and over continuously until we stop the program manually. Press ⌘F2 to interrupt a program that is stuck in a continual loop. Most terminals support a keyboard shortcut,
+When we run this program, we’ll see `again!` printed over and over continuously
+until we stop the program manually. Most terminals support a keyboard shortcut,
 <span class="keystroke">ctrl-c</span>, to interrupt a program that is stuck in
 a continual loop:
 
