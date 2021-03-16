@@ -1,6 +1,6 @@
 ## Without Arguments
 
-Refactor this code so that instead of having `vec0` and creating the vector in `fn main`, we instead create it within `fn fill_vec` and transfer the freshly created vector from fill_vec to its caller.
+Refactor this code so that instead of having `vec0` and creating the vector in `fn main`, we create it within `fn fill_vec` and transfer the freshly created vector from fill_vec to its caller.
 
 <div class="hint">
   Stop reading whenever you feel like you have enough direction :)

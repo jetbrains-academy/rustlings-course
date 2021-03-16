@@ -1,0 +1,26 @@
+type: edu
+files:
+- name: src/main.rs
+  visible: true
+- name: Cargo.toml
+  visible: true
+- name: tests/tests.rs
+  visible: false
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 36
+    length: 38
+    placeholder_text: // Something goes here
+  - offset: 106
+    length: 22
+    placeholder_text: // Something goes here
+  - offset: 240
+    length: 101
+    placeholder_text: // Instantiate a classic c struct!
+  - offset: 423
+    length: 65
+    placeholder_text: // Instantiate a tuple struct!
+  - offset: 565
+    length: 11
+    placeholder_text: // Instantiate a unit struct!
