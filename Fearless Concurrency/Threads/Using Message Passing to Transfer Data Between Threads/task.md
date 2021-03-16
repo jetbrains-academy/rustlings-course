@@ -180,7 +180,7 @@ Earlier we mentioned that `mpsc` was an acronym for _multiple producer, single c
 
     let (tx, rx) = mpsc::channel();
 
-    let tx1 = mpsc::Sender::clone(&tx);
+    let tx1 = tx.clone();
     thread::spawn(move || {
         let vals = vec![
             String::from("hi"),
