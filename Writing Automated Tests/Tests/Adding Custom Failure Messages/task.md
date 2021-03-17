@@ -34,53 +34,52 @@ Let’s introduce a bug into this code by changing `greeting` to not include `na
 Running this test produces the following:
 
 ```text
-    running 1 test
-    test tests::greeting_contains_name ... FAILED
+running 1 test
+test tests::greeting_contains_name ... FAILED
 
-    failures:
+failures:
 
-    ---- tests::greeting_contains_name stdout ----
-    thread 'tests::greeting_contains_name' panicked at 'assertion failed:
-    result.contains("Carol")', src/lib.rs:12:9
-    note: Run with `RUST_BACKTRACE=1` for a backtrace.
+---- tests::greeting_contains_name stdout ----
+thread 'main' panicked at 'assertion failed: result.contains("Carol")', src/lib.rs:12:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 
-    failures:
-        tests::greeting_contains_name
+
+failures:
+    tests::greeting_contains_name
 ```
 
 This result just indicates that the assertion failed and which line the assertion is on. A more useful failure message in this case would print the value we got from the `greeting` function. Let’s change the test function, giving it a custom failure message made from a format string with a placeholder filled in with the actual value we got from the `greeting` function:
 
 ```rust
-    #[test]
-    fn greeting_contains_name() {
-        let result = greeting("Carol");
-        assert!(
-            result.contains("Carol"),
-            "Greeting did not contain name, value was `{}`", result
-        );
-    }
+#[test]
+fn greeting_contains_name() {
+    let result = greeting("Carol");
+    assert!(
+        result.contains("Carol"),
+        "Greeting did not contain name, value was `{}`",
+        result
+    );
+}
 ```
 
 Now when we run the test, we’ll get a more informative error message:
 
 ```text
-    ---- tests::greeting_contains_name stdout ----
-    thread 'tests::greeting_contains_name' panicked at 'Greeting did not
-    contain name, value was `Hello!`', src/lib.rs:12:9
-    note: Run with `RUST_BACKTRACE=1` for a backtrace.
+---- tests::greeting_contains_name stdout ----
+thread 'main' panicked at 'Greeting did not contain name, value was `Hello!`', src/lib.rs:12:9
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ```
 
 We can see the value we actually got in the test output, which would help us debug what happened instead of what we were expecting to happen.
 
-### Checking for Panics with should_panic
+### Checking for Panics with `should_panic`
 
-](ch11-01-writing-tests.html#checking-for-panics-with-should_panic)
-
-In addition to checking that our code returns the correct values we expect, it’s also important to check that our code handles error conditions as we expect. For example, consider the `Guess` type that we created in Chapter 9, Listing 9-10\. Other code that uses `Guess` depends on the guarantee that `Guess` instances will contain only values between 1 and 100\. We can write a test that ensures that attempting to create a `Guess` instance with a value outside that range panics.
+In addition to checking that our code returns the correct values we expect, it’s also important to check that our code handles error conditions as we expect. For example, consider the `Guess` type that we created in the section "To Panic or Not to Panic" of the chapter "Recoverable and Unrecoverable Errors", listing "A `Guess` type that will only continue with
+values between 1 and 100". Other code that uses `Guess` depends on the guarantee that `Guess` instances will contain only values between 1 and 100\. We can write a test that ensures that attempting to create a `Guess` instance with a value outside that range panics.
 
 We do this by adding another attribute, `should_panic`, to our test function. This attribute makes a test pass if the code inside the function panics; the test will fail if the code inside the function doesn’t panic.
 
-Listing 11-8 shows a test that checks that the error conditions of `Guess::new` happen when we expect them to.
+The code snippet below shows a test that checks that the error conditions of `Guess::new` happen when we expect them to.
 
 ```rust
     pub struct Guess {
@@ -111,7 +110,7 @@ Listing 11-8 shows a test that checks that the error conditions of `Guess::new` 
     }
 ```
 
-###### Example of testing that a condition will cause a panic!
+###### Example of testing that a condition will cause a `panic!`
 
 We place the `#[should_panic]` attribute after the `#[test]` attribute and before the test function it applies to. Let’s look at the result when this test passes:
 
@@ -140,18 +139,21 @@ Looks good! Now let’s introduce a bug in our code by removing the condition th
     }
 ```
 
-When we run the test in Listing 11-8, it will fail:
+When we run the test in "Example of testing that a condition will cause a `panic!`", it will fail:
 
 ```text
-    running 1 test
-    test tests::greater_than_100 ... FAILED
+running 1 test
+test tests::greater_than_100 ... FAILED
 
-    failures:
+failures:
 
-    failures:
-        tests::greater_than_100
+---- tests::greater_than_100 stdout ----
+note: test did not panic as expected
 
-    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
+failures:
+    tests::greater_than_100
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
 ```
 
 We don’t get a very helpful message in this case, but when we look at the test function, we see that it’s annotated with `#[should_panic]`. The failure we got means that the code in the test function did not cause a panic.
@@ -206,27 +208,26 @@ To see what happens when a `should_panic` test with an `expected` message fails,
 This time when we run the `should_panic` test, it will fail:
 
 ```text
-    running 1 test
-    test tests::greater_than_100 ... FAILED
+running 1 test
+test tests::greater_than_100 ... FAILED
 
-    failures:
+failures:
 
-    ---- tests::greater_than_100 stdout ----
-    thread 'tests::greater_than_100' panicked at 'Guess value must be
-    greater than or equal to 1, got 200.', src/lib.rs:11:13
-    note: Run with `RUST_BACKTRACE=1` for a backtrace.
-    note: Panic did not include expected string 'Guess value must be less than or
-    equal to 100'
+---- tests::greater_than_100 stdout ----
+thread 'main' panicked at 'Guess value must be greater than or equal to 1, got 200.', src/lib.rs:13:13
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+note: panic did not contain expected string
+      panic message: `"Guess value must be greater than or equal to 1, got 200."`,
+ expected substring: `"Guess value must be less than or equal to 100"`
 
-    failures:
-        tests::greater_than_100
+failures:
+    tests::greater_than_100
 
-    test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
 ```
 
 The failure message indicates that this test did indeed panic as we expected, but the panic message did not include the expected string `'Guess value must be less than or equal to 100'`. The panic message that we did get in this case was `Guess value must be greater than or equal to 1, got 200.` Now we can start figuring out where our bug is!
 
-[
 
 ### Using Result<T, E> in Tests
 
