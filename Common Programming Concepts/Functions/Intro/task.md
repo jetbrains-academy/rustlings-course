@@ -20,7 +20,7 @@ Function definitions in Rust start with `fn` and have a set of parentheses after
 
 We can call any function we’ve defined by entering its name followed by a set of parentheses. Because `another_function` is defined in the program, it can be called from inside the `main` function. Note that we defined `another_function` _after_ the `main` function in the source code; we could have defined it before as well. Rust doesn’t care where you define your functions, only that they’re defined somewhere.
 
-Let’s run the code from listing above to explore functions further. Place the another_function example in src/main.rs and run it. You should see the following output:
+Let’s run the code from the example above to explore functions further. Place the another_function example in src/main.rs and run it. You should see the following output:
 
 ```text
 $ cargo run
