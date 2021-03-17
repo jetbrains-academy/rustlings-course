@@ -3,6 +3,7 @@ content:
 - How to Write Tests
 - Adding Custom Failure Messages
 - Running Tests
+- Test Organization
 - Assert
 - Assert_Eq
 - Testing Task
