@@ -34,25 +34,23 @@ Output of `cargo test` after creating *tests/common/mod.rs* and calling the `set
 function from the `it_adds_two` test in *tests/integration_test.rs*:
 
 ```text
+Compiling submodules v0.1.0 
+    Finished test [unoptimized + debuginfo] target(s) in 0.50s
+     Running target/debug/deps/submodules-c44b35b673c8053d
+
 running 1 test
 test tests::internal ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
-     Running target/debug/deps/test_organization_part_2-96466a4481ba69a9
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
-
-     Running target/debug/deps/integration_test-b1dee312747c94e5
+     Running target/debug/deps/integration_test-31048908068047a2
 
 running 1 test
 test it_adds_two ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
-   Doc-tests test_organization_part_2
+   Doc-tests submodules
 
 running 0 tests
 

@@ -141,12 +141,6 @@ test tests::internal ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
-     Running target/debug/deps/test_organization-7f41fdad84922eef
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
-
      Running target/debug/deps/integration_tests-d5df7484b111e79e
 
 running 1 test
@@ -233,12 +227,6 @@ running 1 test
 test tests::internal ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
-
-     Running target/debug/deps/test_organization-7f41fdad84922eef
-
-running 0 tests
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
      Running target/debug/deps/common-b5e4eefa9d201089
 
