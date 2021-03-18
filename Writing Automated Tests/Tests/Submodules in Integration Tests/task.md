@@ -33,7 +33,7 @@ we demonstrated in the listing "Declaring the front_of_house module whose body w
 Output of `cargo test` after creating *tests/common/mod.rs* and calling the `setup`
 function from the `it_adds_two` test in *tests/integration_test.rs*:
 
-```console
+```text
 running 1 test
 test tests::internal ... ok
 
@@ -59,7 +59,7 @@ running 0 tests
 test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 ```
 
-#### Integration Tests for Binary Crates
+##### Integration Tests for Binary Crates
 
 If our project is a binary crate that only contains a *src/main.rs* file and
 doesn’t have a *src/lib.rs* file, we can’t create integration tests in the
@@ -86,5 +86,6 @@ in the same way external code will use it. Even though Rust’s type system and
 ownership rules help prevent some kinds of bugs, tests are still important to
 reduce logic bugs having to do with how your code is expected to behave.
 
+_You can refer to the following chapter in the Rust Programming Language Book: [Submodules in Integration Tests](https://doc.rust-lang.org/stable/book/ch11-03-test-organization.html#submodules-in-integration-tests)_
 
 
