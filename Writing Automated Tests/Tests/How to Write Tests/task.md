@@ -54,11 +54,11 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
 Cargo compiled and ran the test. After the `Compiling`, `Finished`, and `Running` lines is the line `running 1 test`. The next line shows the name of the generated test function, called `it_works`, and the result of running that test, `ok`. The overall summary of running the tests appears next. The text `test result: ok.` means that all the tests passed, and the portion that reads `1 passed; 0 failed` totals the number of tests that passed or failed.
 
-Because we don’t have any tests we’ve marked as ignored, the summary shows `0 ignored`. We also haven’t filtered the tests being run, so the end of the summary shows `0 filtered out`. We’ll talk about ignoring and filtering out tests in the next section, [“Controlling How Tests Are Run.”](https://doc.rust-lang.org/stable/book/ch11-02-running-tests.html#controlling-how-tests-are-run)
+Because we don’t have any tests we’ve marked as ignored, the summary shows `0 ignored`. We also haven’t filtered the tests being run, so the end of the summary shows `0 filtered out`. We’ll talk about ignoring and filtering out tests in the section "Running Tests".
 
 The `0 measured` statistic is for benchmark tests that measure performance. Benchmark tests are, as of this writing, only available in nightly Rust. See [the documentation about benchmark tests](https://doc.rust-lang.org/unstable-book/library-features/test.html) to learn more.
 
-The next part of the test output, which starts with `Doc-tests how_to_write_tests`, is for the results of any documentation tests. We don’t have any documentation tests yet, but Rust can compile any code examples that appear in our API documentation. This feature helps us keep our docs and our code in sync! We’ll discuss how to write documentation tests in the [“Documentation Comments as Tests”](https://doc.rust-lang.org/stable/book/ch14-02-publishing-to-crates-io.html#documentation-comments-as-tests) section of Chapter 14\. For now, we’ll ignore the `Doc-tests` output.
+The next part of the test output, which starts with `Doc-tests how_to_write_tests`, is for the results of any documentation tests. We don’t have any documentation tests yet, but Rust can compile any code examples that appear in our API documentation. This feature helps us keep our docs and our code in sync! We’ll discuss how to write documentation tests in the [“Documentation Comments as Tests”](https://doc.rust-lang.org/stable/book/ch14-02-publishing-to-crates-io.html#documentation-comments-as-tests) section of Chapter 14 of the Rust Book. For now, we’ll ignore the `Doc-tests` output.
 
 Let’s change the name of our test to see how that changes the test output. Change the `it_works` function to a different name, such as `exploration`, like so:
 
@@ -104,7 +104,7 @@ Let’s add another test, but this time we’ll make a test that fails! Tests fa
 
 ##### Example of adding a second test that will fail because we call the panic! macro
 
-Run the tests again using `cargo test`. The output should look like Listing 11-4, which shows that our `exploration` test passed and `another` failed.
+Run the tests again using `cargo test`. The output should look like the listing below, which shows that our `exploration` test passed and `another` failed.
 ```text
 Compiling how_to_write_tests v0.1.0
    Finished dev [unoptimized + debuginfo] target(s) in 0.34s
@@ -301,7 +301,7 @@ Let’s introduce a bug into our code to see what it looks like when a test that
 
 Run the tests again:
 
-```console
+```text
 running 1 test
 test tests::it_adds_two ... FAILED
 
@@ -320,12 +320,13 @@ failures:
 test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out
 ```
 
-Our test caught the bug! The `it_adds_two` test failed, displaying the message `assertion failed: `(left == right)`` and showing that `left` was `4` and `right` was `5`. This message is useful and helps us start debugging: it means the `left` argument to `assert_eq!` was `4` but the `right` argument, where we had `add_two(2)`, was `5`.
+Our test caught the bug! The `it_adds_two` test failed, displaying the message `assertion failed: '(left == right)'` and showing that `left` was `4` and `right` was `5`. This message is useful and helps us start debugging: it means the `left` argument to `assert_eq!` was `4` but the `right` argument, where we had `add_two(2)`, was `5`.
 
-Note that in some languages and test frameworks, the parameters to the functions that assert two values are equal are called `expected` and `actual`, and the order in which we specify the arguments matters. However, in Rust, they’re called `left` and `right`, and the order in which we specify the value we expect and the value that the code under test produces doesn’t matter. We could write the assertion in this test as `assert_eq!(add_two(2), 4)`, which would result in a failure message that displays `assertion failed: `(left == right)`` and that `left` was `5` and `right` was `4`.
+Note that in some languages and test frameworks, the parameters to the functions that assert two values are equal are called `expected` and `actual`, and the order in which we specify the arguments matters. However, in Rust, they’re called `left` and `right`, and the order in which we specify the value we expect and the value that the code under test produces doesn’t matter. We could write the assertion in this test as `assert_eq!(add_two(2), 4)`, which would result in a failure message that displays `assertion failed: '(left == right)'` and that `left` was `5` and `right` was `4`.
 
 The `assert_ne!` macro will pass if the two values we give it are not equal and fail if they’re equal. This macro is most useful for cases when we’re not sure what a value _will_ be, but we know what the value definitely _won’t_ be if our code is functioning as we intend. For example, if we’re testing a function that is guaranteed to change its input in some way, but the way in which the input is changed depends on the day of the week that we run our tests, the best thing to assert might be that the output of the function is not equal to the input.
 
-Under the surface, the `assert_eq!` and `assert_ne!` macros use the operators `==` and `!=`, respectively. When the assertions fail, these macros print their arguments using debug formatting, which means the values being compared must implement the `PartialEq` and `Debug` traits. All the primitive types and most of the standard library types implement these traits. For structs and enums that you define, you’ll need to implement `PartialEq` to assert that values of those types are equal or not equal. You’ll need to implement `Debug` to print the values when the assertion fails. Because both traits are derivable traits, as mentioned in Listing 5-12 in Chapter 5, this is usually as straightforward as adding the `#[derive(PartialEq, Debug)]` annotation to your struct or enum definition. See Appendix C, [“Derivable Traits,”](https://doc.rust-lang.org/stable/book/appendix-03-derivable-traits.html) for more details about these and other derivable traits.
+Under the surface, the `assert_eq!` and `assert_ne!` macros use the operators `==` and `!=`, respectively. When the assertions fail, these macros print their arguments using debug formatting, which means the values being compared must implement the `PartialEq` and `Debug` traits. All the primitive types and most of the standard library types implement these traits. For structs and enums that you define, you’ll need to implement `PartialEq` to assert that values of those types are equal or not equal. You’ll need to implement `Debug` to print the values when the assertion fails. Because both traits are derivable traits, as mentioned in the listing "Adding the annotation to derive the `Debug`
+trait and printing the `Rectangle` instance using debug formatting" in the chapter "Structs", section "Example Structs", this is usually as straightforward as adding the `#[derive(PartialEq, Debug)]` annotation to your struct or enum definition. See Appendix C, [“Derivable Traits,”](https://doc.rust-lang.org/stable/book/appendix-03-derivable-traits.html) for more details about these and other derivable traits.
 
-_You can refer to the following chapter in the Rust Programming Language Book:[Writing Tests](https://doc.rust-lang.org/stable/book/ch11-01-writing-tests.html)_
+_You can refer to the following chapter in the Rust Programming Language Book: [Writing Tests](https://doc.rust-lang.org/stable/book/ch11-01-writing-tests.html)_
