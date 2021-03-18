@@ -83,7 +83,7 @@ mod tests {
 }
 ```
 
-#### Testing a private function
+##### Testing a private function
 
 Note that the `internal_adder` function is not marked as `pub`, but because
 tests are just Rust code and the `tests` module is just another module, you can
@@ -121,7 +121,7 @@ fn it_adds_two() {
 }
 ```
 
-#### An integration test of a function in the `test_organization` crate
+##### An integration test of a function in the `test_organization` crate
 
 We’ve added `use test_organization;` at the top of the code, which we didn’t need in the
 unit tests. The reason is that each file in the `tests` directory is a separate
@@ -131,7 +131,7 @@ We don’t need to annotate any code in *tests/integration_test.rs* with
 `#[cfg(test)]`. Cargo treats the `tests` directory specially and compiles files
 in this directory only when we run `cargo test`. Run `cargo test` now:
 
-```console
+```text
 Compiling test_organization v0.1.0 
     Finished test [unoptimized + debuginfo] target(s) in 0.54s
      Running target/debug/deps/test_organization-61f5d8d60ccbcc19
@@ -182,7 +182,7 @@ function’s name as an argument to `cargo test`. To run all the tests in a
 particular integration test file, use the `--test` argument of `cargo test`
 followed by the name of the file (`cargo test --test integration_test`):
 
-```console
+```text
 running 1 test
 test it_adds_two ... ok
 
@@ -224,7 +224,7 @@ When we run the tests again, we’ll see a new section in the test output for th
 *common.rs* file, even though this file doesn’t contain any test functions nor
 did we call the `setup` function from anywhere:
 
-```console
+```text
    Compiling test_organization v0.1.0
     Finished test [unoptimized + debuginfo] target(s) in 0.81s
      Running target/debug/deps/test_organization-61f5d8d60ccbcc19
@@ -263,3 +263,5 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 Having `common` appear in the test results with `running 0 tests` displayed for
 it is not what we wanted. We just wanted to share some code with the other
 integration test files. You will learn how to avoid having `common` appear in the test output and to organize the tests properly in the next section.
+
+_You can refer to the following chapter in the Rust Programming Language Book: [Test Organization](https://doc.rust-lang.org/stable/book/ch11-03-test-organization.html)_
