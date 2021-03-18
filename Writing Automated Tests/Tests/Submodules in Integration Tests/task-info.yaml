@@ -7,6 +7,6 @@ files:
 - name: src/lib.rs
   visible: true
 - name: tests/integration_test.rs
-  visible: true
-- name: tests/common.rs
+  visible: false
+- name: tests/common/mod.rs
   visible: false

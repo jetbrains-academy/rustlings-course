@@ -4,6 +4,7 @@ content:
 - Adding Custom Failure Messages
 - Running Tests
 - Test Organization
+- Submodules in Integration Tests
 - Assert
 - Assert_Eq
 - Testing Task

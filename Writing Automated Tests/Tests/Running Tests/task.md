@@ -166,7 +166,7 @@ To demonstrate how to run a subset of tests, we’ll create three tests for our
 `add_two` function, as shown below, and choose which ones to run.
 
 
-```rust,noplayground
+```rust
 pub fn add_two(a: i32) -> i32 {
     a + 2
 }

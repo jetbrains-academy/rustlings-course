@@ -35,9 +35,7 @@ included in the compiled result.
 Recall the example of a test module and a function generated automatically by cargo new in the first section of
 this chapter:
 
-<span class="filename">Filename: src/lib.rs</span>
-
-```rust,noplayground
+```rust
 #[cfg(test)]
 mod tests {
     #[test]
@@ -65,7 +63,7 @@ adhere to, Rust’s privacy rules do allow you to test private functions.
 Consider the code below with the private function `internal_adder`.
 
 
-```rust,noplayground
+```rust
 pub fn add_two(a: i32) -> i32 {
     internal_adder(a, 2)
 }
@@ -114,7 +112,7 @@ Let’s look at an integration test. With the code from listing "Testing a priva
 *src/lib.rs* file, look in a *tests* directory, where there is a file named
 *tests/integration_test.rs* with the code from the listing below.
 
-```rust,ignore
+```rust
 use test_organization;
 
 #[test]
@@ -134,6 +132,10 @@ We don’t need to annotate any code in *tests/integration_test.rs* with
 in this directory only when we run `cargo test`. Run `cargo test` now:
 
 ```console
+Compiling test_organization v0.1.0 
+    Finished test [unoptimized + debuginfo] target(s) in 0.54s
+     Running target/debug/deps/test_organization-61f5d8d60ccbcc19
+     
 running 1 test
 test tests::internal ... ok
 
@@ -178,7 +180,7 @@ integration test file has its own section, so if we add more files in the
 We can still run a particular integration test function by specifying the test
 function’s name as an argument to `cargo test`. To run all the tests in a
 particular integration test file, use the `--test` argument of `cargo test`
-followed by the name of the file:
+followed by the name of the file (`cargo test --test integration_test`):
 
 ```console
 running 1 test
@@ -223,6 +225,10 @@ When we run the tests again, we’ll see a new section in the test output for th
 did we call the `setup` function from anywhere:
 
 ```console
+   Compiling test_organization v0.1.0
+    Finished test [unoptimized + debuginfo] target(s) in 0.81s
+     Running target/debug/deps/test_organization-61f5d8d60ccbcc19
+
 running 1 test
 test tests::internal ... ok
 
@@ -256,66 +262,4 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
 Having `common` appear in the test results with `running 0 tests` displayed for
 it is not what we wanted. We just wanted to share some code with the other
-integration test files.
-
-To avoid having `common` appear in the test output, instead of creating
-*tests/common.rs*, we’ll create *tests/common/mod.rs*. This is an alternate
-naming convention that Rust also understands. Naming the file this way tells
-Rust not to treat the `common` module as an integration test file. When we move
-the `setup` function code into *tests/common/mod.rs* and delete the
-*tests/common.rs* file, the section in the test output will no longer appear.
-Files in subdirectories of the *tests* directory don’t get compiled as separate
-crates or have sections in the test output.
-
-After we’ve created *tests/common/mod.rs*, we can use it from any of the
-integration test files as a module. Here’s an example of calling the `setup`
-function from the `it_adds_two` test in *tests/integration_test.rs*:
-
-
-```rust,ignore
-use test_organization;
-
-mod common;
-
-#[test]
-fn it_adds_two() {
-    common::setup();
-    assert_eq!(4, test_organization::add_two(2));
-}
-```
-
-Note that the `mod common;` declaration is the same as the module declaration
-we demonstrated in the listing "Declaring the front_of_house module whose body will be in _src/front_of_house.rs" in the section "Separating Modules into Different Files" in "Modules". Then in the test function, we can call the
-`common::setup()` function.
-
-#### Integration Tests for Binary Crates
-
-If our project is a binary crate that only contains a *src/main.rs* file and
-doesn’t have a *src/lib.rs* file, we can’t create integration tests in the
-*tests* directory and bring functions defined in the *src/main.rs* file into
-scope with a `use` statement. Only library crates expose functions that other
-crates can use; binary crates are meant to be run on their own.
-
-This is one of the reasons Rust projects that provide a binary have a
-straightforward *src/main.rs* file that calls logic that lives in the
-*src/lib.rs* file. Using that structure, integration tests *can* test the
-library crate with `use` to make the important functionality available.
-If the important functionality works, the small amount of code in the
-*src/main.rs* file will work as well, and that small amount of code doesn’t
-need to be tested.
-
-## Summary
-
-Rust’s testing features provide a way to specify how code should function to
-ensure it continues to work as you expect, even as you make changes. Unit tests
-exercise different parts of a library separately and can test private
-implementation details. Integration tests check that many parts of the library
-work together correctly, and they use the library’s public API to test the code
-in the same way external code will use it. Even though Rust’s type system and
-ownership rules help prevent some kinds of bugs, tests are still important to
-reduce logic bugs having to do with how your code is expected to behave.
-
-Let’s combine the knowledge you learned in this chapter and in previous
-chapters to work on a project!
-
-
+integration test files. You will learn how to avoid having `common` appear in the test output and to organize the tests properly in the next section.
