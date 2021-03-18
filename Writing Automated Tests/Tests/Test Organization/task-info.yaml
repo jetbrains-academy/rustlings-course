@@ -1,10 +1,10 @@
 type: theory
 files:
 - name: Cargo.toml
-  visible: true
+  visible: false
 - name: src/lib.rs
   visible: true
 - name: tests/integration_test.rs
   visible: true
 - name: tests/common.rs
-  visible: false
+  visible: true
