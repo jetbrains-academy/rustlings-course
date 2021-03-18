@@ -60,7 +60,7 @@ As an example, the code below has a silly function that prints the value of its
 parameter and returns 10, as well as a test that passes and a test that fails.
 
 
-```rust,panics,noplayground
+```rust,panics
 fn prints_and_returns_10(a: i32) -> i32 {
     println!("I got the value {}", a);
     10
@@ -84,11 +84,11 @@ mod tests {
 }
 ```
 
-#### Tests for a function that calls `println!`
+##### Tests for a function that calls `println!`
 
 When we run these tests with `cargo test`, we’ll see the following output:
 
-```console
+```text
 running 2 tests
 test tests::this_test_will_fail ... FAILED
 test tests::this_test_will_pass ... ok
@@ -117,7 +117,7 @@ of the test summary output, which also shows the cause of the test failure.
 If we want to see printed values for passing tests as well, we can tell Rust
 to also show the output of successful tests at the end with `--show-output`.
 
-```console
+```text
 $ cargo test -- --show-output
 ```
 
@@ -125,7 +125,7 @@ When we run the tests in "Tests for a function that calls
 `println!`" again with the `--show-output` flag, we
 see the following output:
 
-```console
+```text
 running 2 tests
 test tests::this_test_will_fail ... FAILED
 test tests::this_test_will_pass ... ok
@@ -192,12 +192,12 @@ mod tests {
 }
 ```
 
-#### Three tests with three different names
+##### Three tests with three different names
 
 If we run the tests without passing any arguments, as we saw earlier, all the
 tests will run in parallel:
 
-```console
+```text
 running 3 tests
 test tests::add_three_and_two ... ok
 test tests::add_two_and_two ... ok
@@ -216,7 +216,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
 We can pass the name of any test function to `cargo test` to run only that test:
 
-```console
+```text
 $ cargo test one_hundred
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.69s
@@ -241,7 +241,7 @@ We can specify part of a test name, and any test whose name matches that value
 will be run. For example, because two of our tests’ names contain `add`, we can
 run those two by running `cargo test add`:
 
-```console
+```text
 $ cargo test add
    Compiling adder v0.1.0 (file:///projects/adder)
     Finished test [unoptimized + debuginfo] target(s) in 0.61s
@@ -284,7 +284,7 @@ fn expensive_test() {
 After `#[test]` we add the `#[ignore]` line to the test we want to exclude. Now
 when we run our tests, `it_works` runs, but `expensive_test` doesn’t:
 
-```console
+```text
 running 2 tests
 test expensive_test ... ignored
 test it_works ... ok
@@ -301,7 +301,7 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 The `expensive_test` function is listed as `ignored`. If we want to run only
 the ignored tests, we can use `cargo test -- --ignored`:
 
-```console
+```text
 running 1 test
 test expensive_test ... ok
 
@@ -318,3 +318,5 @@ By controlling which tests run, you can make sure your `cargo test` results
 will be fast. When you’re at a point where it makes sense to check the results
 of the `ignored` tests and you have time to wait for the results, you can run
 `cargo test -- --ignored` instead.
+
+_You can refer to the following chapter in the Rust Programming Language Book: [Controlling How Tests Are Run](https://doc.rust-lang.org/stable/book/ch11-02-running-tests.html)_
