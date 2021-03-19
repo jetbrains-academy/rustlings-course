@@ -205,7 +205,7 @@ test tests::one_hundred ... ok
 
 test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
-   Doc-tests adder
+   Doc-tests running_tests
 
 running 0 tests
 
@@ -214,14 +214,9 @@ test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
 #### Running Single Tests
 
-We can pass the name of any test function to `cargo test` to run only that test:
+We can pass the name of any test function to `cargo test` to run only that test, for example, `cargo test one_hundred`:
 
 ```text
-$ cargo test one_hundred
-   Compiling adder v0.1.0 (file:///projects/adder)
-    Finished test [unoptimized + debuginfo] target(s) in 0.69s
-     Running target/debug/deps/adder-92948b65e88960b4
-
 running 1 test
 test tests::one_hundred ... ok
 
@@ -242,14 +237,9 @@ will be run. For example, because two of our tests’ names contain `add`, we ca
 run those two by running `cargo test add`:
 
 ```text
-$ cargo test add
-   Compiling adder v0.1.0 (file:///projects/adder)
-    Finished test [unoptimized + debuginfo] target(s) in 0.61s
-     Running target/debug/deps/adder-92948b65e88960b4
-
 running 2 tests
-test tests::add_three_and_two ... ok
 test tests::add_two_and_two ... ok
+test tests::add_three_and_two ... ok
 
 test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out
 ```
@@ -268,7 +258,7 @@ time-consuming tests using the `ignore` attribute to exclude them, as shown
 here:
 
 
-```rust,noplayground
+```rust
 #[test]
 fn it_works() {
     assert_eq!(2 + 2, 4);
@@ -291,7 +281,7 @@ test it_works ... ok
 
 test result: ok. 1 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out
 
-   Doc-tests adder
+   Doc-tests running_tests
 
 running 0 tests
 
@@ -307,7 +297,7 @@ test expensive_test ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out
 
-   Doc-tests adder
+   Doc-tests running_tests
 
 running 0 tests
 
