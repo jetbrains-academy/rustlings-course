@@ -6,7 +6,7 @@ It’s useful to discuss strings in the context of collections because strings a
 
 ### What Is a String?
 
-We’ll first define what we mean by the term _string_. Rust has only one string type in the core language, which is the string slice `str` that is usually seen in its borrowed form `&str`. In Chapter 4, we talked about _string slices_, which are references to some UTF-8 encoded string data stored elsewhere. String literals, for example, are stored in the program’s binary and are therefore string slices.
+We’ll first define what we mean by the term _string_. Rust has only one string type in the core language, which is the string slice `str` that is usually seen in its borrowed form `&str`. In the chapter "Understanding Ownership", we talked about _string slices_, which are references to some UTF-8 encoded string data stored elsewhere. String literals, for example, are stored in the program’s binary and are therefore string slices.
 
 The `String` type, which is provided by Rust’s standard library rather than coded into the core language, is a growable, mutable, owned, UTF-8 encoded string type. When Rustaceans refer to “strings” in Rust, they usually mean the `String` and the string slice `&str` types, not just one of those types. Although this section is largely about `String`, both types are used heavily in Rust’s standard library, and both `String` and string slices are UTF-8 encoded.
 
@@ -14,15 +14,14 @@ Rust’s standard library also includes a number of other string types, such as 
 
 ### Creating a New String
 
-Many of the same operations available with `Vec<T>` are available with `String` as well, starting with the `new` function to create a string, shown in Listing 8-11.
-
+Many of the same operations available with `Vec<T>` are available with `String` as well, starting with the `new` function to create a string, shown below.
 ```rust
     let mut s = String::new();
 ```
 
 ##### Example of creating a new, empty String
 
-This line creates a new empty string called `s`, which we can then load data into. Often, we’ll have some initial data that we want to start the string with. For that, we use the `to_string` method, which is available on any type that implements the `Display` trait, as string literals do. Listing 8-12 shows two examples.
+This line creates a new empty string called `s`, which we can then load data into. Often, we’ll have some initial data that we want to start the string with. For that, we use the `to_string` method, which is available on any type that implements the `Display` trait, as string literals do. The listing below shows two examples.
 
 ```rust
     let data = "initial contents";
@@ -37,7 +36,7 @@ This line creates a new empty string called `s`, which we can then load data int
 
 This code creates a string containing `initial contents`.
 
-We can also use the function `String::from` to create a `String` from a string literal. The code in Listing 8-13 is equivalent to the code from Listing 8-12 that uses `to_string`.
+We can also use the function `String::from` to create a `String` from a string literal. The code below is equivalent to the code from the previous listing that uses `to_string`.
 
 ```rust
     let s = String::from("initial contents");
@@ -47,7 +46,7 @@ We can also use the function `String::from` to create a `String` from a string l
 
 Because strings are used for so many things, we can use many different generic APIs for strings, providing us with a lot of options. Some of them can seem redundant, but they all have their place! In this case, `String::from` and `to_string` do the same thing, so which you choose is a matter of style.
 
-Remember that strings are UTF-8 encoded, so we can include any properly encoded data in them, as shown in Listing 8-14.
+Remember that strings are UTF-8 encoded, so we can include any properly encoded data in them, as shown below.
 
 ```rust
     let hello = String::from("السلام عليكم");
@@ -73,7 +72,7 @@ A `String` can grow in size and its contents can change, just like the contents 
 
 #### Appending to a String with `push_str` and `push`
 
-We can grow a `String` by using the `push_str` method to append a string slice, as shown in Listing 8-15.
+We can grow a `String` by using the `push_str` method to append a string slice, as shown in the code snippet below.
 
 ```rust
     let mut s = String::from("foo");
@@ -82,7 +81,7 @@ We can grow a `String` by using the `push_str` method to append a string slice, 
 
 ##### Example of appending a string slice to a String using the push_str method
 
-After these two lines, `s` will contain `foobar`. The `push_str` method takes a string slice because we don’t necessarily want to take ownership of the parameter. For example, the code in Listing 8-16 shows that it would be unfortunate if we weren’t able to use `s2` after appending its contents to `s1`.
+After these two lines, `s` will contain `foobar`. The `push_str` method takes a string slice because we don’t necessarily want to take ownership of the parameter. For example, the next code snippet shows that it would be unfortunate if we weren’t able to use `s2` after appending its contents to `s1`.
 
 ```rust
     let mut s1 = String::from("foo");
@@ -91,24 +90,24 @@ After these two lines, `s` will contain `foobar`. The `push_str` method takes a 
     println!("s2 is {}", s2);
 ```
 
-##### Listing 8-16: Using a string slice after appending its contents to a String
+##### Using a string slice after appending its contents to a String
 
 If the `push_str` method took ownership of `s2`, we wouldn’t be able to print its value on the last line. However, this code works as we’d expect!
 
-The `push` method takes a single character as a parameter and adds it to the `String`. Listing 8-17 shows code that adds the letter _l_ to a `String` using the `push` method.
+The `push` method takes a single character as a parameter and adds it to the `String`. The code snippet below shows code that adds the letter _l_ to a `String` using the `push` method.
 
 ```rust
     let mut s = String::from("lo");
     s.push('l');
 ```
 
-##### Listing 8-17: Adding one character to a String value using push
+##### Adding one character to a String value using push
 
 As a result of this code, `s` will contain `lol`.
 
 #### Concatenation with the `+` Operator or the format! Macro
 
-Often, you’ll want to combine two existing strings. One way is to use the `+` operator, as shown in Listing 8-18.
+Often, you’ll want to combine two existing strings. One way is to use the `+` operator, as shown below.
 
 ```rust
     let s1 = String::from("Hello, ");
@@ -116,7 +115,7 @@ Often, you’ll want to combine two existing strings. One way is to use the `+` 
     let s3 = s1 + &s2; // note s1 has been moved here and can no longer be used
 ```
 
-##### Listing 8-18: Using the + operator to combine two String values into a new String value
+##### Using the + operator to combine two String values into a new String value
 
 The string `s3` will contain `Hello, world!` as a result of this code. The reason `s1` is no longer valid after the addition and the reason we used a reference to `s2` has to do with the signature of the method that gets called when we use the `+` operator. The `+` operator uses the `add` method, whose signature looks something like this:
 
@@ -124,13 +123,13 @@ The string `s3` will contain `Hello, world!` as a result of this code. The reaso
     fn add(self, s: &str) -> String {
 ```
 
-This isn’t the exact signature that’s in the standard library: in the standard library, `add` is defined using generics. Here, we’re looking at the signature of `add` with concrete types substituted for the generic ones, which is what happens when we call this method with `String` values. We’ll discuss generics in Chapter 10\. This signature gives us the clues we need to understand the tricky bits of the `+` operator.
+This isn’t the exact signature that’s in the standard library: in the standard library, `add` is defined using generics. Here, we’re looking at the signature of `add` with concrete types substituted for the generic ones, which is what happens when we call this method with `String` values. We’ll discuss generics in the chapter "Generic Types, Traits and Lifetime". This signature gives us the clues we need to understand the tricky bits of the `+` operator.
 
-First, `s2` has an `&`, meaning that we’re adding a _reference_ of the second string to the first string because of the `s` parameter in the `add` function: we can only add a `&str` to a `String`; we can’t add two `String` values together. But wait—the type of `&s2` is `&String`, not `&str`, as specified in the second parameter to `add`. So why does Listing 8-18 compile?
+First, `s2` has an `&`, meaning that we’re adding a _reference_ of the second string to the first string because of the `s` parameter in the `add` function: we can only add a `&str` to a `String`; we can’t add two `String` values together. But wait—the type of `&s2` is `&String`, not `&str`, as specified in the second parameter to `add`. So why does the listing "Using the + operator to combine two String values into a new String value" compile?
 
-The reason we’re able to use `&s2` in the call to `add` is that the compiler can _coerce_ the `&String` argument into a `&str`. When we call the `add` method, Rust uses a _deref coercion_, which here turns `&s2` into `&s2[..]`. We’ll discuss deref coercion in more depth in Chapter 15\. Because `add` does not take ownership of the `s` parameter, `s2` will still be a valid `String` after this operation.
+The reason we’re able to use `&s2` in the call to `add` is that the compiler can _coerce_ the `&String` argument into a `&str`. When we call the `add` method, Rust uses a _deref coercion_, which here turns `&s2` into `&s2[..]`. We’ll discuss deref coercion in more depth in Chapter 15 of the [Rust Book](https://doc.rust-lang.org/book/ch15-00-smart-pointers.html). Because `add` does not take ownership of the `s` parameter, `s2` will still be a valid `String` after this operation.
 
-Second, we can see in the signature that `add` takes ownership of `self`, because `self` does _not_ have an `&`. This means `s1` in Listing 8-18 will be moved into the `add` call and no longer be valid after that. So although `let s3 = s1 + &s2;` looks like it will copy both strings and create a new one, this statement actually takes ownership of `s1`, appends a copy of the contents of `s2`, and then returns ownership of the result. In other words, it looks like it’s making a lot of copies but isn’t; the implementation is more efficient than copying.
+Second, we can see in the signature that `add` takes ownership of `self`, because `self` does _not_ have an `&`. This means `s1` in the listing "Using the + operator to combine two String values into a new String value" will be moved into the `add` call and no longer be valid after that. So although `let s3 = s1 + &s2;` looks like it will copy both strings and create a new one, this statement actually takes ownership of `s1`, appends a copy of the contents of `s2`, and then returns ownership of the result. In other words, it looks like it’s making a lot of copies but isn’t; the implementation is more efficient than copying.
 
 If we need to concatenate multiple strings, the behavior of the `+` operator gets unwieldy:
 
@@ -156,7 +155,7 @@ This code also sets `s` to `tic-tac-toe`. The `format!` macro works in the same 
 
 ### Indexing into Strings
 
-In many other programming languages, accessing individual characters in a string by referencing them by index is a valid and common operation. However, if you try to access parts of a `String` using indexing syntax in Rust, you’ll get an error. Consider the invalid code in Listing 8-19.
+In many other programming languages, accessing individual characters in a string by referencing them by index is a valid and common operation. However, if you try to access parts of a `String` using indexing syntax in Rust, you’ll get an error. Consider the invalid code in below.
 
 ```rust
     let s1 = String::from("hello");
@@ -181,7 +180,7 @@ The error and the note tell the story: Rust strings don’t support indexing. Bu
 
 #### Internal Representation
 
-A `String` is a wrapper over a `Vec<u8>`. Let’s look at some of our properly encoded UTF-8 example strings from Listing 8-14\. First, this one:
+A `String` is a wrapper over a `Vec<u8>`. Let’s look at some of our properly encoded UTF-8 example strings from "Example of storing greetings in different languages in strings". First, this one:
 
 ```rust
     let len = String::from("Hola").len();
@@ -247,11 +246,10 @@ What would happen if we used `&hello[0..1]`? The answer: Rust would panic at run
 
 You should use ranges to create string slices with caution, because doing so can crash your program.
 
-[
+
 
 ### Methods for Iterating Over Strings
 
-](ch08-02-strings.html#methods-for-iterating-over-strings)
 
 Fortunately, you can access elements in a string in other ways.
 
