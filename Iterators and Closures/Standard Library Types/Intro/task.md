@@ -12,7 +12,7 @@ In Rust, iterators are _lazy_, meaning they have no effect until you call method
 
 ##### Creating an iterator
 
-Once we’ve created an iterator, we can use it in a variety of ways. In **[Chapter 3](https://doc.rust-lang.org/stable/book/ch03-05-control-flow.html)**, we use iterators with `for` loops to execute some code on each item, although we glossed over what the call to `iter` did until now.
+Once we’ve created an iterator, we can use it in a variety of ways. In "Common Programming Concepts/If", we used iterators with `for` loops to execute some code on each item, although we glossed over what the call to `iter` did until now.
 
 The example in the next code snippet separates the creation of the iterator from the use of the iterator in the `for` loop. The iterator is stored in the `v1_iter` variable, and no iteration takes place at that time. When the `for` loop is called using the iterator in `v1_iter`, each element in the iterator is used in one iteration of the loop, which prints out each value.
 
@@ -78,6 +78,7 @@ The `Iterator` trait has a number of different methods with default implementati
 Methods that call `next` are called _consuming adaptors_, because calling them uses up the iterator. One example is the `sum` method, which takes ownership of the iterator and iterates through the items by repeatedly calling `next`, thus consuming the iterator. As it iterates through, it adds each item to a running total and returns the total when iteration is complete. The code snippet below has a test illustrating a use of the `sum` method:
 
 ```rust
+    #[test]
     fn iterator_sum() {
         let v1 = vec![1, 2, 3];
 
@@ -110,19 +111,19 @@ The following code snippet shows an example of calling the iterator adaptor meth
 The warning we get is this:
 
 ```text
-    warning: unused `std::iter::Map` which must be used: iterator adaptors are lazy
-    and do nothing unless consumed
-     --> src/main.rs:4:5
-      |
-    4 |     v1.iter().map(|x| x + 1);
-      |     ^^^^^^^^^^^^^^^^^^^^^^^^^
-      |
-      = note: #[warn(unused_must_use)] on by default
+warning: unused `Map` that must be used
+ --> src/main.rs:4:5
+  |
+4 |     v1.iter().map(|x| x + 1);
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_must_use)]` on by default
+  = note: iterators are lazy and do nothing unless consumed
 ```
 
 The code in the last example doesn’t do anything; the closure we’ve specified never gets called. The warning reminds us why: iterator adaptors are lazy, and we need to consume the iterator here.
 
-To fix this and consume the iterator, we’ll use the `collect` method, which we used in **[Chapter 12](https://doc.rust-lang.org/stable/book/ch12-01-accepting-command-line-arguments.html)** with `env::args`. This method consumes the iterator and collects the resulting values into a collection data type.
+To fix this and consume the iterator, we’ll use the `collect` method, which is discussed in **[Chapter 12](https://doc.rust-lang.org/stable/book/ch12-01-accepting-command-line-arguments.html)** of the Rust Book with `env::args`. This method consumes the iterator and collects the resulting values into a collection data type.
 
 In the following example, we collect the results of iterating over the iterator that’s returned from the call to `map` into a vector. This vector will end up containing each item from the original vector incremented by 1.
 
@@ -145,6 +146,7 @@ Now that we’ve introduced iterators, we can demonstrate a common use of closur
 In the code snippet below, we use `filter` with a closure that captures the `shoe_size` variable from its environment to iterate over a collection of `Shoe` struct instances. It will return only shoes that are the specified size.
 
 ```rust
+    #[derive(PartialEq, Debug)]
     struct Shoe {
         size: u32,
         style: String,
@@ -156,23 +158,28 @@ In the code snippet below, we use `filter` with a closure that captures the `sho
             .collect()
     }
 
-    #[test]
-    fn filters_by_size() {
-        let shoes = vec![
-            Shoe { size: 10, style: String::from("sneaker") },
-            Shoe { size: 13, style: String::from("sandal") },
-            Shoe { size: 10, style: String::from("boot") },
-        ];
+    #[cfg(test)]
+    mod tests {
+        use super::*;
 
-        let in_my_size = shoes_in_my_size(shoes, 10);
-
-        assert_eq!(
-            in_my_size,
-            vec![
+        #[test]
+        fn filters_by_size() {
+            let shoes = vec![
                 Shoe { size: 10, style: String::from("sneaker") },
+                Shoe { size: 13, style: String::from("sandal") },
                 Shoe { size: 10, style: String::from("boot") },
-            ]
-        );
+            ];
+
+            let in_my_size = shoes_in_my_size(shoes, 10);
+
+            assert_eq!(
+                in_my_size,
+                vec![
+                    Shoe { size: 10, style: String::from("sneaker") },
+                    Shoe { size: 10, style: String::from("boot") },
+                ]
+            );
+        }
     }
 ```
 
@@ -217,9 +224,8 @@ Next, we’ll implement the `Iterator` trait for our `Counter` type by defining 
         type Item = u32;
 
         fn next(&mut self) -> Option<Self::Item> {
-            self.count += 1;
-
-            if self.count < 6 {
+            if self.count < 5 {
+                self.count += 1;
                 Some(self.count)
             } else {
                 None
@@ -232,13 +238,14 @@ Next, we’ll implement the `Iterator` trait for our `Counter` type by defining 
 
 We set the associated `Item` type for our iterator to `u32`, meaning the iterator will return `u32` values. Again, don’t worry about associated types yet, we’ll cover them in Chapter 19.
 
-We want our iterator to add 1 to the current state, so we initialized `count` to 0 so it would return 1 first. If the value of `count` is less than 6, `next` will return the current value wrapped in `Some`, but if `count` is 6 or higher, our iterator will return `None`.
+We want our iterator to add 1 to the current state, so we initialized `count` to 0 so it would return 1 first. If the value of `count` is less than 5, `next` will increment `count` and return the current value wrapped in `Some`. Once `count` is 5, our iterator will stop incrementing `count` and always return `None`.
 
 #### Using Our Counter Iterator’s next Method
 
 Once we’ve implemented the `Iterator` trait, we have an iterator! The following code snippet shows a test demonstrating that we can use the iterator functionality of our `Counter` struct by calling the `next` method on it directly, just as we did with the iterator created from a vector.
 
 ```rust
+    #[test]
     fn calling_next_directly() {
         let mut counter = Counter::new();
 
@@ -262,6 +269,7 @@ We implemented the `Iterator` trait by defining the `next` method, so we can now
 For example, if for some reason we wanted to take the values produced by an instance of `Counter`, pair them with values produced by another `Counter` instance after skipping the first value, multiply each pair together, keep only those results that are divisible by 3, and add all the resulting values together, we could do so, as shown in the test below:
 
 ```rust
+    #[test]
     fn using_other_iterator_trait_methods() {
         let sum: u32 = Counter::new().zip(Counter::new().skip(1))
                                      .map(|(a, b)| a * b)
@@ -277,9 +285,3 @@ For example, if for some reason we wanted to take the values produced by an inst
 Note that `zip` produces only four pairs; the theoretical fifth pair `(5, None)` is never produced because `zip` returns `None` when either of its input iterators return `None`.
 
 All of these method calls are possible because we specified how the `next` method works, and the standard library provides default implementations for other methods that call `next`.
-
-For the Arc exercise check out the chapter [Shared-State Concurrency](https://doc.rust-lang.org/book/2018-edition/ch16-03-shared-state.html) of the Rust Book.
-
-For the Iterator exercise check out the chapters [Iterator](https://doc.rust-lang.org/book/2018-edition/ch13-02-iterators.html) of the Rust Book and the [Iterator documentation](https://doc.rust-lang.org/stable/std/iter/trait.Iterator.htmlj).
-
-Do not adjust your monitors -- iterators 1 and 2 are indeed missing. Iterator 3 is a bit challenging so we're leaving space for some exercises to lead up to it!
