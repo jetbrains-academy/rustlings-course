@@ -3,5 +3,6 @@ content:
 - Shared-State Concurrency
 - Arc
 - Iterable Collection
+- Capitalize first
 - Iterator
 - Factorial

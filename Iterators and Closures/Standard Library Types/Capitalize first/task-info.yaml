@@ -1,0 +1,20 @@
+type: edu
+files:
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 160
+    length: 15
+    placeholder_text: /* Step 1 */
+  - offset: 340
+    length: 61
+    placeholder_text: /* Something goes here */
+  - offset: 560
+    length: 74
+    placeholder_text: /* Something gos here */
+- name: src/main.rs
+  visible: true
+- name: Cargo.toml
+  visible: true
+- name: tests/tests.rs
+  visible: false
