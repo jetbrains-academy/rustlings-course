@@ -6,7 +6,7 @@ files:
   visible: true
   placeholders:
   - offset: 40
-    length: 83
+    length: 19
     placeholder_text: //Implement the function here
 - name: tests/tests.rs
   visible: false
