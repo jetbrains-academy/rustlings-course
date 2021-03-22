@@ -8,7 +8,7 @@ Here is your mission, should you choose to accept it:
 1. Complete the divide function to get the first four tests to pass
 2. Uncomment the last two tests and get them to pass by filling in values for `x` using `division_results`.
 
-Check out the chapters [Iterator](https://doc.rust-lang.org/book/2018-edition/ch13-02-iterators.html) of the Rust Book and the [Iterator documentation](https://doc.rust-lang.org/stable/std/iter/trait.Iterator.htmlj).
+Check out the chapter [Iterator](https://doc.rust-lang.org/book/2018-edition/ch13-02-iterators.html) of the Rust Book and the [Iterator documentation](https://doc.rust-lang.org/stable/std/iter/trait.Iterator.htmlj).
 
 Scroll down for a minor hint for part 2, and scroll down further for a major hint.
 Have fun :-)
@@ -19,6 +19,6 @@ Have fun :-)
 </div>
 
 <div class="hint">
-  Have a look at the Iter trait and at the explanation of its collect function.
-  Especially the part about Result is interesting.
+  Have a look at the <code>Iter</code> trait and at the explanation of its <code>collect</code> function.
+  Especially the part about <code>Result</code> is interesting.
 </div>
