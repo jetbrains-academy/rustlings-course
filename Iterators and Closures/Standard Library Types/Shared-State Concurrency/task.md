@@ -1,6 +1,6 @@
 ## Shared-State Concurrency
 
-Message passing is a fine way of handling concurrency, but it’s not the only one. Consider this part of the slogan from the Go language documentation again: “communicate by sharing memory.”
+Message passing is a fine way of handling concurrency, but it’s not the only one. Consider this part of the slogan from the Go language documentation again: “do not communicate by sharing memory.”
 
 What would communicating by sharing memory look like? In addition, why would message-passing enthusiasts not use it and do the opposite instead?
 
@@ -53,7 +53,7 @@ After dropping the lock, we can print the mutex value and see that we were able 
 
 #### Sharing a Mutex<T> Between Multiple Threads
 
-Now, let’s try to share a value between multiple threads using `Mutex<T>`. We’ll spin up 10 threads and have them each increment a counter value by 1, so the counter goes from 0 to 10\. Note that the next few examples will have compiler errors, and we’ll use those errors to learn more about using `Mutex<T>` and how Rust helps us use it correctly. The following code has our starting example:
+Now, let’s try to share a value between multiple threads using `Mutex<T>`. We’ll spin up 10 threads and have them each increment a counter value by 1, so the counter goes from 0 to 10\. The next example will have a compiler error, and we’ll use that error to learn more about using `Mutex<T>` and how Rust helps us use it correctly. The following code has our starting example:
 
 ```rust
     use std::sync::Mutex;
@@ -89,101 +89,26 @@ In the main thread, we collect all the join handles. Then we call `join` on each
 We hinted that this example wouldn’t compile. Now let’s find out why!
 
 ```text
-    error[E0382]: capture of moved value: `counter`
-      --> src/main.rs:10:27
-       |
-    9  |         let handle = thread::spawn(move || {
-       |                                    ------- value moved (into closure) here
-    10 |             let mut num = counter.lock().unwrap();
-       |                           ^^^^^^^ value captured here after move
-       |
-       = note: move occurs because `counter` has type `std::sync::Mutex<i32>`,
-       which does not implement the `Copy` trait
-
-    error[E0382]: use of moved value: `counter`
-      --> src/main.rs:21:29
-       |
-    9  |         let handle = thread::spawn(move || {
-       |                                    ------- value moved (into closure) here
-    ...
-    21 |     println!("Result: {}", *counter.lock().unwrap());
-       |                             ^^^^^^^ value used here after move
-       |
-       = note: move occurs because `counter` has type `std::sync::Mutex<i32>`,
-       which does not implement the `Copy` trait
-
-    error: aborting due to 2 previous errors
+error[E0382]: use of moved value: `counter`
+  --> src/main.rs:9:36
+   |
+5  |     let counter = Mutex::new(0);
+   |         ------- move occurs because `counter` has type `Mutex<i32>`, which does not implement the `Copy` trait
+...
+9  |         let handle = thread::spawn(move || {
+   |                                    ^^^^^^^ value moved into closure here, in previous iteration of loop
+10 |             let mut num = counter.lock().unwrap();
+   |                           ------- use occurs due to use in closure
 ```
 
-The error message states that the `counter` value is moved into the closure and then captured when we call `lock`. That description sounds like what we wanted, but it’s not allowed!
-
-Let’s figure this out by simplifying the program. Instead of making 10 threads in a `for` loop, let’s just make two threads without a loop and see what happens. Replace the first `for` loop from the snippet above with this code instead:
-
-```rust
-    use std::sync::Mutex;
-    use std::thread;
-
-    fn main() {
-        let counter = Mutex::new(0);
-        let mut handles = vec![];
-
-        let handle = thread::spawn(move || {
-            let mut num = counter.lock().unwrap();
-
-            *num += 1;
-        });
-        handles.push(handle);
-
-        let handle2 = thread::spawn(move || {
-            let mut num2 = counter.lock().unwrap();
-
-            *num2 += 1;
-        });
-        handles.push(handle2);
-
-        for handle in handles {
-            handle.join().unwrap();
-        }
-
-        println!("Result: {}", *counter.lock().unwrap());
-    }
-```
-
-We make two threads and change the variable names used with the second thread to `handle2` and `num2`. When we run the code this time, compiling gives us the following:
-
-```text
-    error[E0382]: capture of moved value: `counter`
-      --> src/main.rs:16:24
-       |
-    8  |     let handle = thread::spawn(move || {
-       |                                ------- value moved (into closure) here
-    ...
-    16 |         let mut num2 = counter.lock().unwrap();
-       |                        ^^^^^^^ value captured here after move
-       |
-       = note: move occurs because `counter` has type `std::sync::Mutex<i32>`,
-       which does not implement the `Copy` trait
-
-    error[E0382]: use of moved value: `counter`
-      --> src/main.rs:26:29
-       |
-    8  |     let handle = thread::spawn(move || {
-       |                                ------- value moved (into closure) here
-    ...
-    26 |     println!("Result: {}", *counter.lock().unwrap());
-       |                             ^^^^^^^ value used here after move
-       |
-       = note: move occurs because `counter` has type `std::sync::Mutex<i32>`,
-       which does not implement the `Copy` trait
-
-    error: aborting due to 2 previous errors
-```
-
-Aha! The first error message indicates that `counter` is moved into the closure for the thread associated with `handle`. That move is preventing us from capturing `counter` when we try to call `lock` on it and store the result in `num2` in the second thread! So Rust is telling us that we can’t move ownership of `counter` into multiple threads. This was hard to see earlier because our threads were in a loop, and Rust can’t point to different threads in different iterations of the loop. Let’s fix the compiler error with a multiple-ownership method we discussed in Chapter 15.
+The error message states that the `counter` value was moved in the previous
+iteration of the loop. So Rust is telling us that we can’t move the ownership
+of lock `counter` into multiple threads. Let’s fix the compiler error with a
+multiple-ownership method that is discussed in [Chapter 15](https://doc.rust-lang.org/book/ch15-00-smart-pointers.html) of the Rust Book.
 
 ### Multiple Ownership with Multiple Threads
 
-In Chapter 15, we gave a value multiple owners by using the smart pointer `Rc<T>` to create a reference counted value. Let’s do the same here and see what happens. We’ll wrap the `Mutex<T>` in `Rc<T>` in the following example and clone the `Rc<T>` before moving ownership to the thread. Now that we’ve seen the errors, we’ll also switch back to using the `for` loop, and we’ll keep the `move` keyword with the closure.
+In [Chapter 15](https://doc.rust-lang.org/book/ch15-00-smart-pointers.html) of the Rust Book, the authors gave a value multiple owners by using the smart pointer `Rc<T>` to create a reference counted value. Let’s do the same here and see what happens. We’ll wrap the `Mutex<T>` in `Rc<T>` in the following example and clone the `Rc<T>` before moving ownership to the thread. Now that we’ve seen the errors, we’ll also switch back to using the `for` loop, and we’ll keep the `move` keyword with the closure.
 
 ```rust
     use std::rc::Rc;
@@ -217,59 +142,86 @@ In Chapter 15, we gave a value multiple owners by using the smart pointer `Rc<T>
 Once again, we compile and get... different errors! The compiler is teaching us a lot.
 
 ```text
-    error[E0277]: the trait bound `std::rc::Rc<std::sync::Mutex<i32>>:
-    std::marker::Send` is not satisfied in `[closure@src/main.rs:11:36:
-    15:10 counter:std::rc::Rc<std::sync::Mutex<i32>>]`
-      --> src/main.rs:11:22
-       |
-    11 |         let handle = thread::spawn(move || {
-       |                      ^^^^^^^^^^^^^ `std::rc::Rc<std::sync::Mutex<i32>>`
-    cannot be sent between threads safely
-       |
-       = help: within `[closure@src/main.rs:11:36: 15:10
-    counter:std::rc::Rc<std::sync::Mutex<i32>>]`, the trait `std::marker::Send` is
-    not implemented for `std::rc::Rc<std::sync::Mutex<i32>>`
-       = note: required because it appears within the type
-    `[closure@src/main.rs:11:36: 15:10 counter:std::rc::Rc<std::sync::Mutex<i32>>]`
-       = note: required by `std::thread::spawn`
+error[E0277]: `Rc<Mutex<i32>>` cannot be sent between threads safely
+   --> src/main.rs:11:22
+    |
+11  |           let handle = thread::spawn(move || {
+    |  ______________________^^^^^^^^^^^^^_-
+    | |                      |
+    | |                      `Rc<Mutex<i32>>` cannot be sent between threads safely
+12  | |             let mut num = counter.lock().unwrap();
+13  | |
+14  | |             *num += 1;
+15  | |         });
+    | |_________- within this `[closure@src/main.rs:11:36: 15:10]`
+    |
+    = help: within `[closure@src/main.rs:11:36: 15:10]`, the trait `Send` is not implemented for `Rc<Mutex<i32>>`
+    = note: required because it appears within the type `[closure@src/main.rs:11:36: 15:10]`
 ```
 
-Wow, that error message is very wordy! Here are some important parts to focus on: the first inline error says ``std::rc::Rc<std::sync::Mutex<i32>>` cannot be sent between threads safely`. The reason for this is in the next important part to focus on, the error message. The distilled error message says `the trait bound `Send` is not satisfied`. We’ll talk about `Send` in the next section: it’s one of the traits that ensures the types we use with threads are meant for use in concurrent situations.
+Wow, that error message is very wordy! Here’s the important part to focus
+on: `` `Rc<Mutex<i32>>` cannot be sent between threads safely ``. The compiler
+is also telling us the reason why: ``the trait `Send` is not implemented for
+`Rc<Mutex<i32>>` ``. We’ll talk about `Send` in the next section: it’s one of
+the traits that ensures the types we use with threads are meant for use in
+concurrent situations.
 
-Unfortunately, `Rc<T>` is not safe to share across threads. When `Rc<T>` manages the reference count, it adds to the count for each call to `clone` and subtracts from the count when each clone is dropped. But it doesn’t use any concurrency primitives to make sure that changes to the count can’t be interrupted by another thread. This could lead to wrong counts—subtle bugs that could in turn lead to memory leaks or a value being dropped before we’re done with it. What we need is a type exactly like `Rc<T>` but one that makes changes to the reference count in a thread-safe way.
+Unfortunately, `Rc<T>` is not safe to share across threads. When `Rc<T>`
+manages the reference count, it adds to the count for each call to `clone` and
+subtracts from the count when each clone is dropped. But it doesn’t use any
+concurrency primitives to make sure that changes to the count can’t be
+interrupted by another thread. This could lead to wrong counts—subtle bugs that
+could in turn lead to memory leaks or a value being dropped before we’re done
+with it. What we need is a type exactly like `Rc<T>` but one that makes changes
+to the reference count in a thread-safe way.
 
-#### Atomic Reference Counting with Arc<T>
+#### Atomic Reference Counting with `Arc<T>`
 
-Fortunately, `Arc<T>` _is_ a type like `Rc<T>` that is safe to use in concurrent situations. The _a_ stands for _atomic_, meaning it’s an _atomically reference counted_ type. Atomics are an additional kind of concurrency primitive that we won’t cover in detail here: see the standard library documentation for `std::sync::atomic` for more details. At this point, you just need to know that atomics work like primitive types but are safe to share across threads.
+Fortunately, `Arc<T>` *is* a type like `Rc<T>` that is safe to use in
+concurrent situations. The *a* stands for *atomic*, meaning it’s an *atomically
+reference counted* type. Atomics are an additional kind of concurrency
+primitive that we won’t cover in detail here: see the standard library
+documentation for [`std::sync::atomic`] for more details. At this point, you just
+need to know that atomics work like primitive types but are safe to share
+across threads.
 
-You might then wonder why all primitive types aren’t atomic and why standard library types aren’t implemented to use `Arc<T>` by default. The reason is that thread safety comes with a performance penalty that you only want to pay when you really need to. If you’re just performing operations on values within a single thread, your code can run faster if it doesn’t have to enforce the guarantees atomics provide.
+[`std::sync::atomic`]: https://doc.rust-lang.org/std/sync/atomic/
 
-Let’s return to our example: `Arc<T>` and `Rc<T>` have the same API, so we fix our program by changing the `use` line, the call to `new`, and the call to `clone`. The following code will finally compile and run:
+You might then wonder why all primitive types aren’t atomic and why standard
+library types aren’t implemented to use `Arc<T>` by default. The reason is that
+thread safety comes with a performance penalty that you only want to pay when
+you really need to. If you’re just performing operations on values within a
+single thread, your code can run faster if it doesn’t have to enforce the
+guarantees atomics provide.
+
+Let’s return to our example: `Arc<T>` and `Rc<T>` have the same API, so we fix
+our program by changing the `use` line, the call to `new`, and the call to
+`clone`. The code below will finally compile and run:
 
 ```rust
-    use std::sync::{Mutex, Arc};
-    use std::thread;
+use std::sync::{Arc, Mutex};
+use std::thread;
 
-    fn main() {
-        let counter = Arc::new(Mutex::new(0));
-        let mut handles = vec![];
+fn main() {
+    let counter = Arc::new(Mutex::new(0));
+    let mut handles = vec![];
 
-        for _ in 0..10 {
-            let counter = Arc::clone(&counter);
-            let handle = thread::spawn(move || {
-                let mut num = counter.lock().unwrap();
+    for _ in 0..10 {
+        let counter = Arc::clone(&counter);
+        let handle = thread::spawn(move || {
+            let mut num = counter.lock().unwrap();
 
-                *num += 1;
-            });
-            handles.push(handle);
-        }
-
-        for handle in handles {
-            handle.join().unwrap();
-        }
-
-        println!("Result: {}", *counter.lock().unwrap());
+            *num += 1;
+        });
+        handles.push(handle);
     }
+
+    for handle in handles {
+        handle.join().unwrap();
+    }
+
+    println!("Result: {}", *counter.lock().unwrap());
+}
 ```
 
 ##### Using an Arc<T> to wrap the Mutex<T> to be able to share ownership across multiple threads
