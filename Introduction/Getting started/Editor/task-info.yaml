@@ -1,0 +1,8 @@
+type: theory
+files:
+- name: src/main.rs
+  visible: true
+- name: Cargo.toml
+  visible: true
+- name: screen_3.png
+  visible: true
