@@ -14,8 +14,8 @@ img {
 <img src="edu_editor.png" class="center" width="100%"/>
 
 
-To run your code at any time, choose the Run option from the context menu or press <span style="color: #3383FF">&shortcut:Run;</span>:
+To run your code at any time, choose the Run option from the context menu or press <span style="color: #509DD6">&shortcut:Run;</span>:
 
 <img src="edu_context_menu_run.png" class="center" width="100%"/>
 
-If you want to go back to the Editor and focus on your code, the fastest way to do it is with the Hide All Windows command (<span style="color: #3383FF">&shortcut:HideAllWindows;</span>). To get all the windows back, repeat the command.
+If you want to go back to the Editor and focus on your code, the fastest way to do it is with the Hide All Windows command (<span style="color: #509DD6">&shortcut:HideAllWindows;</span>). To get all the windows back, repeat the command.

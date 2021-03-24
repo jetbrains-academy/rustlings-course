@@ -13,6 +13,6 @@ img {
 
 You can navigate to any task by double-clicking its name.
 
-To hide the Course View window, click the Project Tool Window button or press <span style="color: #3383FF">&shortcut:ActivateProjectToolWindow;</span>. This will give you more space for the Editor and Task Description windows.
+To hide the Course View window, click the Project Tool Window button or press <span style="color: #509DD6">&shortcut:ActivateProjectToolWindow;</span>. This will give you more space for the Editor and Task Description windows.
 
-To show the hidden Course View window, click the Project Tool Window button (or press <span style="color: #3383FF">&shortcut:ActivateProjectToolWindow;</span>) again.
+To show the hidden Course View window, click the Project Tool Window button (or press <span style="color: #509DD6">&shortcut:ActivateProjectToolWindow;</span>) again.
