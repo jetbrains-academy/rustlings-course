@@ -1,0 +1,24 @@
+type: theory
+files:
+- name: src/main.rs
+  visible: true
+- name: Cargo.toml
+  visible: true
+- name: images/back.svg
+  visible: true
+- name: images/commentTask.svg
+  visible: true
+- name: images/edu_next_button.png
+  visible: true
+- name: images/edu_peek_solution.png
+  visible: true
+- name: images/edu_task_description_window_settings.png
+  visible: true
+- name: images/forward.svg
+  visible: true
+- name: images/gear.svg
+  visible: true
+- name: images/hideToolWindow.svg
+  visible: true
+- name: images/reset.svg
+  visible: true
