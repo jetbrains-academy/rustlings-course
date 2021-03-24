@@ -26,9 +26,6 @@ If you use two monitors, it may be helpful to switch the Task Description panel 
 
 <style>
 img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   display: inline !important;
 }
 table, th, td {
