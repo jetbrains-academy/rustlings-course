@@ -13,7 +13,7 @@ Use the Task Description icons for the following actions:
 |**Check**                           | <font size="-1">Check the correctness of your answer (for a quiz) or your code solution (for a programming task)</font>|   
 | **Run**                            | <font size="-1">Run your code (for a theoretical tasks)</font>|
 |![](images/back.svg)                | <font size="-1">Go to the previous task</font>       |    
-|![](images/forward.svg) <font size="-1">or</font> **Next** | <font size="-1">Go to the next task</font>| 
+|![](images/forward.svg) &nbsp;<font size="-1">or</font> **Next** | <font size="-1">Go to the next task</font>| 
 |![](images/reset.svg)               | <font size="-1">Discard all the changes you’ve made in the task, and start over</font>| 
 |![](images/commentTask.svg)         | <font size="-1">View the task page on Stepik and leave a comment</font>| 
 |<a>Peek Solution...</a>             | <font size="-1">Reveal the correct answer and show the <b>diff</b></font>|
