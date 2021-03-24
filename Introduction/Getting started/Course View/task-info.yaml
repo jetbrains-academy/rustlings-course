@@ -4,5 +4,5 @@ files:
   visible: true
 - name: Cargo.toml
   visible: true
-- name: screen_2.png
+- name: edu_course_view.png
   visible: true
