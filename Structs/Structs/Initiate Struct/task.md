@@ -1,4 +1,4 @@
-## Address all the TODOs to make the tests pass!
+## Initiate Struct
 
 Complete all TODO fields to make the tests pass!
 You should define a Classic Struct with two fields: "name" and "hex" and then create an instance of this struct with values "green" and "#00FF00" corresponding to these fields. 
