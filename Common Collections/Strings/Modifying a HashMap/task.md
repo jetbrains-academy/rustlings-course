@@ -11,4 +11,4 @@ Make yur code pass the tests!
 
 <div class="hint"> Use the `entry()` and  `or_insert()` methods of `HashMap` to achieve this.</div></li>
 
-<div class="hint">Learn more at https://doc.rust-lang.org/stable/book/ch08-03-hash-maps.html#only-inserting-a-value-if-the-key-has-no-value</div></li>
+<div class="hint">Learn more at <a href="https://doc.rust-lang.org/stable/book/ch08-03-hash-maps.html#only-inserting-a-value-if-the-key-has-no-value">https://doc.rust-lang.org/stable/book/ch08-03-hash-maps.html#only-inserting-a-value-if-the-key-has-no-value</a></div>
