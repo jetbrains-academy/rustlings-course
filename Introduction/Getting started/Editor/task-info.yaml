@@ -3,8 +3,8 @@ files:
 - name: src/main.rs
   visible: true
 - name: Cargo.toml
-  visible: true
+  visible: false
 - name: edu_context_menu_run.png
-  visible: true
+  visible: false
 - name: edu_editor.png
-  visible: true
+  visible: false
