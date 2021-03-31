@@ -165,10 +165,10 @@ Tests that use `should_panic` can be imprecise because they only indicate that t
 
     impl Guess {
         pub fn new(value: i32) -> Guess {
-            if value < 1 {
+            if value <= 1 {
                 panic!("Guess value must be greater than or equal to 1, got {}.",
                        value);
-            } else if value > 100 {
+            } else if value >= 100 {
                 panic!("Guess value must be less than or equal to 100, got {}.",
                        value);
             }
@@ -193,14 +193,14 @@ Tests that use `should_panic` can be imprecise because they only indicate that t
 
 ##### Example of testing that a condition will cause a panic! with a particular panic message
 
-This test will pass because the value we put in the `should_panic` attribute’s `expected` parameter is a substring of the message that the `Guess::new` function panics with. We could have specified the entire panic message that we expect, which in this case would be `Guess value must be less than or equal to 100, got 200.` What you choose to specify in the expected parameter for `should_panic` depends on how much of the panic message is unique or dynamic and how precise you want your test to be. In this case, a substring of the panic message is enough to ensure that the code in the test function executes the `else if value > 100` case.
+This test will pass because the value we put in the `should_panic` attribute’s `expected` parameter is a substring of the message that the `Guess::new` function panics with. We could have specified the entire panic message that we expect, which in this case would be `Guess value must be less than or equal to 100, got 200.` What you choose to specify in the expected parameter for `should_panic` depends on how much of the panic message is unique or dynamic and how precise you want your test to be. In this case, a substring of the panic message is enough to ensure that the code in the test function executes the `else if value >= 100` case.
 
-To see what happens when a `should_panic` test with an `expected` message fails, let’s again introduce a bug into our code by swapping the bodies of the `if value < 1` and the `else if value > 100` blocks:
+To see what happens when a `should_panic` test with an `expected` message fails, let’s again introduce a bug into our code by swapping the bodies of the `if value <= 1` and the `else if value >= 100` blocks:
 
 ```rust
-    if value < 1 {
+    if value <= 1 {
         panic!("Guess value must be less than or equal to 100, got {}.", value);
-    } else if value > 100 {
+    } else if value >= 100 {
         panic!("Guess value must be greater than or equal to 1, got {}.", value);
     }
 ```
