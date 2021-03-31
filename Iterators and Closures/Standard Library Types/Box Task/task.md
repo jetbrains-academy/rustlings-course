@@ -18,7 +18,7 @@ Check out the hints if you're stuck! :)
 The compiler's message should help: since we cannot store the value of the actual type
 when working with recursive types, we need to store a reference (pointer) to its value.
 We should, therefore, place our <code>List</code> inside a <code>Box</code>. More details in the book here:
-<a href="https://doc.rust-lang.org/book/ch15-01-box.html#enabling-recursive-types-with-boxes">https://doc.rust-lang.org/book/ch15-01-box.html#enabling-recursive-types-with-boxes</a>
+<a href="https://doc.rust-lang.org/book/ch15-01-box.html#enabling-recursive-types-with-boxes">https://doc.rust-lang.org/book/ch15-01-box.html#enabling-recursive-types-with-boxes</a>.
 </div>
 
 <div class="hint">

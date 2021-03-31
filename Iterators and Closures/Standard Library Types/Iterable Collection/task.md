@@ -17,4 +17,4 @@ Very similar to the lines above and below. You've got this!</div>
 
 <div class="hint">An iterator goes through all elements in a collection, but what if we've run out of
 elements? What should we expect here? If you're stuck, take a look at 
-<a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html">https://doc.rust-lang.org/std/iter/trait.Iterator.html</a> for some ideas</div>
+<a href="https://doc.rust-lang.org/std/iter/trait.Iterator.html">https://doc.rust-lang.org/std/iter/trait.Iterator.html</a> for some ideas.</div>
