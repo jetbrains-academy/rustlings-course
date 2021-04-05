@@ -23,7 +23,7 @@ We should, therefore, place our <code>List</code> inside a <code>Box</code>. Mor
 
 <div class="hint">
 Step 2:
-Creating an empty list should be fairly straightforward (hint: peek at the assertions).
+Creating an empty list should be fairly straightforward.
 For a non-empty list keep in mind that we want to use our Cons "list builder".
 Although the current list is one of integers (i32), feel free to change the definition
 and try other types!</div>
