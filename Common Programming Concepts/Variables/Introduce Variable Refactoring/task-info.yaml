@@ -1,0 +1,16 @@
+type: ide
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 36
+    length: 4
+    placeholder_text: "1993"
+  - offset: 72
+    length: 4
+    placeholder_text: "1993"
+  - offset: 105
+    length: 4
+    placeholder_text: "1993"
+- name: Cargo.toml
+  visible: false
