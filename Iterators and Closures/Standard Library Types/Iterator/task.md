@@ -5,7 +5,7 @@ You can do it!
 
 Here is your mission, should you choose to accept it:
 
-1. Complete the divide function to get the first four tests to pass
+1. Complete the divide function to get the first four tests to pass.
 2. Uncomment the last two tests and get them to pass by filling in values for `x` using `division_results`.
 
 Check out the chapter [Iterator](https://doc.rust-lang.org/book/2018-edition/ch13-02-iterators.html) of the Rust Book and the [Iterator documentation](https://doc.rust-lang.org/stable/std/iter/trait.Iterator.htmlj).
@@ -20,5 +20,5 @@ Have fun :-)
 
 <div class="hint">
   Have a look at the <code>Iter</code> trait and at the explanation of its <code>collect</code> function.
-  Especially the part about <code>Result</code> is interesting.
+  Especially interesting is the part about <code>Result</code>.
 </div>

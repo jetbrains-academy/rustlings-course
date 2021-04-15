@@ -18,7 +18,7 @@ Currently its type is <code>char</code>. Have a look at the methods that are ava
 <a href="https://doc.rust-lang.org/std/primitive.char.html">https://doc.rust-lang.org/std/primitive.char.html</a>.</div>
 
 <div class="hint">First you'll need to turn the Vec into an iterator.
-Then you'll need to apply your function unto each item in the vector.
+Then you'll need to apply your function to each item in the <vector></vector>
 P.s. Don't forget to <code>collect()</code> at the end!</div>
 
 <div class="hint">This is very similar to the previous test. The only real change is that you will need to

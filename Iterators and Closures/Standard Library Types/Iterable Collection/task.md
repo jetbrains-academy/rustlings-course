@@ -4,12 +4,12 @@ Make the code compile by filling in the `???`s
 
 When performing operations on elements within a collection, iterators are essential.
 This module helps you get familiar with the structure of using an iterator and
-how to go through elements within an iterable collection.
+with going through elements within an iterable collection.
 
 Check out the hints if you're stuck!
 
 <div class="hint">We need to apply something to the collection <code>my_fav_fruits</code> before we start to go through
-it. What could that be? Take a look at the struct definition for a vector for inspiration:
+it. What could that be? Take a look at the struct vector definition for inspiration:
 <a href="https://doc.rust-lang.org/std/vec/struct.Vec.html">https://doc.rust-lang.org/std/vec/struct.Vec.html</a>.</div>
 
 <div class="hint">Step 2 & step 2.1:

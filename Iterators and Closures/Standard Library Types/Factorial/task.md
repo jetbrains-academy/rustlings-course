@@ -16,5 +16,5 @@ For the most fun don't use:
 In an imperative language, you might write a for loop that updates
 a mutable variable. Or, you might write code utilizing recursion
 and a match clause. In Rust you can take another functional
-approach, computing the factorial elegantly with ranges and iterators.
+approach and compute the factorial elegantly with ranges and iterators.
 </div>
