@@ -1,7 +1,7 @@
 ## Struct Logic
 
 Structs contain more than simply some data, they can also have logic, in this
-exercise we have defined the Package struct and we want to test some logic attached to it,
+exercise we have defined a Package struct and we want to test some logic attached to it,
 make the code compile and the tests pass!
 
 <div class="hint">
@@ -9,7 +9,7 @@ The new method needs to panic if the weight is physically impossible :) How do w
 </div>
 
 <div class="hint">
-For is_international: What makes a package international? Seems related to the places it goes through right?
+For is_international: What makes a package international? Seems related to the places it goes through, right?
 </div>
 
 <div class="hint">
