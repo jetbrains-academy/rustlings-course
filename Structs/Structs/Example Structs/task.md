@@ -181,7 +181,7 @@ error[E0277]: `Rectangle` doesn't implement `std::fmt::Display`
 The `println!` macro can do many kinds of formatting, and by default, the curly
 brackets tell `println!` to use formatting known as `Display`: output intended
 for direct end user consumption. The primitive types we’ve seen so far
-implement `Display` by default, because there’s only one way you’d want to show
+implement `Display` by default because there’s only one way you’d want to show
 a `1` or any other primitive type to a user. But with structs, the way
 `println!` should format the output is less clear because there are more
 display possibilities: Do you want commas or not? Do you want to print the
@@ -276,7 +276,7 @@ with custom behavior as well as how to create your own traits in the chapter "Ge
 
 Our `area` function is very specific: it only computes the area of rectangles.
 It would be helpful to tie this behavior more closely to our `Rectangle`
-struct, because it won’t work with any other type. Let’s look at how we can
+struct because it won’t work with any other type. Let’s look at how we can
 continue to refactor this code by turning the `area` function into an `area`
 *method* defined on our `Rectangle` type.
 

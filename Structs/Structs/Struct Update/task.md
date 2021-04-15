@@ -4,7 +4,7 @@ Complete the TODO field to make the tests pass! Create your instance of `Order` 
 
 <div class="hint">
 Creating instances of structs is easy, all you need to do is assign some values to its fields.
-There is however some shortcuts that can be taken when instantiating structs.
+There are, however, some shortcuts that can be taken when instantiating structs.
 </div>
 
 <div class="hint">

@@ -1,8 +1,8 @@
 ## Defining and Instantiating Structs
 
-Structs are similar to tuples, which were discussed in the chapter "Common Programming Concepts". Like tuples,
-the pieces of a struct can be different types. Unlike with tuples, you’ll name
-each piece of data so it’s clear what the values mean. As a result of these
+Structs are similar to tuples, which were discussed in the chapter "Common Programming Concepts". Like in the case of tuples,
+the pieces of a struct can be of different types. Unlike the case with tuples, you’ll name
+each piece of data so it’s clear what the values mean. As a result of assigning these
 names, structs are more flexible than tuples: you don’t have to rely on the
 order of the data to specify or access the values of an instance.
 
@@ -92,7 +92,7 @@ would get even more annoying. Luckily, there’s a convenient shorthand!
 
 ### Using the Field Init Shorthand when Variables and Fields Have the Same Name
 
-Because the parameter names and the struct field names are exactly the same in
+Because the parameter names and the struct field names are exactly the same
 in the code above, we can use the *field init shorthand* syntax to rewrite
 `build_user` so that it behaves exactly the same but doesn’t have the
 repetition of `email` and `username`, as shown below.
