@@ -75,7 +75,7 @@ Also note that the values we get from the calls to `next` are immutable referenc
 
 The `Iterator` trait has a number of different methods with default implementations provided by the standard library; you can find out about these methods by looking in the standard library API documentation for the `Iterator` trait. Some of these methods call the `next` method in their definition, which is why you’re required to implement the `next` method when implementing the `Iterator` trait.
 
-Methods that call `next` are called _consuming adaptors_, because calling them uses up the iterator. One example is the `sum` method, which takes ownership of the iterator and iterates through the items by repeatedly calling `next`, thus consuming the iterator. As it iterates through, it adds each item to a running total and returns the total when iteration is complete. The code snippet below has a test illustrating a use of the `sum` method:
+Methods that call `next` are called _consuming adaptors_ because calling them uses up the iterator. One example is the `sum` method, which takes ownership of the iterator and iterates through the items by repeatedly calling `next`, thus consuming the iterator. As it iterates through, it adds each item to a running total and returns the total when the iteration is complete. The code snippet below has a test illustrating the use of the `sum` method:
 
 ```rust
     #[test]
@@ -123,7 +123,7 @@ warning: unused `Map` that must be used
 
 The code in the last example doesn’t do anything; the closure we’ve specified never gets called. The warning reminds us why: iterator adaptors are lazy, and we need to consume the iterator here.
 
-To fix this and consume the iterator, we’ll use the `collect` method, which is discussed in **[Chapter 12](https://doc.rust-lang.org/stable/book/ch12-01-accepting-command-line-arguments.html)** of the Rust Book with `env::args`. This method consumes the iterator and collects the resulting values into a collection data type.
+To fix this and consume the iterator, we’ll use the `collect` method, which is discussed in **[Chapter 12](https://doc.rust-lang.org/stable/book/ch12-01-accepting-command-line-arguments.html)** of the Rust Book, with `env::args`. This method consumes the iterator and collects the resulting values into a collection data type.
 
 In the following example, we collect the results of iterating over the iterator that’s returned from the call to `map` into a vector. This vector will end up containing each item from the original vector incremented by 1.
 
@@ -238,7 +238,7 @@ Next, we’ll implement the `Iterator` trait for our `Counter` type by defining 
 
 We set the associated `Item` type for our iterator to `u32`, meaning the iterator will return `u32` values. Again, don’t worry about associated types yet, we’ll cover them in Chapter 19.
 
-We want our iterator to add 1 to the current state, so we initialized `count` to 0 so it would return 1 first. If the value of `count` is less than 5, `next` will increment `count` and return the current value wrapped in `Some`. Once `count` is 5, our iterator will stop incrementing `count` and always return `None`.
+We want our iterator to add 1 to the current state, so we initialize `count` to 0 so it would return 1 first. If the value of `count` is less than 5, `next` will increment `count` and return the current value wrapped in `Some`. Once `count` is 5, our iterator will stop incrementing `count` and will always return `None`.
 
 #### Using Our Counter Iterator’s next Method
 
@@ -266,7 +266,7 @@ This test creates a new `Counter` instance in the `counter` variable and then ca
 
 We implemented the `Iterator` trait by defining the `next` method, so we can now use any `Iterator` trait method’s default implementations as defined in the standard library, because they all use the `next` method’s functionality.
 
-For example, if for some reason we wanted to take the values produced by an instance of `Counter`, pair them with values produced by another `Counter` instance after skipping the first value, multiply each pair together, keep only those results that are divisible by 3, and add all the resulting values together, we could do so, as shown in the test below:
+For example, if for some reason we wanted to take the values produced by an instance of `Counter`, pair them with values produced by another `Counter` instance after skipping the first value, multiply each pair together, keep only those results that are divisible by 3, and add up all the resulting values together, we could do so as shown in the test below:
 
 ```rust
     #[test]
@@ -284,4 +284,4 @@ For example, if for some reason we wanted to take the values produced by an inst
 
 Note that `zip` produces only four pairs; the theoretical fifth pair `(5, None)` is never produced because `zip` returns `None` when either of its input iterators return `None`.
 
-All of these method calls are possible because we specified how the `next` method works, and the standard library provides default implementations for other methods that call `next`.
+All of these method calls are possible because we've specified how the `next` method works and the standard library provides default implementations for other methods that call `next`.
