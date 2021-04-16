@@ -1,7 +1,7 @@
 ## Defining an Enum
 
 Let’s look at a situation we might want to express in code and see why enums
-are useful and more appropriate than structs in this case. Say we need to work
+are useful and more appropriate than structs in this case. Say, we need to work
 with IP addresses. Currently, two major standards are used for IP addresses:
 version four and version six. These are the only possibilities for an IP
 address that our program will come across: we can *enumerate* all possible
@@ -9,7 +9,7 @@ variants, which is where enumeration gets its name.
 
 Any IP address can be either a version four or a version six address, but not
 both at the same time. That property of IP addresses makes the enum data
-structure appropriate, because enum values can only be one of its variants.
+structure appropriate because enum values can only be one of its variants.
 Both version four and version six addresses are still fundamentally IP
 addresses, so they should be treated as the same type when the code is handling
 situations that apply to any kind of IP address.
@@ -300,7 +300,7 @@ let absent_number: Option<i32> = None;
 ```
 
 If we use `None` rather than `Some`, we need to tell Rust what type of
-`Option<T>` we have, because the compiler can’t infer the type that the `Some`
+`Option<T>` we have because the compiler can’t infer the type that the `Some`
 variant will hold by looking only at a `None` value.
 
 When we have a `Some` value, we know that a value is present and the value is
@@ -333,7 +333,7 @@ error[E0277]: cannot add `Option<i8>` to `i8`
   ```
 
 Intense! In effect, this error message means that Rust doesn’t understand how
-to add an `i8` and an `Option<i8>`, because they’re different types. When we
+to add an `i8` and an `Option<i8>` because they’re different types. When we
 have a value of a type like `i8` in Rust, the compiler will ensure that we
 always have a valid value. We can proceed confidently without having to check
 for null before using that value. Only when we have an `Option<i8>` (or

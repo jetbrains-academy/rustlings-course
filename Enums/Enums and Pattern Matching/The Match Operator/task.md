@@ -191,7 +191,7 @@ next arm.
 Some(i) => Some(i + 1),
 ```
 
-Does `Some(5)` match `Some(i)`? Why yes it does! We have the same variant. The
+Does `Some(5)` match `Some(i)`? Why, yes it does! We have the same variant. The
 `i` binds to the value contained in `Some`, so `i` takes the value `5`. The
 code in the match arm is then executed, so we add 1 to the value of `i` and
 create a new `Some` value with our total `6` inside.
@@ -267,7 +267,7 @@ match some_u8_value {
 }
 ```
 
-The `_` pattern will match any value. By putting it after our other arms, the
+The `_` pattern will match any value. When put after our other arms, the
 `_` will match all the possible cases that aren’t specified before it. The `()`
 is just the unit value, so nothing will happen in the `_` case. As a result, we
 can say that we want to do nothing for all the possible values that we don’t
