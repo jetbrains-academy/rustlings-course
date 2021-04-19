@@ -1,4 +1,4 @@
-### Variables and Mutability
+## Variables and Mutability
 
 Let's talk about simple variables.
 
