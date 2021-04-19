@@ -1,4 +1,4 @@
-# Generic Types, Traits, and Lifetimes
+## Generic Types, Traits, and Lifetimes
 
 Every programming language has tools for effectively handling the duplication
 of concepts. In Rust, one such tool is *generics*. Generics are abstract
