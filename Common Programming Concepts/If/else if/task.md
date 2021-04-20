@@ -1,4 +1,4 @@
-### Handling Multiple Conditions with else if
+## Handling Multiple Conditions with else if
 
 You can have multiple conditions by combining `if` and `else` in an `else if` expression. For example:
 

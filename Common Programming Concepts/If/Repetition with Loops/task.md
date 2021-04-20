@@ -1,4 +1,4 @@
-### Repetition with Loops
+## Repetition with Loops
 
 It’s often useful to execute a block of code more than once. For this task, Rust provides several _loops_. A loop runs through the code inside the loop body to the end and then starts immediately back at the beginning. 
 

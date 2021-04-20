@@ -1,4 +1,4 @@
-### Shadowing
+## Shadowing
 
 In Rust, you can declare a new variable with the same name as a previous variable, and the new variable shadows the previous variable. Rustaceans say that the first variable is _shadowed_ by the second, which means that the second variable’s value is what appears when the variable is used. We can shadow a variable by using the same variable’s name and repeating the use of the `let` keyword as follows:
 
