@@ -86,6 +86,6 @@ enums. Creating custom types to use in your API ensures type safety: the
 compiler will make certain your functions get only values of the type each
 function expects.
 
-In order to provide a well-organized API to your users that is straightforward
+In order to provide your users with a well-organized API, which is straightforward
 to use and only exposes exactly what your users will need, let’s now turn to
 Rust’s modules.
