@@ -1,15 +1,15 @@
 ## Factorial
 
-Complete this function to return factorial of num.
+Complete this function to return the factorial of num.
 
 Do not use:
 - `return`
 
-For extra fun don't use:
+For extra fun, don't use:
 - imperative style loops (`for`, `while`)
 - additional variables
 
-For the most fun don't use:
+For the most fun, don't use:
 - recursion
 
 <div class="hint">
