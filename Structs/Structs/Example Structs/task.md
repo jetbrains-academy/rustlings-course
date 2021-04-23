@@ -1,7 +1,7 @@
 ## An Example Program Using Structs
 
 To understand when we might want to use structs, let’s write a program that
-calculates the area of a rectangle. We’ll start with single variables, and then
+calculates the area of a rectangle. We’ll start with single variables and then
 refactor the program until we’re using structs instead.
 
 Let’s make a new binary project with Cargo called *rectangles* that will take
@@ -90,7 +90,7 @@ if we want to draw the rectangle on the screen, it would matter! We would have
 to keep in mind that `width` is the tuple index `0` and `height` is the tuple
 index `1`. If someone else worked on this code, they would have to figure this
 out and keep it in mind as well. It would be easy to forget or mix up these
-values and cause errors, because we haven’t conveyed the meaning of our data in
+values and cause errors because we haven’t conveyed the meaning of our data in
 our code.
 
 ### Refactoring with Structs: Adding More Meaning
