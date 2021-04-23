@@ -8,5 +8,5 @@ Make me compile without changing line 7!
 
   1. Make another, separate version of the data that's in `vec0` and pass that to `fill_vec` instead.
   2. Make `fill_vec` borrow its argument instead of taking ownership of it, and then copy the data within the function in order to return an owned `Vec<i32>`
-  3. Make `fill_vec` *mutably* borrow its argument (which will need to be mutable), modify it directly, then not return anything. Then you can get rid of `vec1` entirely -- note that this will change what gets printed by the first `println!`
+  3. Make `fill_vec` *mutably* borrow its argument (which will need to be mutable), modify it directly, and do not return anything. Then you can get rid of `vec1` entirely – note that this will change what gets printed by the first `println!`
 </div>
