@@ -1,10 +1,20 @@
 title: rustlings
 language: English
-summary: Small exercises to get you used to reading and writing Rust code! The materials
-  are based on the original course "rustlings" created by Carol Nichols! The course
-  is provided with the materials from The Rust Programming Language book, written
-  by Steve Klabnik and Carol Nichols, with contributions from the Rust Community.
-  The course source code is available on <a href = "https://github.com/jetbrains-academy/rustlings-course">github</a>.
+summary: <p>This course contains small exercises aimed to familiarize you with reading and writing Rust code.
+  It is an adaptation of the exciting <a href=”https://github.com/rust-lang/rustlings”>rustlings</a> course created by Carol Nichols.
+  The adaptation tries to stick closely to the original spirit of rustlings but provides a few helpful hints about Rust development added
+  inside the IDE. It also contains materials from <a href=”https://doc.rust-lang.org/book/index.html”>The Rust Programming Language Book</a>
+  written by Steve Klabnik and Carol Nichols with contributions by the Rust Community.</p>
+
+  <p>In this course, you will learn about common programming concepts, such as variables, data types,
+  functions, and control flow and take a close look at one of Rust's essential features – ownership.
+  You will see examples of using strings, structs, enums, modules, and macros in Rust and try them
+  out yourself. Among other things, you will find out how to perform type conversions, handle errors,
+  and write automated tests.</p>
+
+  <p>Have fun and good luck!</p>
+
+  <p>P.S. Want to contribute? Feel free to send a pull request to this course’s <a href=”https://github.com/jetbrains-academy/rustlings-course”>git repo</a>.</p>
 programming_language: Rust
 content:
 - Introduction
