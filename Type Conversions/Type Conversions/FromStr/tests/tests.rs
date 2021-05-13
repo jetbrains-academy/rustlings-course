@@ -15,47 +15,47 @@ fn good_input() {
 #[test]
 #[should_panic]
 fn missing_age() {
-    assert!("John,".parse::<Person>().is_err());
+    "John,".parse::<Person>().unwrap();
 }
 
 #[test]
 #[should_panic]
 fn invalid_age() {
-    assert!("John,twenty".parse::<Person>().is_err());
+    "John,twenty".parse::<Person>().unwrap();
 }
 
 #[test]
 #[should_panic]
 fn missing_comma_and_age() {
-    assert!("John".parse::<Person>().is_err());
+    "John".parse::<Person>().unwrap();
 }
 
 #[test]
 #[should_panic]
 fn missing_name() {
-    assert!(",1".parse::<Person>().is_err());
+    ",1".parse::<Person>().unwrap();
 }
 
 #[test]
 #[should_panic]
 fn missing_name_and_age() {
-    assert!(",".parse::<Person>().is_err());
+    ",".parse::<Person>().unwrap();
 }
 
 #[test]
 #[should_panic]
 fn missing_name_and_invalid_age() {
-    assert!(",one".parse::<Person>().is_err());
+    ",one".parse::<Person>().unwrap();
 }
 
 #[test]
 #[should_panic]
 fn trailing_comma() {
-    assert!("John,32,".parse::<Person>().is_err());
+    "John,32,".parse::<Person>().unwrap();
 }
 
 #[test]
 #[should_panic]
 fn trailing_comma_and_some_string() {
-    assert!("John,32,man".parse::<Person>().is_err());
+    "John,32,man".parse::<Person>().unwrap();
 }

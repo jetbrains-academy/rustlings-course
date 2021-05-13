@@ -14,7 +14,10 @@ Steps:
 with something like `"4".parse::<usize>()`.
 6. If while parsing the age, something goes wrong, an error should be returned.
    If everything goes well, return a `Result` of a `Person` object.
-
+   
 <div class="hint">The implementation of <code>FromStr</code> should return an <code>Ok</code> with a <code>Person</code> object,
-or an <code>Err</code> with an error if the string is not valid.
+or an <code>Err</code> with a string if the string is not valid.
 This is almost like the try_from_into exercise.</div>
+
+**Note**: in the original rustlings course this exercise uses `Box<dyn error::Error>` and tests for an `Err` with an error
+instead of a string, but here we will discuss errors in the next chapter.
