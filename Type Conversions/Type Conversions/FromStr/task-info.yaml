@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 251
-    length: 994
+    length: 954
     placeholder_text: // Write your code here
 - name: src/main.rs
   visible: true
