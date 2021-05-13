@@ -26,36 +26,17 @@ pub fn divide(a: i32, b: i32) -> Result<i32, DivisionError> {
 
 // Complete the function and return a value of the correct type so the test passes.
 // Desired output: Ok([1, 11, 1426, 3])
-pub fn result_with_list() -> () {
+pub fn result_with_list() -> Result<Vec<i32>, DivisionError> {
     let numbers = vec![27, 297, 38502, 81];
     let division_results = numbers.into_iter().map(|n| divide(n, 27));
+    return division_results.collect::<Result<Vec<i32>, DivisionError>>();
 }
 
 // Complete the function and return a value of the correct type so the test passes.
 // Desired output: [Ok(1), Ok(11), Ok(1426), Ok(3)]
-pub fn list_of_results() -> () {
+pub fn list_of_results() -> Vec<Result<i32, DivisionError>> {
     let numbers = vec![27, 297, 38502, 81];
     let division_results = numbers.into_iter().map(|n| divide(n, 27));
+    let x: Vec<Result<_, DivisionError>> = division_results.collect();
+    return x
 }
-
-// #[cfg(test)]
-// mod tests {
-//     use super::*;
-//
-//     // Iterator exercises using your `divide` function
-//
-//     #[test]
-//     fn result_with_list() {
-//         let numbers = vec![27, 297, 38502, 81];
-//         let division_results = numbers.into_iter().map(|n| divide(n, 27));
-//         let x= division_results.collect::<Result<Vec<_>, _>>();
-//         assert_eq!(format!("{:?}", x), "Ok([1, 11, 1426, 3])");
-//     }
-//     #[test]
-//     fn list_of_results() {
-//         let numbers = vec![27, 297, 38502, 81];
-//         let division_results = numbers.into_iter().map(|n| divide(n, 27));
-//         let x = division_results.collect::<Vec<Result<i32, _>>>();
-//         assert_eq!(format!("{:?}", x), "[Ok(1), Ok(11), Ok(1426), Ok(3)]");
-//     }
-// }

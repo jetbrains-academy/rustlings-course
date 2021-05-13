@@ -5,7 +5,7 @@ You can do it!
 
 Here is your mission, should you choose to accept it:
 
-1. Complete the divide function to get the first four tests to pass.
+1. Complete the `divide` function to get the first four tests to pass.
 2. Get the remaining tests to pass by completing the result_with_list and
 `list_of_results` functions.
 
@@ -20,9 +20,6 @@ possible.
 </div>
 
 <div class="hint">
-  Have a look at the <code>Iter</code> trait and at the explanation of its <code>collect</code> function.
-  Especially interesting is the part about <code>Result</code>.
-
 The `division_results` variable needs to be collected into a collection type.
 
 The `result_with_list` function needs to return a single `Result` where the success

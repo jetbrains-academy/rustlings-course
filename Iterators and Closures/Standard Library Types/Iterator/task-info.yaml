@@ -8,11 +8,17 @@ files:
   - offset: 398
     length: 209
     placeholder_text: /*implement the function here*/
-  - offset: 1483
-    length: 48
-    placeholder_text: //fill in the correct expression for x here
-  - offset: 1801
-    length: 50
-    placeholder_text: //fill in the correct expression for x here
+  - offset: 764
+    length: 31
+    placeholder_text: /* Something goes here */
+  - offset: 917
+    length: 69
+    placeholder_text: /* Something goes here */
+  - offset: 1154
+    length: 31
+    placeholder_text: /* Something goes here */
+  - offset: 1307
+    length: 79
+    placeholder_text: /* Something goes here */
 - name: tests/tests.rs
   visible: false
