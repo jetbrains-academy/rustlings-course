@@ -3,8 +3,8 @@ files:
 - name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 219
-    length: 665
+  - offset: 251
+    length: 994
     placeholder_text: // Write your code here
 - name: src/main.rs
   visible: true
