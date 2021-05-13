@@ -3,15 +3,15 @@ files:
 - name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 401
-    length: 497
-    placeholder_text: /* Something goes here */
-  - offset: 401
-    length: 497
-    placeholder_text: /* Something gos here */
   - offset: 155
     length: 53
     placeholder_text: /* Step 1 */
+  - offset: 305
+    length: 74
+    placeholder_text: /* TODO */
+  - offset: 750
+    length: 69
+    placeholder_text: /* TODO */
 - name: src/main.rs
   visible: true
 - name: Cargo.toml
