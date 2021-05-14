@@ -16,3 +16,6 @@ Also note that correct RGB color values must be integers in the 0..=255 range.
 
 <div class="hint">Follow the steps provided in the task.
 You can also use this <a href="https://doc.rust-lang.org/std/convert/trait.TryFrom.html">example</a>.</div>
+
+**Note**: in the original rustlings course this exercise uses `Box<dyn error::Error>` and tests for an `Err` with an error
+instead of a string, but here we will discuss errors in the next chapter.
