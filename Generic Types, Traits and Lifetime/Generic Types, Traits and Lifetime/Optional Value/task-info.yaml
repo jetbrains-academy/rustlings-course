@@ -3,11 +3,11 @@ files:
 - name: src/main.rs
   visible: true
   placeholders:
-  - offset: 138
-    length: 37
+  - offset: 137
+    length: 35
     placeholder_text: value = optional_value {
-  - offset: 627
-    length: 51
+  - offset: 607
+    length: 55
     placeholder_text: value = optional_values_vec.pop() {
 - name: Cargo.toml
   visible: true
