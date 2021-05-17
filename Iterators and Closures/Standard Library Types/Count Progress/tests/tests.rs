@@ -1,5 +1,4 @@
 use count_progress::*;
-use super::*;
 use std::collections::HashMap;
 
 #[test]
