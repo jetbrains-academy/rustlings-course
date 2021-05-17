@@ -19,8 +19,8 @@ Step 2:
 Return 0 from <code>count_stack</code> to make the code compile in order to test count.
 </div>
 
-<div class="hint">The stack variable in count_stack is a slice of HashMaps. It needs to be
+<div class="hint">The <code>stack</code> variable in <code>count_stack</code> is a slice of HashMaps. It needs to be
 converted into an iterator in order to use the iterator methods.
 </div>
 
-<div class="hint">The <code>fold</code> method can be useful in the count_stack function.</div>
+<div class="hint">The <code>fold</code> method can be useful in the <code>count_stack</code> function.</div>
