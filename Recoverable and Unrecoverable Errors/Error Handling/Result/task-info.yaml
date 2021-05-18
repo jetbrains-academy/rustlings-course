@@ -10,6 +10,6 @@ files:
     placeholder_text: /*here could be the expression to compare if the value is appropriate*/
   - offset: 341
     length: 142
-    placeholder_text: /*here could be the othere arms of the comparison*/
+    placeholder_text: /*here could be the other arms of the comparison*/
 - name: tests/tests.rs
   visible: false
