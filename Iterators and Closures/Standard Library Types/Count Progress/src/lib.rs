@@ -34,10 +34,5 @@ pub fn count_stack_for(stack: &[HashMap<String, Progress>], value: Progress) -> 
 }
 
 pub fn count_stack(stack: &[HashMap<String, Progress>], value: Progress) -> usize {
-    let mut count = 0;
-    for map in stack {
-        let c = map.iter().filter(|&(_, b)| *b == value).count();
-        count += c
-    }
-    count
+    stack.into_iter().flat_map(|hash_map| hash_map.values()).fold(0, |acc, stack_item|  if stack_item == &value {acc + 1} else {acc})
 }
