@@ -24,7 +24,7 @@ In the example below, we bring the `crate::front_of_house::hosting` module into 
 
 Adding `use` and a path in a scope is similar to creating a symbolic link in the filesystem. By adding `use crate::front_of_house::hosting` in the crate root, `hosting` is now a valid name in that scope, just as though the `hosting` module had been defined in the crate root. Paths brought into scope with `use` also check privacy, like any other paths.
 
-Specifying a relative path with `use` is slightly different. Instead of starting from a name in the current scope, we must start the path given to `use` with the keyword `self`. The example below shows how to specify a relative path to get the same behavior as in the code above.
+You can also bring an item into scope with `use`  and a relative path. The example below shows how to specify a relative path to get the same behavior as in the code above.
 
 ```rust
     mod front_of_house {
@@ -147,7 +147,7 @@ The next example shows the code from the beginning of the task with `use` in the
 
 By using `pub use`, external code can now call the `add_to_waitlist` function using `hosting::add_to_waitlist`. If we hadn’t specified `pub use`, the `eat_at_restaurant` function could call `hosting::add_to_waitlist` in its scope but external code couldn’t take advantage of this new path.
 
-Re-exporting is useful when the internal structure of your code is different than the way programmers calling your code would think about the domain. For example, in this restaurant metaphor, the people running the restaurant think about “front of house” and “back of house.” But customers visiting a restaurant probably won’t think about the parts of the restaurant in those terms. With `pub use`, we can write our code with one structure but expose a different structure. Doing so makes our library well organized for programmers working on the library and programmers calling the library.
+Re-exporting is useful when the internal structure of your code is different from how programmers calling your code would think about the domain. For example, in this restaurant metaphor, the people running the restaurant think about “front of house” and “back of house.” But customers visiting a restaurant probably won’t think about the parts of the restaurant in those terms. With `pub use`, we can write our code with one structure but expose a different structure. Doing so makes our library well organized for programmers working on the library and programmers calling the library.
 
 ### Using External Packages
 
@@ -160,7 +160,7 @@ In the "Guessing Game" Chapter, we programmed a guessing game project that used 
 
 Adding `rand` as a dependency in _Cargo.toml_ tells Cargo to download the `rand` package and any dependencies from _https://crates.io_ and make `rand` available to our project.
 
-Then, to bring `rand` definitions into the scope of our package, we added a `use` line starting with the name of the package, `rand`, and listing the items we wanted to bring into scope. Recall that in the section [“Generating a Random Number”](https://doc.rust-lang.org/stable/book/ch02-00-guessing-game-tutorial.html#generating-a-random-number) in the "Guessing Game" Chapter, we brought the `Rng` trait into scope and called the `rand::thread_rng` function:
+Then, to bring `rand` definitions into the scope of our package, we added a `use` line starting with the name of the crate, `rand`, and listed the items we wanted to bring into scope. Recall that in the section [“Generating a Random Number”](https://doc.rust-lang.org/stable/book/ch02-00-guessing-game-tutorial.html#generating-a-random-number) in the "Guessing Game" Chapter, we brought the `Rng` trait into scope and called the `rand::thread_rng` function:
 
 ```rust
     use rand::Rng;
@@ -169,7 +169,7 @@ Then, to bring `rand` definitions into the scope of our package, we added a `use
     }
 ```
 
-Members of the Rust community have made many packages available at _https://crates.io_, and pulling any of them into your package involves these same steps: listing them in your package’s _Cargo.toml_ file and using `use` to bring items into scope.
+Members of the Rust community have made many packages available at _https://crates.io_, and pulling any of them into your package involves these same steps: listing them in your package’s _Cargo.toml_ file and using `use` to bring items from their crates into scope.
 
 Note that the standard library (`std`) is also a crate that’s external to our package. Because the standard library is shipped with the Rust language, we don’t need to change _Cargo.toml_ to include `std`. But we do need to refer to it with `use` to bring items from there into our package’s scope. For example, with `HashMap` we would use this line:
 
@@ -181,7 +181,7 @@ This is an absolute path starting with `std`, the name of the standard library c
 
 ### Using Nested Paths to Clean Up Large use Lists
 
-If we’re using multiple items defined in the same package or same module, listing each item on its own line can take up a lot of vertical space in our files. For example, these two `use` statements we had in Listing 2-4 in the Guessing Game bring items from `std` into scope:
+If we’re using multiple items defined in the same crate or same module, listing each item on its own line can take up a lot of vertical space in our files. For example, these two `use` statements bring items from `std` into scope:
 
 ```rust
     use std::cmp::Ordering;
@@ -198,7 +198,7 @@ Instead, we can use nested paths to bring the same items into scope in one line.
 
 ##### Specifying a nested path to bring multiple items with the same prefix into scope
 
-In bigger programs, bringing many items into scope from the same package or module using nested paths can reduce the number of separate `use` statements needed by a lot!
+In bigger programs, bringing many items into scope from the same crate or module using nested paths can reduce the number of separate `use` statements needed by a lot!
 
 We can use a nested path at any level in a path, which is useful when combining two `use` statements that share a subpath. For example, the snippet below shows two `use` statements: one that brings `std::io` into scope and one that brings `std::io::Write` into scope.
 

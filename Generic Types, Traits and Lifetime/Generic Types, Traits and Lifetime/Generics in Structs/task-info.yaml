@@ -1,0 +1,26 @@
+type: edu
+files:
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 18
+    length: 3
+    placeholder_text: /* Something goes here */
+  - offset: 39
+    length: 1
+    placeholder_text: u32
+  - offset: 49
+    length: 3
+    placeholder_text: /* Something goes here */
+  - offset: 60
+    length: 3
+    placeholder_text: /* Something goes here */
+  - offset: 88
+    length: 1
+    placeholder_text: u32
+- name: Cargo.toml
+  visible: true
+- name: tests/tests.rs
+  visible: false
+- name: src/main.rs
+  visible: true

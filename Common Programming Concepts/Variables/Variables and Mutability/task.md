@@ -1,4 +1,4 @@
-### Variables and Mutability
+## Variables and Mutability
 
 Let's talk about simple variables.
 
@@ -37,7 +37,10 @@ error[E0384]: cannot assign twice to immutable variable `x`
  --> src/main.rs:4:5
   |
 2 |     let x = 5;
-  |         - first assignment to `x`
+  |         -
+  |         |
+  |         first assignment to `x`
+  |         help: make this binding mutable: `mut x`
 3 |     println!("The value of x is: {}", x);
 4 |     x = 6;
   |     ^^^^^ cannot assign twice to immutable variable
@@ -70,7 +73,7 @@ When we run the program now, we get this:
 ```text
 $ cargo run
    Compiling variables v0.1.0 (file:///projects/variables)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.30 secs
+    Finished dev [unoptimized + debuginfo] target(s) in 0.30s
      Running `target/debug/variables`
 The value of x is: 5
 The value of x is: 6

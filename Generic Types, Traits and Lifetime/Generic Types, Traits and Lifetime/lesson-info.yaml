@@ -1,0 +1,12 @@
+content:
+- Intro
+- Generic Data Types
+- Traits
+- Lifetime Syntax
+- Generics in Vec
+- Generics in Structs
+- Trait Bound Syntax
+- Use Option
+- Optional Value
+- String Trait
+- Vec Trait

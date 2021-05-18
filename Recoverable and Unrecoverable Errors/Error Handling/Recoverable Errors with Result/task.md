@@ -34,15 +34,16 @@ How do we know `File::open` returns a `Result`? We could look at the [standard l
 Attempting to compile now gives us the following output:
 
 ```text
-    error[E0308]: mismatched types
-     --> src/main.rs:4:18
-      |
-    4 |     let f: u32 = File::open("hello.txt");
-      |                  ^^^^^^^^^^^^^^^^^^^^^^^ expected u32, found enum
-    `std::result::Result`
-      |
-      = note: expected type `u32`
-                 found type `std::result::Result<std::fs::File, std::io::Error>`
+error[E0308]: mismatched types
+ --> src/main.rs:4:18
+  |
+4 |     let f: u32 = File::open("hello.txt");
+  |            ---   ^^^^^^^^^^^^^^^^^^^^^^^ expected `u32`, found enum `std::result::Result`
+  |            |
+  |            expected due to this
+  |
+  = note: expected type `u32`
+             found enum `std::result::Result<File, std::io::Error>`
 ```
 
 This tells us the return type of the `File::open` function is a `Result<T, E>`. The generic parameter `T` has been filled in here with the type of the success value, `std::fs::File`, which is a file handle. The type of `E` used in the error value is `std::io::Error`.
@@ -54,18 +55,16 @@ In the case where `File::open` succeeds, the value in the variable `f` will be a
 We need to add to the code in the code snippet above to take different actions depending on the value `File::open` returns. The following code snippet shows one way to handle the `Result` using a basic tool, the `match` expression that we discussed in Chapter 6.
 
 ```rust
-    use std::fs::File;
+use std::fs::File;
 
-    fn main() {
-        let f = File::open("hello.txt");
+fn main() {
+    let f = File::open("hello.txt");
 
-        let f = match f {
-            Ok(file) => file,
-            Err(error) => {
-                panic!("There was a problem opening the file: {:?}", error)
-            },
-        };
-    }
+    let f = match f {
+        Ok(file) => file,
+        Err(error) => panic!("Problem opening the file: {:?}", error),
+    };
+}
 ```
 
 ##### Using a match expression to handle the Result variants that might be returned
@@ -77,8 +76,7 @@ Here we tell Rust that when the result is `Ok`, return the inner `file` value ou
 The other arm of the `match` handles the case where we get an `Err` value from `File::open`. In this example, we’ve chosen to call the `panic!` macro. If there’s no file named _hello.txt_ in our current directory and we run this code, we’ll see the following output from the `panic!` macro:
 
 ```text
-    thread 'main' panicked at 'There was a problem opening the file: Error { repr:
-    Os { code: 2, message: "No such file or directory" } }', src/main.rs:9:12
+thread 'main' panicked at 'Problem opening the file: Os { code: 2, kind: NotFound, message: "No such file or directory" }', src/main.rs:8:23
 ```
 
 As usual, this output tells us exactly what has gone wrong.
@@ -88,23 +86,25 @@ As usual, this output tells us exactly what has gone wrong.
 The code in the next example will `panic!` no matter why `File::open` failed. What we want to do instead is take different actions for different failure reasons: if `File::open` failed because the file doesn’t exist, we want to create the file and return the handle to the new file. If `File::open` failed for any other reason—for example, because we didn’t have permission to open the file—we still want the code to `panic!` in the same way as it did in the previous snippet. Look at the following code, which adds an inner `match` expression.
 
 ```rust
-    use std::fs::File;
-    use std::io::ErrorKind;
+use std::fs::File;
+use std::io::ErrorKind;
 
-    fn main() {
-        let f = File::open("hello.txt");
+fn main() {
+    let f = File::open("hello.txt");
 
-        let f = match f {
-            Ok(file) => file,
-            Err(error) => match error.kind() {
-                ErrorKind::NotFound => match File::create("hello.txt") {
-                    Ok(fc) => fc,
-                    Err(e) => panic!("Tried to create file but there was a problem: {:?}", e),
-                },
-                other_error => panic!("There was a problem opening the file: {:?}", other_error),
+    let f = match f {
+        Ok(file) => file,
+        Err(error) => match error.kind() {
+            ErrorKind::NotFound => match File::create("hello.txt") {
+                Ok(fc) => fc,
+                Err(e) => panic!("Problem creating the file: {:?}", e),
             },
-        };
-    }
+            other_error => {
+                panic!("Problem opening the file: {:?}", other_error)
+            }
+        },
+    };
+}
 ```
 
 ##### Handling different kinds of errors in different ways
@@ -116,20 +116,20 @@ The condition we want to check in the inner match is whether the value returned 
 That’s a lot of `match`! The `match` expression is very useful but also very much a primitive. In Chapter 13, you’ll learn about closures; the `Result<T, E>` type has many methods that accept a closure and are implemented using `match` expressions. Using those methods will make your code more concise. A more seasoned Rustacean might write this code instead of the previous one:
 
 ```rust
-    use std::fs::File;
-    use std::io::ErrorKind;
+use std::fs::File;
+use std::io::ErrorKind;
 
-    fn main() {
-        let f = File::open("hello.txt").unwrap_or_else(|error| {
-            if error.kind() == ErrorKind::NotFound {
-                File::create("hello.txt").unwrap_or_else(|error| {
-                    panic!("Tried to create file but there was a problem: {:?}", error);
-                })
-            } else {
-                panic!("There was a problem opening the file: {:?}", error);
-            }
-        });
-    }
+fn main() {
+    let f = File::open("hello.txt").unwrap_or_else(|error| {
+        if error.kind() == ErrorKind::NotFound {
+            File::create("hello.txt").unwrap_or_else(|error| {
+                panic!("Problem creating the file: {:?}", error);
+            })
+        } else {
+            panic!("Problem opening the file: {:?}", error);
+        }
+    });
+}
 ```
 
 Although this code has the same behavior as the previous one, it doesn’t contain any `match` expressions and is cleaner to read. Come back to this example after you’ve read Chapter 13, and look up the `unwrap_or_else` method in the standard library documentation. Many more of these methods can clean up huge nested `match` expressions when you’re dealing with errors.
@@ -234,7 +234,7 @@ The code snippet below shows an implementation of `read_username_from_file` that
 
 The `?` placed after a `Result` value is defined to work in almost the same way as the `match` expressions we defined to handle the `Result` values in the example causing error on match. If the value of the `Result` is an `Ok`, the value inside the `Ok` will get returned from this expression, and the program will continue. If the value is an `Err`, the `Err` will be returned from the whole function as if we had used the `return` keyword so the error value gets propagated to the calling code.
 
-There is a difference between what the `match` expression from that example and the `?` operator do: error values that have the `?` operator called on them go through the `from` function, defined in the `From` trait in the standard library, which is used to convert errors from one type into another. When the `?` operator calls the `from` function, the error type received is converted into the error type defined in the return type of the current function. This is useful when a function returns one error type to represent all the ways a function might fail, even if parts might fail for many different reasons. As long as each error type implements the `from` function to define how to convert itself to the returned error type, the `?` operator takes care of the conversion automatically.
+There is a difference between what the `match` expression from that example does and what the `?` operator does: error values that have the `?` operator called on them go through the `from` function, defined in the `From` trait in the standard library, which is used to convert errors from one type into another. When the `?` operator calls the `from` function, the error type received is converted into the error type defined in the return type of the current function. This is useful when a function returns one error type to represent all the ways a function might fail, even if parts might fail for many different reasons. As long as each error type implements the `from` function to define how to convert itself to the returned error type, the `?` operator takes care of the conversion automatically.
 
 In the context of the last snippet, the `?` at the end of the `File::open` call will return the value inside an `Ok` to the variable `f`. If an error occurs, the `?` operator will return early out of the whole function and give any `Err` value to the calling code. The same thing applies to the `?` at the end of the `read_to_string` call.
 
@@ -273,9 +273,9 @@ Speaking of different ways to write this function, the code snippet below shows 
 
 Reading a file into a string is a fairly common operation, so Rust provides the convenient `fs::read_to_string` function that opens the file, creates a new `String`, reads the contents of the file, puts the contents into that `String`, and returns it. Of course, using `fs::read_to_string` doesn’t give us the opportunity to explain all the error handling, so we did it the longer way first.
 
-#### The ? Operator Can Only Be Used in Functions That Return Result
+#### The `?` Operator Can Only Be Used in Functions That Return `Result`
 
-The `?` operator can only be used in functions that have a return type of `Result`, because it is defined to work in the same way as the `match` expression we defined in the example with code causing error on match. The part of the `match` that requires a return type of `Result` is `return Err(e)`, so the return type of the function must be a `Result` to be compatible with this `return`.
+The `?` operator can only be used in functions that have a return type of `Result`, because it is defined to work in the same way as the `match` expression we defined in the example with code causing error on match. The part of the `match` that requires a return type of `Result` is `return Err(e)`, so the return type of the function has to be a `Result` to be compatible with this `return`.
 
 Let’s look at what happens if we use the `?` operator in the `main` function, which you’ll recall has a return type of `()`:
 
@@ -290,19 +290,21 @@ Let’s look at what happens if we use the `?` operator in the `main` function, 
 When we compile this code, we get the following error message:
 
 ```text
-    error[E0277]: the `?` operator can only be used in a function that returns
-    `Result` or `Option` (or another type that implements `std::ops::Try`)
-     --> src/main.rs:4:13
-      |
-    4 |     let f = File::open("hello.txt")?;
-      |             ^^^^^^^^^^^^^^^^^^^^^^^^ cannot use the `?` operator in a
-      function that returns `()`
-      |
-      = help: the trait `std::ops::Try` is not implemented for `()`
-      = note: required by `std::ops::Try::from_error`
+error[E0277]: the `?` operator can only be used in a function that returns `Result` or `Option` (or another type that implements `Try`)
+ --> src/main.rs:4:13
+  |
+3 | / fn main() {
+4 | |     let f = File::open("hello.txt")?;
+  | |             ^^^^^^^^^^^^^^^^^^^^^^^^ cannot use the `?` operator in a function that returns `()`
+5 | | }
+  | |_- this function should return `Result` or `Option` to accept `?`
+  |
+  = help: the trait `Try` is not implemented for `()`
+  = note: required by `from_error`
 ```
 
-This error points out that we’re only allowed to use the `?` operator in a function that returns `Result<T, E>`. When you’re writing code in a function that doesn’t return `Result<T, E>`, and you want to use `?` when you call other functions that return `Result<T, E>`, you have two choices to fix this problem. One technique is to change the return type of your function to be `Result<T, E>` if you have no restrictions preventing that. The other technique is to use a `match` or one of the `Result<T, E>` methods to handle the `Result<T, E>` in whatever way is appropriate.
+This error points out that we’re only allowed to use the `?` operator in a function that returns `Result` or `Option` or another type that implements
+`std::ops::Try`. When you’re writing code in a function that doesn’t return one of these types, and you want to use `?` when you call other functions that return `Result<T, E>`, you have two choices to fix this problem. One technique is to change the return type of your function to be `Result<T, E>` if you have no restrictions preventing that. The other technique is to use a `match` or one of the `Result<T, E>` methods to handle the `Result<T, E>` in whatever way is appropriate.
 
 The `main` function is special, and there are restrictions on what its return type must be. One valid return type for main is `()`, and conveniently, another valid return type is `Result<T, E>`, as shown here:
 

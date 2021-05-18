@@ -1,8 +1,8 @@
 ## Result
 
-Make this test pass!
+Make the test pass!
 
 <div class="hint">
-  `PositiveNonzeroInteger::new` is always creating a new instance and returning an `Ok` result.
-  It should be doing some checking, returning an `Err` result if those checks fail, and only returning an `Ok` result if those checks determine that everything is... okay :)
+<code>PositiveNonzeroInteger::new</code> is always creating a new instance and returning an <code>Ok</code> result.
+It should be doing some checking, returning an <code>Err</code> result if those checks fail, and only returning an <code>Ok</code> result if those checks determine that everything is... okay :)
 </div>

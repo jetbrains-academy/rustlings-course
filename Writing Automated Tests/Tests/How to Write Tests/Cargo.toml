@@ -1,0 +1,4 @@
+[package]
+name = "how_to_write_tests"
+version = "0.1.0"
+edition = "2018"

@@ -85,7 +85,7 @@ There are some strange edge cases with `macro_rules!`. In the future, Rust will 
 
 The second form of macros is _procedural macros_, which act more like functions (and are a type of procedure). Procedural macros accept some code as an input, operate on that code, and produce some code as an output rather than matching against patterns and replacing the code with other code as declarative macros do.
 
-The three kinds of procedural macros: custom derive, attribute-like, and function-like, all work in a similar fashion.
+The three kinds of procedural macros (custom derive, attribute-like, and function-like) all work in a similar fashion.
 
 When creating procedural macros, the definitions must reside in their own crate with a special crate type. This is for complex technical reasons that we hope to eliminate in the future. Using procedural macros looks like the code in the example below, where `some_attribute` is a placeholder for using a specific macro.
 
@@ -163,7 +163,7 @@ The next step is to define the procedural macro. At the time of this writing, pr
     $ cargo new hello_macro_derive --lib
 ```
 
-Our two crates are tightly related, so we create the procedural macro crate within the directory of our `hello_macro` crate. If we change the trait definition in `hello_macro`, we’ll have to change the implementation of the procedural macro in `hello_macro_derive` as well. The two crates will need to be published separately, and programmers using these crates will need to add both as dependencies and bring them both into scope. We could instead have the `hello_macro` crate use `hello_macro_derive` as a dependency and reexport the procedural macro code. However, the way we’ve structured the project makes it possible for programmers to use `hello_macro` even if they don’t want the `derive` functionality.
+Our two crates are tightly related, so we create the procedural macro crate within the directory of our `hello_macro` crate. If we change the trait definition in `hello_macro`, we’ll have to change the implementation of the procedural macro in `hello_macro_derive` as well. The two crates will need to be published separately, and programmers using these crates will need to add both as dependencies and bring them both into scope. We could instead have the `hello_macro` crate use `hello_macro_derive` as a dependency and re-export the procedural macro code. However, the way we’ve structured the project makes it possible for programmers to use `hello_macro` even if they don’t want the `derive` functionality.
 
 We need to declare the `hello_macro_derive` crate as a procedural macro crate. We’ll also need functionality from the `syn` and `quote` crates, as you’ll see in a moment, so we need to add them as dependencies. Add the following to the _Cargo.toml_ file for `hello_macro_derive`:
 
@@ -172,8 +172,8 @@ We need to declare the `hello_macro_derive` crate as a procedural macro crate. W
     proc-macro = true
 
     [dependencies]
-    syn = "0.14.4"
-    quote = "0.6.3"
+    syn = "1.0"
+    quote = "1.0"
 ```
 
 To start defining the procedural macro, place the code in the snippet below into your _src/lib.rs_ file for the `hello_macro_derive` crate. Note that this code won’t compile until we add a definition for the `impl_hello_macro` function.
@@ -198,7 +198,7 @@ To start defining the procedural macro, place the code in the snippet below into
 
 ##### Code that most procedural macro crates will require in order to process Rust code
 
-Notice that we’ve split the code into the `hello_macro_derive` function responsible for parsing the `TokenStream` and the `impl_hello_macro` function responsible for transforming the syntax tree: this makes writing a procedural macro more convenient. The code in the outer function (`hello_macro_derive` in this case) will be the same for almost every procedural macro crate you see or create. The code you specify in the body of the inner function (`impl_hello_macro` in this case) will be different depending on your procedural macro’s purpose.
+Notice that we’ve split the code into the `hello_macro_derive` function, which is responsible for parsing the `TokenStream` and the `impl_hello_macro` function, which is responsible for transforming the syntax tree: this makes writing a procedural macro more convenient. The code in the outer function (`hello_macro_derive` in this case) will be the same for almost every procedural macro crate you see or create. The code you specify in the body of the inner function (`impl_hello_macro` in this case) will be different depending on your procedural macro’s purpose.
 
 We’ve introduced three new crates: `proc_macro`, [`syn`](https://crates.io/crates/syn), and [`quote`](https://crates.io/crates/quote). The `proc_macro` crate comes with Rust, so we didn’t need to add that to the dependencies in _Cargo.toml_. The `proc_macro` crate is the compiler’s API that allows us to read and manipulate Rust code from our code.
 
@@ -298,7 +298,7 @@ Other than that, attribute-like macros work the same way as custom derive macros
 
 ### Function-like macros
 
-Function-like macros define macros that look like function calls. Similarly to `macro_rules!` macros, they’re more flexible than functions in that they can take an unknown number of arguments, for example. However, `macro_rules!` macros can only be defined using the match-like syntax we discussed in the section [“Declarative Macros with `macro_rules!` for General Metaprogramming”](https://doc.rust-lang.org/stable/book/ch19-06-macros.html#declarative-macros-with-macro_rules-for-general-metaprogramming) earlier. Function-like macros take a `TokenStream` parameter and their definition manipulates that `TokenStream` using Rust code as the other two types of procedural macros do. An example of a function-like macro is an `sql!` macro that might be called like so:
+Function-like macros define macros that look like function calls. Similarly to `macro_rules!` macros, they’re more flexible than functions; for example, they can take an unknown number of arguments. However, `macro_rules!` macros can be defined only using the match-like syntax we discussed in the section [“Declarative Macros with `macro_rules!` for General Metaprogramming”](https://doc.rust-lang.org/stable/book/ch19-06-macros.html#declarative-macros-with-macro_rules-for-general-metaprogramming) earlier. Function-like macros take a `TokenStream` parameter and their definition manipulates that `TokenStream` using Rust code as the other two types of procedural macros do. An example of a function-like macro is an `sql!` macro that might be called like so:
 
 ```rust
     let sql = sql!(SELECT * FROM posts WHERE id=1);
@@ -315,7 +315,7 @@ This definition is similar to the custom derive macro’s signature: we receive 
 
 ## Summary
 
-Whew! Now you have some Rust features in your toolbox that you won’t use often, but you’ll know they’re available in particular circumstances. We’ve introduced several complex topics, so when you encounter them in error message suggestions or in other peoples’ code, you’ll recognize these concepts and syntax. Use this chapter as a reference to guide you to solutions.
+Whew! Now you have some Rust features in your toolbox that you won’t use often, but you’ll know they’re available in very particular circumstances. We’ve introduced several complex topics, so that when you encounter them in error message suggestions or in other peoples’ code, you’ll be able to recognize these concepts and syntax. Use this chapter as a reference to guide you to solutions.
 
 _You can refer to the following book sections:_
 * [Macros](https://doc.rust-lang.org/stable/book/ch19-06-macros.html)

@@ -1,5 +1,3 @@
-use std::cmp::Ordering;
-
 #[derive(PartialEq, Debug)]
 pub struct PositiveNonzeroInteger(u64);
 

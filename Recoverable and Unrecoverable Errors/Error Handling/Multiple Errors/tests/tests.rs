@@ -1,5 +1,4 @@
 use errorsn::{read_and_validate, test_with_str, CreationError, PositiveNonzeroInteger};
-use std::error;
 use std::io;
 
 #[test]
