@@ -4,11 +4,11 @@ files:
   visible: true
   placeholders:
   - offset: 41
-    length: 60
-    placeholder_text: 'println!("10 years ago in {}: {}", year1993, year1993 - 10);'
-  - offset: 132
-    length: 60
-    placeholder_text: 'println!("10 years ago in {}: {}", year2020, year2020 - 10);'
+    length: 61
+    placeholder_text: 'println!("{}: 10 years ago was {}", year1993, year1993 - 10);'
+  - offset: 133
+    length: 61
+    placeholder_text: 'println!("{}: 10 years ago was {}", year2020, year2020 - 10);'
 - name: Cargo.toml
   visible: false
 - name: refactoring.png
