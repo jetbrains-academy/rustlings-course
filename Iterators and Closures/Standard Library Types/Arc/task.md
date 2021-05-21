@@ -14,5 +14,5 @@ Check out the chapter [Shared-State Concurrency](https://doc.rust-lang.org/book/
 </div>
 
 <div class="hint">This is a simple exercise if you understand the underlying concepts, but if this
-is too much of a struggle, consider reading through all of <a href="https://doc.rust-lang.org/stable/book/ch16-00-concurrency.html">Chapter 16</a> in the Book.
+is too much of a struggle, consider reading (or completing) the "Fearless Concurrency" section first. Alternatively, read through all of <a href="https://doc.rust-lang.org/stable/book/ch16-00-concurrency.html">Chapter 16</a> in the Book.
 </div>
