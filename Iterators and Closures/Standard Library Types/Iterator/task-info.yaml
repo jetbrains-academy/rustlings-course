@@ -5,9 +5,12 @@ files:
 - name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 398
-    length: 209
-    placeholder_text: /*implement the function here*/
+  - offset: 418
+    length: 32
+    placeholder_text: /* TODO */
+  - offset: 490
+    length: 7
+    placeholder_text: /* TODO */
   - offset: 764
     length: 31
     placeholder_text: /* Something goes here */
@@ -20,5 +23,8 @@ files:
   - offset: 1307
     length: 79
     placeholder_text: /* Something goes here */
+  - offset: 523
+    length: 78
+    placeholder_text: /* TODO */
 - name: tests/tests.rs
   visible: false
