@@ -1,8 +1,8 @@
 ## Struct Logic
 
-Structs contain more than simply some data – they can also have logic. In this
-exercise, we have defined a Package struct and we want to test some logic attached to it,
-make the code compile and the tests pass!
+Structs contain data, but can also have logic. In this exercise we have
+defined the `Package` struct, and we want to test some logic attached to it.
+Make the code compile and the tests pass!
 
 <div class="hint">
 The new method needs to panic if the weight is physically impossible :) How do we do that in Rust?

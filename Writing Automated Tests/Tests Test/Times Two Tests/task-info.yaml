@@ -10,6 +10,6 @@ files:
   - offset: 151
     length: 2
     placeholder_text: /*insert the value we assume to get from the times_two function*/
-  - offset: 249
-    length: 2
-    placeholder_text: /*write an assert for `times_two(-4)`*/
+  - offset: 228
+    length: 30
+    placeholder_text: /*write an assert for `times_two(-2)`*/
