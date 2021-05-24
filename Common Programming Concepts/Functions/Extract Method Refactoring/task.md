@@ -25,7 +25,7 @@ and then either press &shortcut:ExtractMethod; or choose *Refactor -> Extract Me
 
 In the dialog that appears, you can choose a more suitable name for the parameter (for example, year):
 
-![Image: 2020-unique-launches.png](refactoring.png)
+![Image: refactoring.png](refactoring.png)
 
 **Step 2: Replace Duplicated Code**
 
