@@ -21,7 +21,7 @@ Select the first occurrence of
 println!("{}: 10 years ago was {}", year1993, year1993 - 10);
 ```
 
-and then either press &shortcut:ExtractMethod; or choose *Refactor&rarr;Extract Method...* from the right-click menu.
+and then either press &shortcut:ExtractMethod; or choose *Refactor -> Extract Method...* from the right-click menu.
 
 In the dialog that appears, you can choose a more suitable name for the parameter (for example, year):
 

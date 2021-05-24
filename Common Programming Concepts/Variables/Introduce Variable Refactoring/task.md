@@ -12,7 +12,7 @@ Let's also refactor the code!
 %IDE_NAME% has a handy functionality called **"Introduce Variable Refactoring"**, which allows you to quickly do this.
 
 Select any occurrence of `1993` and then either press &shortcut:IntroduceVariable; 
-or choose *Refactor&rarr;Introduce Variable...* from the right-click menu. 
+or choose *Refactor -> Introduce Variable...* from the right-click menu. 
 
-*Note*: you can also use &shortcut:IntroduceConstant; or *Refactor&rarr;Introduce Constant...* from the right-click menu
+*Note*: you can also use &shortcut:IntroduceConstant; or *Refactor -> Introduce Constant...* from the right-click menu
 to create constants.
