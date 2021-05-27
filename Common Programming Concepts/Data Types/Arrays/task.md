@@ -1,6 +1,6 @@
 ## Arrays
 
-Create an array with at least 100 elements.
+Create an array with at least 100 elements. Run the main.rs file to see what your code outputs.
 
 <div class="hint">
   There's a shorthand to initialize Arrays with a certain size that does not require you to type in 100 items (but you certainly can if you want!).
