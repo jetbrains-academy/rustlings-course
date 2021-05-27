@@ -4,21 +4,17 @@ files:
   visible: true
 - name: Cargo.toml
   visible: false
-- name: images/back.svg
+- name: images/back.png
   visible: false
-- name: images/commentTask.svg
-  visible: false
-- name: images/edu_next_button.png
-  visible: false
-- name: images/edu_peek_solution.png
+- name: images/commentTask.png
   visible: false
 - name: images/edu_task_description_window_settings.png
   visible: false
-- name: images/forward.svg
+- name: images/forward.png
   visible: false
-- name: images/gear.svg
+- name: images/gear.png
   visible: false
-- name: images/hideToolWindow.svg
+- name: images/hideToolWindow.png
   visible: false
-- name: images/reset.svg
+- name: images/reset.png
   visible: false

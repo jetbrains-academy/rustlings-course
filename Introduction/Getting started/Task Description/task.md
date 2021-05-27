@@ -12,15 +12,15 @@ Use the Task Description icons for the following actions:
 |------------------------------------|-------------------------------|
 |**Check**                           | <font size="-1">Check the correctness of your answer (for a quiz) or your code solution (for a programming task)</font>|   
 | **Run**                            | <font size="-1">Run your code (for a theoretical tasks)</font>|
-|![](images/back.svg)                | <font size="-1">Go to the previous task</font>       |    
-|![](images/forward.svg) &nbsp;<font size="-1">or</font> **Next** | <font size="-1">Go to the next task</font>| 
-|![](images/reset.svg)               | <font size="-1">Discard all the changes you’ve made in the task, and start over</font>| 
-|![](images/commentTask.svg)         | <font size="-1">View the task page on Stepik and leave a comment</font>| 
+|<img src="images/back.png" width="20">                 | <font size="-1">Go to the previous task</font>       |    
+|<img src="images/forward.png" width="20"> &nbsp;<font size="-1">or</font> **Next** | <font size="-1">Go to the next task</font>| 
+|<img src="images/reset.png" width="20">               | <font size="-1">Discard all the changes you’ve made in the task, and start over</font>| 
+|<img src="images/commentTask.png" width="18">         | <font size="-1">View the task page on Stepik and leave a comment</font>| 
 |<a>Peek Solution...</a>             | <font size="-1">Reveal the correct answer and show the <b>diff</b></font>|
 
-We recommend keeping the Task Description window visible and not hiding it completely. If it is too distracting, you can hide it by clicking the ![](images/hideToolWindow.svg) button in the top right-hand corner of the Task Description window.
+We recommend keeping the Task Description window visible and not hiding it completely. If it is too distracting, you can hide it by clicking the <img src="images/hideToolWindow.png" width="20"> button in the top right-hand corner of the Task Description window.
 
-If you use two monitors, it may be helpful to switch the Task Description panel to the floating mode and move it to the second monitor, or just place it near the main IDE window. To do this, click the tool window settings ![](images/gear.svg) icon :
+If you use two monitors, it may be helpful to switch the Task Description panel to the floating mode and move it to the second monitor, or just place it near the main IDE window. To do this, click the tool window settings <img src="images/gear.png" width="20"> icon :
 
 <img src="images/edu_task_description_window_settings.png" width="85%"/>
 
