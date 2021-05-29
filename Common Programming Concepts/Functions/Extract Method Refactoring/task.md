@@ -11,7 +11,7 @@ So before actually changing the message format, the developer decided to perform
 
 ###Task
 
-**Step 1: Create Function**
+**Step 1: Create a Function**
 
 Perform the refactoring and create a new function to replace the duplicated code.
 
@@ -27,9 +27,9 @@ In the dialog that appears, you can choose a more suitable name for the paramete
 
 ![Image: refactoring.png](refactoring.png)
 
-**Step 2: Replace Duplicated Code**
+**Step 2: Replace the Duplicated Code**
 
-After a new function is created, replace the second occurrence of the code with the new function call.
+After the new function has been created, replace the second occurrence of the code with the new function call.
 
 **Step 3: Change the Text**
 

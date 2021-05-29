@@ -1,6 +1,6 @@
 ## Mastering the IDE: Managing Conditions
 
-Can you quickly understand what the code from `main.rs` file prints?
+Can you quickly understand what the code from the `main.rs` file prints?
  
 %IDE_NAME% has lots of useful features that can help you make the code more readable.
 
@@ -10,7 +10,7 @@ Place the cursor on `&&` and use the &shortcut:ShowIntentionActions; shortcut to
 
 ![](image.png)
 
-Now, can you quickly understand what the code from `main.rs` file prints?
+Now, can you quickly understand what the code from the `main.rs` file prints?
 
 <div class="hint">
   The resulting if condition should be <br>
