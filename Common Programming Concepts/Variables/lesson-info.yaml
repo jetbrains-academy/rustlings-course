@@ -3,6 +3,7 @@ content:
 - Variables and Mutability
 - New Variable Binding
 - Differences Between Variables and Constants
+- Introduce Variable Refactoring
 - Shadowing
 - Variable Type
 - Mutable Variable Binding

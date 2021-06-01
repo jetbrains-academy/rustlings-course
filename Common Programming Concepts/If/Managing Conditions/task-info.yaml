@@ -1,0 +1,13 @@
+type: ide
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 40
+    length: 64
+    placeholder_text: '!(!(number > 4 && number <= 9) && !(number > 0  && number <
+      10))'
+- name: Cargo.toml
+  visible: true
+- name: image.png
+  visible: false

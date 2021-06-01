@@ -1,0 +1,25 @@
+type: ide
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 25
+    length: 1
+    placeholder_text: 1
+  - offset: 66
+    length: 4
+    placeholder_text: 1..4
+  - offset: 81
+    length: 23
+    placeholder_text: nice_slice == [2, 3, 4]
+  - offset: 259
+    length: 3
+    placeholder_text: type placeholder
+  - offset: 294
+    length: 12
+    placeholder_text: type placeholder
+  - offset: 357
+    length: 4
+    placeholder_text: type placeholder
+- name: Cargo.toml
+  visible: true
