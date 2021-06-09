@@ -1,0 +1,15 @@
+type: edu
+files:
+- name: Cargo.toml
+  visible: false
+- name: src/lib.rs
+  visible: true
+- name: tests/tests.rs
+  visible: true
+  placeholders:
+  - offset: 122
+    length: 1
+    placeholder_text: /*insert the parameter for the assertion here*/
+  - offset: 202
+    length: 1
+    placeholder_text: /*insert the parameter for the assertion here*/

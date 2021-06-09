@@ -1,0 +1,17 @@
+type: edu
+files:
+- name: Cargo.toml
+  visible: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 27
+    length: 3
+    placeholder_text: /*insert a modifier here to make the module accessible from
+      outside*/
+  - offset: 68
+    length: 3
+    placeholder_text: /*insert a modifier here to make the module accessible from
+      outside*/
+- name: tests/tests.rs
+  visible: false

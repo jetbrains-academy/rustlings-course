@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: Cargo.toml
+  visible: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 46
+    length: 4
+    placeholder_text: /*insert the type annotation here*/
+- name: tests/tests.rs
+  visible: false

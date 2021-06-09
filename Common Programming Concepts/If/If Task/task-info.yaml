@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: Cargo.toml
+  visible: false
+- name: tests/tests.rs
+  visible: false
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 43
+    length: 25
+    placeholder_text: //insert the solution here

@@ -1,0 +1,18 @@
+type: edu
+files:
+- name: Cargo.toml
+  visible: false
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 70
+    length: 28
+    placeholder_text: Option<String>
+  - offset: 133
+    length: 2
+    placeholder_text: Some
+  - offset: 274
+    length: 45
+    placeholder_text: None
+- name: tests/tests.rs
+  visible: false

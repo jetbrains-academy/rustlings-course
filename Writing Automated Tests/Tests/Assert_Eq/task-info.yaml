@@ -1,0 +1,10 @@
+type: theory
+files:
+- name: Cargo.toml
+  visible: false
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 85
+    length: 4
+    placeholder_text: /*insert a correct assertion to pass the task*/

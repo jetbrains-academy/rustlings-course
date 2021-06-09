@@ -1,0 +1,11 @@
+content:
+- Intro
+- Variables and Mutability
+- New Variable Binding
+- Differences Between Variables and Constants
+- Shadowing
+- Variable Type
+- Mutable Variable Binding
+- Value
+- Converting Type
+- Constant Type

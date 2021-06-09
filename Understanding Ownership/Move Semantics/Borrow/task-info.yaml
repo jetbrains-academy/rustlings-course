@@ -1,0 +1,28 @@
+type: edu
+files:
+- name: Cargo.toml
+  visible: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 83
+    length: 27
+    placeholder_text: /*you could replace vec0 with another variable*/
+  - offset: 140
+    length: 7
+    placeholder_text: vec_0 /*and put it here*/
+  - offset: 378
+    length: 4
+    placeholder_text: /*if you gonna modify the argument, it should be mutable*/
+  - offset: 397
+    length: 11
+    placeholder_text: -> Vec<i32> /*if you are not returning a value, here should
+      be no type*/
+  - offset: 415
+    length: 28
+    placeholder_text: /*you could borrow vec value*/
+  - offset: 504
+    length: 10
+    placeholder_text: vec /*and then you don't have to return anything here*/
+- name: tests/tests.rs
+  visible: false

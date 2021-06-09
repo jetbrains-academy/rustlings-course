@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: Cargo.toml
+  visible: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 111
+    length: 1
+    placeholder_text: /*call the macro here*/
+- name: tests/tests.rs
+  visible: false

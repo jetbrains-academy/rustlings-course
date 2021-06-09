@@ -1,0 +1,11 @@
+type: theory
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 73
+    length: 8
+    placeholder_text: x = 6;
+- name: Cargo.toml
+  visible: false
+solution_hidden: true
