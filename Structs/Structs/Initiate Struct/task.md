@@ -5,6 +5,9 @@ You should define a Classic Struct with two fields: "name" and "hex" and then cr
 You should also define a Tuple Struct with two string-type fields and instantiate one with the same values as before. 
 Finally, you need to instantiate a Unit Struct and make sure our program prints the message "UnitStructs are fun!" :)
 
+**Note**: all fields in the first two structs have to be [made public](https://doc.rust-lang.org/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html#exposing-paths-with-the-pub-keyword) using the `pub` keyword.
+This is needed for proper testing and for `main.rs` to work. The public modifier will be explained in detail in the [Modules](course://Modules and Macros/Modules) lesson.
+
 <div class="hint">
 Rust has more than one type of struct. Three actually, all variants are used to package related data together.
 There are normal (or classic) structs. These are named collections of related data stored in fields.

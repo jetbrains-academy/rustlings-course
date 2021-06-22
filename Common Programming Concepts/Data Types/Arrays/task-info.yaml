@@ -4,11 +4,11 @@ files:
   visible: false
 - name: src/main.rs
   visible: true
+  placeholders:
+  - offset: 24
+    length: 51
+    placeholder_text: type here
 - name: tests/tests.rs
   visible: false
 - name: src/lib.rs
   visible: true
-  placeholders:
-  - offset: 43
-    length: 51
-    placeholder_text: /* TODO */
