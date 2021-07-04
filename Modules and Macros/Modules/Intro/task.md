@@ -8,7 +8,7 @@ As an example, let’s write a library crate that provides the functionality of 
 
 In the restaurant industry, some parts of a restaurant are referred to as _front of house_ and others as _back of house_. Front of house is where customers are; this is where hosts seat customers, servers take orders and payment, and bartenders make drinks. Back of house is where the chefs and cooks work in the kitchen, dishwashers clean up, and managers do administrative work.
 
-To structure our crate in the same way that a real restaurant works, we can organize the functions into nested modules. Create a new library named `restaurant` by running `cargo new --lib restaurant`; then put the code from the example below into _src/lib.rs_ to define some modules and function signatures.
+To structure our crate in the same way that a real restaurant works, we can organize the functions into nested modules. Create a new library named `restaurant` by running `cargo new --lib restaurant`; then switch to the _Project Files_ view within the Project Tool Window and put the code from the example below into _src/lib.rs_ to define some modules and function signatures. 
 
 ```rust
     mod front_of_house {
