@@ -9,7 +9,7 @@ A _path_ can take two forms:
 
 Both absolute and relative paths are followed by one or more identifiers separated by double colons (`::`).
 
-Let’s return to the example in the first code snippet in Itro. How do we call the `add_to_waitlist` function? This is the same as asking, what’s the path of the `add_to_waitlist` function? In the code snippet below, we simplified our code a bit by removing some of the modules and functions. We’ll show two ways to call the `add_to_waitlist` function from a new function `eat_at_restaurant` defined in the crate root. The `eat_at_restaurant` function is part of our library crate’s public API, so we mark it with the `pub` keyword. In the "Exposing Paths with the `pub` Keyword" section, we’ll go into more detail about `pub`. Note that this example won’t compile just yet; we’ll explain why in a bit.
+Let’s return to the example in the first code snippet in Intro. How do we call the `add_to_waitlist` function? This is the same as asking, what’s the path of the `add_to_waitlist` function? In the code snippet below, we simplified our code a bit by removing some of the modules and functions. We’ll show two ways to call the `add_to_waitlist` function from a new function `eat_at_restaurant` defined in the crate root. The `eat_at_restaurant` function is part of our library crate’s public API, so we mark it with the `pub` keyword. In the "Exposing Paths with the `pub` Keyword" section, we’ll go into more detail about `pub`. Note that this example won’t compile just yet; we’ll explain why in a bit.
 
 ```rust
     mod front_of_house {
