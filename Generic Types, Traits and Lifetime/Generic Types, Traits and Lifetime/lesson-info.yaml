@@ -8,5 +8,6 @@ content:
 - Trait Bound Syntax
 - Use Option
 - Optional Value
+- Pattern Binding
 - String Trait
 - Vec Trait
