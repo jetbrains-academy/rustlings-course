@@ -1,4 +1,4 @@
-## Result
+## Multiple Errors
 
 This program uses a completed version of the code from the previous task.
 It won't compile right now! Why? Use the hints if you're stuck.
