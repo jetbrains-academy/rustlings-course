@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 141
-    length: 4
+    length: 3
     placeholder_text: /* TODO */
 - name: Cargo.toml
   visible: true
