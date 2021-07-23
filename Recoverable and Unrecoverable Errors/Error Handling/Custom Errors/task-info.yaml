@@ -1,0 +1,20 @@
+type: edu
+files:
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 433
+    length: 117
+    placeholder_text: /* TODO */
+  - offset: 782
+    length: 216
+    placeholder_text: |-
+      let x: i64 = s.parse().unwrap();
+          PositiveNonzeroInteger::new(x)
+              .map_err(ParsePosNonzeroError::from_creation)
+- name: src/main.rs
+  visible: true
+- name: Cargo.toml
+  visible: true
+- name: tests/tests.rs
+  visible: false

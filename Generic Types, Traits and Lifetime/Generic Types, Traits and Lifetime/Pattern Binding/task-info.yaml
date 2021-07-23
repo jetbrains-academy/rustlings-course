@@ -3,9 +3,9 @@ files:
 - name: src/main.rs
   visible: true
   placeholders:
-  - offset: 117
+  - offset: 141
     length: 3
-    placeholder_text: /* Something missing here! */
+    placeholder_text: /* TODO */
 - name: Cargo.toml
   visible: true
 - name: tests/tests.rs
