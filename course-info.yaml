@@ -1,4 +1,5 @@
-title: rustlings
+type: marketplace
+title: Rustlings
 language: English
 summary: <p>This course contains small exercises aimed to familiarize you with reading and writing Rust code.
   It is an adaptation of the exciting <a href="https://github.com/rust-lang/rustlings">rustlings</a> course created by Carol Nichols.
