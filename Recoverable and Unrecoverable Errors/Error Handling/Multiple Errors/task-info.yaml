@@ -1,21 +1,14 @@
 type: edu
 files:
-- name: Cargo.toml
-  visible: false
 - name: src/lib.rs
   visible: true
+- name: src/main.rs
+  visible: true
   placeholders:
-  - offset: 191
-    length: 22
-    placeholder_text: /* ??? */
-  - offset: 276
-    length: 1
-    placeholder_text: /*something could go wrong here*/
-  - offset: 317
-    length: 1
-    placeholder_text: /*something could go wrong here*/
-  - offset: 369
-    length: 1
-    placeholder_text: /*something could go wrong here*/
+  - offset: 153
+    length: 14
+    placeholder_text: ParseIntError
+- name: Cargo.toml
+  visible: true
 - name: tests/tests.rs
   visible: false

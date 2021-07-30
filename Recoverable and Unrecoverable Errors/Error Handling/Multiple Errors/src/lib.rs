@@ -1,36 +1,9 @@
 use std::error;
 use std::fmt;
-use std::io;
 
-// PositiveNonzeroInteger is a struct defined below the tests.
-pub fn read_and_validate(b: &mut dyn io::BufRead) -> Result<PositiveNonzeroInteger, Box<dyn error::Error>> {
-    let mut line = String::new();
-    b.read_line(&mut line)?;
-    let num: i64 = line.trim().parse()?;
-    let answer = PositiveNonzeroInteger::new(num)?;
-    Ok(answer)
-}
-
-// This is a test helper function that turns a &str into a BufReader.
-pub fn test_with_str(s: &str) -> Result<PositiveNonzeroInteger, Box<dyn error::Error>> {
-    let mut b = io::BufReader::new(s.as_bytes());
-    read_and_validate(&mut b)
-}
-
+// Don't change anything in this file
 #[derive(PartialEq, Debug)]
 pub struct PositiveNonzeroInteger(u64);
-
-impl PositiveNonzeroInteger {
-    pub fn new(value: i64) -> Result<PositiveNonzeroInteger, CreationError> {
-        if value == 0 {
-            Err(CreationError::Zero)
-        } else if value < 0 {
-            Err(CreationError::Negative)
-        } else {
-            Ok(PositiveNonzeroInteger(value as u64))
-        }
-    }
-}
 
 #[derive(PartialEq, Debug)]
 pub enum CreationError {
@@ -38,16 +11,25 @@ pub enum CreationError {
     Zero,
 }
 
+impl PositiveNonzeroInteger {
+    pub fn new(value: i64) -> Result<PositiveNonzeroInteger, CreationError> {
+        match value {
+            x if x < 0 => Err(CreationError::Negative),
+            x if x == 0 => Err(CreationError::Zero),
+            x => Ok(PositiveNonzeroInteger(x as u64))
+        }
+    }
+}
 
+// This is required so that `CreationError` can implement `error::Error`.
 impl fmt::Display for CreationError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let description = match *self {
-            CreationError::Negative => "Number is negative",
-            CreationError::Zero => "Number is zero",
+            CreationError::Negative => "number is negative",
+            CreationError::Zero => "number is zero",
         };
         f.write_str(description)
     }
 }
 
 impl error::Error for CreationError {}
-

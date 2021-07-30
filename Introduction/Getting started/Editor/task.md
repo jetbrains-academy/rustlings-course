@@ -18,5 +18,5 @@ To run your code at any time, choose the Run option from the context menu or pre
 
 <img src="edu_context_menu_run.png" class="center" width="100%"/>
 
-In can sometimes be helpful to run the `main()` function (contained in the `main.rs` file, however note that not all the tasks have it) to see what output your code produces.
+It can sometimes be helpful to run the `main()` function (contained in the `main.rs` file, however note that not all the tasks have it) to see what output your code produces.
 If you want to go back to the Editor and focus on your code, the fastest way to do it is with the Hide All Windows command (<span style="color: #509DD6">&shortcut:HideAllWindows;</span>). To get all the windows back, repeat the command.
