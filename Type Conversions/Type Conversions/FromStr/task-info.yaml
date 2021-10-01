@@ -3,7 +3,7 @@ files:
 - name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 519
+  - offset: 584
     length: 872
     placeholder_text: /* TODO */
 - name: src/main.rs

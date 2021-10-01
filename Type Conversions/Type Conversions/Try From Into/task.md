@@ -8,7 +8,7 @@ You can read more about it at https://doc.rust-lang.org/std/convert/trait.TryFro
 Your task here is to complete this implementation
 and return an `Ok` result of inner type `Color`.
 You need to create an implementation for a tuple of three integers,
-an array of three integers and a slice of integers.
+an array of three integers, and a slice of integers.
 
 Note that the implementation for tuple and array will be checked at compile time,
 but the slice implementation needs to check the slice length!
@@ -17,5 +17,15 @@ Also note that correct RGB color values must be integers in the 0..=255 range.
 <div class="hint">Follow the steps provided in the task.
 You can also use this <a href="https://doc.rust-lang.org/std/convert/trait.TryFrom.html">example</a>.</div>
 
-**Note**: in the original rustlings course this exercise uses `Box<dyn error::Error>` and tests for an `Err` with an error
-instead of a string, but here we will discuss errors in the next chapter.
+<div class="hint">Hint: Is there an implementation of <code>TryFrom</code> in the standard library that
+can both do the required integer conversion and check the range of the input?</div>
+
+<div class="hint">Look at the test cases to see which error variants to return.</div>
+
+<div class="hint">You can use the <code>map_err</code> or <code>or</code> methods of <code>Result</code> to
+convert errors.</div>
+
+<div class="hint">If you would like to propagate errors by using the <code>?</code>
+operator in your solution, you might want to look at this <a href="https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/reenter_question_mark.html">article</a>.</div>
+
+**Challenge**: Can you make the `TryFrom` implementations generic over many integer types?
