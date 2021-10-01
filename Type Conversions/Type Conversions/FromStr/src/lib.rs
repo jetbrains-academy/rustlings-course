@@ -7,6 +7,7 @@ pub struct Person {
     pub age: usize,
 }
 
+// We will use this error type for the `FromStr` implementation.
 #[derive(Debug, PartialEq)]
 pub enum ParsePersonError {
     // Empty input string
