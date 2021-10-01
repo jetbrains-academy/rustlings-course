@@ -3,6 +3,7 @@
 This is a test for the following sections:
 - Variables
 - Functions
+- If
 
 Mary is buying apples.
 One apple usually costs 2 dollars, but if you buy 40 or more at once, each apple only costs 1!
