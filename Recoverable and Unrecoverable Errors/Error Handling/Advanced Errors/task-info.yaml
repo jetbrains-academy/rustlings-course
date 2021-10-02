@@ -2,6 +2,17 @@ type: edu
 files:
 - name: src/lib.rs
   visible: true
+  placeholders:
+  - offset: 363
+    length: 33
+    placeholder_text: '// TODO: complete this implementation so that the `?` operator
+      will work for `CreationError`'
+  - offset: 406
+    length: 141
+    placeholder_text: |-
+      // TODO: implement another instance of the `From` trait here so that the
+      // `?` operator will work in the other place in the `FromStr`
+      // implementation below.
 - name: src/main.rs
   visible: true
 - name: Cargo.toml

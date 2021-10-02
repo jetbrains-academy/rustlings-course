@@ -8,7 +8,7 @@ Make this code compile!
 
 <div class="hint">
 
-This exercise uses an updated version of the code in Custom Errors. The parsing
+This exercise uses an updated version of the code in "Custom Errors". The parsing
 code is now in an implementation of the `FromStr` trait. Note that the
 parsing code uses `?` directly, without any calls to `map_err()`. There is
 one partial implementation of the `From` trait example that you should

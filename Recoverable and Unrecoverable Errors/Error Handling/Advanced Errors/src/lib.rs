@@ -4,21 +4,22 @@ use std::str::FromStr;
 // This is a custom error type that we will be using in the `FromStr`
 // implementation.
 #[derive(PartialEq, Debug)]
-enum ParsePosNonzeroError {
+pub enum ParsePosNonzeroError {
     Creation(CreationError),
     ParseInt(ParseIntError),
 }
 
 impl From<CreationError> for ParsePosNonzeroError {
     fn from(e: CreationError) -> Self {
-        // TODO: complete this implementation so that the `?` operator will
-        // work for `CreationError`
+        ParsePosNonzeroError::Creation(e)
     }
 }
 
-// TODO: implement another instance of the `From` trait here so that the
-// `?` operator will work in the other place in the `FromStr`
-// implementation below.
+impl From<ParseIntError> for ParsePosNonzeroError {
+    fn from(e: ParseIntError) -> Self {
+        ParsePosNonzeroError::ParseInt(e)
+    }
+}
 
 // Don't change anything below this line.
 
@@ -31,16 +32,16 @@ impl FromStr for PositiveNonzeroInteger {
 }
 
 #[derive(PartialEq, Debug)]
-struct PositiveNonzeroInteger(u64);
+pub struct PositiveNonzeroInteger(u64);
 
 #[derive(PartialEq, Debug)]
-enum CreationError {
+pub enum CreationError {
     Negative,
     Zero,
 }
 
 impl PositiveNonzeroInteger {
-    fn new(value: i64) -> Result<PositiveNonzeroInteger, CreationError> {
+    pub fn new(value: i64) -> Result<PositiveNonzeroInteger, CreationError> {
         match value {
             x if x < 0 => Err(CreationError::Negative),
             x if x == 0 => Err(CreationError::Zero),

@@ -1,4 +1,5 @@
 use advanced_errors::*;
+use std::str::FromStr;
 
 #[test]
 fn test_parse_error() {
