@@ -1,3 +1,4 @@
+use std::error::Error;
 use advanced_errors_2::*;
 
 fn main() -> Result<(), Box<dyn Error>> {

@@ -2,6 +2,21 @@ type: edu
 files:
 - name: src/lib.rs
   visible: true
+  placeholders:
+  - offset: 793
+    length: 19
+    placeholder_text: '// TODO: Complete this function'
+  - offset: 822
+    length: 35
+    placeholder_text: |-
+      // TODO: Implement a missing trait so that `main()` below will compile. It
+      // is not necessary to implement any methods inside the missing trait.
+  - offset: 1354
+    length: 173
+    placeholder_text: /* TODO */
+  - offset: 2169
+    length: 7
+    placeholder_text: /* TODO */
 - name: src/main.rs
   visible: true
 - name: Cargo.toml

@@ -27,7 +27,7 @@ Don't forget to read comments in the code.
 types to implement. These traits make it easier for other code to consume
 the custom error type.</div>
 
-<div class="hint">Follow the steps in the comment near the top of the file. You will have to
+<div class="hint">You will have to
 supply a missing trait implementation, and complete a few incomplete ones.</div>
 
 <div class="hint">
