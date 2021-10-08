@@ -6,7 +6,7 @@ files:
   visible: true
   placeholders:
   - offset: 160
-    length: 4
+    length: 3
     placeholder_text: /*insert the keyword here to make the function public*/
 - name: tests/tests.rs
   visible: false

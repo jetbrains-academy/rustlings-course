@@ -11,13 +11,13 @@ files:
       outside*/
   - offset: 57
     length: 5
-    placeholder_text: ???
+    placeholder_text: /*TODO*/
   - offset: 68
     length: 3
     placeholder_text: /*insert a modifier here to make the module accessible from
       outside*/
   - offset: 103
     length: 6
-    placeholder_text: ???
+    placeholder_text: /*TODO*/
 - name: tests/tests.rs
   visible: false
