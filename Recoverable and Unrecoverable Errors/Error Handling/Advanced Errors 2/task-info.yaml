@@ -1,4 +1,5 @@
 type: edu
+custom_name: Error Trait
 files:
 - name: src/lib.rs
   visible: true
