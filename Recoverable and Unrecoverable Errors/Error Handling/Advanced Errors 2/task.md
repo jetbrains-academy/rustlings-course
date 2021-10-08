@@ -21,6 +21,7 @@ Parser for `Climate`:
 5. Parse the temp as a `f32` and return an error if that fails.
 6. Return an `Ok` value containing the completed `Climate` value.
 
+Add or complete the missing steps.
 Don't forget to read comments in the code.
 
 <div class="hint">This exercise demonstrates a few traits that are useful for custom error
