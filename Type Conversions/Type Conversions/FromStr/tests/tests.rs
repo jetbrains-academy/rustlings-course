@@ -1,3 +1,4 @@
+#![feature(or_patterns)]
 use fromstr::*;
 
 #[test]
@@ -13,7 +14,6 @@ fn good_input() {
     assert_eq!(p.age, 32);
 }
 #[test]
-#[should_panic]
 fn missing_age() {
     assert!(matches!(
             "John,".parse::<Person>(),
@@ -22,7 +22,6 @@ fn missing_age() {
 }
 
 #[test]
-#[should_panic]
 fn invalid_age() {
     assert!(matches!(
             "John,twenty".parse::<Person>(),
@@ -31,46 +30,40 @@ fn invalid_age() {
 }
 
 #[test]
-#[should_panic]
 fn missing_comma_and_age() {
     assert_eq!("John".parse::<Person>(), Err(ParsePersonError::BadLen));
 }
 
 #[test]
-#[should_panic]
 fn missing_name() {
     assert_eq!(",1".parse::<Person>(), Err(ParsePersonError::NoName));
 }
 
-// #[test]
-// #[should_panic]
-// fn missing_name_and_age() {
-//     assert!(matches!(
-//             ",".parse::<Person>(),
-//             Err(ParsePersonError::NoName | ParsePersonError::ParseInt(_))
-//         ));
-// }
-//
-// #[test]
-// #[should_panic]
-// fn missing_name_and_invalid_age() {
-//     assert!(matches!(
-//             ",one".parse::<Person>(),
-//             Err(ParsePersonError::NoName | ParsePersonError::ParseInt(_))
-//         ));
-// }
-//
-// #[test]
-// #[should_panic]
-// fn trailing_comma() {
-//     assert_eq!("John,32,".parse::<Person>(), Err(ParsePersonError::BadLen));
-// }
-//
-// #[test]
-// #[should_panic]
-// fn trailing_comma_and_some_string() {
-//     assert_eq!(
-//         "John,32,man".parse::<Person>(),
-//         Err(ParsePersonError::BadLen)
-//     );
-// }
+#[test]
+fn missing_name_and_age() {
+    assert!(matches!(
+            ",".parse::<Person>(),
+            Err(ParsePersonError::NoName | ParsePersonError::ParseInt(_))
+        ));
+}
+
+#[test]
+fn missing_name_and_invalid_age() {
+    assert!(matches!(
+            ",one".parse::<Person>(),
+            Err(ParsePersonError::NoName | ParsePersonError::ParseInt(_))
+        ));
+}
+
+#[test]
+fn trailing_comma() {
+    assert_eq!("John,32,".parse::<Person>(), Err(ParsePersonError::BadLen));
+}
+
+#[test]
+fn trailing_comma_and_some_string() {
+    assert_eq!(
+        "John,32,man".parse::<Person>(),
+        Err(ParsePersonError::BadLen)
+    );
+}

@@ -20,6 +20,12 @@ pub enum ParsePersonError {
     ParseInt(ParseIntError),
 }
 
+impl From<ParseIntError> for ParsePersonError {
+    fn from(err: ParseIntError) -> Self {
+        ParsePersonError::ParseInt(err)
+    }
+}
+
 impl FromStr for Person {
     type Err = ParsePersonError;
     fn from_str(s: &str) -> Result<Person, Self::Err> {
@@ -38,11 +44,8 @@ impl FromStr for Person {
             // return Err(String::from("name field must not be empty"));
             return Err(ParsePersonError::NoName);
         };
-        return if let Ok(age) = parts[1].parse::<usize>() {
-            Ok(Person { name, age })
-        } else {
-            // Err(ParsePersonError::ParseInt());
-            return Err(ParsePersonError :: ParseInt(_))
-        };
+        let age = parts[1].parse::<usize>()?;
+
+        Ok(Person { name, age })
     }
 }
