@@ -4,7 +4,8 @@ Remember back in the previous exercise, we had multiple mapping functions so tha
 could translate lower-level errors into our custom error type using
 `map_err()`? What if we could use the `?` operator directly instead?
 
-Make this code compile! 
+Make this code compile! Complete the code so that an appropriate error is returned in each of the cases in `main()`.
+Pay attention to comments and check out hints if you're stuck.
 
 <div class="hint">
 
