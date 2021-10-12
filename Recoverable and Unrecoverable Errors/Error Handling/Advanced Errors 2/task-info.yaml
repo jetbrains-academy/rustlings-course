@@ -12,9 +12,6 @@ files:
     placeholder_text: |-
       // TODO: Implement a missing trait so that `main()` will compile. It
       // is not necessary to implement any methods inside the missing trait.
-  - offset: 1354
-    length: 173
-    placeholder_text: /* TODO */
   - offset: 2122
     length: 19
     placeholder_text: /* Add a condition */
@@ -28,6 +25,9 @@ files:
   - offset: 2392
     length: 5
     placeholder_text: Badlen
+  - offset: 1354
+    length: 173
+    placeholder_text: /* Complete the implementation */
 - name: src/main.rs
   visible: true
 - name: Cargo.toml
