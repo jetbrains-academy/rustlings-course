@@ -1,4 +1,3 @@
-#![feature(or_patterns)]
 use fromstr::*;
 
 #[test]
@@ -43,7 +42,7 @@ fn missing_name() {
 fn missing_name_and_age() {
     assert!(matches!(
             ",".parse::<Person>(),
-            Err(ParsePersonError::NoName | ParsePersonError::ParseInt(_))
+            Err(ParsePersonError::NoName)
         ));
 }
 
@@ -51,7 +50,7 @@ fn missing_name_and_age() {
 fn missing_name_and_invalid_age() {
     assert!(matches!(
             ",one".parse::<Person>(),
-            Err(ParsePersonError::NoName | ParsePersonError::ParseInt(_))
+            Err(ParsePersonError::NoName)
         ));
 }
 
