@@ -16,8 +16,16 @@ with something like `"4".parse::<usize>()`.
    If everything goes well, return a `Result` of a `Person` object.
    
 <div class="hint">The implementation of <code>FromStr</code> should return an <code>Ok</code> with a <code>Person</code> object,
-or an <code>Err</code> with a string if the string is not valid.
-This is almost like the try_from_into exercise.</div>
+or an <code>Err</code> with a string if the string is not valid. </div>
 
-**Note**: in the original rustlings course this exercise uses `Box<dyn error::Error>` and tests for an `Err` with an error
-instead of a string, but here we will discuss errors in the next chapter.
+<div class="hint">This is almost like the from_into exercise, but returning errors instead
+of falling back to a default value.</div>
+
+<div class="hint">Hint: Look at the test cases to see which error variants to return.</div>
+
+<div class="hint">Another hint: You can use the `map_err` method of <code>Result</code> with a function
+or a closure to wrap the error from <code>parse::&lt;usize&gt;</code>.</div>
+
+<div class="hint">Yet another hint: If you would like to propagate errors by using the <code>?</code>
+operator in your solution, you might want to check out <a href="https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/reenter_question_mark.html">this</a> article.</div>
+

@@ -11,7 +11,7 @@ Recall from [“Handling Potential Failure with the `Result` Type”](https://do
     }
 ```
 
-The `T` and `E` are generic type parameters: we’ll discuss generics in more detail in Chapter 10\. What you need to know right now is that `T` represents the type of the value that will be returned in a success case within the `Ok` variant, and `E` represents the type of the error that will be returned in a failure case within the `Err` variant. Because `Result` has these generic type parameters, we can use the `Result` type and the functions that the standard library has defined on it in many different situations where the successful value and error value we want to return may differ.
+The `T` and `E` are generic type parameters: we’ll discuss generics in more detail in the lesson "Generic Types, Traits and Lifetime". What you need to know right now is that `T` represents the type of the value that will be returned in a success case within the `Ok` variant, and `E` represents the type of the error that will be returned in a failure case within the `Err` variant. Because `Result` has these generic type parameters, we can use the `Result` type and the functions that the standard library has defined on it in many different situations where the successful value and error value we want to return may differ.
 
 Let’s call a function that returns a `Result` value because the function could fail. In the code snippet below we try to open a file.
 
@@ -52,7 +52,7 @@ This return type means the call to `File::open` might succeed and return a file 
 
 In the case where `File::open` succeeds, the value in the variable `f` will be an instance of `Ok` that contains a file handle. In the case where it fails, the value in `f` will be an instance of `Err` that contains more information about the kind of error that happened.
 
-We need to add to the code in the code snippet above to take different actions depending on the value `File::open` returns. The following code snippet shows one way to handle the `Result` using a basic tool, the `match` expression that we discussed in Chapter 6.
+We need to add to the code in the code snippet above to take different actions depending on the value `File::open` returns. The following code snippet shows one way to handle the `Result` using a basic tool, the `match` expression that we discussed in ["The Match Operator"](course://Enums/Enums and Pattern Matching/The Match Operator).
 
 ```rust
 use std::fs::File;
@@ -113,7 +113,7 @@ The type of the value that `File::open` returns inside the `Err` variant is `io:
 
 The condition we want to check in the inner match is whether the value returned by `error.kind()` is the `NotFound` variant of the `ErrorKind` enum. If it is, we try to create the file with `File::create`. However, because `File::create` could also fail, we need a second arm in the inner `match` expression. When the file can’t be created, a different error message is printed. The second arm of the outer `match` stays the same, so the program panics on any error besides the missing file error.
 
-That’s a lot of `match`! The `match` expression is very useful but also very much a primitive. In Chapter 13, you’ll learn about closures; the `Result<T, E>` type has many methods that accept a closure and are implemented using `match` expressions. Using those methods will make your code more concise. A more seasoned Rustacean might write this code instead of the previous one:
+That’s a lot of `match`! The `match` expression is very useful but also very much a primitive. In ["Iterators and Closures"](course://Iterators and Closures), you’ll learn about closures; the `Result<T, E>` type has many methods that accept a closure and are implemented using `match` expressions. Using those methods will make your code more concise. A more seasoned Rustacean might write this code instead of the previous one:
 
 ```rust
 use std::fs::File;
@@ -132,7 +132,7 @@ fn main() {
 }
 ```
 
-Although this code has the same behavior as the previous one, it doesn’t contain any `match` expressions and is cleaner to read. Come back to this example after you’ve read Chapter 13, and look up the `unwrap_or_else` method in the standard library documentation. Many more of these methods can clean up huge nested `match` expressions when you’re dealing with errors.
+Although this code has the same behavior as the previous one, it doesn’t contain any `match` expressions and is cleaner to read. Come back to this example after you’ve read ["Iterators and Closures"](course://Iterators and Closures), and look up the `unwrap_or_else` method in the standard library documentation. Many more of these methods can clean up huge nested `match` expressions when you’re dealing with errors.
 
 ### Shortcuts for Panic on Error: `unwrap` and `expect`
 
@@ -319,7 +319,7 @@ The `main` function is special, and there are restrictions on what its return ty
     }
 ```
 
-The `Box<dyn Error>` type is called a _trait object_, which we’ll talk about in the [“Using Trait Objects that Allow for Values of Different Types”](https://doc.rust-lang.org/stable/book/ch17-02-trait-objects.html#using-trait-objects-that-allow-for-values-of-different-types) section in Chapter 17\. For now, you can read `Box<dyn Error>` to mean “any kind of error.” Using `?` in a `main` function with this return type is allowed.
+The `Box<dyn Error>` type is called a _trait object_, which is discussed in the [“Using Trait Objects that Allow for Values of Different Types”](https://doc.rust-lang.org/stable/book/ch17-02-trait-objects.html#using-trait-objects-that-allow-for-values-of-different-types) section in Chapter 17 of the book\. For now, you can read `Box<dyn Error>` to mean “any kind of error.” Using `?` in a `main` function with this return type is allowed.
 
 Now that we’ve discussed the details of calling `panic!` or returning `Result`, let’s return to the topic of how to decide which is appropriate to use in which cases.
 

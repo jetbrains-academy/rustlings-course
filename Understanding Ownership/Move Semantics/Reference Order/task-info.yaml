@@ -4,11 +4,11 @@ files:
   visible: true
   placeholders:
   - offset: 16
-    length: 88
+    length: 87
     placeholder_text: |-
       let mut x = 100;
           let y = &mut x;
-          let z = &mut *y;
+          let z = &mut x;
           *y += 100;
           *z += 1000;
 - name: Cargo.toml

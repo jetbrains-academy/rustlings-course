@@ -3,18 +3,18 @@ files:
 - name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 906
+  - offset: 538
+    length: 386
+    placeholder_text: // Write your code here
+  - offset: 1096
     length: 18
     placeholder_text: // Write your code here
-  - offset: 1086
-    length: 168
-    placeholder_text: // Write your code here
-  - offset: 313
-    length: 429
+  - offset: 1284
+    length: 129
     placeholder_text: // Write your code here
 - name: src/main.rs
   visible: true
 - name: Cargo.toml
   visible: true
 - name: tests/tests.rs
-  visible: false
+  visible: true

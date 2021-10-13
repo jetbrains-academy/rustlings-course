@@ -9,6 +9,6 @@ fn verify_test() {
 
     //Assert
     assert_eq!(price1, 55, "There was an incorrect price for an order containing more then 40 apples.");
-    assert_eq!(price2, 80, "There was an incorrect price for an order containing 40 apples.");
+    assert_eq!(price2, 40, "There was an incorrect price for an order containing 40 apples.");
     assert_eq!(price3, 40, "There was an incorrect price for an order containing less then 40 apples.");
 }
