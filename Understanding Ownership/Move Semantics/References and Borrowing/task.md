@@ -51,7 +51,7 @@ The scope in which the variable `s` is valid is the same as any function paramet
 
 We call having references as function parameters _borrowing_. As in real life, if a person owns something, you can borrow it from them. When you’re done, you have to give it back.
 
-    So what happens if we try to modify something we’re borrowing? Try the code in the code snippet below. Spoiler alert: it doesn’t work!
+So what happens if we try to modify something we’re borrowing? Try the code in the code snippet below. Spoiler alert: it doesn’t work!
 
 ```rust
     fn main() {
