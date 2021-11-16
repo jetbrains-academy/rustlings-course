@@ -46,13 +46,13 @@ We’ve walked through an example of a Rust program already in Chapter 2. Now th
 As a first example of ownership, we’ll look at the _scope_ of some variables. A scope is the range within a program for which an item is valid. Let’s say we have a variable that looks like this:
 
 ```rust
-    let s = "hello"
+let s = "hello"
 ```
 
 The variable `s` refers to a string literal, where the value of the string is hardcoded into the text of our program. The variable is valid from the point at which it’s declared until the end of the current _scope_. The code snippet below has comments annotating where the variable `s` is valid.
 
 ```rust
-    {                      // s is not valid here, it’s not yet declared
+{                      // s is not valid here, it’s not yet declared
 let s = "hello";   // s is valid from this point forward
 
 // do stuff with s
@@ -77,7 +77,7 @@ We’ll use `String` as the example here and concentrate on the parts of `String
 We’ve already seen string literals, where a string value is hardcoded into our program. String literals are convenient, but they aren’t suitable for every situation in which we may want to use text. One reason is that they’re immutable. Another is that not every string value can be known when we write our code: for example, what if we want to take user input and store it? For these situations, Rust has a second string type, `String`. This type is allocated on the heap and as such is able to store an amount of text that is unknown to us at compile time. You can create a `String` from a string literal using the `from` function, like so:
 
 ```rust
-    let s = String::from("hello");
+let s = String::from("hello");
 ```
 
 The double colon (`::`) is an operator that allows us to namespace this particular `from` function under the `String` type rather than using some sort of name like `string_from`. We’ll discuss this syntax more in the [“Method Syntax”](https://doc.rust-lang.org/stable/book/ch05-03-method-syntax.html#method-syntax) section of Chapter 5 and when we talk about namespacing with modules in [“Paths for Referring to an Item in the Module Tree”](https://doc.rust-lang.org/stable/book/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html) in Chapter 7.
@@ -85,7 +85,7 @@ The double colon (`::`) is an operator that allows us to namespace this particul
 This kind of string _can_ be mutated:
 
 ```rust
-    let mut s = String::from("hello");
+let mut s = String::from("hello");
 
 s.push_str(", world!"); // push_str() appends a literal to a String
 
@@ -110,7 +110,7 @@ However, the second part is different. In languages with a _garbage collector (G
 Rust takes a different path: the memory is automatically returned once the variable that owns it goes out of scope. Here’s a version of our scope example from the code snippet above using a `String` instead of a string literal:
 
 ```rust
-    {
+{
 let s = String::from("hello"); // s is valid from this point forward
 
 // do stuff with s
@@ -129,7 +129,7 @@ This pattern has a profound impact on the way Rust code is written. It may seem 
 Multiple variables can interact with the same data in different ways in Rust. Let’s look at an example using an integer in the code snippet below.
 
 ```rust
-    let x = 5;
+let x = 5;
 let y = x;
 ```
 
@@ -140,7 +140,7 @@ We can probably guess what this is doing: “bind the value `5` to `x`; then mak
 Now let’s look at the `String` version:
 
 ```rust
-    let s1 = String::from("hello");
+let s1 = String::from("hello");
 let s2 = s1;
 ```
 
@@ -171,7 +171,7 @@ Earlier, we said that when a variable goes out of scope, Rust automatically call
 To ensure memory safety, there’s one more detail to what happens in this situation in Rust. Instead of trying to copy the allocated memory, Rust considers `s1` to no longer be valid and, therefore, Rust doesn’t need to free anything when `s1` goes out of scope. Check out what happens when you try to use `s1` after `s2` is created; it won’t work:
 
 ```rust
-    let s1 = String::from("hello");
+let s1 = String::from("hello");
 let s2 = s1;
 
 println!("{}, world!", s1);
@@ -180,7 +180,7 @@ println!("{}, world!", s1);
 You’ll get an error like this because Rust prevents you from using the invalidated reference:
 
 ```text
-    error[E0382]: borrow of moved value: `s1`
+error[E0382]: borrow of moved value: `s1`
  --> src/main.rs:5:28
   |
 2 |     let s1 = String::from("hello");
@@ -209,7 +209,7 @@ If we _do_ want to deeply copy the heap data of the `String`, not just the stack
 Here’s an example of the `clone` method in action:
 
 ```rust
-    let s1 = String::from("hello");
+let s1 = String::from("hello");
 let s2 = s1.clone();
 
 println!("s1 = {}, s2 = {}", s1, s2);
@@ -224,7 +224,7 @@ When you see a call to `clone`, you know that some arbitrary code is being execu
 There’s another wrinkle we haven’t talked about yet. This code using integers, part of which was shown in the "Assigning the integer value of variable x to y" snippet, works and is valid:
 
 ```rust
-    let x = 5;
+let x = 5;
 let y = x;
 
 println!("x = {}, y = {}", x, y);
@@ -249,7 +249,7 @@ So what types implement the `Copy` trait? You can check the documentation for th
 The semantics for passing a value to a function are similar to those for assigning a value to a variable. Passing a variable to a function will move or copy, just as assignment does. The example below has an example with some annotations showing where variables go into and out of scope.
 
 ```rust
-    fn main() {
+fn main() {
     let s = String::from("hello");  // s comes into scope
 
     takes_ownership(s);             // s's value moves into the function...
@@ -283,7 +283,7 @@ If we tried to use `s` after the call to `takes_ownership`, Rust would throw a c
 Returning values can also transfer ownership. The code snippet below is an example with similar annotations to those in the previous snippet.
 
 ```rust
-    fn main() {
+fn main() {
     let s1 = gives_ownership();         // gives_ownership moves its return
     // value into s1
 
@@ -323,7 +323,7 @@ Taking ownership and then returning ownership with every function is a bit tedio
 It’s possible to return multiple values using a tuple, as shown in the snippet below.
 
 ```rust
-    fn main() {
+fn main() {
     let s1 = String::from("hello");
 
     let (s2, len) = calculate_length(s1);

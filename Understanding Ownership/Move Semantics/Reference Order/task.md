@@ -1,6 +1,6 @@
 ## Reference order
 
-Make the code compile only be reordering the lines in `main()`, but without
+Make the code compile only by reordering the lines in `main()`, but without
 adding, changing or removing any of them.
 
 <div class="hint">
