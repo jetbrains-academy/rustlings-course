@@ -7,7 +7,7 @@ THAN 11* fruits in the basket. Three types of fruits - Apple (4),
 Mango (2) and Lichi (5) are already given in the basket. You are
 not allowed to insert any more of these fruits!
 
-Make yur code pass the tests!
+Make your code pass the tests!
 
 <div class="hint"> Use the `entry()` and  `or_insert()` methods of `HashMap` to achieve this.</div></li>
 
