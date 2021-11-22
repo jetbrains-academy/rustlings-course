@@ -7,7 +7,7 @@ at least three different types of fruits (e.g apple, banana, mango)
 in the basket and the total count of all the fruits should be at
 least five.
 
-Make yur code compile and pass the tests!
+Make your code compile and pass the tests!
 
 <div class="hint"> Take a look at the return type of the function to figure out
   the type for the <code>basket</code>.</div></li>
