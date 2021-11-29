@@ -26,3 +26,4 @@ files:
     placeholder_text: vec /*and then you don't have to return anything here*/
 - name: tests/tests.rs
   visible: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+Move+Semantics+/+Borrow
