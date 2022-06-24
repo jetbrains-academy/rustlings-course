@@ -1,0 +1,27 @@
+type: edu
+files:
+- name: Cargo.toml
+  visible: true
+- name: tests/tests.rs
+  visible: false
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 288
+    length: 9
+    placeholder_text: /* Something goes here */
+  - offset: 514
+    length: 5
+    placeholder_text: /* Add return type */
+  - offset: 529
+    length: 53
+    placeholder_text: /* Something goes here */
+  - offset: 641
+    length: 3
+    placeholder_text: /* Add return type */
+  - offset: 655
+    length: 45
+    placeholder_text: /* Something goes here */
+- name: src/main.rs
+  visible: true
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Data+Types+/+Structs+/+Struct+Logic

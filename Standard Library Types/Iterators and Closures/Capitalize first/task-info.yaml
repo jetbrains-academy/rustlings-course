@@ -1,0 +1,21 @@
+type: edu
+files:
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 155
+    length: 53
+    placeholder_text: ???
+  - offset: 298
+    length: 81
+    placeholder_text: vec![]
+  - offset: 743
+    length: 76
+    placeholder_text: String::new()
+- name: src/main.rs
+  visible: true
+- name: Cargo.toml
+  visible: true
+- name: tests/tests.rs
+  visible: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Iterators+and+Closures+/+Capitalize+first
