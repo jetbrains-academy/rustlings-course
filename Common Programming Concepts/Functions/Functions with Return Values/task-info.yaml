@@ -1,0 +1,7 @@
+type: theory
+custom_name: 'Functions with Return Values '
+files:
+- name: src/main.rs
+  visible: true
+- name: Cargo.toml
+  visible: false
