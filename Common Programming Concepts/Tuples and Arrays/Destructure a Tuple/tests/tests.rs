@@ -1,7 +1,5 @@
 extern crate escargot;
 
-use std::fmt;
-
 #[test]
 fn prints_is_years_old() {
     //TODO: here are even two unwraps in a row, that's dangerous
@@ -18,9 +16,9 @@ fn prints_is_years_old() {
     let expected_is  = "is";
     let expected_years = "years";
     let expected_old = "old";
-    assert!(actual_as_string.contains(expected_is), "The \"{} is {} years old\" line is missing from the output ");
-    assert!(actual_as_string.contains(expected_old), "The \"{} is {} years old\" line is missing from the output ");
-    assert!(actual_as_string.contains(expected_years), "The \"{} is {} years old\" line is missing from the output ");
+    assert!(actual_as_string.contains(expected_is), "The \"{{}} is {{}} years old\" line is missing from the output ",);
+    assert!(actual_as_string.contains(expected_old), "The \"{{}} is {{}} years old\" line is missing from the output ");
+    assert!(actual_as_string.contains(expected_years), "The \"{{}} is {{}} years old\" line is missing from the output ");
 }
 
 
