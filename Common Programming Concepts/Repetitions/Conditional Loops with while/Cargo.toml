@@ -1,0 +1,4 @@
+[package]
+name = "conditional_loops_with_while"
+version = "0.1.0"
+edition = "2021"

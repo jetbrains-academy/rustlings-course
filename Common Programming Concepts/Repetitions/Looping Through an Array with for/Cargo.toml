@@ -1,0 +1,4 @@
+[package]
+name = "looping_through_a_collection_with_for"
+version = "0.1.0"
+edition = "2021"
