@@ -10,6 +10,7 @@ members = [
     "Common Programming Concepts/Repetitions/*/",
     "Common Programming Concepts/Tuples and Arrays/*/",
     "Understanding Ownership/Move Semantics/*/",
+    "Understanding Ownership/What is ownership/*/",
     "Data Types/Primitive Types/*/",
     "Data Types/Structs/*/",
     "Data Types/Enums and Pattern Matching/*/",

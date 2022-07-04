@@ -1,10 +1,7 @@
 content:
-- Intro
 - References and Borrowing
 - The Slice Type
 - Slices
-- Mutable
 - Borrow
 - Mutable Argument
-- Without Arguments
 - Reference Order

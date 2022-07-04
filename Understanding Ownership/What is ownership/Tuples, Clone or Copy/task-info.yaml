@@ -1,0 +1,12 @@
+type: output
+files:
+- name: tests/output.txt
+  visible: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 240
+    length: 8
+    placeholder_text: /* TODO */
+- name: Cargo.toml
+  visible: false
