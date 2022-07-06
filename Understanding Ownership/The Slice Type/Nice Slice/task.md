@@ -1,6 +1,6 @@
-## Slices
+## Nice Slice
 
-Get a slice out of Array so that the `if` statement returns `true`.
+Get a slice out of an array so that the `if` statement returns `true`.
 
 <div class="hint">
   Take a look at the <a href ="https://doc.rust-lang.org/book/ch04-03-slices.html">Other Slices</a> section of the book  
