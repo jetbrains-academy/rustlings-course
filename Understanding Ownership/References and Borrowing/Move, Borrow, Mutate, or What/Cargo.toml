@@ -1,0 +1,7 @@
+[package]
+name = "move_mutate_or_what"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+escargot = "0.5"

@@ -1,0 +1,15 @@
+type: edu
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 235
+    length: 11
+    placeholder_text: months
+  - offset: 422
+    length: 23
+    placeholder_text: 'mut months: [&str; 12]'
+- name: Cargo.toml
+  visible: false
+- name: tests/tests.rs
+  visible: false

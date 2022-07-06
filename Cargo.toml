@@ -11,6 +11,7 @@ members = [
     "Common Programming Concepts/Tuples and Arrays/*/",
     "Understanding Ownership/Move Semantics/*/",
     "Understanding Ownership/What is ownership/*/",
+    "Understanding Ownership/References and Borrowing/*/",
     "Data Types/Primitive Types/*/",
     "Data Types/Structs/*/",
     "Data Types/Enums and Pattern Matching/*/",
