@@ -10,4 +10,4 @@ files:
     length: 4
     placeholder_text: "{:?}"
 - name: Cargo.toml
-  visible: true
+  visible: false
