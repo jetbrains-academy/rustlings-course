@@ -1,0 +1,21 @@
+type: output
+files:
+- name: tests/output.txt
+  visible: false
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 32
+    length: 30
+    placeholder_text: // Something goes here
+  - offset: 90
+    length: 14
+    placeholder_text: /* Something goes here */
+  - offset: 171
+    length: 101
+    placeholder_text: // Instantiate a classic c struct!
+  - offset: 350
+    length: 65
+    placeholder_text: // Instantiate a tuple struct!
+- name: Cargo.toml
+  visible: false

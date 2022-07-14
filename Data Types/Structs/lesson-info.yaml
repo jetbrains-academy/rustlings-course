@@ -1,8 +1,13 @@
 content:
 - Intro
-- Defining Structs
-- Example Structs
-- Method Syntax
-- Initiate Struct
+- Defining and Initiating Structs
+- Using the Field Init Shorthand
+- Creating Instances From Other Instances
+- Tuple Structs
+- Ownership of Struct Data
+- Play with Color Structs
+- Dealing with Rectangles
+- Refactoring with Tuples
+- Refactoring with Structs, Adding More Meaning
+- Adding Useful Functionality with Derived Traits
 - Struct Update
-- Struct Logic

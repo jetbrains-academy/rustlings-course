@@ -13,6 +13,7 @@ members = [
     "Understanding Ownership/References and Borrowing/*/",
     "Understanding Ownership/The Slice Type/*/",
     "Data Types/Structs/*/",
+    "Data Types/Structs with Methods/*/",
     "Data Types/Enums and Pattern Matching/*/",
     "Modules/Modules/*/",
     "Vectors, Hashmaps, and Strings/Vectors and Hashmaps/*/",
