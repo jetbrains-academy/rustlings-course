@@ -1,4 +1,5 @@
 content:
 - Structs
 - Structs with Methods
-- Enums and Pattern Matching
+- Enums
+- Pattern Matching
