@@ -1,0 +1,4 @@
+[package]
+name = "restriction_of_mutable_references"
+version = "0.1.0"
+edition = "2021"

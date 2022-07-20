@@ -1,0 +1,4 @@
+[package]
+name = "who_owns_the_ring_of_power"
+version = "0.1.0"
+edition = "2021"
