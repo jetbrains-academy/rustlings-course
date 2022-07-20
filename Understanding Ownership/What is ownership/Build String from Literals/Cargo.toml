@@ -1,0 +1,4 @@
+[package]
+name = "build_string_from_literals"
+version = "0.1.0"
+edition = "2021"
