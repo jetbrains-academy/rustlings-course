@@ -1,4 +1,4 @@
-use declaring_a_vector::array_and_vec;
+use declaring_a_vector::{create_array, create_vector};
 
 #[test]
 fn if_compiles() {
@@ -8,6 +8,7 @@ fn if_compiles() {
 
 #[test]
 fn test_array_and_vec_similarity() {
-    let (a, v) = array_and_vec();
+    let a = create_array();
+    let v = create_vector();
     assert_eq!(a, v[..]);
 }

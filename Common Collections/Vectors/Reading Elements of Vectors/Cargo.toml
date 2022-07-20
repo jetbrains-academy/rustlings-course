@@ -1,4 +1,4 @@
 [package]
-name = "loop_over_a_vector"
+name = "reading_elements_of_vectors"
 version = "0.1.0"
 edition = "2021"

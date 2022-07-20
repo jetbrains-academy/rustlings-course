@@ -1,0 +1,4 @@
+[package]
+name = "dropping_a_vector_drops_its_elements"
+version = "0.1.0"
+edition = "2021"
