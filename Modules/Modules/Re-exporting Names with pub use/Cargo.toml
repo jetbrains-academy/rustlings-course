@@ -1,0 +1,4 @@
+[package]
+name = "re_exporting_names_with_pub_use"
+version = "0.1.0"
+edition = "2021"

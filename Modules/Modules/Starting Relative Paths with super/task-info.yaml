@@ -1,0 +1,10 @@
+type: theory
+files:
+- name: Cargo.toml
+  visible: false
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 226
+    length: 7
+    placeholder_text: 'super::'
