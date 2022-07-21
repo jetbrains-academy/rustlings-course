@@ -3,7 +3,7 @@ files:
 - name: tests/output.txt
   visible: false
 - name: src/main.rs
-  visible: false
+  visible: true
 - name: Cargo.toml
   visible: false
 - name: src/lib.rs
