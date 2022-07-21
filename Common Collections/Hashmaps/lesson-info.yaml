@@ -1,4 +1,8 @@
 content:
-- HashMaps
-- Declaring a HashMap
-- Modifying a HashMap
+- Intro
+- Creating a New Hash Map
+- Hash Maps and Ownership
+- Accessing Values in a Hash Map
+- Updating a Hash Map
+- Fruits Delivery
+- More Fruits

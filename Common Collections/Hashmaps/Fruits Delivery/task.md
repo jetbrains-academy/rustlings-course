@@ -1,4 +1,4 @@
-## Declaring a HashMap
+## Fruits Delivery
 
 A basket of fruits in the form of a hash map needs to be defined.
 The key represents the name of the fruit and the value represents
