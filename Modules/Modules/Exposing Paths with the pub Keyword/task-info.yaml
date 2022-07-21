@@ -11,4 +11,6 @@ files:
   - offset: 51
     length: 3
     placeholder_text: pub
+- name: runConfigurations/Build.run.xml
+  visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Modules+/+Modules+/+Exposing+Paths+with+the+pub+Keyword
