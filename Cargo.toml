@@ -19,7 +19,7 @@ members = [
     "Vectors, Hashmaps, and Strings/Strings/*/",
     "Vectors, Hashmaps, and Strings/String Test/*/",
     "Error Handling/Error Handling/*/",
-    "Error Handling/Errors Everywhere/*/",
+    "Error Handling/Errors Primer/*/",
     "Generic Types, Traits, and Lifetime/Generic Types, Traits, and Lifetime/*/",
     "Writing Automated Tests/Tests/*/",
     "Writing Automated Tests/Tests Test/*/",

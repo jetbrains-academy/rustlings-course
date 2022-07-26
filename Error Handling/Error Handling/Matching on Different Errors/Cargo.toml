@@ -1,4 +1,4 @@
 [package]
-name = "matching_result_2"
+name = "matching_on_different_errors"
 version = "0.1.0"
 edition = "2021"
