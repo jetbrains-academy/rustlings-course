@@ -1,0 +1,4 @@
+[package]
+name = "defining_and_initiating_structs"
+version = "0.1.0"
+edition = "2021"

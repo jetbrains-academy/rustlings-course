@@ -1,0 +1,4 @@
+[package]
+name = "enum_variant_types"
+version = "0.1.0"
+edition = "2021"
