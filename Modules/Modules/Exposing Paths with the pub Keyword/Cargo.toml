@@ -1,0 +1,4 @@
+[package]
+name = "exposing_paths_with_the_pub_keyword"
+version = "0.1.0"
+edition = "2021"

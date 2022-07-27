@@ -1,0 +1,4 @@
+[package]
+name = "providing_new_names_with_the_as_keyword"
+version = "0.1.0"
+edition = "2021"
