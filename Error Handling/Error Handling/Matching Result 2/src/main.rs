@@ -6,7 +6,7 @@ fn main() {
 
     let cost = match total_cost(pretend_user_input) {
         Ok(cost) => cost,
-        Err(ParseIntError) => panic!(ParseIntError)
+        Err(ParseIntError) => panic!("{}", ParseIntError)
     };
 
     if cost > tokens {

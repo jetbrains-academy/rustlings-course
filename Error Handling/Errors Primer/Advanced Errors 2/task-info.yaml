@@ -1,0 +1,37 @@
+type: edu
+custom_name: Error Trait
+files:
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 793
+    length: 19
+    placeholder_text: '// TODO: Complete this function'
+  - offset: 822
+    length: 35
+    placeholder_text: |-
+      // TODO: Implement a missing trait so that `main()` will compile. It
+      // is not necessary to implement any methods inside the missing trait.
+  - offset: 2122
+    length: 19
+    placeholder_text: /* Add a condition */
+  - offset: 2189
+    length: 79
+    placeholder_text: /* Return an error if the city name is empty */
+  - offset: 2281
+    length: 63
+    placeholder_text: /* Return an error if the string is empty or has the wrong number
+      of fields */
+  - offset: 2392
+    length: 5
+    placeholder_text: Badlen
+  - offset: 1354
+    length: 173
+    placeholder_text: /* Complete the implementation */
+- name: src/main.rs
+  visible: true
+- name: Cargo.toml
+  visible: false
+- name: tests/tests.rs
+  visible: true
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Error+Handling+/+Errors+Primer+/+Advanced+Errors+2

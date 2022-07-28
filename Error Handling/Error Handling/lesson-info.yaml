@@ -1,12 +1,14 @@
 content:
 - Intro
+- Unrecoverable Errors with panic
+- Using a panic Backtrace
 - Recoverable Errors with Result
-- To Panic or Not to Panic
+- Matching on Different Errors
+- Shortcuts for Panic on Error - unwrap and expect
+- Propagating Errors
+- A Shortcut for Propagating Errors
+- Propagating Errors Limitations
 - Returning Result
 - Matching Result
 - Matching Result 2
-- Result
-- Multiple Errors
-- Custom Errors
-- Advanced Errors
-- Advanced Errors 2
+- Summary

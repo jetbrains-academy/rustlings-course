@@ -1,0 +1,4 @@
+[package]
+name = "shortcuts_for_panic_on_error___unwrap_and_expect"
+version = "0.1.0"
+edition = "2021"

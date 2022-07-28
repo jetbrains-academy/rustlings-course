@@ -5,14 +5,14 @@ files:
 - name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 70
-    length: 28
+  - offset: 46
+    length: 22
     placeholder_text: Option<String>
-  - offset: 133
+  - offset: 103
     length: 2
     placeholder_text: Some
-  - offset: 274
-    length: 45
+  - offset: 244
+    length: 57
     placeholder_text: None
 - name: tests/tests.rs
   visible: false

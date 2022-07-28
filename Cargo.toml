@@ -21,6 +21,7 @@ members = [
     "Common Collections/Hashmaps/*/",
     "Common Collections/Strings/*/",
     "Error Handling/Error Handling/*/",
+    "Error Handling/Errors Primer/*/",
     "Generic Types, Traits, and Lifetime/Generic Types, Traits, and Lifetime/*/",
     "Writing Automated Tests/Tests/*/",
     "Writing Automated Tests/Tests Test/*/",
