@@ -18,7 +18,7 @@ content:
 - Understanding Ownership
 - Structs, Methods, Enums, and Pattern Matching
 - Modules
-- Vectors, Hashmaps, and Strings
+- Common Collections
 - Error Handling
 - Generic Types, Traits, and Lifetime
 - Writing Automated Tests
