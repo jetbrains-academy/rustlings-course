@@ -1,4 +1,4 @@
 [package]
-name = "summary_modules"
+name = "summary"
 version = "0.1.0"
 edition = "2021"
