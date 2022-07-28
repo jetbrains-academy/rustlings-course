@@ -1,0 +1,6 @@
+Classic Struct:
+Name: green
+Hex: #00FF00
+Tuple Struct:
+Name: green
+Hex: #00FF00

@@ -1,0 +1,4 @@
+[package]
+name = "refactoring_with_structs__adding_more_meaning"
+version = "0.1.0"
+edition = "2021"

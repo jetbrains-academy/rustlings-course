@@ -15,7 +15,7 @@ content:
 - Introduction
 - Common Programming Concepts
 - Understanding Ownership
-- Data Types
+- Structs, Methods, Enums, and Pattern Matching
 - Modules
 - Common Collections
 - Error Handling

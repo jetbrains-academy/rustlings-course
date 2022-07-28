@@ -1,0 +1,4 @@
+hello world
+Color: (255, 0, 255)
+Position: Point { x: 10, y: 15 }
+Quit
