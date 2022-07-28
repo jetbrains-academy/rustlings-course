@@ -1,0 +1,12 @@
+content:
+- Intro
+- Creating a New Vector
+- Updating a Vector
+- Create a Vector on Your Own
+- Dropping a Vector Drops Its Elements
+- Reading Elements of Vectors
+- Reference vs push
+- Iterating over the Values in a Vector
+- Loop Over a Vector
+- Using an Enum to Store Multiple Types
+- Count Typed Cells

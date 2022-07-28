@@ -1,0 +1,4 @@
+[package]
+name = "using_the_field_init_shorthand"
+version = "0.1.0"
+edition = "2021"

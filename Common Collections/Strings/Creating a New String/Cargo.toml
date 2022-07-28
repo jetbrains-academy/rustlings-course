@@ -1,0 +1,4 @@
+[package]
+name = "creating_a_new_string"
+version = "0.1.0"
+edition = "2021"

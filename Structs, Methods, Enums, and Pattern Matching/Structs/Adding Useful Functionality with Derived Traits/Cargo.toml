@@ -1,0 +1,4 @@
+[package]
+name = "adding_useful_functionality_with_derived_traits"
+version = "0.1.0"
+edition = "2021"

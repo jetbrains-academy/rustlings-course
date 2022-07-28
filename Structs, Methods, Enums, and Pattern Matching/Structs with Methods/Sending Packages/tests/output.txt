@@ -1,0 +1,5 @@
+The package from Spain to Germany is indeed international!
+The package from Spain to Spain is not international indeed!
+Your price is:
+4500
+The fees are correct!
