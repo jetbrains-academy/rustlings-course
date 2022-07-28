@@ -3,8 +3,7 @@ fn main() {
 
     let first = &v[0];
 
-    // ERROR!!! 
-    v.push(6);
+    v.push(6); // ERROR!!!
 
     println!("The first element is: {}", first);
 
