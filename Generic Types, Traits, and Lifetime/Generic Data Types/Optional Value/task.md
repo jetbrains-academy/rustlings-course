@@ -2,7 +2,7 @@
 
 Make the code compile! Check out the hints if you are stuck.
 
-<div class="hint">check out these links:
+<div class="hint">Check out these links:
 <a href="https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html">https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html</a>
 <a href="https://doc.rust-lang.org/rust-by-example/flow_control/while_let.html">https://doc.rust-lang.org/rust-by-example/flow_control/while_let.html</a></div>
 
