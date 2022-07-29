@@ -23,7 +23,7 @@ After running this command the whole fragment will be replaced by the following 
 let largest = largest(number_list);
 ```
 
-You will also see the extracted function:
+You will also see the extracted function below the `main` function:
 
 ```rust
 fn largest(list: Vec<i32>) -> i32 {
@@ -45,7 +45,7 @@ Note that code is still complied and runs as before with the same results.
 To avoid name clashes let's rename a couple of variables:
 
 - the first binding of the `largest` variable (line 4) should be renamed to `result`;
-- the second binding of the `largest` variable (second frame in the editor) should 
+- the second binding of the `largest` variable should 
 be also renamed to `result`.
 
 To do that, you can 
@@ -54,7 +54,7 @@ pointing at the corresponding variable. See also the [task introducing this refa
 
 ### Step 3: Replacing Duplicated Code Fragment
 
-You can now select the whole third frame in the editor and replace it with yet another call
+You can now select the whole fourth frame in the editor and replace it with yet another call
 to the `largest` function, namely `largest(number_list);`.
 
 At this time, you may also want to remove the `mut` modifier for the second `result` binding. 
