@@ -19,7 +19,7 @@ files:
     length: 1
     placeholder_text: u32
 - name: Cargo.toml
-  visible: true
+  visible: false
 - name: tests/tests.rs
   visible: false
 - name: src/main.rs
