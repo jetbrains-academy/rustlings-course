@@ -1,2 +1,4 @@
 content:
-- Generic Types, Traits, and Lifetime
+- Generic Data Types
+- Traits
+- Lifetimes
