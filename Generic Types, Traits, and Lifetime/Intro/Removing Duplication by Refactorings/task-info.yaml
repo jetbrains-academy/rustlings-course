@@ -28,3 +28,5 @@ files:
           }
 - name: Cargo.toml
   visible: true
+- name: images/ExtractFunction.png
+  visible: false
