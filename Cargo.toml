@@ -22,6 +22,7 @@ members = [
     "Common Collections/Strings/*/",
     "Error Handling/Error Handling/*/",
     "Error Handling/Errors Primer/*/",
+    "Generic Types, Traits, and Lifetime/Intro/*/",
     "Generic Types, Traits, and Lifetime/Generic Data Types/*/",
     "Generic Types, Traits, and Lifetime/Traits/*/",
     "Generic Types, Traits, and Lifetime/Lifetimes/*/",
