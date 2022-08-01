@@ -1,7 +1,7 @@
 content:
-- Intro
-- How to Write Tests
-- Adding Custom Failure Messages
+- ../How to Write Tests/Intro
+- ../How to Write Tests/How to Write Tests
+- ../How to Write Tests/Adding Custom Failure Messages
 - Running Tests
 - Test Organization
 - Submodules in Integration Tests

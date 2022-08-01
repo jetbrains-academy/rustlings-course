@@ -25,6 +25,7 @@ members = [
     "Generic Types, Traits, and Lifetime/Generic Types, Traits, and Lifetime/*/",
     "Writing Automated Tests/Tests/*/",
     "Writing Automated Tests/Tests Test/*/",
+    "Writing Automated Tests/How to Write Tests/*/",
     "Standard Library Types/Iterators and Closures/*/",
     "Standard Library Types/Smart Pointers/*/",
     "Standard Library Types/Type Conversions/*/",
