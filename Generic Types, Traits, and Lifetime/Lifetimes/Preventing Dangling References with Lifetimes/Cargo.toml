@@ -1,0 +1,4 @@
+[package]
+name = "preventing_dangling_references_with_lifetimes_"
+version = "0.1.0"
+edition = "2021"

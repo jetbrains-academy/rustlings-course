@@ -1,0 +1,4 @@
+[package]
+name = "performance_of_code_using_generics"
+version = "0.1.0"
+edition = "2021"

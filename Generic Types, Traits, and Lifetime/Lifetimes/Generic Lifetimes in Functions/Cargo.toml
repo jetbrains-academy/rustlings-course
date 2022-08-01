@@ -1,0 +1,4 @@
+[package]
+name = "generic_lifetimes_in_functions"
+version = "0.1.0"
+edition = "2021"

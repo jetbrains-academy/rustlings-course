@@ -1,0 +1,4 @@
+[package]
+name = "thinking_in_terms_of_lifetimes"
+version = "0.1.0"
+edition = "2021"

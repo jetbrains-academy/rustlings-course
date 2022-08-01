@@ -1,0 +1,4 @@
+[package]
+name = "implementing_a_trait_on_a_type"
+version = "0.1.0"
+edition = "2021"

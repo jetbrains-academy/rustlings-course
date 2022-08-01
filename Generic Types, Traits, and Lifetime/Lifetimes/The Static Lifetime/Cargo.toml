@@ -1,0 +1,4 @@
+[package]
+name = "the_static_lifetime"
+version = "0.1.0"
+edition = "2021"

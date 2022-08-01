@@ -1,0 +1,4 @@
+[package]
+name = "lifetime_annotations_in_function_signatures"
+version = "0.1.0"
+edition = "2021"
