@@ -1,0 +1,4 @@
+[package]
+name = "generic_type_parameters__trait_bounds__and_lifetimes_together_"
+version = "0.1.0"
+edition = "2021"

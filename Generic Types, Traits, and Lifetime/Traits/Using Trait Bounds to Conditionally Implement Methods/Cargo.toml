@@ -1,0 +1,4 @@
+[package]
+name = "using_trait_bounds_to_conditionally_implement_methods"
+version = "0.1.0"
+edition = "2021"

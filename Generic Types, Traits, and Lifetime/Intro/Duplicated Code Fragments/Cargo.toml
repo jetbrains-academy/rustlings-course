@@ -1,0 +1,4 @@
+[package]
+name = "duplicated_code_fragments"
+version = "0.1.0"
+edition = "2021"

@@ -1,0 +1,4 @@
+[package]
+name = "calling_methods_without_default_implementations"
+version = "0.1.0"
+edition = "2021"

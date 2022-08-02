@@ -1,0 +1,4 @@
+[package]
+name = "returning_types_that_implement_traits"
+version = "0.1.0"
+edition = "2021"

@@ -1,0 +1,42 @@
+type: ide
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 66
+    length: 35
+    placeholder_text: |-
+      let mut largest = number_list[0];
+
+          for number in number_list {
+              if number > largest {
+                  largest = number;
+              }
+          }
+  - offset: 144
+    length: 6
+    placeholder_text: largest
+  - offset: 224
+    length: 6
+    placeholder_text: mut largest
+  - offset: 233
+    length: 22
+    placeholder_text: |-
+      number_list[0];
+
+          for number in number_list {
+              if number > largest {
+                  largest = number;
+              }
+          }
+  - offset: 298
+    length: 6
+    placeholder_text: largest
+  - offset: 310
+    length: 181
+    placeholder_text: ""
+- name: Cargo.toml
+  visible: false
+- name: images/ExtractFunction.png
+  visible: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Generic+Types+Traits+and+Lifetime+/+Intro+/+Removing+Duplication+by+Refactorings

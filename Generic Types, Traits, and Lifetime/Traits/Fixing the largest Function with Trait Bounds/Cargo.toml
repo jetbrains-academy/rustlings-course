@@ -1,0 +1,4 @@
+[package]
+name = "fixing_the_largest_function_with_trait_bounds"
+version = "0.1.0"
+edition = "2021"
