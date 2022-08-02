@@ -1,6 +1,6 @@
 ### Using Result<T, E> in Tests
 
-So far, we’ve written tests that panic when they fail. We can also write tests that use `Result<T, E>`! Here’s the test from Listing 11-1, rewritten to use `Result<T, E>` and return an `Err` instead of panicking:
+So far, we’ve written tests that panic when they fail. We can also write tests that use `Result<T, E>`! Here’s the test from [one of the previous tasks](course://Writing Automated Tests/How to Write Tests/The Anatomy of a Test Function), rewritten to use `Result<T, E>` and return an `Err` instead of panicking:
 
 ```rust
     #[cfg(test)]
