@@ -1,5 +1,3 @@
-use submodules;
-
 mod common;
 
 #[test]

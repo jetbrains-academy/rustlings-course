@@ -11,6 +11,11 @@ mod tests {
     use super::*;
 
     #[test]
+    fn it_works() {
+        assert_eq!(2 + 2, 4);
+    }
+
+    #[test]
     fn internal() {
         assert_eq!(4, internal_adder(2, 2));
     }

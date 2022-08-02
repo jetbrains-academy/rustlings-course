@@ -1,6 +1,6 @@
-use test_organization;
+use integration_tests;
 
 #[test]
 fn it_adds_two() {
-    assert_eq!(4, test_organization::add_two(2));
+    assert_eq!(4, integration_tests::add_two(2));
 }

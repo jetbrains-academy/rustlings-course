@@ -20,17 +20,17 @@ Let’s look at an integration test. With the code from listing "Testing a priva
 *tests/integration_test.rs* with the code from the listing below.
 
 ```rust
-use test_organization;
+use integration_tests;
 
 #[test]
 fn it_adds_two() {
-    assert_eq!(4, test_organization::add_two(2));
+    assert_eq!(4, integration_tests::add_two(2));
 }
 ```
 
-##### An integration test of a function in the `test_organization` crate
+##### An integration test of a function in the `integration_tests` crate
 
-We’ve added `use test_organization;` at the top of the code, which we didn’t need in the
+We’ve added `use integration_tests;` at the top of the code, which we didn’t need in the
 unit tests. The reason is that each file in the `tests` directory is a separate
 crate, so we need to bring our library into each test crate’s scope.
 
@@ -39,9 +39,9 @@ We don’t need to annotate any code in *tests/integration_test.rs* with
 in this directory only when we run `cargo test`. Run `cargo test` now:
 
 ```text
-Compiling test_organization v0.1.0 
+Compiling integration_tests v0.1.0 
     Finished test [unoptimized + debuginfo] target(s) in 0.54s
-     Running target/debug/deps/test_organization-61f5d8d60ccbcc19
+     Running target/debug/deps/integration_tests-61f5d8d60ccbcc19
      
 running 1 test
 test tests::internal ... ok
@@ -55,7 +55,7 @@ test it_adds_two ... ok
 
 test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
-   Doc-tests test_organization
+   Doc-tests integration_tests
 
 running 0 tests
 
@@ -70,7 +70,7 @@ seeing: one line for each unit test (one named `internal` that we added in
 The integration tests section starts with the line `Running target/debug/deps/integration_tests-d5df7484b111e79e` (the hash at the end of
 your output will be different). Next, there is a line for each test function in
 that integration test and a summary line for the results of the integration
-test just before the `Doc-tests test_organization` section starts.
+test just before the `Doc-tests integration_tests` section starts.
 
 Similarly to how adding more unit test functions adds more result lines to the
 unit tests section, adding more test functions to the integration test file
