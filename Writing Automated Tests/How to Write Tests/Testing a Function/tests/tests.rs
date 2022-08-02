@@ -3,7 +3,7 @@ extern crate core;
 
 use std::error::Error;
 use escargot::CargoTest;
-use escargot::format::test::{Event, Test, TestOk};
+use escargot::format::test::{Event, Test};
 
 #[test]
 fn compiles_and_passes() {
@@ -18,18 +18,18 @@ fn compiles_and_tests_err() ->  Result<(), Box<dyn Error>> {
         "Can't run tests for lib"
     )?;
 
-    let test_ok_messages: Vec<_> = messages
+    let test_messages: Vec<_> = messages
         .flatten()
         .flat_map(|m| m.decode_custom())
         .filter_map(|e|
             match e {
-                Event::Test(Test::Ok(test)) => { Some(test) }
+                Event::Test(test) => { Some(test) }
                 _ => {None}
             })
         .collect();
 
-    test_should_pass(&test_ok_messages, "is_true_when_even")?;
-    test_should_pass(&test_ok_messages, "is_false_when_odd")?;
+    test_should_exist_and_pass(&test_messages, "is_true_when_even")?;
+    test_should_exist_and_pass(&test_messages, "is_false_when_odd")?;
     Ok(())
 }
 
@@ -45,12 +45,31 @@ fn find_lib_test(error_message: &str) -> Result<CargoTest, Box<dyn Error>> {
         .ok_or(error_message)?)
 }
 
-fn test_should_pass(test_ok_messages: &[TestOk], name:&str) ->  Result<(), Box<dyn Error>>  {
-    let tst = test_ok_messages.iter().find(
-        |t| t.name == format!("tests::{}", name)
+fn test_should_exist_and_pass(test_ok_messages: &[Test], name:&str) ->  Result<(), Box<dyn Error>>  {
+
+    let expected_test_name = format!("tests::{}", name);
+
+    let test_started = test_ok_messages.iter().any(
+        |t|
+            match t {
+                Test::Started(t) => { t.name == expected_test_name }
+                _ => { false }
+            }
     );
 
-    if tst.is_none() {
+    if !test_started {
+        return Err(format!("The `{}` test is not found", name).into())
+    }
+
+    let test_ok = test_ok_messages.iter().find(
+        |t|
+            match t {
+                Test::Ok(t) => { t.name == expected_test_name }
+                _ => { false }
+            }
+    );
+
+    if test_ok.is_none() {
         return Err(format!("The `{}` test should pass", name).into())
     }
 
@@ -59,7 +78,7 @@ fn test_should_pass(test_ok_messages: &[TestOk], name:&str) ->  Result<(), Box<d
 
 fn to_panic(r: &Result<(), Box<dyn Error>>) {
     if let Err(e) = r {
-        panic!("{:?}", e)
+        panic!("{}", e)
     }
 }
 
