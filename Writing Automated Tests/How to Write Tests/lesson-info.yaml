@@ -6,3 +6,6 @@ content:
 - Adding Custom Failure Messages
 - Checking for Panics with should_panic
 - Using Result in Tests
+- Assert
+- Assert_Eq
+- Testing a Function

@@ -1,7 +1,8 @@
 content:
 - Running Tests
 - Test Organization
+- Unit Tests
+- Integration Tests
 - Submodules in Integration Tests
-- Assert
-- Assert_Eq
-- Testing a Function
+- Times Two Tests
+- Summary
