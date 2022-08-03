@@ -1,0 +1,4 @@
+[package]
+name = "checking_for_panics_with_should_panic_"
+version = "0.1.0"
+edition = "2021"

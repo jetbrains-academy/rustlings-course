@@ -1,0 +1,7 @@
+[package]
+name = "assert"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+escargot = {version = "0.5.7", features=["test_unstable"]}

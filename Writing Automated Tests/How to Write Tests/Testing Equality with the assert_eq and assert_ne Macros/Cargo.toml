@@ -1,0 +1,4 @@
+[package]
+name = "testing_equality_with_the_assert_eq_and_assert_ne_macros"
+version = "0.1.0"
+edition = "2021"

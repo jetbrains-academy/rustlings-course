@@ -1,0 +1,4 @@
+[package]
+name = "adding_custom_failure_messages"
+version = "0.1.0"
+edition = "2021"
