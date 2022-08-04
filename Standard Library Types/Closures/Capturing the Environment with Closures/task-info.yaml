@@ -7,5 +7,5 @@ files:
     length: 22
     placeholder_text: '|| self.most_stocked()'
 - name: Cargo.toml
-  visible: true
+  visible: false
 solution_hidden: true

@@ -8,6 +8,6 @@ files:
     length: 38
     placeholder_text: /* Complete the closure here */
 - name: Cargo.toml
-  visible: true
+  visible: false
 - name: tests/output.txt
   visible: false

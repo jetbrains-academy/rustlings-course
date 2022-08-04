@@ -2,7 +2,7 @@ type: edu
 custom_name: "Task: Iterable Collection"
 files:
 - name: Cargo.toml
-  visible: true
+  visible: false
 - name: tests/tests.rs
   visible: false
 - name: src/main.rs
