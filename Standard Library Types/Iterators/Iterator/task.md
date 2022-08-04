@@ -9,7 +9,7 @@ Here is your mission, should you choose to accept it:
 2. Get the remaining tests to pass by completing the result_with_list and
 `list_of_results` functions.
 
-Check out the chapter [Iterator](https://doc.rust-lang.org/book/2018-edition/ch13-02-iterators.html) of the Rust Book and the [Iterator documentation](https://doc.rust-lang.org/stable/std/iter/).
+Check out the chapter [Iterator](https://doc.rust-lang.org/book/2021-edition/ch13-02-iterators.html) of the Rust Book and the [Iterator documentation](https://doc.rust-lang.org/stable/std/iter/).
 
 Scroll down for a minor hint for part 2, and scroll down further for a major hint.
 Have fun :-)
