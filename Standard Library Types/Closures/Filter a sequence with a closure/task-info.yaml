@@ -1,0 +1,13 @@
+type: output
+custom_name: 'Task: Filter a Sequence with a Closure'
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 198
+    length: 38
+    placeholder_text: /* Complete the closure here */
+- name: Cargo.toml
+  visible: true
+- name: tests/output.txt
+  visible: false
