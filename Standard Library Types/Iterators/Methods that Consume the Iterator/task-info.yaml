@@ -1,0 +1,6 @@
+type: theory
+files:
+- name: src/lib.rs
+  visible: true
+- name: Cargo.toml
+  visible: true

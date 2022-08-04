@@ -1,4 +1,4 @@
-## Factorial
+## Compute Factorial
 
 Complete this function to return the factorial of num.
 

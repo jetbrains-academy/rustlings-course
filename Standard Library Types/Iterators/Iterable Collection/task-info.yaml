@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Iterable Collection"
 files:
 - name: Cargo.toml
   visible: true

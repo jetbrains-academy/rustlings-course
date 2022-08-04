@@ -1,5 +1,9 @@
 content:
-- Intro
+- Processing a Series of Items with Iterators
+- The Iterator Trait and the next Method
+- Methods that Consume the Iterator
+- Methods that Produce Other Iterators
+- Using Closures that Capture Their Environment
 - Iterable Collection
 - Capitalize first
 - Iterator

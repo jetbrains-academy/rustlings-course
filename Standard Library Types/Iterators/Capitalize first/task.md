@@ -8,7 +8,7 @@ Step 2. Apply the `capitalize_first` function to a slice of string slices.
 Return a vector of strings.
 `["hello", "world"]` -> `["Hello", "World"]`
 
-Step 3. // Apply the `capitalize_first` function again to a slice of string slices.
+Step 3. Apply the `capitalize_first` function again to a slice of string slices.
 Return a single string.
 `["hello", " ", "world"]` -> `"Hello World"`
 
