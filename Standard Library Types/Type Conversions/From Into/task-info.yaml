@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: From and Into"
 files:
 - name: src/lib.rs
   visible: true

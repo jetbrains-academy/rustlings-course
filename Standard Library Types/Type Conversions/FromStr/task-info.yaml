@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Implement FromStr"
 files:
 - name: src/lib.rs
   visible: true
