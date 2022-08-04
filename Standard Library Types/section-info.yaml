@@ -1,4 +1,5 @@
 content:
-- Iterators and Closures
+- Closures
+- Iterators
 - Smart Pointers
 - Type Conversions
