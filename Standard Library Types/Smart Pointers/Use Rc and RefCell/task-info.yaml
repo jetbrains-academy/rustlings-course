@@ -1,0 +1,34 @@
+type: edu
+custom_name: 'Task: Switch the Lamp'
+files:
+- name: src/switcher.rs
+  visible: true
+  placeholders:
+  - offset: 97
+    length: 17
+    placeholder_text: '/* Correct type should be here: */Lamp'
+  - offset: 155
+    length: 18
+    placeholder_text: /* Correct type should be here */ Lamp
+  - offset: 210
+    length: 15
+    placeholder_text: /* Clone the reference to the lamp */
+  - offset: 282
+    length: 8
+    placeholder_text: /* RefCell requires explicit borrowing, but which one? */
+  - offset: 323
+    length: 12
+    placeholder_text: /* RefCell requires explicit borrowing, but which one? */
+  - offset: 388
+    length: 12
+    placeholder_text: /* RefCell requires explicit borrowing, but which one? */
+- name: src/lib.rs
+  visible: true
+- name: src/main.rs
+  visible: true
+- name: Cargo.toml
+  visible: true
+- name: tests/tests.rs
+  visible: false
+- name: src/lamp.rs
+  visible: true
