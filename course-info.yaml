@@ -23,5 +23,5 @@ content:
 - Generic Types, Traits, and Lifetime
 - Writing Automated Tests
 - Standard Library Types
-- Concurrency
+- Fearless Concurrency
 - Macros
