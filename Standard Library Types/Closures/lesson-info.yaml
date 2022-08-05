@@ -1,0 +1,9 @@
+content:
+- Intro
+- Capturing the Environment with Closures
+- Closure Type Inference and Annotation
+- Capturing References or Moving Ownership
+- Moving Captured Values Out of the Closure and the Fn Traits
+- unwrap_or_else
+- Example sort_by_key
+- Filter a sequence with a closure

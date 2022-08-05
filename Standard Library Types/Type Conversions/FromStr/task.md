@@ -1,4 +1,4 @@
-## FromStr
+## Implement FromStr
 
 This does practically the same thing that `TryFrom<&str>` does.
 Additionally, upon implementing `FromStr`, you can use the `parse` method
@@ -23,7 +23,7 @@ of falling back to a default value.</div>
 
 <div class="hint">Hint: Look at the test cases to see which error variants to return.</div>
 
-<div class="hint">Another hint: You can use the `map_err` method of <code>Result</code> with a function
+<div class="hint">Another hint: You can use the <code>map_err</code> method of <code>Result</code> with a function
 or a closure to wrap the error from <code>parse::&lt;usize&gt;</code>.</div>
 
 <div class="hint">Yet another hint: If you would like to propagate errors by using the <code>?</code>

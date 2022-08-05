@@ -1,0 +1,4 @@
+[package]
+name = "filter_a_sequence_with_a_closure"
+version = "0.1.0"
+edition = "2021"

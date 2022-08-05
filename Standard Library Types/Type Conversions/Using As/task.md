@@ -1,4 +1,4 @@
-## Using As
+## Use `as`
 
 Type casting in Rust is done via the usage of the `as` operator.
 Please note that the `as` operator is not only used when type casting.

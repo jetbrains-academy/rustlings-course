@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: AsRef and AsMut"
 files:
 - name: src/lib.rs
   visible: true
@@ -16,7 +17,7 @@ files:
 - name: src/main.rs
   visible: true
 - name: Cargo.toml
-  visible: true
+  visible: false
 - name: tests/tests.rs
   visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Type+Conversions+/+AsRef+and+AsMut

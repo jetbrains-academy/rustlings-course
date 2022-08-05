@@ -1,0 +1,4 @@
+[package]
+name = "lamp_with_switchers"
+version = "0.1.0"
+edition = "2021"

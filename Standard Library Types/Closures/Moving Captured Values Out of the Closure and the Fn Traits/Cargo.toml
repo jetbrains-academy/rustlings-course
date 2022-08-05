@@ -1,0 +1,4 @@
+[package]
+name = "moving_captured_values_out_of_the_closure_and_the_fn_traits"
+version = "0.1.0"
+edition = "2021"

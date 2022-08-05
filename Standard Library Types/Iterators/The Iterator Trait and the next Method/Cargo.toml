@@ -1,0 +1,4 @@
+[package]
+name = "the_iterator_trait_and_the_next_method"
+version = "0.1.0"
+edition = "2021"

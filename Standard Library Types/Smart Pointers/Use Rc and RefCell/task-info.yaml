@@ -1,0 +1,35 @@
+type: edu
+custom_name: 'Task: Switch the Lamp'
+files:
+- name: src/switcher.rs
+  visible: true
+  placeholders:
+  - offset: 97
+    length: 17
+    placeholder_text: '/* Correct type should be here: */Lamp'
+  - offset: 155
+    length: 18
+    placeholder_text: /* Correct type should be here */ Lamp
+  - offset: 210
+    length: 15
+    placeholder_text: /* Clone the reference to the lamp */
+  - offset: 282
+    length: 8
+    placeholder_text: /* RefCell requires explicit borrowing, but which one? */
+  - offset: 323
+    length: 12
+    placeholder_text: /* RefCell requires explicit borrowing, but which one? */
+  - offset: 388
+    length: 12
+    placeholder_text: /* RefCell requires explicit borrowing, but which one? */
+- name: src/lib.rs
+  visible: true
+- name: src/main.rs
+  visible: true
+- name: Cargo.toml
+  visible: false
+- name: tests/tests.rs
+  visible: false
+- name: src/lamp.rs
+  visible: true
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Smart+Pointers+/+Use+Rc+and+RefCell

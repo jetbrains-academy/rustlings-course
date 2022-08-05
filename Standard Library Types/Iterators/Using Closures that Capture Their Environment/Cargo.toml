@@ -1,0 +1,4 @@
+[package]
+name = "using_closures_that_capture_their_environment"
+version = "0.1.0"
+edition = "2021"
