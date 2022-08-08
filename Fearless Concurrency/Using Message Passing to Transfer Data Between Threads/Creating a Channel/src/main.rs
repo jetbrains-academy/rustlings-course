@@ -1,3 +1,5 @@
+use std::sync::mpsc;
+
 fn main() {
-    // put you code here to launch it
+    let (tx, rx) = mpsc::channel::<String>();
 }

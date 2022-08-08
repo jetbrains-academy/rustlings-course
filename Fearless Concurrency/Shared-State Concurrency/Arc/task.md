@@ -1,4 +1,4 @@
-## Arc
+## Use `Arc`
 
 Make this code compile by filling in a value for `shared_numbers` and creating an initial binding for `child_numbers` somewhere.
 Try not to create any copies of the `numbers` Vec!

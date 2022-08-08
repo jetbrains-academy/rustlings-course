@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Use Arc"
 files:
 - name: Cargo.toml
   visible: false
