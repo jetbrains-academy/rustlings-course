@@ -1,0 +1,4 @@
+[package]
+name = "multiple_ownership_with_multiple_threads"
+version = "0.1.0"
+edition = "2021"

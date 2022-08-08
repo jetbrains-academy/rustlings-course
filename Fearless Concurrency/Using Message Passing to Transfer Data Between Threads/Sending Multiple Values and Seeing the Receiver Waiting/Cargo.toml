@@ -1,0 +1,4 @@
+[package]
+name = "sending_multiple_values_and_seeing_the_receiver_waiting"
+version = "0.1.0"
+edition = "2021"

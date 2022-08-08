@@ -32,10 +32,12 @@ members = [
     "Standard Library Types/Smart Pointers/*/",
     "Standard Library Types/Type Conversions/*/",
     "Standard Library Types/Closures/*/",
-    "Concurrency/Threads/*/",
-    "Concurrency/Shared-State Concurrency/*/",
+    "Fearless Concurrency/Using Threads to Run Code Simultaneously/*/",
+    "Fearless Concurrency/Using Message Passing to Transfer Data Between Threads/*/",
+    "Fearless Concurrency/Shared-State Concurrency/*/",
     "Macros/Macros/*/",
     "Macros/Macros Test/*/",
+    "Fearless Concurrency/Using Threads to Run Code Simultaneously/*/",
 ]
 
 exclude = [

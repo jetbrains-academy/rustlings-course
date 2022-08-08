@@ -1,0 +1,4 @@
+[package]
+name = "using_message_passing_to_transfer_data_between_threads"
+version = "0.1.0"
+edition = "2021"

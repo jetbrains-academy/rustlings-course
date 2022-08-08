@@ -1,0 +1,4 @@
+[package]
+name = "sharing_a_mutex_between_multiple_threads"
+version = "0.1.0"
+edition = "2021"

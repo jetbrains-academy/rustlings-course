@@ -1,4 +1,0 @@
-[package]
-name = "using_threads_to_run_code_simultaneously"
-version = "0.1.0"
-edition = "2018"

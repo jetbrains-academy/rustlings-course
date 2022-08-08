@@ -1,0 +1,4 @@
+[package]
+name = "waiting_for_all_threads_to_finish_using_join_handles"
+version = "0.1.0"
+edition = "2021"

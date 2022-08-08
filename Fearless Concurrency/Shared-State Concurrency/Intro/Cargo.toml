@@ -1,0 +1,4 @@
+[package]
+name = "shared_state_concurrency"
+version = "0.1.0"
+edition = "2021"

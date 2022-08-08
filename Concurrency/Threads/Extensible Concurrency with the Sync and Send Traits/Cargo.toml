@@ -1,4 +1,0 @@
-[package]
-name = "extensible_concurrency_with_the_sync_and_send_traits"
-version = "0.1.0"
-edition = "2018"

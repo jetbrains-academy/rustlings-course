@@ -1,0 +1,4 @@
+[package]
+name = "creating_multiple_producers_by_cloning_the_transmitter"
+version = "0.1.0"
+edition = "2021"
