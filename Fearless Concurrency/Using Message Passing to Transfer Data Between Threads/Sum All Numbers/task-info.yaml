@@ -18,6 +18,6 @@ files:
     placeholder_text: /* What should you iterate over to receive all the numbers?
       */
 - name: Cargo.toml
-  visible: true
+  visible: false
 - name: tests/tests.rs
   visible: false
