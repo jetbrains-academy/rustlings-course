@@ -1,4 +1,4 @@
-## Converting Fahrenheit to Celsius
+## Convert Fahrenheit to Celsius
 
 Make me compile!
 

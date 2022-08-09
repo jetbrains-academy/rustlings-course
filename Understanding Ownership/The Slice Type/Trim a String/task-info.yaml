@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Trim a String"
 files:
 - name: src/lib.rs
   visible: true

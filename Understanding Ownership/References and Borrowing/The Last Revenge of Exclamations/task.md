@@ -1,4 +1,4 @@
-## Exclamations Strike Back
+## The Last Revenge of Exclamations
 
 Make me compile!
 
@@ -9,5 +9,5 @@ Make me compile!
 
 <div class="hint">
 
-Both calls to `fn add_exclamation` expext a mutable reference.
+Both calls to `fn add_exclamation` expect a mutable reference.
 </div>

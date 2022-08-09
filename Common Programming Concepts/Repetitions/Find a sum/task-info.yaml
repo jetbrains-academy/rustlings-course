@@ -1,4 +1,5 @@
 type: output
+custom_name: "Task: Find a Sum"
 files:
 - name: tests/output.txt
   visible: false

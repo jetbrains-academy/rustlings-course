@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Generics in Structs"
 files:
 - name: src/lib.rs
   visible: true

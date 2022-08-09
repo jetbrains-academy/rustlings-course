@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Use a Tuple Index"
 files:
 - name: Cargo.toml
   visible: false

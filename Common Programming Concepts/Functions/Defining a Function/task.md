@@ -1,4 +1,4 @@
-## Defining a Function
+## Define a Function
 
   This main function is calling a function that it expects to exist, but the function doesn't exist.
   It expects this function to have the name `call_me`.

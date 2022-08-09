@@ -1,4 +1,5 @@
 type: output
+custom_name: "Task: Play with Color Structs"
 files:
 - name: tests/output.txt
   visible: false

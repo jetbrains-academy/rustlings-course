@@ -1,11 +1,12 @@
 type: edu
+custom_name: 'Task: Morning or Evening?'
 files:
 - name: Cargo.toml
   visible: false
 - name: src/main.rs
   visible: true
   placeholders:
-  - offset: 135
+  - offset: 109
     length: 19
     placeholder_text: // Finish the rest of this line like the example! Or make it
       be false!

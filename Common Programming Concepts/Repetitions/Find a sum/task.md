@@ -1,4 +1,4 @@
-## Find a sum
+## Find a Sum
 
 Find the sum of all the integer numbers between 1 and 100 (both included).
 

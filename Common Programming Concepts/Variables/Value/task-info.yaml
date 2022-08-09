@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Give a Value"
 files:
 - name: Cargo.toml
   visible: false

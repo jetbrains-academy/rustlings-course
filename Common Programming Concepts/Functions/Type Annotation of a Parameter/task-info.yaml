@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Type Annotation of a Parameter"
 files:
 - name: Cargo.toml
   visible: false

@@ -1,4 +1,5 @@
 type: output
+custom_name: "Task: Who Owns the One Ring?"
 files:
 - name: tests/output.txt
   visible: false
