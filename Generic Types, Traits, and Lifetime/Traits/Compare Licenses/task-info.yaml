@@ -4,9 +4,9 @@ files:
 - name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 61
+  - offset: 59
     length: 47
-    placeholder_text: ""
+    placeholder_text: ";"
     dependency:
       section: Generic Types, Traits, and Lifetime
       lesson: Traits
@@ -14,15 +14,15 @@ files:
       file: src/lib.rs
       placeholder: 1
       is_visible: false
-  - offset: 315
+  - offset: 313
     length: 13
     placeholder_text: ??
-  - offset: 344
+  - offset: 342
     length: 13
     placeholder_text: ??
 - name: src/main.rs
   visible: true
 - name: Cargo.toml
-  visible: true
+  visible: false
 - name: tests/tests.rs
   visible: false
