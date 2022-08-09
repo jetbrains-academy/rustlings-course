@@ -15,4 +15,5 @@ content:
 - Pattern Binding
 - Specify Lifetimes
 - Unify Lifetimes
+- Lifetimes for Structs with References
 - Summary
