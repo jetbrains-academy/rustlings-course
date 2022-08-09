@@ -1,4 +1,5 @@
 type: output
+custom_name: "Task: Tuples: Clone or Copy"
 files:
 - name: tests/output.txt
   visible: false

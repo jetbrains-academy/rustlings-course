@@ -1,4 +1,4 @@
-## Result
+## Positive Nonzero Integer
 
 Make the test pass!
 

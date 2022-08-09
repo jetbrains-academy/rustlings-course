@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Returning Result"
 files:
 - name: Cargo.toml
   visible: false

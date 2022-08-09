@@ -1,4 +1,4 @@
-## Advanced Errors 2
+## Error Trait
 
 This exercise demonstrates a few traits that are useful for custom error
 types to implement, especially so that other code can consume the custom

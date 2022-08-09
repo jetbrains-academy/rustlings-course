@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Add Conditions"
 files:
 - name: src/lib.rs
   visible: true

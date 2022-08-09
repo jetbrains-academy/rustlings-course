@@ -1,4 +1,5 @@
 type: output
+custom_name: "Task: Convert Fahrenheit to Celsius"
 files:
 - name: tests/output.txt
   visible: false

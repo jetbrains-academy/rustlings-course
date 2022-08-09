@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Variable Type"
 files:
 - name: Cargo.toml
   visible: false

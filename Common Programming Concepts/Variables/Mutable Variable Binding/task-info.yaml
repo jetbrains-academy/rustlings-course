@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Mutable Variable Binding"
 files:
 - name: Cargo.toml
   visible: false

@@ -1,4 +1,5 @@
 type: output
+custom_name: "Task: Implement Match"
 files:
 - name: Cargo.toml
   visible: false

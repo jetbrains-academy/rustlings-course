@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: More Fruits"
 files:
 - name: src/lib.rs
   visible: true

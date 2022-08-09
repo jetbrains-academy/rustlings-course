@@ -1,4 +1,5 @@
 type: output
+custom_name: "Task: Home Alone at Day X"
 files:
 - name: tests/output.txt
   visible: false

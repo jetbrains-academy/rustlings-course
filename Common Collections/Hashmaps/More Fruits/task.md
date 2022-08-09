@@ -1,4 +1,4 @@
-## Modifying a HashMap
+## More Fruits
 
 A basket of fruits in the form of a hash map is given. The key
 represents the name of the fruit and the value represents how many

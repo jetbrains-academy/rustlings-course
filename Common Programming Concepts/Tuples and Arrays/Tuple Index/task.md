@@ -1,4 +1,4 @@
-## Tuple Index
+## Use a Tuple Index
 
 Use a tuple index to access the second element of `numbers`.
 

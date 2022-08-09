@@ -1,4 +1,4 @@
-## Characters
+## Character Kinds
 
 Fill in the rest of the line that has code missing!
 

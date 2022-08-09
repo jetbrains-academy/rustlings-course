@@ -1,4 +1,5 @@
 type: ide
+custom_name: "Task: Understanding Types"
 files:
 - name: src/main.rs
   visible: true

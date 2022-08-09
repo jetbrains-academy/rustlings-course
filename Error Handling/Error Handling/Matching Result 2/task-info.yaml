@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Extended Matching Result"
 files:
 - name: Cargo.toml
   visible: false

@@ -1,4 +1,4 @@
-## Making a sausage
+## Making a Sausage
 
 Make me compile!
 

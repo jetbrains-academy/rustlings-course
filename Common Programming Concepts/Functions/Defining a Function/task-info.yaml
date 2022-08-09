@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Define a Function"
 files:
 - name: Cargo.toml
   visible: false

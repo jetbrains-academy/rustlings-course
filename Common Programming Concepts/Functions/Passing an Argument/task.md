@@ -1,4 +1,4 @@
-## Passing an Argument
+## Pass an Argument
 
 Make me compile!
 

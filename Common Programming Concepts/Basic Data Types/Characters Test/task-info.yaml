@@ -1,4 +1,5 @@
 type: edu
+custom_name: "Task: Character Kinds"
 files:
 - name: Cargo.toml
   visible: false
