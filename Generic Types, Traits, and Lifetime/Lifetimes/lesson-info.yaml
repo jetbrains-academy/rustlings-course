@@ -13,4 +13,5 @@ content:
 - The Static Lifetime
 - Generic Type Parameters, Trait Bounds, and Lifetimes Together
 - Pattern Binding
+- Specify Lifetimes
 - Summary

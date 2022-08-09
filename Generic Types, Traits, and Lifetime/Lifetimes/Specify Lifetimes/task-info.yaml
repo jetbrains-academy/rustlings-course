@@ -1,0 +1,13 @@
+type: output
+custom_name: 'Task: Specify Lifetimes'
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 3
+    length: 46
+    placeholder_text: 'longest(x: &str, y: &str) -> &str'
+- name: Cargo.toml
+  visible: false
+- name: tests/output.txt
+  visible: false
