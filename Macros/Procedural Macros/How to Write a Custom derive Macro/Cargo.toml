@@ -1,7 +1,7 @@
 [package]
 name = "how_to_write_a_custom_derive_macro"
 version = "0.1.0"
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 hello_macro = { path = "../hello_macro" }
