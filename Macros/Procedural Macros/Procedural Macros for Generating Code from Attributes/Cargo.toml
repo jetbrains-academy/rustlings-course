@@ -1,0 +1,4 @@
+[package]
+name = "procedural_macros_for_generating_code_from_attributes"
+version = "0.1.0"
+edition = "2021"
