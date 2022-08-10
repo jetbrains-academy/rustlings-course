@@ -24,5 +24,5 @@ You may need the following methods:
 </div>
 
 <div class="hint">
-Be careful not to destroy the log after printing it. Make sure that you refer to log entries by references when you print them in `Engine::print_log()`.
+Be careful not to destroy the log after printing it. Make sure that you refer to log entries by references when you print them in <code>Engine::print_log()</code>.
 </div>
