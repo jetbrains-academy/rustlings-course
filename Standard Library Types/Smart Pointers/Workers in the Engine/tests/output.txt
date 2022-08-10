@@ -1,0 +1,12 @@
+Log content:
+Worker 0 did some work
+Worker 1 did some work
+Worker 2 did some work
+
+Final log content:
+Worker 0 did some work
+Worker 1 did some work
+Worker 2 did some work
+Worker 0 did some work
+Worker 1 did some work
+Worker 2 did some work

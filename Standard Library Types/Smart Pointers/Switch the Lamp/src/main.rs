@@ -1,13 +1,7 @@
-use std::cell::RefCell;
-use std::rc::Rc;
-
 use lamp_with_switchers::{lamp::*, switcher::*};
 
 fn main() {
-    let lamp =
-        Rc::new(
-            RefCell::new(
-                Lamp::default()));
+    let lamp = Lamp::default();
 
     let sw1 = Switcher::new(&lamp);
     let sw2 = Switcher::new(&lamp);
