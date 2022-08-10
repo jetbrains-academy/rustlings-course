@@ -1,0 +1,19 @@
+type: output
+custom_name: 'Task: Lifetimes for Structs with References'
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 11
+    length: 4
+    placeholder_text: ""
+  - offset: 31
+    length: 3
+    placeholder_text: ""
+  - offset: 51
+    length: 3
+    placeholder_text: ""
+- name: Cargo.toml
+  visible: false
+- name: tests/output.txt
+  visible: false

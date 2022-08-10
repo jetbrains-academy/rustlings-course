@@ -1,0 +1,15 @@
+type: edu
+custom_name: 'Task: Combine Traits'
+files:
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 343
+    length: 27
+    placeholder_text: ??
+- name: src/main.rs
+  visible: true
+- name: Cargo.toml
+  visible: false
+- name: tests/tests.rs
+  visible: false

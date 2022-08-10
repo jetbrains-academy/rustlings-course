@@ -1,0 +1,4 @@
+[package]
+name = "lifetimes_for_structs_with_references"
+version = "0.1.0"
+edition = "2018"

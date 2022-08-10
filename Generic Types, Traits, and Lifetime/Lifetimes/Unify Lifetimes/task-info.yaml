@@ -1,0 +1,16 @@
+type: output
+custom_name: 'Task: Unify Lifetimes'
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 208
+    length: 12
+    placeholder_text: /* Something could here */
+  - offset: 235
+    length: 10
+    placeholder_text: "let "
+- name: Cargo.toml
+  visible: false
+- name: tests/output.txt
+  visible: false

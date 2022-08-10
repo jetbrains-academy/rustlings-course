@@ -1,0 +1,15 @@
+type: edu
+custom_name: 'Task: License It'
+files:
+- name: src/lib.rs
+  visible: true
+  placeholders:
+  - offset: 59
+    length: 47
+    placeholder_text: ;
+- name: src/main.rs
+  visible: true
+- name: Cargo.toml
+  visible: false
+- name: tests/tests.rs
+  visible: false
