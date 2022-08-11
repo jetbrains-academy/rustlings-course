@@ -13,8 +13,6 @@ that would have one dimension parameter and use that as both width and height,
 thus making it easier to create a square `Rectangle` rather than having to
 specify the same value twice:
 
-<span class="filename">Filename: src/main.rs</span>
-
 ```rust
 impl Rectangle {
     fn square(size: u32) -> Rectangle {

@@ -7,8 +7,7 @@ Maybe you can find something in the standard library.
 
 
 <div class="hint">
-
-The right type for an argument and a result is `&str`.
+The right type for an argument and a result is <code>&str</code>.
 </div>
 
 <div class="hint">

@@ -8,12 +8,12 @@ variable available; constants.
 </div>
 
 <div class="hint">
-Constants are always immutable and they are declared with keyword 'const' rather
-than keyword 'let'.
+Constants are always immutable and they are declared with keyword <code>const</code> rather
+than keyword <code>let</code>.
 Constants types must also always be annotated.
 </div>
 
 <div class="hint">
-Read more about constants under 'Differences Between Variables and Constants' in the book's section
-<a href="https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#differences-between-variables-and-constants">'Variables and Mutability'</a> 
+
+Read more about constants in the [Constants](course://Common+Programming+Concepts/Variables/Constants) task.
 </div>

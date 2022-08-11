@@ -15,12 +15,12 @@ Scroll down for a minor hint for part 2, and scroll down further for a major hin
 Have fun :-)
 
 <div class="hint">
-  The `divide` function needs to return the correct error when even division is not
+  The <code>divide</code> function needs to return the correct error when even division is not
 possible.
 </div>
 
 <div class="hint">
-The `division_results` variable needs to be collected into a collection type.
+The <code>division_results</code> variable needs to be collected into a collection type.
 
 The `result_with_list` function needs to return a single `Result` where the success
 case is a vector of integers and the failure case is a `DivisionError`.

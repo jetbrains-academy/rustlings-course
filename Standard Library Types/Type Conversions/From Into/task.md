@@ -19,5 +19,5 @@ Steps:
 4. If the name is empty, then return the default of Person
 5. Extract the other element from the split operation and parse it into a `usize` as the age. If while parsing the age, something goes wrong, then return the default of Person. Otherwise, return an instantiated Person object with the results
 
-<div class="hint">Follow the steps provided right before the `TryFrom` implementation.
+<div class="hint">Follow the steps provided right before the <code>TryFrom</code> implementation.
 You can also use this <a href="https://doc.rust-lang.org/std/convert/trait.TryFrom.html">example</a>.</div>

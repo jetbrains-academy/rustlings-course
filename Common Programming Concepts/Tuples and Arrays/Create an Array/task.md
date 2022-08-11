@@ -13,4 +13,4 @@ test checks for the string `"Wow, that's a big array!"`.
   ```
 </div>
 
-Bonus: what are some other things you could have that would return true for `a.len()` <code>&gt;</code>`= 100`?
+Bonus: what are some other things you could have that would return true for `a.len() >= 100`?

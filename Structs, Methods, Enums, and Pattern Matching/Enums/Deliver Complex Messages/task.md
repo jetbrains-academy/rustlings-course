@@ -6,8 +6,7 @@ Make the code compile! Check out the hint if you're stuck.
 such as no data, anonymous structs, a single string, tuples, ...etc</div>
 
 <div class="hint">
-
-Use `{...}` to define `Message::Move` and `(...)` for `Message::Echo` and `Message::ChangeColor`.
+Use <code>{...}</code> to define <code>Message::Move</code> and <code>(...)</code> for <code>Message::Echo</code> and <code>Message::ChangeColor</code>.
 </div>
 
 

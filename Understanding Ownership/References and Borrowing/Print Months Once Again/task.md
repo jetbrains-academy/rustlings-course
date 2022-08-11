@@ -5,8 +5,7 @@ Something strange is going on here. The program is compiled without any problems
 Refactor this program to avoid array copying by switching to a mutable reference in `fn print_months_reversed` and fix the compiler errors.
 
 <div class="hint">
-
-The first step would be to change the type of argument in `fn print_months_reversed`.
+The first step would be to change the type of argument in <code>fn print_months_reversed</code>.
 </div>
 
 <div class="hint">

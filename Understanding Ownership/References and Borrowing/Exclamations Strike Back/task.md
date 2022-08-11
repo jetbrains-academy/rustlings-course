@@ -3,6 +3,5 @@
 Make me compile!
 
 <div class="hint">
-
-Why not borrow `hello` via a reference?
+Why not borrow <code>hello</code> via a reference?
 </div>

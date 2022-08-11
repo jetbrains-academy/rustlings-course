@@ -9,6 +9,6 @@ not allowed to insert any more of these fruits!
 
 Make your code pass the tests!
 
-<div class="hint"> Use the `entry()` and  `or_insert()` methods of `HashMap` to achieve this.</div></li>
+<div class="hint"> Use the <code>entry()</code> and  <code>or_insert()</code> methods of <code>HashMap</code> to achieve this.</div>
 
-<div class="hint">Learn more at <a href="https://doc.rust-lang.org/stable/book/ch08-03-hash-maps.html#only-inserting-a-value-if-the-key-has-no-value">https://doc.rust-lang.org/stable/book/ch08-03-hash-maps.html#only-inserting-a-value-if-the-key-has-no-value</a></div>
+<div class="hint">Learn more <a href="https://doc.rust-lang.org/stable/book/ch08-03-hash-maps.html#only-inserting-a-value-if-the-key-has-no-value">here</a>.</div>

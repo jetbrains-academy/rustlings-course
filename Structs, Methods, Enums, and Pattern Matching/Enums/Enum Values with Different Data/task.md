@@ -52,4 +52,4 @@ what you might come up with.
 Note that even though the standard library contains a definition for `IpAddr`,
 we can still create and use our own definition without conflict because we
 haven’t brought the standard library’s definition into our scope. We’ll talk
-more about bringing types into scope in the section "Modules" of the chapter "Modules and Macros".
+more about bringing types into scope [later](course://Modules/Modules/Bringing Paths into Scope with the use Keyword).

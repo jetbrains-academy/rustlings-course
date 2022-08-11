@@ -5,18 +5,15 @@ defined the `Package` struct, and we want to test some logic attached to it.
 Make the code compile and the tests pass!
 
 <div class="hint">
-
-Don't forget to use field init shortcuts in `new` when initializing fields by the variables with the same names. 
+Don't forget to use field init shortcuts in <code>new</code> when initializing fields by the variables with the same names. 
 </div>
 
 <div class="hint">
-
-For `is_international`: What makes a package international? Seems related to the places it goes through, right?
+For <code>is_international</code>: What makes a package international? Seems related to the places it goes through, right?
 </div>
 
 <div class="hint">
-
-For `get_fees`: Bigger is more expensive usually, we don't have size, but something may fit the bill here :)
+For <code>get_fees</code>: Bigger is more expensive usually, we don't have size, but something may fit the bill here :)
 </div>
 
 <div class="hint">
