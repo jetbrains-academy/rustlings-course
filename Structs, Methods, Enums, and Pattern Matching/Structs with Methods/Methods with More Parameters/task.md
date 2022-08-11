@@ -7,8 +7,6 @@ within `self`; otherwise it should return `false`. That is, we want to be able
 to write the program shown below, once we’ve defined the `can_hold`
 method.
 
-<span class="filename">Filename: src/main.rs</span>
-
 ```rust,ignore
 fn main() {
     let rect1 = Rectangle {
@@ -29,8 +27,7 @@ fn main() {
 }
 ```
 
-<span class="caption">Listing 5-14: Using the as-yet-unwritten `can_hold`
-method</span>
+#### Using the as-yet-unwritten `can_hold` method
 
 And the expected output would look like the following, because both dimensions
 of `rect2` are smaller than the dimensions of `rect1` but `rect3` is wider than
@@ -55,7 +52,6 @@ Boolean, and the implementation will check whether the width and height of
 respectively. Let’s add the new `can_hold` method to the `impl` block from
 the first listing in this section, shown below.
 
-<span class="filename">Filename: src/main.rs</span>
 
 ```rust
 impl Rectangle {

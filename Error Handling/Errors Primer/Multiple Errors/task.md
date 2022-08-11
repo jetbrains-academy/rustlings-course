@@ -20,6 +20,4 @@ Check out the section "A Shortcut for Propagating Errors: the ? Operator" in thi
 course, like <code>Box</code> and the <code>From</code> trait. It's not important to understand
 them in detail right now, but you can read ahead if you like.
 Read more about boxing errors:
-<a href="https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/boxing_errors.html">https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/boxing_errors.html</a>.
-Read more about using the <code>?</code> operator with boxed errors:
-<a href="https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/boxing_errors.html">https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/reenter_question_mark.html</a>.</div>
+<a href="https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/boxing_errors.html">here</a>.</div>

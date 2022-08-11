@@ -9,7 +9,7 @@ become even more inconvenient when this code is used in more places.
 
 So before actually changing the message format, the developer decided to perform refactoring and create a function that prints the message.
 
-###Task
+### Task
 
 **Step 1: Create a Function**
 

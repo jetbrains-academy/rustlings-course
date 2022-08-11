@@ -33,14 +33,13 @@ supply a missing trait implementation, and complete a few incomplete ones.</div>
 
 <div class="hint">
 You may find these pages to be helpful references:
-<a href="https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/define_error_type.html">https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/define_error_type.html</a>
-<a href="https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/boxing_errors.html">https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/boxing_errors.html</a>
-<a href="https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/wrap_error.html">https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/wrap_error.html</a>
+<a href="https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/define_error_type.html">1</a>,
+<a href="https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/boxing_errors.html">2</a>, 
+<a href="https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/wrap_error.html">3</a>.
 </div>
 
 <div class="hint">
-
-What trait must our error type have for `main()` to return the return
+What trait must our error type have for <code>main()</code> to return the return
 type that it returns?
 </div>
 

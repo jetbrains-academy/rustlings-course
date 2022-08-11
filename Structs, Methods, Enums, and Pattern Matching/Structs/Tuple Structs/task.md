@@ -34,4 +34,4 @@ You can also define structs that don’t have any fields! These are called
 *unit-like structs* because they behave similarly to `()`, the unit type.
 Unit-like structs can be useful in situations in which you need to implement a
 trait on some type but don’t have any data that you want to store in the type
-itself. We’ll discuss traits in the chapter "Generic Types, Traits and Lifetime".
+itself. We’ll discuss traits [later](course://Generic+Types,+Traits,+and Lifetime/Traits/Traits).
