@@ -7,7 +7,7 @@ data to be valid for as long as the entire struct is valid.
 
 It’s possible for structs to store references to data owned by something else,
 but to do so requires the use of *lifetimes*, a Rust feature that we’ll
-discuss in in the chapter "Generic Types, Traits and Lifetime". Lifetimes ensure that the data referenced by a struct
+discuss in the chapter "Generic Types, Traits and Lifetime". Lifetimes ensure that the data referenced by a struct
 is valid for as long as the struct is. Let’s say you try to store a reference
 in a struct without specifying lifetimes, like this, which won’t work:
 
