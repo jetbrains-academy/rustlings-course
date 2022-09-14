@@ -37,7 +37,7 @@ We then start the macro definition with `macro_rules!` and the name of the macro
 
 The structure in the `vec!` body is similar to the structure of a `match` expression. Here we have one arm with the pattern `( $( $x:expr ),* )`, followed by `=>` and the block of code associated with this pattern. If the pattern matches, the associated block of code will be emitted. Given that this is the only pattern in this macro, there is only one valid way to match; any other pattern will result in an error. More complex macros will have more than one arm.
 
-Valid pattern syntax in macro definitions is different than the pattern syntax covered in Chapter 18 because macro patterns are matched against Rust code structure rather than values. Let’s walk through what the pattern pieces in in the code snippet above mean; for the full macro pattern syntax, see [the reference](https://doc.rust-lang.org/1.30.0/book/first-edition/macros.html).
+Valid pattern syntax in macro definitions is different than the pattern syntax covered in Chapter 18 because macro patterns are matched against Rust code structure rather than values. Let’s walk through what the pattern pieces in the code snippet above mean; for the full macro pattern syntax, see [the reference](https://doc.rust-lang.org/1.30.0/book/first-edition/macros.html).
 
 First, a set of parentheses encompasses the whole pattern. A dollar sign (`<main>`) is next, followed by a set of parentheses that captures values that match the pattern within the parentheses for use in the replacement code. Within `$()` is `$x:expr`, which matches any Rust expression and gives the expression the name `$x`.
 
