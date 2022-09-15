@@ -1,6 +1,7 @@
 ### Re-exporting Names with `pub use`
 
-When we bring a name into scope with the `use` keyword, the name available in the new scope is private. To enable the code that calls our code to refer to that name as if it had been defined in that code’s scope, we can combine `pub` and `use`. This technique is called _re-exporting_ because we’re bringing an item into scope but also making that item available for others to bring into their scope.
+When we bring a name into scope with the `use` keyword, the name available in the new scope is private. In order to be able to refer to that name from some other code (as if the name has been defined in that code’s scope), we can combine `pub` and `use`.
+This technique is called _re-exporting_ because we’re bringing an item into scope but also making that item available for others to bring into their scope.
 
 The next example shows the code from the beginning of the task with `use` in the root module changed to `pub use`.
 
