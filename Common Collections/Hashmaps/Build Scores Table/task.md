@@ -1,7 +1,7 @@
 ## Build Scores Table
 
-A list of scores (one per line) of a soccer match is given. Each line 
-is of the form :
+Given is a list of scores (one per line) of a soccer match. Each line 
+is of the form:
 ```
 <team_1_name>,<team_2_name>,<team_1_goals>,<team_2_goals>
 ```
