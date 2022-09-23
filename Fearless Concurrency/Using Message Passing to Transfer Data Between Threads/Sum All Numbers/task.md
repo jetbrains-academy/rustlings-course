@@ -1,6 +1,6 @@
 ## Sum All Numbers
 
-We want to send elements of two vectors to a channel, and then count and find a sum of all of them.
+We want to send elements of two vectors to a channel and then count and find a sum of all of them.
 
 Make this compile!
 
