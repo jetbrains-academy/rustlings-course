@@ -5,7 +5,7 @@ function. As with generic type parameters, we need to declare generic lifetime
 parameters inside angle brackets between the function name and the parameter
 list. The constraint we want to express in this signature is that all the
 references in the parameters and the return value must have the same lifetime.
-We’ll name the lifetime `'a` and then add it to each reference, as shown in
+We’ll name the lifetime `'a` and then add it to each reference, as shown
 in the code snippet below.
 
 
