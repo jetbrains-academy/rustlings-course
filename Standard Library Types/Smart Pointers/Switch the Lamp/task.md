@@ -1,12 +1,12 @@
 ## Switch the Lamp
 
-In this task, we need a single lamp and several external switchers which are able to operate on the lamp
+In this task, we need a single lamp and several external switchers, which are able to operate on the lamp
 like in the following scenario:
 
 * create a lamp
-* create a switcher for a lamp 
+* create a switcher for the lamp 
 * create another switcher for the same lamp 
-* operate on different switchers and make sure that the lamp is on, and then off again
+* operate on different switchers and make sure that the lamp is on and then off again
 
 Unfortunately, Rust doesn't allow us to have several mutable references to the lamp. If you try to do that 
 in `main.rs` you'll see that immediately.
