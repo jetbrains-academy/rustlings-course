@@ -1,6 +1,6 @@
 ## Move, Borrow, Mutate, or What
 
-Make me compile! Don't change anything except the functions arguments.
+Make me compile! Don't change anything except the function's arguments.
 
 <div class="hint">
 <code>fn get_last_char</code> shouldn't take ownership, use reference for borrowing there.

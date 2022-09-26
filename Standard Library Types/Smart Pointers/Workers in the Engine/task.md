@@ -10,10 +10,10 @@ Workers require writable access to the log, but Rust would never allow us to hav
 
 There is one more problem. The `Worker` struct keeps a reference to a log. We know that references in `struct`s require specifying lifetimes, but don't try to follow the compiler suggestions. They won't lead you anywhere. The real problem is that workers and the engine have different lifetimes. It'd be impossible to persuade the borrow checker that everything is fine by specifying lifetimes. Instead, we should use [Rc&lt;T> smart pointers](https://doc.rust-lang.org/book/ch15-04-rc.html).
 
-Edit `worker` and `engine` modules so that the program compiles, runs, and passes the tests. Don't edit `main.rs`. It should work as it is.
+Edit the `worker` and `engine` modules so that the program compiles, runs, and passes the tests. Don't edit `main.rs`. It should work as it is.
 
 <div class="hint">
-Instead of following the compiler suggestions your first step could be to change the type of the log to <code>Rc&lt;RefCell&lt;Vec&lt;String>>></code> (smart pointer to <code>RefCell</code> with a vector of strings) in both <code>worker</code> and <code>engine</code> modules. Then you will need to fix the rest of the code.
+Instead of following the compiler suggestions, your first step could be to change the type of the log to <code>Rc&lt;RefCell&lt;Vec&lt;String>>></code> (smart pointer to <code>RefCell</code> with a vector of strings) in both <code>worker</code> and <code>engine</code> modules. Then you will need to fix the rest of the code.
 </div>
 
 <div class="hint">

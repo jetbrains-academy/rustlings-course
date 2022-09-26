@@ -8,7 +8,7 @@ If we’re using multiple items defined in the same crate or same module, listin
     // ---snip---
 ```
 
-Instead, we can use nested paths to bring the same items into scope in one line. We do this by specifying the common part of the path, followed by two colons, and then curly brackets around a list of the parts of the paths that differ, as shown below:
+Instead, we can use nested paths to bring the same items into scope in one line. We do this by specifying the common part of the path followed by two colons and a list of the parts of the paths that differ in curly brackets, as shown below:
 
 ```rust
     use std::{cmp::Ordering, io};
@@ -17,7 +17,7 @@ Instead, we can use nested paths to bring the same items into scope in one line.
 
 ##### Specifying a nested path to bring multiple items with the same prefix into scope
 
-In bigger programs, bringing many items into scope from the same crate or module using nested paths can reduce the number of separate `use` statements needed by a lot!
+In bigger programs, bringing many items into scope from the same crate or module using nested paths can significantly reduce the number of separate needed `use` statements!
 
 We can use a nested path at any level in a path, which is useful when combining two `use` statements that share a subpath. For example, the snippet below shows two `use` statements: one that brings `std::io` into scope and one that brings `std::io::Write` into scope.
 

@@ -74,7 +74,7 @@ We now have a way to find out the index of the end of the first word in the stri
 
 This program compiles without any errors and would also do so if we used `word` after calling `s.clear()`. Because `word` isn’t connected to the state of `s` at all, `word` still contains the value `5`. We could use that value `5` with the variable `s` to try to extract the first word out, but this would be a bug because the contents of `s` have changed since we saved `5` in `word`.
 
-Having to worry about the index in `word` getting out of sync with the data in `s` is tedious and error prone! Managing these indices is even more brittle if we write a `second_word` function. Its signature would have to look like this:
+Having to worry about the index in `word` getting out of sync with the data in `s` is tedious and error-prone! Managing these indices is even more brittle if we write a `second_word` function. Its signature would have to look like this:
 
 ```rust
     fn second_word(s: &String) -> (usize, usize) {

@@ -1,6 +1,6 @@
 ## Count Typed Cells
 
-We have a vector of `SpreadsheetCell` values. You task is to count cells for every type.
+We have a vector of `SpreadsheetCell` values. Your task is to count cells for every type.
 There is `struct CellsCounter` to store results.
 
 <div class="hint">What should we iterate over?</div>

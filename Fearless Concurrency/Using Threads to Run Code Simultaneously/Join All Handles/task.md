@@ -5,7 +5,7 @@ finish before the spawned threads are completed. The `thread::spawn` function re
 Collect the JoinHandles and wait for them to finish.
 
 <div class="hint">
-Push the value, you've got from the <code>thread::spawn</code> function into the
+Push the value you've got from the <code>thread::spawn</code> function into the
 <code>handles</code> vector.
 </div>
 
