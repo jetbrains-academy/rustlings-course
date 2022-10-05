@@ -9,7 +9,7 @@ files:
     placeholder_text: /* Return am appropriate error */
   - offset: 863
     length: 102
-    placeholder_text: /* Add a condition for the cases when trere is a wrong number
+    placeholder_text: /* Add a condition for the cases when there is a wrong number
       of fields and return an appropriate error */
   - offset: 974
     length: 143
