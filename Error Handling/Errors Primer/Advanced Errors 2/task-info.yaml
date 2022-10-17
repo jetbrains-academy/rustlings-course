@@ -1,5 +1,5 @@
 type: edu
-custom_name: Error Trait
+custom_name: "Task: Advanced Errors 2"
 files:
 - name: src/lib.rs
   visible: true
@@ -10,8 +10,8 @@ files:
   - offset: 822
     length: 35
     placeholder_text: |-
-      // TODO: Implement a missing trait so that `main()` will compile. It
-      // is not necessary to implement any methods inside the missing trait.
+      // TODO: Make ParseClimateError suitable for propagating errors in main.
+      // See hints if you are in trouble.
   - offset: 2122
     length: 19
     placeholder_text: /* Add a condition */
@@ -24,7 +24,7 @@ files:
       of fields */
   - offset: 2392
     length: 5
-    placeholder_text: Badlen
+    placeholder_text: BadLen
   - offset: 1354
     length: 173
     placeholder_text: /* Complete the implementation */
