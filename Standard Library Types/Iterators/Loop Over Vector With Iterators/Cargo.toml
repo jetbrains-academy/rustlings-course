@@ -1,0 +1,4 @@
+[package]
+name = "loop_over_vector_with_iterators"
+version = "0.1.0"
+edition = "2021"

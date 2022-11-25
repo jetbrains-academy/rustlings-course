@@ -5,6 +5,7 @@ content:
 - Methods that Produce Other Iterators
 - Using Closures that Capture Their Environment
 - Iterable Collection
+- Loop Over Vector With Iterators
 - Capitalize first
 - Iterator
 - Factorial
