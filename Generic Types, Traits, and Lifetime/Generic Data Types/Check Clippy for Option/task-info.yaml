@@ -1,0 +1,11 @@
+type: ide
+custom_name: "Task: Check Clippy for Option"
+files:
+- name: src/main.rs
+  visible: true
+  placeholders:
+  - offset: 65
+    length: 23
+    placeholder_text: for x in option
+- name: Cargo.toml
+  visible: false

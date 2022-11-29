@@ -9,4 +9,5 @@ content:
 - Generics in Vec
 - Generics in Structs
 - Use Option
+- Check Clippy for Option
 - Optional Value
