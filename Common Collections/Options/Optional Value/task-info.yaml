@@ -1,15 +1,15 @@
 type: edu
-custom_name: "Task: Optional Value"
+custom_name: "Task: Options in pattern matching"
 files:
-- name: src/main.rs
+- name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 137
+  - offset: 223
     length: 35
-    placeholder_text: value = optional_value {
-  - offset: 607
+    placeholder_text: word = optional_target
+  - offset: 723
     length: 55
-    placeholder_text: value = optional_values_vec.pop() {
+    placeholder_text: integer = optional_integers.pop()
 - name: Cargo.toml
   visible: false
 - name: tests/tests.rs
