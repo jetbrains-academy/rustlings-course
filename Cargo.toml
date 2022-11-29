@@ -20,6 +20,7 @@ members = [
     "Common Collections/Vectors/*/",
     "Common Collections/Hashmaps/*/",
     "Common Collections/Strings/*/",
+    "Common Collections/Options/*/",
     "Error Handling/Error Handling/*/",
     "Error Handling/Errors Primer/*/",
     "Generic Types, Traits, and Lifetime/Intro/*/",
