@@ -1,0 +1,4 @@
+[package]
+name = "check_more_clippy_suggestions"
+version = "0.1.0"
+edition = "2021"
