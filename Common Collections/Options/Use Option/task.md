@@ -1,7 +1,10 @@
-## Use Option
+## Want some ice cream?
 
+We have the `maybe_ice_cream` function that returns how much ice cream there is left in the fridge.
+If it's before 10PM, there's 5 pieces left. At 10PM, someone eats them
+all, so there'll be no more left :(
 
-Make the code compile! You can peep the hints if you're stuck.
+Your task is to complete the implementation of the `maybe_ice_cream` function and fix the test after it.
 
 To learn about Option<T>, check out these links:
 
@@ -10,10 +13,6 @@ To learn about Option<T>, check out these links:
 - [Option Enum Documentation](https://doc.rust-lang.org/std/option/enum.Option.html)
 
 
-<div class="hint">Hint 1: Check out some functions of Option:
-<code>is_some</code>
-<code>is_none</code>
-<code>unwrap</code>
-and pattern matching.</div>
-
-<div class="hint">There are no sensible defaults for the value of an <code>Array</code>; the values need to be filled before use.</div>
+<div class="hint">Options can have a <code>Some</code> value, with an inner value, or a <code>None</code> value, without an inner value.
+There's multiple ways to get at the inner value, you can use <code>unwrap</code>, or pattern match. Unwrapping
+is the easiest, but how do you do it safely so that it doesn't panic in your face later?</div>
