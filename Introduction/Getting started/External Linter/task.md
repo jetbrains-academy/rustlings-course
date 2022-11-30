@@ -4,7 +4,7 @@ IntelliJ Rust plugin doesn't detect all the errors. It relies on the Rust compil
 
 1. Go to **Settings / Preferences | Languages & Frameworks | Rust | External Linters**.
 2. Set the parameters as follows: 
-    - Select **Cargo check** in the **External Tool:** list;
+    - Select **Cargo Check** in the **External Tool:** list;
     - Check the **Run external linter to analyze code on the fly** checkbox.
 
 ![External Linters](images/external-linters.png)
