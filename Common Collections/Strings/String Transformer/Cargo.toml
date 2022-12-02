@@ -1,0 +1,4 @@
+[package]
+name = "string_transformer"
+version = "0.1.0"
+edition = "2021"
