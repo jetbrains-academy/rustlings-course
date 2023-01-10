@@ -4,11 +4,7 @@ files:
   visible: false
 - name: src/lib.rs
   visible: true
-  placeholders:
-  - offset: 226
-    length: 7
-    placeholder_text: 'super::'
 - name: runConfigurations/Build.run.xml
   visible: false
-solution_hidden: true
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Modules+/+Modules+/+Starting+Relative+Paths+with+super
+solution_hidden: true
