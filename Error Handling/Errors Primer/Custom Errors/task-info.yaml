@@ -4,15 +4,12 @@ files:
 - name: src/lib.rs
   visible: true
   placeholders:
-  - offset: 433
+  - offset: 383
     length: 117
-    placeholder_text: /* TODO */
-  - offset: 782
-    length: 216
-    placeholder_text: |-
-      let x: i64 = s.parse().unwrap();
-          PositiveNonzeroInteger::new(x)
-              .map_err(ParsePosNonzeroError::from_creation)
+    placeholder_text: // Add another error conversion function for ParseIntError here.
+  - offset: 754
+    length: 48
+    placeholder_text: .unwrap();
 - name: src/main.rs
   visible: true
 - name: Cargo.toml
