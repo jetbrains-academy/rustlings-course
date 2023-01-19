@@ -28,11 +28,11 @@ content:
 - Introduction
 - Common Programming Concepts
 - Understanding Ownership
-- Structs, Methods, Enums, and Pattern Matching
+- "Structs, Methods, Enums, and Pattern Matching"
 - Modules
 - Common Collections
 - Error Handling
-- Generic Types, Traits, and Lifetime
+- "Generic Types, Traits, and Lifetime"
 - Writing Automated Tests
 - Standard Library Types
 - Fearless Concurrency
