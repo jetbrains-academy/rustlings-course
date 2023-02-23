@@ -1,6 +1,6 @@
-# rustlings (Educational Products version) [![official JetBrains project](http://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+#  Learn Rust [![official JetBrains project](http://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 
-Greetings and welcome to `rustlings`.
+Greetings and welcome to `Learn Rust`.
 This project contains small exercises to get you used to reading and writing Rust code.
 This includes reading and responding to compiler messages!
 
