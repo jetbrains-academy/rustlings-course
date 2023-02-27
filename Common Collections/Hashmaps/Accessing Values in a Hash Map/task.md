@@ -15,8 +15,7 @@ method, as shown below.
     let score = scores.get(&team_name);
 ```
 
-#### Accessing the score for the Blue team
-stored in the hash map</span>
+#### Accessing the score for the Blue team stored in the hash map</span>
 
 Here, `score` will have the value that’s associated with the Blue team, and the
 result will be `Some(&10)`. The result is wrapped in `Some` because `get`
