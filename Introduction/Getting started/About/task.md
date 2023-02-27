@@ -1,4 +1,4 @@
-Welcome to the Educational Products' adaptation of the exciting [rustlings](https://github.com/rust-lang/rustlings) course.
+Welcome to the JetBrains Academy adaptation of the exciting [rustlings](https://github.com/rust-lang/rustlings) course.
 
 This course contains small exercises to get you used to reading and writing Rust code. This includes reading and responding to compiler messages!
 
