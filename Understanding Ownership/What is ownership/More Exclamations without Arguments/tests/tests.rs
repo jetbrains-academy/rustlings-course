@@ -13,8 +13,8 @@ fn prints_hello1_twice() {
     let actual_as_string = std::str::from_utf8(&actual).unwrap();
     let expected_first_line  = "hello1 is `Hello!`\n";
     let expected_second_line = "hello1 is `Hello!!`\n";
-    assert!(actual_as_string.contains(expected_first_line), "The output with one '!' is missing");
-    assert!(actual_as_string.contains(expected_second_line), "The output with \"!!\" is missing");
+    assert!(actual_as_string.contains(expected_first_line), "The output 'Hello!' is missing");
+    assert!(actual_as_string.contains(expected_second_line), "The output \"Hello!!\" is missing");
 }
 
 
