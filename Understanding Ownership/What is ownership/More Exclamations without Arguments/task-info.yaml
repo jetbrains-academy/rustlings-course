@@ -12,7 +12,7 @@ files:
     placeholder_text: hello
   - offset: 234
     length: 0
-    placeholder_text: 's: String'
+    placeholder_text: "s: String"
   - offset: 252
     length: 36
     placeholder_text: /* Create the "Hello" string here */
