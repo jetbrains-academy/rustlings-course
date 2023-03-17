@@ -46,7 +46,7 @@ Now that we’ve discussed some of the most common ways to use vectors, be sure
 to review [the API documentation][vec-api] for all the many useful methods defined on
 `Vec<T>` by the standard library. For example, in addition to `push`, a `pop`
 method removes and returns the last element. Let’s move on to the next
-collection type: `HashMap`!
+collection type: `String`!
 
 
 
