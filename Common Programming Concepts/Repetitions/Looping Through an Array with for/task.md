@@ -1,6 +1,6 @@
 ## Looping Through an Array with for
 
-You could use the `while` construct to loop over the elements of a collection, such as an array. For example, let’s look at Listing 3-4:
+You could use the `while` construct to loop over the elements of a collection, such as an array. For example, let’s look at the following code:
 
 ```rust
 fn main() {
@@ -34,7 +34,7 @@ All five array values appear in the terminal, as expected. Even though `index` w
 
 But this approach is error-prone; we could cause the program to panic if the index length is incorrect. It’s also slow because the compiler adds runtime code to perform the conditional check on every element on every iteration through the loop.
 
-As a more concise alternative, you can use a `for` loop and execute some code for each item in a collection. A for loop looks like the code in Listing 3-5:
+As a more concise alternative, you can use a `for` loop and execute some code for each item in a collection. A for loop looks like this:
 
 ```rust
 fn main() {
