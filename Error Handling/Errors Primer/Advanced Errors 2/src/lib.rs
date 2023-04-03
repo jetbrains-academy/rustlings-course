@@ -67,8 +67,8 @@ impl FromStr for Climate {
         let (city, year, temp) = match &v[..] {
             [city, year, temp] if !city.is_empty() => (city.to_string(), year, temp),
             [city, year, temp] if city.is_empty() => return Err(ParseClimateError::NoCity),
-            [_,_, _, ..] |  [_,_] => return Err(ParseClimateError::BadLen),
-            _ => return Err(ParseClimateError::Empty),
+            [str] if str.trim().is_empty() => return Err(ParseClimateError::Empty),
+            _ => return Err(ParseClimateError::BadLen),
         };
         let year: u32 = year.parse()?;
         let temp: f32 = temp.parse()?;
