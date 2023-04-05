@@ -6,12 +6,15 @@ files:
   placeholders:
   - offset: 793
     length: 19
-    placeholder_text: '// TODO: Complete this function'
+    placeholder_text: "// TODO: Complete this function"
   - offset: 822
     length: 35
     placeholder_text: |-
       // TODO: Make ParseClimateError suitable for propagating errors in main.
       // See hints if you are in trouble.
+  - offset: 1354
+    length: 173
+    placeholder_text: /* Complete the implementation */
   - offset: 2122
     length: 19
     placeholder_text: /* Add a condition */
@@ -19,15 +22,8 @@ files:
     length: 79
     placeholder_text: /* Return an error if the city name is empty */
   - offset: 2281
-    length: 63
-    placeholder_text: /* Return an error if the string is empty or has the wrong number
-      of fields */
-  - offset: 2392
-    length: 5
-    placeholder_text: BadLen
-  - offset: 1354
-    length: 173
-    placeholder_text: /* Complete the implementation */
+    length: 71
+    placeholder_text: /* Return an error if the string is empty */
 - name: src/main.rs
   visible: true
 - name: Cargo.toml

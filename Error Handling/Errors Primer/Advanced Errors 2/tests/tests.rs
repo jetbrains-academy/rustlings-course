@@ -7,6 +7,12 @@ fn test_empty() {
     assert_eq!(res.unwrap_err().to_string(), "empty input");
 }
 #[test]
+fn test_one_entry() {
+    let res = "abc".parse::<Climate>();
+    assert_eq!(res, Err(ParseClimateError::BadLen));
+    assert_eq!(res.unwrap_err().to_string(), "incorrect number of fields");
+}
+#[test]
 fn test_short() {
     let res = "Boston,1991".parse::<Climate>();
     assert_eq!(res, Err(ParseClimateError::BadLen));
