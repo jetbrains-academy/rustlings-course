@@ -29,8 +29,8 @@ will add `50` to each element.
 
 To change the value that the mutable reference refers to, we have to use the
 dereference operator (`*`) to get to the value in `i` before we can use the
-`+=` operator. We’ll talk more about the dereference operator in the
+`+=` operator. You can read more about the dereference operator in the
 “Following the Pointer to the Value with the Dereference Operator”
 section of Chapter 15 in the [Rust book][book].
 
-[book]: https://doc.rust-lang.org/stable/book/
+[book]: https://doc.rust-lang.org/stable/book/ch15-02-deref.html?highlight=dereference#following-the-pointer-to-the-value
