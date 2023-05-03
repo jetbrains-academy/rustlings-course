@@ -23,8 +23,8 @@ To protect your program from this sort of vulnerability, if you try to read an e
     Finished dev [unoptimized + debuginfo] target(s) in 0.30s
      Running `target/debug/test_rust_project`
 thread 'main' panicked at 'index out of bounds: the len is 3 but the index is 99', /rustc/3c235d5600393dfe6c36eeed34042efad8d4f26e/src/libcore/slice/mod.rs:2686:10
-This error points at a file we didn’t write, _libcore/slice/mod.rs_. That’s the implementation of `slice` in the Rust source code. The code that gets run when we use `[]` on our vector `v` is in _libcore/slice/mod.rs_, and that is where the `panic!` is actually happening.
 ```
+This error points at a file we didn’t write, _libcore/slice/mod.rs_. That’s the implementation of `slice` in the Rust source code. The code that gets run when we use `[]` on our vector `v` is in _libcore/slice/mod.rs_, and that is where the `panic!` is actually happening.
 
 The next note line tells us that we can set the `RUST_BACKTRACE` environment variable to get a backtrace of exactly what happened to cause the error. A _backtrace_ is a list of all the functions that have been called to get to this point. Backtraces in Rust work as they do in other languages: the key to reading the backtrace is to start from the top and read until you see files you wrote. That’s the spot where the problem originated. The lines above the lines mentioning your files are code that your code called; the lines below are code that called your code. These lines might include core Rust code, standard library code, or crates that you’re using. Let’s try getting a backtrace by setting the `RUST_BACKTRACE` environment variable to any value except 0. The code snippet below shows output similar to what you’ll see.
 
