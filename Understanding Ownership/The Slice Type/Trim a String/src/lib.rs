@@ -13,5 +13,9 @@ pub fn trimmed_space(str: &str) -> &str {
         }
     }
 
-    &str[first_non_space..=last_non_space]
+    if last_non_space == 0 {
+        &str[first_non_space..]
+    } else {
+        &str[first_non_space..=last_non_space]
+    }
 }
