@@ -3,11 +3,11 @@ fn main() {
 
     add_exclamation(&mut hello);
 
-    println!("{} is `{}`", "hello", hello);
+    println!("{} is '{}'", "hello", hello);
 
     add_exclamation(&mut hello);
 
-    println!("{} is `{}`", "hello", hello);
+    println!("{} is '{}'", "hello", hello);
 }
 
 fn add_exclamation(s: &mut String) {
