@@ -1,4 +1,4 @@
-type: ide
+type: edu
 custom_name: "Task: Understanding Types"
 files:
 - name: src/main.rs
@@ -12,7 +12,7 @@ files:
     placeholder_text: 1..4
   - offset: 81
     length: 23
-    placeholder_text: nice_slice == [2, 3, 4]
+    placeholder_text: "nice_slice == [2, 3, 4]"
   - offset: 259
     length: 3
     placeholder_text: type placeholder
@@ -23,5 +23,7 @@ files:
     length: 4
     placeholder_text: type placeholder
 - name: Cargo.toml
+  visible: false
+- name: tests/tests.rs
   visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+The+Slice+Type+/+Understanding+Types
