@@ -5,7 +5,7 @@ files:
   visible: true
   placeholders:
   - offset: 0
-    length: 243
+    length: 232
     placeholder_text: |-
       fn main() {
           let year1993 = 1993;
