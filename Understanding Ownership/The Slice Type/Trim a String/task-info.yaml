@@ -10,7 +10,7 @@ files:
   - offset: 35
     length: 4
     placeholder_text: /*TODO*/
-  - offset: 361
+  - offset: 439
     length: 32
     placeholder_text: ..
 - name: src/main.rs
