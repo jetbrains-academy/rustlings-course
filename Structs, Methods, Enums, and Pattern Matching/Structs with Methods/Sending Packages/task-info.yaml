@@ -10,16 +10,16 @@ files:
     length: 107
     placeholder_text: /* Instantiate the package here */
   - offset: 508
-    length: 5
+    length: 4
     placeholder_text: /* Add return type */
   - offset: 523
-    length: 53
+    length: 45
     placeholder_text: /* Something goes here */
-  - offset: 631
+  - offset: 623
     length: 3
     placeholder_text: /* Add return type */
-  - offset: 645
-    length: 45
+  - offset: 637
+    length: 37
     placeholder_text: /* Something goes here */
 - name: tests/output.txt
   visible: false
