@@ -2,7 +2,7 @@
 
 It’s often useful for a program to evaluate a condition within a loop. While the condition is true, the loop runs. When the condition ceases to be true, the program calls `break`, stopping the loop. This loop type could be implemented using a combination of `loop`, `if`, `else`, and `break`; you could try that now in a program if you’d like.
 
-However, this pattern is so common that Rust has a built-in language construct for it, called a `while` loop. Listing 3-3 uses while: the program loops three times, counting down each time, and then, after the loop, it prints another message and exits.
+However, this pattern is so common that Rust has a built-in language construct for it, called a `while` loop. Listing below uses while: the program loops three times, counting down each time, and then, after the loop, it prints another message and exits.
 
 ```rust
 fn main() {
