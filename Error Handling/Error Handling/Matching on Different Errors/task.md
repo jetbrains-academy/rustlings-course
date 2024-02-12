@@ -30,7 +30,7 @@ The type of the value that `File::open` returns inside the `Err` variant is `io:
 
 The condition we want to check in the inner match is whether the value returned by `error.kind()` is the `NotFound` variant of the `ErrorKind` enum. If it is, we try to create the file with `File::create`. However, because `File::create` could also fail, we need a second arm in the inner `match` expression. When the file can’t be created, a different error message is printed. The second arm of the outer `match` stays the same, so the program panics on any error besides the missing file error.
 
-That’s a lot of `match`! The `match` expression is very useful but also very much a primitive. In ["Iterators and Closures"](course://Iterators and Closures), you’ll learn about closures; the `Result<T, E>` type has many methods that accept a closure and are implemented using `match` expressions. Using those methods will make your code more concise. A more seasoned Rustacean might write this code instead of the previous one:
+That’s a lot of `match`! The `match` expression is very useful but also very much a primitive. In ["Standard Library Types/Closures"](course://Standard Library Types/Closures), you’ll learn about closures; the `Result<T, E>` type has many methods that accept a closure and are implemented using `match` expressions. Using those methods will make your code more concise. A more seasoned Rustacean might write this code instead of the previous one:
 
 ```rust
 use std::fs::File;
@@ -49,4 +49,4 @@ fn main() {
 }
 ```
 
-Although this code has the same behavior as the previous one, it doesn’t contain any `match` expressions and is cleaner to read. Come back to this example after you’ve read ["Iterators and Closures"](course://Iterators and Closures), and look up the `unwrap_or_else` method in the standard library documentation. Many more of these methods can clean up huge nested `match` expressions when you’re dealing with errors.
+Although this code has the same behavior as the previous one, it doesn’t contain any `match` expressions and is cleaner to read. Come back to this example after you’ve read ["Standard Library Types/Closures"](course://Standard Library Types/Closures), and look up the `unwrap_or_else` method in the standard library documentation. Many more of these methods can clean up huge nested `match` expressions when you’re dealing with errors.
