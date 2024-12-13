@@ -22,7 +22,7 @@ First, notice that all the tuple code in the variable declaration and the functi
 
 These ampersands are _references_, and they allow you to refer to some value without taking ownership of it. Figure 5 shows a diagram.
 
-<img alt="&amp;String s pointing at String s1" src="https://doc.rust-lang.org/stable/book/img/trpl04-05.svg" class="center">
+<img alt="&amp;String s pointing at String s1" src="https://doc.rust-lang.org/stable/book/img/trpl04-06.svg" class="center">
 
 ##### Figure 5: A diagram of &String s pointing at String s1
 
