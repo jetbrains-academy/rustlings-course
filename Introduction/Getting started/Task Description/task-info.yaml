@@ -1,25 +1,41 @@
 type: theory
 files:
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: images/back.svg
-  visible: false
-- name: images/commentTask.svg
-  visible: false
-- name: images/edu_next_button.png
-  visible: false
-- name: images/edu_peek_solution.png
-  visible: false
-- name: images/edu_task_description_window_settings.png
-  visible: false
-- name: images/forward.svg
-  visible: false
-- name: images/gear.svg
-  visible: false
-- name: images/hideToolWindow.svg
-  visible: false
-- name: images/reset.svg
-  visible: false
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: images/back.svg
+    visible: false
+  - name: images/edu_next_button.png
+    visible: false
+  - name: images/edu_peek_solution.png
+    visible: false
+  - name: images/forward.svg
+    visible: false
+  - name: images/gear.svg
+    visible: false
+  - name: images/hideToolWindow.svg
+    visible: false
+  - name: images/reset.svg
+    visible: false
+  - name: images/commentTask_dark.svg
+    visible: false
+  - name: images/commentTask.svg
+    visible: false
+  - name: images/moreVertical_dark.svg
+    visible: false
+  - name: images/moreVertical.svg
+    visible: false
+  - name: images/rateCourse_dark.svg
+    visible: false
+  - name: images/rateCourse.svg
+    visible: false
+  - name: images/translation_dark.svg
+    visible: false
+  - name: images/translation.svg
+    visible: false
+  - name: images/edu_task_description_window_settings_dark.png
+    visible: false
+  - name: images/edu_task_description_window_settings.png
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Introduction+/+Getting+started+/+Task+Description
