@@ -16,13 +16,15 @@ Use the Task Description window elements for the following actions:
 | ![](images/forward.svg) &nbsp;<font size="-1">or</font> **Next** | <font size="-1">Go to the next task</font>                                                                              | 
 | ![](images/reset.svg)                                            | <font size="-1">Discard all the changes you’ve made in the task, and start over</font>                                  | 
 | ![](images/commentTask.svg)                                      | <font size="-1">Leave a comment on a particular task</font>                                                             | 
+| ![](images/rateCourse.svg)                                       | <font size="-1">Rate the course</font>                                                                                  | 
+| ![](images/translation.svg)                                      | <font size="-1">Translate this course with AI</font>                                                                    | 
 | <a>Peek Solution...</a>                                          | <font size="-1">Reveal the correct answer and show the <b>diff</b></font>                                               |
 
 We recommend keeping the Task Description window visible and not hiding it completely. If it is too distracting, you can hide it by clicking the ![](images/hideToolWindow.svg) button in the top right-hand corner of the Task Description window.
 
-If you use two monitors, it may be helpful to switch the Task Description panel to the floating mode and move it to the second monitor, or just place it near the main IDE window. To do this, click the tool window settings ![](images/gear.svg) icon :
+If you use two monitors, it may be helpful to switch the Task Description panel to the floating mode and move it to the second monitor, or just place it near the main IDE window. To do this, click the tool window settings ![](images/moreVertical.svg) icon :
 
-<img src="images/edu_task_description_window_settings.png" width="85%"/>
+<img src="images/edu_task_description_window_settings.png" width="65%"/>
 
 <style>
 img {
