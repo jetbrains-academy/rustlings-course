@@ -5,7 +5,7 @@ Something strange is going on here. The program is compiled without any problems
 Refactor this program to avoid array copying by switching to a mutable reference in `fn print_months_reversed` and fix the compiler errors.
 
 <div class="hint">
-  Remember as we discussed in <a href="course://Common Programming Concepts/Tuples and Arrays/The Array Type">The Array Type</a> task, arrays are allocated on the stack.
+  Remember, as we discussed in <a href="course://Common Programming Concepts/Tuples and Arrays/The Array Type">The Array Type</a> task, arrays are allocated on the stack.
 </div>
 
 <div class="hint">
