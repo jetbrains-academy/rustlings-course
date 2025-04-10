@@ -9,9 +9,8 @@ variable available; constants.
 
 <div class="hint">
 
-Constants are always immutable and they are declared with keyword <code>const</code> rather
-than keyword <code>let</code>.
-Constants types must also always be annotated. We'll go into the details of the type annotations in the [Basic Data Types](course://Common Programming Concepts/Basic Data Types) lesson. For now, you can use `i32` type for signed 32-bit integer.
+Constants are always immutable and are declared using the <code>const</code> keyword instead of <code>let</code>. 
+Additionally, the types of constants must always be annotated. We’ll dive deeper into type annotations in the [Basic Data Types](course://Common Programming Concepts/Basic Data Types) lesson. For now, you can use the `i32` type for a signed 32-bit integer.
 </div>
 
 <div class="hint">
