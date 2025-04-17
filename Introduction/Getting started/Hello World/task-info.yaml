@@ -1,14 +1,18 @@
 type: edu
 custom_name: "Task: Hello World"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 16
-    length: 26
-    placeholder_text: // put your code here to launch it
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 16
+        length: 26
+        placeholder_text: // put your code here to launch it
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
+  - name: images/run_dark.svg
+    visible: false
+  - name: images/run.svg
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Introduction+/+Getting+started+/+Hello+World
