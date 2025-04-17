@@ -8,6 +8,26 @@ Keep in mind that Rust is a _statically typed language_, which means that it mus
 let guess: u32 = "42".parse().expect("Not a number!");
 ```
 
+<div class="hint" title="Code explanation">
+
+  Although the example is focused on type annotation, it uses the `parse` and `expect` methods. 
+  We won't pay much attention to them now, but for a general understanding, they are used for the following:
+  - `parse` converts a string to another type (number in this instance) and returns either a value or `Err`;
+  - `expect` allows you to set a custom error message for panic in case `parse` returns `Err`.
+
+  For example, this code
+  ```rust
+  let guess: u32 = "a42".parse().expect("Not a number!");
+  ```
+  will cause the following error:
+  ```text
+  thread 'main' panicked at Common Programming Concepts/Basic Data Types/Intro/src/main.rs:2:36:
+  Not a number!: ParseIntError { kind: InvalidDigit }
+  ...
+```
+</div>
+
+
 If we don’t add the type annotation here, Rust will display the following error, which means the compiler needs more information from us to know which type we want to use:
 
 ```text
