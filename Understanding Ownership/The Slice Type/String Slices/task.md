@@ -15,7 +15,7 @@ We can create slices using a range within brackets by specifying `[starting_inde
 
 Figure 6 shows this in a diagram.
 
-<img alt="world containing a pointer to the 6th byte of String s and a length 5" src="https://doc.rust-lang.org/stable/book/img/trpl04-06.svg" class="center" style="width: 50%;">
+<img alt="world containing a pointer to the 6th byte of String s and a length 5" src="https://doc.rust-lang.org/stable/book/img/trpl04-07.svg" class="center" style="width: 50%;">
 
 ##### Figure 6: String slice referring to part of a String
 
