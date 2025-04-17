@@ -8,13 +8,13 @@ For example, let's apply [DeMorgan's law](https://en.wikipedia.org/wiki/De_Morga
 
 Place the cursor on `&&` and use the &shortcut:ShowIntentionActions; shortcut to see available context actions.
 
-![](image.png)
+![](images/demorgan_refactor.png)
 
 Now, can you quickly understand what the code from the `main.rs` file prints?
 
 <div class="hint">
   The resulting if condition should be <br>
-  <code>(number > 4 && number <= 9) || (number > 0 && number < 10)</code>
+  <code>(number > 4 && number <= 9) || (number > 10 && number < 20)</code>
 </div>
 
 
