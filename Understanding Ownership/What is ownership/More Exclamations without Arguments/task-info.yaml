@@ -1,23 +1,23 @@
 type: edu
 custom_name: "Task: More Exclamations without Arguments"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 17
-    length: 30
-    placeholder_text: let hello = String::from("Hello");
-  - offset: 87
-    length: 0
-    placeholder_text: hello
-  - offset: 234
-    length: 0
-    placeholder_text: "s: String"
-  - offset: 252
-    length: 36
-    placeholder_text: /* Create the "Hello" string here */
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 17
+        length: 30
+        placeholder_text: let hello = String::from("Hello");
+      - offset: 93
+        length: 0
+        placeholder_text: hello
+      - offset: 246
+        length: 0
+        placeholder_text: "s: String"
+      - offset: 264
+        length: 36
+        placeholder_text: /* Create the "Hello" string here */
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+What+is+ownership+/+More+Exclamations+without+Arguments
