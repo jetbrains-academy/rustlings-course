@@ -17,7 +17,7 @@ Now let's replace the line inside the main function with the code:
 ```
 ##### Example: A program that prints Hello, world!
 
-To run this code click on **Run** icon (![](images/run.svg)) at the left-upper corner of the editor. Click **Check** button in the **Task Description** window to run the tests checking the correctness of the solution provided.
+To run this code, click the **Run** icon (![](images/run.svg)) in the top-left corner of the editor. Click the **Check** button in the **Task Description** window to run tests and verify the correctness of your solution.
 
 If `Hello, world!` did print, congratulations! You’ve officially written a Rust program. That makes you a Rust programmer—welcome!
 
