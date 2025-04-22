@@ -44,3 +44,5 @@ members = [
 exclude = [
     "**/*.yaml"
 ]
+
+resolver = "2"

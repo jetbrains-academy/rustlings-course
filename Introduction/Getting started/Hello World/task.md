@@ -17,7 +17,7 @@ Now let's replace the line inside the main function with the code:
 ```
 ##### Example: A program that prints Hello, world!
 
-To run this code click on **Run** icon at the left-upper corner of the editor. Click **Check** button in the **Task Description** window to run the tests checking the correctness of the solution provided.
+To run this code, click the **Run** icon (![](images/run.svg)) in the top-left corner of the editor. Click the **Check** button in the **Task Description** window to run tests and verify the correctness of your solution.
 
 If `Hello, world!` did print, congratulations! You’ve officially written a Rust program. That makes you a Rust programmer—welcome!
 
@@ -53,3 +53,9 @@ Third, you see the `"Hello, world!"` string. We pass this string as an argument 
 Fourth, we end the line with a semicolon (`;`), which indicates that this expression is over and the next one is ready to begin. Most lines of Rust code end with a semicolon.
 
 _You can refer to the following chapter in the Rust Programming Language book: [Hello, World!](https://doc.rust-lang.org/stable/book/ch01-02-hello-world.html)_
+
+<style>
+img {
+  display: inline !important;
+}
+</style>
