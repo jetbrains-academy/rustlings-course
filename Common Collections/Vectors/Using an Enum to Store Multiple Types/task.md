@@ -1,6 +1,6 @@
 ### Using an Enum to Store Multiple Types
 
-At the beginning of this chapter, we said that vectors can only store values
+At the beginning of this lesson, we said that vectors can only store values
 that are the same type. This can be inconvenient; there are definitely use
 cases for needing to store a list of items of different types. Fortunately, the
 variants of an enum are defined under the same enum type, so when we need to
@@ -36,7 +36,7 @@ this vector. If Rust allowed a vector to hold any type, there would be a chance
 that one or more of the types would cause errors with the operations performed
 on the elements of the vector. Using an enum plus a `match` expression means
 that Rust will ensure at compile time that every possible case is handled, as
-discussed in the chapter "Enums".
+discussed in the [Enums](course://Structs,%20Methods,%20Enums,%20and%20Pattern%20Matching/Enums) lesson.
 
 When you’re writing a program, if you don’t know the exhaustive set of types
 the program will get at runtime to store in a vector, the enum technique won’t

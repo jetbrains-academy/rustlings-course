@@ -3,7 +3,7 @@
 Using enums has even more advantages. Thinking more about our IP address type,
 at the moment we don’t have a way to store the actual IP address *data*; we
 only know what *kind* it is. Given that you just learned about structs in
-the previous chapter, you might tackle this problem as shown in the code snippet below.
+the previous lesson, you might tackle this problem as shown in the code snippet below.
 
 ```rust
 enum IpAddrKind {

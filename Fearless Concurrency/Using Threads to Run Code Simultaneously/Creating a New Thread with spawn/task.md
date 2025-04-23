@@ -1,6 +1,6 @@
 ### Creating a New Thread with `spawn`
 
-To create a new thread, we call the `thread::spawn` function and pass it a closure (we talked about closures in Chapter 13) containing the code we want to run in the new thread. The example in the code snippet below prints some text from a main thread and other text from a new thread:
+To create a new thread, we call the `thread::spawn` function and pass it a closure (we talked about closures in the [Closures](course://Standard Library Types/Closures) lesson) containing the code we want to run in the new thread. The example in the code snippet below prints some text from a main thread and other text from a new thread:
 
 ```rust
     use std::thread;

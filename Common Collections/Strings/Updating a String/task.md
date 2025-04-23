@@ -55,7 +55,7 @@ The string `s3` will contain `Hello, world!` as a result of this code. The reaso
     fn add(self, s: &str) -> String {
 ```
 
-This isn’t the exact signature that’s in the standard library: in the standard library, `add` is defined using generics. Here, we’re looking at the signature of `add` with concrete types substituted for the generic ones, which is what happens when we call this method with `String` values. We’ll discuss generics in the chapter "Generic Types, Traits and Lifetime". This signature gives us the clues we need to understand the tricky bits of the `+` operator.
+This isn’t the exact signature that’s in the standard library: in the standard library, `add` is defined using generics. Here, we’re looking at the signature of `add` with concrete types substituted for the generic ones, which is what happens when we call this method with `String` values. We’ll discuss generics in the [Generic Types, Traits and Lifetime](course://Generic%20Types,%20Traits,%20and%20Lifetime) section. This signature gives us the clues we need to understand the tricky bits of the `+` operator.
 
 First, `s2` has an `&`, meaning that we’re adding a _reference_ of the second string to the first string because of the `s` parameter in the `add` function: we can only add a `&str` to a `String`; we can’t add two `String` values together. But wait—the type of `&s2` is `&String`, not `&str`, as specified in the second parameter to `add`. So why does the listing "Using the + operator to combine two String values into a new String value" compile?
 

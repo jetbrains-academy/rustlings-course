@@ -2,7 +2,7 @@
 
 As we did with structs, we can define enums to hold generic data types in their
 variants. Let’s take another look at the `Option<T>` enum that the standard
-library provides, which we used in the chapter "Enums":
+library provides, which we used in the [Enums](course://Structs,%20Methods,%20Enums,%20and%20Pattern%20Matching/Enums) lesson:
 
 ```rust
 enum Option<T> {
@@ -19,7 +19,7 @@ optional value, and because `Option<T>` is generic, we can use this abstraction
 no matter what the type of the optional value is.
 
 Enums can use multiple generic types as well. The definition of the `Result`
-enum that we used in the chapter "Recoverable and Unrecoverable Errors" is one example:
+enum that we used in the [Error Handling](course://Error Handling/Error Handling) lesson is one example:
 
 ```rust
 enum Result<T, E> {

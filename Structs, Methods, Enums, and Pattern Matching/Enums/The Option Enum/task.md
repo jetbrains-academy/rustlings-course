@@ -58,7 +58,7 @@ you can use `Some` and `None` directly without the `Option::` prefix. The
 still variants of type `Option<T>`.
 
 The `<T>` syntax is a feature of Rust we haven’t talked about yet. It’s a
-generic type parameter, and we’ll cover generics in more detail in the chapter "Generic Types, Traits and Lifetime".
+generic type parameter, and we’ll cover generics in more detail in the [Generic Types, Traits, and Lifetime](course://Generic%20Types,%20Traits,%20and%20Lifetime) section.
 For now, all you need to know is that `<T>` means the `Some` variant of the
 `Option` enum can hold one piece of data of any type. Here are some examples of
 using `Option` values to hold number types and string types:

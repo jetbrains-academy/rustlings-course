@@ -10,7 +10,7 @@ fn main() {
 }
 ```
 
-Arrays are useful when you want your data allocated on the stack rather than the heap (we will discuss the stack and the heap more in Chapter 4) or when you want to ensure you always have a fixed number of elements. An array isn’t as flexible as the vector type, though. A vector is a similar collection type provided by the standard library that is allowed to grow or shrink in size. If you’re unsure whether to use an array or a vector, you should probably use a vector. Chapter 8 discusses vectors in more detail.
+Arrays are useful when you want your data allocated on the stack rather than the heap (we discussed the stack and the heap more in the [Understanding Ownership](course://Understanding Ownership) section) or when you want to ensure you always have a fixed number of elements. An array isn’t as flexible as the vector type, though. A vector is a similar collection type provided by the standard library that is allowed to grow or shrink in size. If you’re unsure whether to use an array or a vector, you should probably use a vector. We will discuss it in the [Vectors](course://Common Collections/Vectors) lesson in more detail.
 
 An example of when you might want to use an array rather than a vector is in a program that needs to know the names of the months of the year. It’s very unlikely that such a program will need to add or remove months, so you can use an array because you know it will always contain 12 elements. Since we don't even need to change the names of the months, we can use the `const` keyword:
 

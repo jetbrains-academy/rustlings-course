@@ -26,7 +26,7 @@ These ampersands are _references_, and they allow you to refer to some value wit
 
 ##### Figure 5: A diagram of &String s pointing at String s1
 
-> Note: The opposite of referencing by using `&` is _dereferencing_, which is accomplished with the dereference operator, `*`. We’ll see some uses of the dereference operator in Chapter 8 and discuss details of dereferencing in Chapter 15.
+> Note: The opposite of referencing by using `&` is _dereferencing_, which is accomplished with the dereference operator, `*`. We’ll see some uses of the dereference operator in the [Common Programming Concepts](course://Common Programming Concepts) section and discuss details of dereferencing in the [Smart Pointers](course://Standard Library Types/Smart Pointers) lesson.
 
 Let’s take a closer look at the function call here:
 
