@@ -25,17 +25,24 @@ vendor:
   url: https://www.jetbrains.com/
 programming_language: Rust
 content:
-- Introduction
-- Common Programming Concepts
-- Understanding Ownership
-- "Structs, Methods, Enums, and Pattern Matching"
-- Modules
-- Common Collections
-- Error Handling
-- "Generic Types, Traits, and Lifetime"
-- Writing Automated Tests
-- Standard Library Types
-- Fearless Concurrency
-- Macros
+  - Introduction
+  - Common Programming Concepts
+  - Understanding Ownership
+  - "Structs, Methods, Enums, and Pattern Matching"
+  - Modules
+  - Common Collections
+  - Error Handling
+  - "Generic Types, Traits, and Lifetime"
+  - Writing Automated Tests
+  - Standard Library Types
+  - Fearless Concurrency
+  - Macros
 tags:
-- Beginner-friendly
+  - Beginner-friendly
+additional_files:
+  - name: .cargo/config.toml
+  - name: LICENSE
+  - name: README.md
+  - name: Cargo.toml
+  - name: change-notes.txt
+yaml_version: 2

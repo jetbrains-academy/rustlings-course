@@ -30,7 +30,7 @@ must have the same type.
 Another way of constructing a hash map is by using iterators and the `collect`
 method on a vector of tuples, where each tuple consists of a key and its value.
 We’ll be going into more detail about iterators and their associated methods in
-the ”Iterators” section of the chapter "Iterators and Closures". The `collect` method gathers data into a number
+the [Iterators](course://Standard%20Library%20Types/Iterators) lesson. The `collect` method gathers data into a number
 of collection types, including `HashMap`. For example, if we had the team names
 and initial scores in two separate vectors, we could use the `zip` method to
 create a vector of tuples where “Blue” is paired with 10, and so forth. Then we

@@ -1,6 +1,6 @@
 ### In Method Definitions
 
-We can implement methods on structs and enums (as we did in the chapter "Structs") and use
+We can implement methods on structs and enums (as we did in the [Structs](course://Structs,%20Methods,%20Enums,%20and%20Pattern%20Matching/Structs) lesson) and use
 generic types in their definitions, too. The code snippet below shows the `Point<T>`
 struct we defined above with a method named `x` implemented on it.
 

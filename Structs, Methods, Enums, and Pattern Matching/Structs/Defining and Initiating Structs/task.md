@@ -1,6 +1,6 @@
 ## Defining and Instantiating Structs
 
-Structs are similar to tuples, which were discussed in the chapter "Common Programming Concepts". Like in the case of tuples,
+Structs are similar to tuples, which were discussed in the [Common Programming Concepts](course://Common Programming Concepts) section. Like in the case of tuples,
 the pieces of a struct can be of different types. Unlike the case with tuples, you’ll name
 each piece of data so it’s clear what the values mean. As a result of assigning these
 names, structs are more flexible than tuples: you don’t have to rely on the

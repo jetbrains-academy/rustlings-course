@@ -1,6 +1,6 @@
 ### Variable Scope
 
-We’ve walked through an example of a Rust program already in Chapter 2. Now that we’re past basic syntax, we won’t include all the `fn main() {` code in examples, so if you’re following along, you’ll have to put the following examples inside a `main` function manually. As a result, our examples will be a bit more concise, letting us focus on the actual details rather than boilerplate code.
+We’ve walked through an example of a Rust program already in the previous section. Now that we’re past basic syntax, we won’t include all the `fn main() {` code in examples, so if you’re following along, you’ll have to put the following examples inside a `main` function manually. As a result, our examples will be a bit more concise, letting us focus on the actual details rather than boilerplate code.
 
 As a first example of ownership, we’ll look at the _scope_ of some variables. A scope is the range within a program for which an item is valid. Let’s say we have a variable that looks like this:
 

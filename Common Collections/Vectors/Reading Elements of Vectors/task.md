@@ -52,7 +52,7 @@ When the `get` method is passed an index that is outside the vector, it returns
 `None` without panicking. You would use this method if accessing an element
 beyond the range of the vector happens occasionally under normal circumstances.
 Your code will then have logic to handle having either `Some(&element)` or
-`None`, as discussed in the chapter "Enums". For example, the index could be coming from
+`None`, as discussed in the [Enums](course://Structs,%20Methods,%20Enums,%20and%20Pattern%20Matching/Enums) lesson. For example, the index could be coming from
 a person entering a number. If they accidentally enter a number that’s too
 large and the program gets a `None` value, you could tell the user how many
 items are in the current vector and give them another chance to enter a valid

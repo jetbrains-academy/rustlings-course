@@ -7,7 +7,7 @@ data to be valid for as long as the entire struct is valid.
 
 It’s possible for structs to store references to data owned by something else,
 but to do so requires the use of *lifetimes*, a Rust feature that we’ll
-discuss in the chapter "Generic Types, Traits and Lifetime". Lifetimes ensure that the data referenced by a struct
+discuss in the [Generic Types, Traits, and Lifetime](course://Generic%20Types,%20Traits,%20and%20Lifetime) section. Lifetimes ensure that the data referenced by a struct
 is valid for as long as the struct is. Let’s say you try to store a reference
 in a struct without specifying lifetimes, like this, which won’t work:
 
@@ -68,7 +68,7 @@ in a struct without specifying lifetimes, like this, which won’t work:
  To learn more, run the command again with --verbose.
 ```
 
- In the chapter "Generic Types, Traits and Lifetime", we’ll discuss how to fix these errors, so you can store
+ In the [Generic Types, Traits, and Lifetime](course://Generic%20Types,%20Traits,%20and%20Lifetime) section, we’ll discuss how to fix these errors, so you can store
  references in structs, but for now, we’ll fix errors like these using owned
  types like `String` instead of references like `&str`.
 

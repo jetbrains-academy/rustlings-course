@@ -27,7 +27,7 @@ impl Rectangle {
 To call this associated function, we use the `::` syntax with the struct name;
 `let sq = Rectangle::square(3);` is an example. This function is namespaced by
 the struct: the `::` syntax is used for both associated functions and
-namespaces created by modules. We’ll discuss modules in the chapter "Modules".
+namespaces created by modules. We’ll discuss modules in the [Modules](course://Modules) section.
 
 ### Multiple `impl` Blocks
 
@@ -53,4 +53,4 @@ impl Rectangle {
 
 There’s no reason to separate these methods into multiple `impl` blocks here,
 but this is valid syntax. We’ll see a case in which multiple `impl` blocks are
-useful in the chapter "Generic Types, Traits and Lifetime".
+useful in the [Generic Types, Traits, and Lifetime](course://Generic%20Types,%20Traits,%20and%20Lifetime) section.

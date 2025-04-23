@@ -38,7 +38,7 @@ that has a width of 30 and a height of 50.
 
 Our `area` function is now defined with one parameter, which we’ve named
 `rectangle`, whose type is an immutable borrow of a struct `Rectangle`
-instance. As mentioned in the chapter "Understanding Ownership", we want to borrow the struct rather than
+instance. As mentioned in the [Understanding Ownership](course://Understanding Ownership) section, we want to borrow the struct rather than
 take ownership of it. This way, `main` retains its ownership and can continue
 using `rect1`, which is the reason we use the `&` in the function signature and
 where we call the function.
