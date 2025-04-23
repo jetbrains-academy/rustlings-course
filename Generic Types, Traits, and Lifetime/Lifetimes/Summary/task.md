@@ -10,7 +10,7 @@ that this flexible code won’t have any dangling references. And all of this
 analysis happens at compile time, which doesn’t affect runtime performance!
 
 Believe it or not, there is much more to learn on the topics we discussed in
-this chapter: [Chapter 17](https://doc.rust-lang.org/stable/book/ch17-00-async-await.html) of the book discusses trait objects, which are another way to use
+this section: [Chapter 17](https://doc.rust-lang.org/stable/book/ch17-00-async-await.html) of the book discusses trait objects, which are another way to use
 traits. There are also more complex scenarios involving lifetime annotations
 that you will only need in very advanced scenarios; for those, you should read
 the [Rust Reference][reference]. But next, you’ll learn how to write tests in

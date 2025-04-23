@@ -2,7 +2,7 @@
 
 The `move` closure is often used alongside `thread::spawn` because it allows you to use data from one thread in another thread.
 
-In [Standard Library Types](course://Standard Library Types) section, we mentioned we can use the `move` keyword before the parameter list of a closure to force the closure to take ownership of the values it uses in the environment. This technique is especially useful when creating new threads in order to transfer ownership of values from one thread to another.
+In the [Standard Library Types](course://Standard Library Types) section, we mentioned we can use the `move` keyword before the parameter list of a closure to force the closure to take ownership of the values it uses in the environment. This technique is especially useful when creating new threads in order to transfer ownership of values from one thread to another.
 
 Notice in the snippet about creating a thread that the closure we pass to `thread::spawn` takes no arguments: we’re not using any data from the main thread in the spawned thread’s code. To use data from the main thread in the spawned thread, the spawned thread’s closure must capture the values it needs. The code snippet below shows an attempt to create a vector in the main thread and use it in the spawned thread. However, this won’t yet work, as you’ll see in a moment.
 

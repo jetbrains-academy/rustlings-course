@@ -23,7 +23,7 @@ returns a `Tweet`, but the code calling this function doesn’t know that.
 
 The ability to return a type that is only specified by the trait it implements
 is especially useful in the context of closures and iterators.
-It will be covered in details in the [Standard Library Types](course://Standard Library Types) section.
+It will be covered in detail in the [Standard Library Types](course://Standard Library Types) section.
 Closures and iterators create types that only the compiler knows
 or types that are very long to specify. The `impl Trait` syntax lets you
 concisely specify that a function returns some type that implements the
