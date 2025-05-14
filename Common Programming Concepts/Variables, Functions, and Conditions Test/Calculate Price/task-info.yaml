@@ -1,20 +1,20 @@
 type: edu
 custom_name: "Task: Calculate Price"
 files:
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 23
-    length: 17
-    placeholder_text: /* TODO */
-  - offset: 42
-    length: 6
-    placeholder_text: /*TODO*/
-  - offset: 55
-    length: 88
-    placeholder_text: /*write your solution here*/
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 23
+        length: 17
+        placeholder_text: /* TODO */
+      - offset: 42
+        length: 6
+        placeholder_text: /*TODO*/
+      - offset: 55
+        length: 88
+        placeholder_text: /*write your solution here*/
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Variables+Functions+and+Conditions+Test+/+Calculate+Price

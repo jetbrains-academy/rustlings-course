@@ -1,11 +1,11 @@
 content:
-- Intro
-- Function Parameters
-- Statements and Expressions
-- Defining a Function
-- Type Annotation of a Parameter
-- Passing an Argument
-- Functions with Return Values
-- Return Type
-- Return a Value
-- Extract Method Refactoring
+  - Intro
+  - Function Parameters
+  - Statements and Expressions
+  - Defining a Function
+  - Type Annotation of a Parameter
+  - Passing an Argument
+  - Functions with Return Values
+  - Return Type
+  - Return a Value
+  - Extract Method Refactoring

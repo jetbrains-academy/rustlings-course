@@ -1,13 +1,13 @@
 content:
-- Intro
-- Borrowing Values with References
-- Exclamations Strike Back
-- Mutable References
-- The Last Revenge of Exclamations
-- Move, Borrow, Mutate, or What
-- Restriction of Mutable References
-- Scopes of References
-- Reference Order
-- Dangling References
-- Print Months Once Again
-- The Rules of References
+  - Intro
+  - Borrowing Values with References
+  - Exclamations Strike Back
+  - Mutable References
+  - The Last Revenge of Exclamations
+  - "Move, Borrow, Mutate, or What"
+  - Restriction of Mutable References
+  - Scopes of References
+  - Reference Order
+  - Dangling References
+  - Print Months Once Again
+  - The Rules of References

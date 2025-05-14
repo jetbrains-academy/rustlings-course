@@ -1,21 +1,21 @@
 type: ide
 custom_name: "Task: Introduce Variable Refactoring"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 10
-    length: 278
-    placeholder_text: |-
-     {
-         let ten_years_ago = 1993 - 10;
-         let five_years_ago = 1993 - 5;
-         let one_year_ago = 1993 - 1;
-     
-         println!("Ten years ago: {}", ten_years_ago);
-         println!("Five years ago: {}", five_years_ago);
-         println!("One year ago: {}", one_year_ago);
-     }
-- name: Cargo.toml
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 10
+        length: 278
+        placeholder_text: |-
+          {
+              let ten_years_ago = 1993 - 10;
+              let five_years_ago = 1993 - 5;
+              let one_year_ago = 1993 - 1;
+          
+              println!("Ten years ago: {}", ten_years_ago);
+              println!("Five years ago: {}", five_years_ago);
+              println!("One year ago: {}", one_year_ago);
+          }
+  - name: Cargo.toml
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Variables+/+Introduce+Variable+Refactoring

@@ -8,8 +8,10 @@ files:
     visible: false
   - name: images/edu_next_button.png
     visible: false
+    is_binary: true
   - name: images/edu_peek_solution.png
     visible: false
+    is_binary: true
   - name: images/forward.svg
     visible: false
   - name: images/gear.svg
@@ -36,6 +38,8 @@ files:
     visible: false
   - name: images/edu_task_description_window_settings_dark.png
     visible: false
+    is_binary: true
   - name: images/edu_task_description_window_settings.png
     visible: false
+    is_binary: true
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Introduction+/+Getting+started+/+Task+Description

@@ -1,17 +1,17 @@
 type: edu
 custom_name: "Task: Loop Over Vector with Iterators"
 files:
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
-- name: src/main.rs
-  visible: true
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 76
-    length: 7
-    placeholder_text: "// TODO: Complete the function to multiply all the elements\
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
+  - name: src/main.rs
+    visible: true
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 76
+        length: 7
+        placeholder_text: "// TODO: Complete the function to multiply all the elements\
       \ in the given vector"
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Iterators+/+Loop+Over+Vector+With+Iterators

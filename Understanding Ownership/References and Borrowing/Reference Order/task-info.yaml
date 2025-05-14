@@ -1,19 +1,19 @@
 type: edu
 custom_name: "Task: Reference order"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 16
-    length: 87
-    placeholder_text: |-
-      let mut x = 100;
-          let y = &mut x;
-          let z = &mut x;
-          *y += 100;
-          *z += 1000;
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 16
+        length: 87
+        placeholder_text: |-
+          let mut x = 100;
+              let y = &mut x;
+              let z = &mut x;
+              *y += 100;
+              *z += 1000;
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+References+and+Borrowing+/+Reference+Order

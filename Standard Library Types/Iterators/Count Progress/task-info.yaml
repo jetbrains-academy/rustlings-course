@@ -1,19 +1,19 @@
 type: edu
 custom_name: "Task: Count Progress"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 416
-    length: 48
-    placeholder_text: /* TODO */
-  - offset: 826
-    length: 129
-    placeholder_text: /* TODO */
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 416
+        length: 48
+        placeholder_text: /* TODO */
+      - offset: 826
+        length: 129
+        placeholder_text: /* TODO */
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Iterators+/+Count+Progress

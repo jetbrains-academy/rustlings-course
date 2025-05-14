@@ -1,9 +1,9 @@
 content:
-- Intro
-- Defining an Enum
-- Deliver Messages
-- Enum Values with Data
-- Enum Values with Different Data
-- Enums with Data and Methods
-- The Option Enum
-- Deliver Complex Messages
+  - Intro
+  - Defining an Enum
+  - Deliver Messages
+  - Enum Values with Data
+  - Enum Values with Different Data
+  - Enums with Data and Methods
+  - The Option Enum
+  - Deliver Complex Messages

@@ -1,20 +1,20 @@
 type: edu
 custom_name: "Task: Loop Over a Vector"
 files:
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 77
-    length: 8
-    placeholder_text: // Fill this up so that each element in the Vec `v` is multiplied
-      by 2.
-  - offset: 60
-    length: 6
-    placeholder_text: /* What should we iterate over here? */
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 60
+        length: 6
+        placeholder_text: /* What should we iterate over here? */
+      - offset: 77
+        length: 8
+        placeholder_text: // Fill this up so that each element in the Vec `v` is multiplied
+          by 2.
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Collections+/+Vectors+/+Loop+Over+a+Vector

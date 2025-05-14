@@ -1,45 +1,45 @@
 type: output
-custom_name: 'Task: Workers in the Engine'
+custom_name: "Task: Workers in the Engine"
 files:
-- name: src/main.rs
-  visible: true
-- name: src/lib.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: src/worker.rs
-  visible: true
-  placeholders:
-  - offset: 0
-    length: 40
-    placeholder_text: /* You may need to use something */
-  - offset: 86
-    length: 24
-    placeholder_text: '&Vec<String>'
-  - offset: 159
-    length: 24
-    placeholder_text: '&Vec<String>'
-  - offset: 270
-    length: 13
-    placeholder_text: /* `push` requires a mutable reference */
-- name: src/engine.rs
-  visible: true
-  placeholders:
-  - offset: 27
-    length: 40
-    placeholder_text: /* You may need to use something */
-  - offset: 98
-    length: 24
-    placeholder_text: Vec<String>
-  - offset: 227
-    length: 29
-    placeholder_text: vec![]
-  - offset: 391
-    length: 20
-    placeholder_text: '&self.log'
-  - offset: 554
-    length: 24
-    placeholder_text: '&self.log'
-- name: tests/output.txt
-  visible: false
+  - name: src/main.rs
+    visible: true
+  - name: src/lib.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: src/worker.rs
+    visible: true
+    placeholders:
+      - offset: 0
+        length: 40
+        placeholder_text: /* You may need to use something */
+      - offset: 86
+        length: 24
+        placeholder_text: '&Vec<String>'
+      - offset: 159
+        length: 24
+        placeholder_text: '&Vec<String>'
+      - offset: 270
+        length: 13
+        placeholder_text: /* `push` requires a mutable reference */
+  - name: src/engine.rs
+    visible: true
+    placeholders:
+      - offset: 27
+        length: 40
+        placeholder_text: /* You may need to use something */
+      - offset: 98
+        length: 24
+        placeholder_text: Vec<String>
+      - offset: 227
+        length: 29
+        placeholder_text: "vec![]"
+      - offset: 391
+        length: 20
+        placeholder_text: '&self.log'
+      - offset: 554
+        length: 24
+        placeholder_text: '&self.log'
+  - name: tests/output.txt
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Smart+Pointers+/+Workers+in+the+Engine

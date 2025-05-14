@@ -1,14 +1,14 @@
 type: edu
 custom_name: "Task: Return the Bigger Number"
 files:
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 43
-    length: 25
-    placeholder_text: //insert the solution here
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 43
+        length: 25
+        placeholder_text: //insert the solution here
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Conditions+/+If+Task

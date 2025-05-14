@@ -1,11 +1,11 @@
 content:
-- Intro
-- Integer Types
-- Floating-Point Types
-- Numeric Operations
-- Numeric Test
-- Booleans
-- Boolean Test
-- Characters
-- Characters Test
-- Use Clippy as External Linter
+  - Intro
+  - Integer Types
+  - Floating-Point Types
+  - Numeric Operations
+  - Numeric Test
+  - Booleans
+  - Boolean Test
+  - Characters
+  - Characters Test
+  - Use Clippy as External Linter

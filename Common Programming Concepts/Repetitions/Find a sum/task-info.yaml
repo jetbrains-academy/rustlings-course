@@ -1,17 +1,17 @@
 type: output
 custom_name: "Task: Find a Sum"
 files:
-- name: tests/output.txt
-  visible: false
-- name: src/main.rs
-  visible: true
-  placeholders:
-    - offset: 42
-      length: 17
-      placeholder_text: /* TODO */
-    - offset: 70
-      length: 13
-      placeholder_text: /* TODO */
-- name: Cargo.toml
-  visible: false
+  - name: tests/output.txt
+    visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 42
+        length: 17
+        placeholder_text: /* TODO */
+      - offset: 70
+        length: 13
+        placeholder_text: /* TODO */
+  - name: Cargo.toml
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Repetitions+/+Find+a+sum

@@ -1,6 +1,6 @@
 content:
-- Intro
-- Creating a New Thread with spawn
-- Waiting for All Threads to Finish Using join Handles
-- Using move Closures with Threads
-- Join All Handles
+  - Intro
+  - Creating a New Thread with spawn
+  - Waiting for All Threads to Finish Using join Handles
+  - Using move Closures with Threads
+  - Join All Handles

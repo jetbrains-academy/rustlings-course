@@ -1,16 +1,16 @@
 type: edu
-custom_name: 'Task: License It'
+custom_name: "Task: License It"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 59
-    length: 47
-    placeholder_text: ;
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 59
+        length: 47
+        placeholder_text: ;
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Generic+Types+Traits+and+Lifetime+/+Traits+/+License+It

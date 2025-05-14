@@ -1,4 +1,4 @@
 content:
-- What is ownership
-- References and Borrowing
-- The Slice Type
+  - What is ownership
+  - References and Borrowing
+  - The Slice Type

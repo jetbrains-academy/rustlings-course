@@ -1,47 +1,47 @@
 type: output
 custom_name: "Task: Home Alone at Day X"
 files:
-- name: tests/output.txt
-  visible: false
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 0
-    length: 164
-    placeholder_text: /* Add use statements here */
-  - offset: 272
-    length: 43
-    placeholder_text: /* What's Alice doing here? */
-- name: src/ground_floor/big_hall.rs
-  visible: true
-- name: src/ground_floor/kitchen.rs
-  visible: true
-- name: src/first_floor/master_bedroom.rs
-  visible: true
-- name: src/first_floor/guest_bedroom.rs
-  visible: true
-- name: src/second_floor/library.rs
-  visible: true
-- name: src/second_floor/office.rs
-  visible: true
-- name: src/second_floor/astronomy_tower.rs
-  visible: true
-- name: src/ground_floor/storage_room.rs
-  visible: true
-- name: src/first_floor/toys_room.rs
-  visible: true
-  placeholders:
-  - offset: 0
-    length: 3
-    placeholder_text: /* ??? */
-- name: src/ground_floor.rs
-  visible: true
-- name: src/first_floor.rs
-  visible: true
-- name: src/second_floor.rs
-  visible: true
+  - name: tests/output.txt
+    visible: false
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 0
+        length: 164
+        placeholder_text: /* Add use statements here */
+      - offset: 272
+        length: 43
+        placeholder_text: /* What's Alice doing here? */
+  - name: src/ground_floor/big_hall.rs
+    visible: true
+  - name: src/ground_floor/kitchen.rs
+    visible: true
+  - name: src/first_floor/master_bedroom.rs
+    visible: true
+  - name: src/first_floor/guest_bedroom.rs
+    visible: true
+  - name: src/second_floor/library.rs
+    visible: true
+  - name: src/second_floor/office.rs
+    visible: true
+  - name: src/second_floor/astronomy_tower.rs
+    visible: true
+  - name: src/ground_floor/storage_room.rs
+    visible: true
+  - name: src/first_floor/toys_room.rs
+    visible: true
+    placeholders:
+      - offset: 0
+        length: 3
+        placeholder_text: /* ??? */
+  - name: src/ground_floor.rs
+    visible: true
+  - name: src/first_floor.rs
+    visible: true
+  - name: src/second_floor.rs
+    visible: true
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Modules+/+Modules+/+Home+Alone+at+Day+X

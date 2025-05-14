@@ -1,7 +1,7 @@
 content:
-- Repetition with Loops
-- Conditional Loops with while
-- Looping Through an Array with for
-- Print Months
-- Looping through Ranges
-- Find a sum
+  - Repetition with Loops
+  - Conditional Loops with while
+  - Looping Through an Array with for
+  - Print Months
+  - Looping through Ranges
+  - Find a sum

@@ -1,20 +1,20 @@
 type: edu
 custom_name: "Task: Want Some Ice Cream?"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 231
-    length: 118
-    placeholder_text: "// TODO: Return an Option!"
-  - offset: 435
-    length: 19
-    placeholder_text: "/* TODO: Fix this test. How do you get at the value contained\
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 231
+        length: 118
+        placeholder_text: "// TODO: Return an Option!"
+      - offset: 435
+        length: 19
+        placeholder_text: "/* TODO: Fix this test. How do you get at the value contained\
       \ in the Option? */"
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
-- name: runConfigurations/Test.run.xml
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
+  - name: runConfigurations/Test.run.xml
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Collections+/+Options+/+Use+Option

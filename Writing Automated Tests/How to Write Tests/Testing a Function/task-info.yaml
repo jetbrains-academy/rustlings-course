@@ -1,18 +1,18 @@
 type: edu
-custom_name: 'Task: Test a Function'
+custom_name: "Task: Test a Function"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 170
-    length: 1
-    placeholder_text: /* TODO */
-  - offset: 182
-    length: 76
-    placeholder_text: /* Write a test function called `is_false_when_odd` here and
-      test for `is_even(5)` */
-- name: tests/tests.rs
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 170
+        length: 1
+        placeholder_text: /* TODO */
+      - offset: 182
+        length: 76
+        placeholder_text: /* Write a test function called `is_false_when_odd` here and
+          test for `is_even(5)` */
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Writing+Automated+Tests+/+How+to+Write+Tests+/+Testing+a+Function

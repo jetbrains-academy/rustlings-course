@@ -1,22 +1,22 @@
 type: edu
 custom_name: "Task: Implement TryFrom"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 538
-    length: 386
-    placeholder_text: // Write your code here
-  - offset: 1096
-    length: 18
-    placeholder_text: // Write your code here
-  - offset: 1284
-    length: 129
-    placeholder_text: // Write your code here
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: true
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 538
+        length: 386
+        placeholder_text: // Write your code here
+      - offset: 1096
+        length: 18
+        placeholder_text: // Write your code here
+      - offset: 1284
+        length: 129
+        placeholder_text: // Write your code here
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: true
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Type+Conversions+/+Try+From+Into

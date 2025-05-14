@@ -1,10 +1,10 @@
 content:
-- Intro
-- In Function Definitions
-- In Struct Definitions
-- In Enum Definitions
-- In Method Definitions
-- Mixing Generic Types
-- Performance of Code Using Generics
-- Generics in Vec
-- Generics in Structs
+  - Intro
+  - In Function Definitions
+  - In Struct Definitions
+  - In Enum Definitions
+  - In Method Definitions
+  - Mixing Generic Types
+  - Performance of Code Using Generics
+  - Generics in Vec
+  - Generics in Structs

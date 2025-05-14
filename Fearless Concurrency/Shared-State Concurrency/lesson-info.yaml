@@ -1,10 +1,10 @@
 content:
-- Intro
-- Using Mutexes
-- The API of Mutex
-- Sharing a Mutex Between Multiple Threads
-- Multiple Ownership with Multiple Threads
-- Atomic Reference Counting with Arc
-- Similarities Between RefCell-Rc and Mutex-Arc
-- Arc
-- Threads Task
+  - Intro
+  - Using Mutexes
+  - The API of Mutex
+  - Sharing a Mutex Between Multiple Threads
+  - Multiple Ownership with Multiple Threads
+  - Atomic Reference Counting with Arc
+  - Similarities Between RefCell-Rc and Mutex-Arc
+  - Arc
+  - Threads Task

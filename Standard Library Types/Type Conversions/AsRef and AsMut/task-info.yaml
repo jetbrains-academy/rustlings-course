@@ -1,23 +1,23 @@
 type: edu
 custom_name: "Task: AsRef and AsMut"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 21
-    length: 12
-    placeholder_text: |-
-      /*Obtain the number of bytes (not characters) in the given argument
-       Add the AsRef trait appropriately as a trait bound*/
-  - offset: 113
-    length: 12
-    placeholder_text: |-
-      /* Obtain the number of characters (not bytes) in the given argument
-       Add the AsRef trait appropriately as a trait bound*/
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 21
+        length: 12
+        placeholder_text: |-
+          /*Obtain the number of bytes (not characters) in the given argument
+           Add the AsRef trait appropriately as a trait bound*/
+      - offset: 113
+        length: 12
+        placeholder_text: |-
+          /* Obtain the number of characters (not bytes) in the given argument
+           Add the AsRef trait appropriately as a trait bound*/
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Type+Conversions+/+AsRef+and+AsMut

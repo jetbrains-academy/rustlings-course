@@ -1,23 +1,23 @@
 type: output
 custom_name: "Task: Play with Color Structs"
 files:
-- name: tests/output.txt
-  visible: false
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 32
-    length: 30
-    placeholder_text: // Something goes here
-  - offset: 90
-    length: 14
-    placeholder_text: /* Something goes here */
-  - offset: 171
-    length: 101
-    placeholder_text: // Instantiate a classic c struct!
-  - offset: 350
-    length: 65
-    placeholder_text: // Instantiate a tuple struct!
-- name: Cargo.toml
-  visible: false
+  - name: tests/output.txt
+    visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 32
+        length: 30
+        placeholder_text: // Something goes here
+      - offset: 90
+        length: 14
+        placeholder_text: /* Something goes here */
+      - offset: 171
+        length: 101
+        placeholder_text: // Instantiate a classic c struct!
+      - offset: 350
+        length: 65
+        placeholder_text: // Instantiate a tuple struct!
+  - name: Cargo.toml
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Structs+Methods+Enums+and+Pattern+Matching+/+Structs+/+Play+with+Color+Structs

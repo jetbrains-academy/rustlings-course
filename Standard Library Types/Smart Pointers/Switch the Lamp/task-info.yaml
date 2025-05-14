@@ -1,48 +1,48 @@
 type: edu
-custom_name: 'Task: Switch the Lamp'
+custom_name: "Task: Switch the Lamp"
 files:
-- name: src/main.rs
-  visible: true
-- name: src/switcher.rs
-  visible: true
-  placeholders:
-  - offset: 60
-    length: 8
-    placeholder_text: '&''a mut Lamp'
-  - offset: 117
-    length: 8
-    placeholder_text: '&''a mut Lamp'
-  - offset: 187
-    length: 5
-    placeholder_text: '&mut self'
-- name: src/lib.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
-- name: src/lamp.rs
-  visible: true
-  placeholders:
-  - offset: 0
-    length: 20
-    placeholder_text: /* You may need to use something */
-  - offset: 73
-    length: 10
-    placeholder_text: bool
-  - offset: 141
-    length: 13
-    placeholder_text: self.on
-  - offset: 182
-    length: 5
-    placeholder_text: '&mut self'
-  - offset: 199
-    length: 17
-    placeholder_text: self.on = true
-  - offset: 262
-    length: 18
-    placeholder_text: self.on = false
-  - offset: 245
-    length: 5
-    placeholder_text: '&mut self'
+  - name: src/main.rs
+    visible: true
+  - name: src/switcher.rs
+    visible: true
+    placeholders:
+      - offset: 60
+        length: 8
+        placeholder_text: '&''a mut Lamp'
+      - offset: 117
+        length: 8
+        placeholder_text: '&''a mut Lamp'
+      - offset: 187
+        length: 5
+        placeholder_text: '&mut self'
+  - name: src/lib.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
+  - name: src/lamp.rs
+    visible: true
+    placeholders:
+      - offset: 0
+        length: 20
+        placeholder_text: /* You may need to use something */
+      - offset: 73
+        length: 10
+        placeholder_text: bool
+      - offset: 141
+        length: 13
+        placeholder_text: self.on
+      - offset: 182
+        length: 5
+        placeholder_text: '&mut self'
+      - offset: 199
+        length: 17
+        placeholder_text: self.on = true
+      - offset: 245
+        length: 5
+        placeholder_text: '&mut self'
+      - offset: 262
+        length: 18
+        placeholder_text: self.on = false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Smart+Pointers+/+Switch+the+Lamp

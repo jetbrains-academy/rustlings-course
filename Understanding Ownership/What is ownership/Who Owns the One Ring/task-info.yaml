@@ -1,47 +1,47 @@
 type: output
 custom_name: "Task: Who Owns the One Ring?"
 files:
-- name: tests/output.txt
-  visible: false
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 172
-    length: 2
-    placeholder_text: ""
-  - offset: 208
-    length: 0
-    placeholder_text: ""
-  - offset: 244
-    length: 2
-    placeholder_text: ""
-  - offset: 280
-    length: 2
-    placeholder_text: ""
-  - offset: 392
-    length: 0
-    placeholder_text: ""
-  - offset: 426
-    length: 2
-    placeholder_text: ""
-  - offset: 464
-    length: 2
-    placeholder_text: ""
-  - offset: 500
-    length: 2
-    placeholder_text: ""
-  - offset: 631
-    length: 2
-    placeholder_text: ""
-  - offset: 667
-    length: 0
-    placeholder_text: ""
-  - offset: 703
-    length: 2
-    placeholder_text: ""
-  - offset: 739
-    length: 2
-    placeholder_text: ""
-- name: Cargo.toml
-  visible: false
+  - name: tests/output.txt
+    visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 172
+        length: 2
+        placeholder_text: ""
+      - offset: 208
+        length: 0
+        placeholder_text: ""
+      - offset: 244
+        length: 2
+        placeholder_text: ""
+      - offset: 280
+        length: 2
+        placeholder_text: ""
+      - offset: 392
+        length: 0
+        placeholder_text: ""
+      - offset: 426
+        length: 2
+        placeholder_text: ""
+      - offset: 464
+        length: 2
+        placeholder_text: ""
+      - offset: 500
+        length: 2
+        placeholder_text: ""
+      - offset: 631
+        length: 2
+        placeholder_text: ""
+      - offset: 667
+        length: 0
+        placeholder_text: ""
+      - offset: 703
+        length: 2
+        placeholder_text: ""
+      - offset: 739
+        length: 2
+        placeholder_text: ""
+  - name: Cargo.toml
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+What+is+ownership+/+Who+Owns+the+One+Ring

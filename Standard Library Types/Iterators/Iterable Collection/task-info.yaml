@@ -1,23 +1,23 @@
 type: edu
 custom_name: "Task: Iterable Collection"
 files:
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 141
-    length: 20
-    placeholder_text: /* ??? */
-  - offset: 436
-    length: 14
-    placeholder_text: /* ??? */
-  - offset: 582
-    length: 4
-    placeholder_text: /* ??? */
-  - offset: 286
-    length: 22
-    placeholder_text: /* ??? */
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 141
+        length: 20
+        placeholder_text: /* ??? */
+      - offset: 286
+        length: 22
+        placeholder_text: /* ??? */
+      - offset: 436
+        length: 14
+        placeholder_text: /* ??? */
+      - offset: 582
+        length: 4
+        placeholder_text: /* ??? */
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Iterators+/+Iterable+Collection

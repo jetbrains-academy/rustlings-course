@@ -44,5 +44,6 @@ additional_files:
   - name: LICENSE
   - name: README.md
   - name: Cargo.toml
+  - name: Cargo.lock
   - name: change-notes.txt
 yaml_version: 2

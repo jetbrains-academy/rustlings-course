@@ -1,29 +1,29 @@
 type: edu
 custom_name: "Task: Understanding Types"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 25
-    length: 1
-    placeholder_text: 1
-  - offset: 66
-    length: 4
-    placeholder_text: 1..4
-  - offset: 81
-    length: 23
-    placeholder_text: "nice_slice == [2, 3, 4]"
-  - offset: 259
-    length: 3
-    placeholder_text: type placeholder
-  - offset: 294
-    length: 12
-    placeholder_text: type placeholder
-  - offset: 357
-    length: 4
-    placeholder_text: type placeholder
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 25
+        length: 1
+        placeholder_text: 1
+      - offset: 66
+        length: 4
+        placeholder_text: 1..4
+      - offset: 81
+        length: 23
+        placeholder_text: "nice_slice == [2, 3, 4]"
+      - offset: 259
+        length: 3
+        placeholder_text: type placeholder
+      - offset: 294
+        length: 12
+        placeholder_text: type placeholder
+      - offset: 357
+        length: 4
+        placeholder_text: type placeholder
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+The+Slice+Type+/+Understanding+Types
