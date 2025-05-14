@@ -15,6 +15,6 @@ as shown in the code snippet below.
 #### Using the `push` method to add values to a vector
 
 As with any variable, if we want to be able to change its value, we need to
-make it mutable using the `mut` keyword, as discussed in the chapter "Common Programming Concepts". The numbers
+make it mutable using the `mut` keyword, as discussed in the [Common Programming Concepts](course://Common Programming Concepts) section. The numbers
 we place inside are all of type `i32`, and Rust infers this from the data, so
 we don’t need the `Vec<i32>` annotation.

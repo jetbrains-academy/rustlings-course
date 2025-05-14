@@ -12,7 +12,7 @@ All iterators implement a trait named `Iterator` that is defined in the standard
     }
 ```
 
-Notice this definition uses some new syntax: `type Item` and `Self::Item`, which are defining an _associated type_ with this trait. We’ll talk about associated types in depth in Chapter 19. For now, all you need to know is that this code says implementing the `Iterator` trait requires that you also define an `Item` type, and this `Item` type is used in the return type of the `next` method. In other words, the `Item` type will be the type returned from the iterator.
+Notice this definition uses some new syntax: `type Item` and `Self::Item`, which are defining an _associated type_ with this trait. For now, all you need to know is that this code says implementing the `Iterator` trait requires that you also define an `Item` type, and this `Item` type is used in the return type of the `next` method. In other words, the `Item` type will be the type returned from the iterator.
 
 The `Iterator` trait only requires implementors to define one method: the `next` method, which returns one item of the iterator at a time wrapped in `Some` and, when iteration is over, returns `None`.
 

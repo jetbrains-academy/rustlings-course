@@ -1,6 +1,6 @@
 ## Separating Modules into Different Files
 
-So far, all the examples in this chapter defined multiple modules in one file. When modules get large, you might want to move their definitions to a separate file to make the code easier to navigate.
+So far, all the examples in this lesson defined multiple modules in one file. When modules get large, you might want to move their definitions to a separate file to make the code easier to navigate.
 
 For example, let’s start from the code in one of the previous tasks and move the `front_of_house` module to its own file _src/front_of_house.rs_ by changing the crate root file so it contains the code shown below. In this case, the crate root file is _src/lib.rs_, but this procedure also works with binary crates whose crate root file is _src/main.rs_.
 

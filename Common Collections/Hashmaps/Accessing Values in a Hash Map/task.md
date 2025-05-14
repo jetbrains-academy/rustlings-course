@@ -21,7 +21,7 @@ Here, `score` will have the value that’s associated with the Blue team, and th
 result will be `Some(&10)`. The result is wrapped in `Some` because `get`
 returns an `Option<&V>`; if there’s no value for that key in the hash map,
 `get` will return `None`. The program will need to handle the `Option` in one
-of the ways that we covered in the chapter "Enums".
+of the ways that we covered in the section [Enums](course://Structs,%20Methods,%20Enums,%20and%20Pattern%20Matching/Enums).
 
 We can iterate over each key/value pair in a hash map in a similar manner as we
 do with vectors, using a `for` loop:

@@ -18,8 +18,8 @@ the `#[cfg(test)]` annotation. However, because unit tests go in the same files
 as the code, you’ll use `#[cfg(test)]` to specify that they shouldn’t be
 included in the compiled result.
 
-Recall the example of a test module and a function generated automatically by cargo new in the first section of
-this chapter:
+Recall the example of a test module and a function generated automatically by cargo new in the first lesson of
+this section:
 
 ```rust
 #[cfg(test)]

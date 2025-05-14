@@ -33,7 +33,7 @@ help: consider using the `'static` lifetime
 
 ```
 
-This error message refers to a feature we haven’t covered yet: lifetimes. We’ll discuss lifetimes in detail in Chapter 10\. But, if you disregard the parts about lifetimes, the message does contain the key to why this code is a problem:
+This error message refers to a feature we haven’t covered yet: lifetimes. We’ll discuss it in detail in the [Lifetimes](course://Generic%20Types,%20Traits,%20and%20Lifetime/Lifetimes) lesson. But, if you disregard the parts about lifetimes, the message does contain the key to why this code is a problem:
 
 ```text
     this function's return type contains a borrowed value, but there is no value

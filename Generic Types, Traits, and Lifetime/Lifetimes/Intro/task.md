@@ -13,7 +13,7 @@ valid.
 
 The concept of lifetimes is somewhat different from tools in other programming
 languages, arguably making lifetimes Rust’s most distinctive feature. Although
-we won’t cover lifetimes in their entirety in this chapter, we’ll discuss
+we won’t cover lifetimes in their entirety in this section, we’ll discuss
 common ways you might encounter lifetime syntax so you can become familiar with
 the concepts.
 

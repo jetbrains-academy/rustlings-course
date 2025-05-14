@@ -79,7 +79,7 @@ same type `T`.
 The code snippet below shows the combined `largest` function definition using the generic
 data type in its signature. The listing also shows how we can call the function
 with either a slice of `i32` values or `char` values. Note that this code won’t
-compile yet, but we’ll fix it later in this chapter.
+compile yet, but we’ll fix it later in this lesson.
 
 
 ```rust,ignore,does_not_compile
