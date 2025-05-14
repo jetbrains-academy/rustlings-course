@@ -1,15 +1,15 @@
 type: output
 custom_name: "Task: Struct Update"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 528
-    length: 103
-    placeholder_text: '// TODO: Create your own order using the update syntax and
-      template above!'
-- name: Cargo.toml
-  visible: false
-- name: tests/output.txt
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 528
+        length: 103
+        placeholder_text: "// TODO: Create your own order using the update syntax and\
+      \ template above!"
+  - name: Cargo.toml
+    visible: false
+  - name: tests/output.txt
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Structs+Methods+Enums+and+Pattern+Matching+/+Structs+/+Struct+Update

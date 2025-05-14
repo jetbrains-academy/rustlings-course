@@ -1,14 +1,14 @@
 type: edu
 custom_name: "Task: Nice Slice"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 63
-    length: 8
-    placeholder_text: //type the invocation of the slice here
-- name: tests/tests.rs
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 63
+        length: 8
+        placeholder_text: //type the invocation of the slice here
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+The+Slice+Type+/+Nice+Slice

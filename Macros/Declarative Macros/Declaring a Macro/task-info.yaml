@@ -1,20 +1,20 @@
 type: edu
 custom_name: "Task: Declaring a Macro"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 0
-    length: 118
-    placeholder_text: |-
-      fn main() {
-          my_macro!();
-      }
-  - offset: 207
-    length: 30
-    placeholder_text: /*the main function declaration should be below the macro declaration*/
-- name: tests/tests.rs
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 0
+        length: 118
+        placeholder_text: |-
+          fn main() {
+              my_macro!();
+          }
+      - offset: 207
+        length: 30
+        placeholder_text: /*the main function declaration should be below the macro declaration*/
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Macros+/+Declarative+Macros+/+Declaring+a+Macro

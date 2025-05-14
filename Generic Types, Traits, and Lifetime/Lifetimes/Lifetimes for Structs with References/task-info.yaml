@@ -1,20 +1,20 @@
 type: output
-custom_name: 'Task: Lifetimes for Structs with References'
+custom_name: "Task: Lifetimes for Structs with References"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 11
-    length: 4
-    placeholder_text: ""
-  - offset: 31
-    length: 3
-    placeholder_text: ""
-  - offset: 51
-    length: 3
-    placeholder_text: ""
-- name: Cargo.toml
-  visible: false
-- name: tests/output.txt
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 11
+        length: 4
+        placeholder_text: ""
+      - offset: 31
+        length: 3
+        placeholder_text: ""
+      - offset: 51
+        length: 3
+        placeholder_text: ""
+  - name: Cargo.toml
+    visible: false
+  - name: tests/output.txt
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Generic+Types+Traits+and+Lifetime+/+Lifetimes+/+Lifetimes+for+Structs+with+References

@@ -1,5 +1,5 @@
 content:
-- Intro
-- Generic Data Types
-- Traits
-- Lifetimes
+  - Intro
+  - Generic Data Types
+  - Traits
+  - Lifetimes

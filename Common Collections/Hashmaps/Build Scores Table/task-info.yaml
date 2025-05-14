@@ -1,21 +1,21 @@
 type: edu
-custom_name: 'Task: Build Scores Table'
+custom_name: "Task: Build Scores Table"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 698
-    length: 523
-    placeholder_text: |-
-      /* TODO: Populate the scores table with details extracted from the
-              current line. Keep in mind that goals scored by team_1
-              will be number of goals conceded from team_2, and similarly
-              goals scored by team_2 will be the number of goals conceded by
-              team_1. */
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 698
+        length: 523
+        placeholder_text: |-
+          /* TODO: Populate the scores table with details extracted from the
+                  current line. Keep in mind that goals scored by team_1
+                  will be number of goals conceded from team_2, and similarly
+                  goals scored by team_2 will be the number of goals conceded by
+                  team_1. */
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Collections+/+Hashmaps+/+Build+Scores+Table

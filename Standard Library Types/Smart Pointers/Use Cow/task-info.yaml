@@ -1,35 +1,35 @@
 type: edu
 custom_name: "Task: Use Cow"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 427
-    length: 8
-    placeholder_text: /* Borrowed or Owned? */
-  - offset: 529
-    length: 8
-    placeholder_text: /* Borrowed or Owned? */
-  - offset: 712
-    length: 8
-    placeholder_text: /* Borrowed or Owned? */
-  - offset: 814
-    length: 5
-    placeholder_text: /* Borrowed or Owned? */
-  - offset: 988
-    length: 5
-    placeholder_text: /* Borrowed or Owned? */
-  - offset: 1087
-    length: 5
-    placeholder_text: /* Borrowed or Owned? */
-  - offset: 1262
-    length: 5
-    placeholder_text: /* Borrowed or Owned? */
-  - offset: 1361
-    length: 5
-    placeholder_text: /* Borrowed or Owned? */
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 427
+        length: 8
+        placeholder_text: /* Borrowed or Owned? */
+      - offset: 529
+        length: 8
+        placeholder_text: /* Borrowed or Owned? */
+      - offset: 712
+        length: 8
+        placeholder_text: /* Borrowed or Owned? */
+      - offset: 814
+        length: 5
+        placeholder_text: /* Borrowed or Owned? */
+      - offset: 988
+        length: 5
+        placeholder_text: /* Borrowed or Owned? */
+      - offset: 1087
+        length: 5
+        placeholder_text: /* Borrowed or Owned? */
+      - offset: 1262
+        length: 5
+        placeholder_text: /* Borrowed or Owned? */
+      - offset: 1361
+        length: 5
+        placeholder_text: /* Borrowed or Owned? */
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Smart+Pointers+/+Use+Cow

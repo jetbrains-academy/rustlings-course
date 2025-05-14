@@ -1,23 +1,23 @@
 type: edu
 custom_name: "Task: Move, Borrow, Mutate, or What"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 89
-    length: 8
-    placeholder_text: /*TODO*/
-  - offset: 163
-    length: 7
-    placeholder_text: /*TODO*/
-  - offset: 193
-    length: 12
-    placeholder_text: /*TODO*/
-  - offset: 275
-    length: 15
-    placeholder_text: /*TODO*/
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 89
+        length: 8
+        placeholder_text: /*TODO*/
+      - offset: 163
+        length: 7
+        placeholder_text: /*TODO*/
+      - offset: 193
+        length: 12
+        placeholder_text: /*TODO*/
+      - offset: 275
+        length: 15
+        placeholder_text: /*TODO*/
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+References+and+Borrowing+/+Move+Borrow+Mutate+or+What

@@ -1,41 +1,41 @@
 type: edu
 custom_name: "Task: Strings and &strs"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 118
-    length: 12
-    placeholder_text: TODO
-  - offset: 144
-    length: 12
-    placeholder_text: TODO
-  - offset: 181
-    length: 12
-    placeholder_text: TODO
-  - offset: 219
-    length: 12
-    placeholder_text: TODO
-  - offset: 264
-    length: 12
-    placeholder_text: TODO
-  - offset: 305
-    length: 12
-    placeholder_text: TODO
-  - offset: 363
-    length: 12
-    placeholder_text: TODO
-  - offset: 409
-    length: 12
-    placeholder_text: TODO
-  - offset: 452
-    length: 12
-    placeholder_text: TODO
-  - offset: 522
-    length: 12
-    placeholder_text: TODO
-- name: tests/tests.rs
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 118
+        length: 12
+        placeholder_text: TODO
+      - offset: 144
+        length: 12
+        placeholder_text: TODO
+      - offset: 181
+        length: 12
+        placeholder_text: TODO
+      - offset: 219
+        length: 12
+        placeholder_text: TODO
+      - offset: 264
+        length: 12
+        placeholder_text: TODO
+      - offset: 305
+        length: 12
+        placeholder_text: TODO
+      - offset: 363
+        length: 12
+        placeholder_text: TODO
+      - offset: 409
+        length: 12
+        placeholder_text: TODO
+      - offset: 452
+        length: 12
+        placeholder_text: TODO
+      - offset: 522
+        length: 12
+        placeholder_text: TODO
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Collections+/+Strings+/+Strings+and+strs

@@ -1,17 +1,17 @@
 type: edu
 custom_name: "Task: Use Arc"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 124
-    length: 17
-    placeholder_text: /*it should be an Arc from the numbers*/
-  - offset: 215
-    length: 43
-    placeholder_text: /*declare child_numbers*/
-- name: tests/tests.rs
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 124
+        length: 17
+        placeholder_text: /*it should be an Arc from the numbers*/
+      - offset: 215
+        length: 43
+        placeholder_text: /*declare child_numbers*/
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Fearless+Concurrency+/+Shared-State+Concurrency+/+Arc

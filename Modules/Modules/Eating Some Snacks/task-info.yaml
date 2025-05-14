@@ -1,25 +1,25 @@
 type: edu
 custom_name: "Task: Eating Some Snacks"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 27
-    length: 3
-    placeholder_text: /*insert a modifier here to make the module accessible from
-      outside*/
-  - offset: 57
-    length: 5
-    placeholder_text: /*TODO*/
-  - offset: 68
-    length: 3
-    placeholder_text: /*insert a modifier here to make the module accessible from
-      outside*/
-  - offset: 103
-    length: 6
-    placeholder_text: /*TODO*/
-- name: tests/tests.rs
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 27
+        length: 3
+        placeholder_text: /*insert a modifier here to make the module accessible from
+          outside*/
+      - offset: 57
+        length: 5
+        placeholder_text: /*TODO*/
+      - offset: 68
+        length: 3
+        placeholder_text: /*insert a modifier here to make the module accessible from
+          outside*/
+      - offset: 103
+        length: 6
+        placeholder_text: /*TODO*/
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Modules+/+Modules+/+Eating+Some+Snacks

@@ -1,14 +1,14 @@
 type: edu
 custom_name: "Task: Matching Result"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 198
-    length: 1
-    placeholder_text: ""
-- name: tests/tests.rs
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 198
+        length: 1
+        placeholder_text: ""
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Error+Handling+/+Error+Handling+/+Matching+Result

@@ -1,32 +1,32 @@
 type: edu
 custom_name: "Task: Implement FromStr"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 753
-    length: 36
-    placeholder_text: /* Return am appropriate error */
-  - offset: 863
-    length: 102
-    placeholder_text: /* Add a condition for the cases when there is a wrong number
-      of fields and return an appropriate error */
-  - offset: 974
-    length: 143
-    placeholder_text: /* Extract the first element from the split operation and use
-      it as the name. Return an appropriate error if the field is empty. */
-  - offset: 1126
-    length: 37
-    placeholder_text: /* Extract the other element from the split and parse it as
-      age. Return an appropriate error if something goes wrong. */
-  - offset: 1173
-    length: 24
-    placeholder_text: /* Return a Result of a Person object if everything goes well.
-      */
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: true
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 753
+        length: 36
+        placeholder_text: /* Return am appropriate error */
+      - offset: 863
+        length: 102
+        placeholder_text: /* Add a condition for the cases when there is a wrong number
+          of fields and return an appropriate error */
+      - offset: 974
+        length: 143
+        placeholder_text: /* Extract the first element from the split operation and use
+          it as the name. Return an appropriate error if the field is empty. */
+      - offset: 1126
+        length: 37
+        placeholder_text: /* Extract the other element from the split and parse it as
+          age. Return an appropriate error if something goes wrong. */
+      - offset: 1173
+        length: 24
+        placeholder_text: /* Return a Result of a Person object if everything goes well.
+          */
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: true
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Type+Conversions+/+FromStr

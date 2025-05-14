@@ -1,22 +1,22 @@
 type: edu
 custom_name: "Task: Add Conditions"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 96
-    length: 20
-    placeholder_text: /* Something goes here */
-  - offset: 127
-    length: 5
-    placeholder_text: /* Something goes here */
-  - offset: 139
-    length: 26
-    placeholder_text: /* Something goes here */
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 96
+        length: 20
+        placeholder_text: /* Something goes here */
+      - offset: 127
+        length: 5
+        placeholder_text: /* Something goes here */
+      - offset: 139
+        length: 26
+        placeholder_text: /* Something goes here */
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Conditions+/+Add+Conditions

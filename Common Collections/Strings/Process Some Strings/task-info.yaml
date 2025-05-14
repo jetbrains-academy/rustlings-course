@@ -1,23 +1,24 @@
 type: edu
-custom_name: 'Task: Process Some Strings'
+custom_name: "Task: Process Some Strings"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 44
-    length: 24
-    placeholder_text: '/* TODO: Remove whitespace from both ends of a string! */'
-  - offset: 119
-    length: 33
-    placeholder_text: '/* TODO: Add " world!" to the string! There''s multiple ways
-      to do this! */'
-  - offset: 203
-    length: 33
-    placeholder_text: '/* TODO: Replace "cars" in the string with "balloons"! */'
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 44
+        length: 24
+        placeholder_text: "/* TODO: Remove whitespace from both ends of a string! */"
+      - offset: 119
+        length: 33
+        placeholder_text: "/* TODO: Add \" world!\" to the string! There's multiple ways\
+      \ to do this! */"
+      - offset: 203
+        length: 33
+        placeholder_text: "/* TODO: Replace \"cars\" in the string with \"balloons\"!\
+      \ */"
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Collections+/+Strings+/+Process+Some+Strings

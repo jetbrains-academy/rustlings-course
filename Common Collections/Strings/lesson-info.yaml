@@ -1,13 +1,13 @@
 content:
-- Intro
-- Creating a New String
-- Return a String
-- Updating a String
-- Indexing into Strings
-- Slicing Strings
-- Iterating Over Strings
-- String Slice
-- Strings and strs
-- Process Some Strings
-- String Transformer
-- Summary
+  - Intro
+  - Creating a New String
+  - Return a String
+  - Updating a String
+  - Indexing into Strings
+  - Slicing Strings
+  - Iterating Over Strings
+  - String Slice
+  - Strings and strs
+  - Process Some Strings
+  - String Transformer
+  - Summary

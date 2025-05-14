@@ -1,24 +1,24 @@
 type: edu
-custom_name: 'Task: Sum All Numbers'
+custom_name: "Task: Sum All Numbers"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 231
-    length: 22
-    placeholder_text: '/* TODO: Send value here */'
-  - offset: 405
-    length: 10
-    placeholder_text: '/* TODO: pass the transmitting end */'
-  - offset: 447
-    length: 2
-    placeholder_text: '/* TODO: pass the transmitting end */'
-  - offset: 546
-    length: 2
-    placeholder_text: /* What should you iterate over to receive all the numbers?
-      */
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 231
+        length: 22
+        placeholder_text: "/* TODO: Send value here */"
+      - offset: 405
+        length: 10
+        placeholder_text: "/* TODO: pass the transmitting end */"
+      - offset: 447
+        length: 2
+        placeholder_text: "/* TODO: pass the transmitting end */"
+      - offset: 546
+        length: 2
+        placeholder_text: /* What should you iterate over to receive all the numbers?
+          */
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Fearless+Concurrency+/+Using+Message+Passing+to+Transfer+Data+Between+Threads+/+Sum+All+Numbers

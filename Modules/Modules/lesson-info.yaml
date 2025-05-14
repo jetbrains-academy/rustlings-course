@@ -1,20 +1,20 @@
 content:
-- Intro
-- Quick Reference
-- Defining Modules
-- Paths for Referring to an Item in the Module Tree
-- Exposing Paths with the pub Keyword
-- Making a sausage
-- Starting Relative Paths with super
-- Making Structs and Enums Public
-- Bringing Paths into Scope with the use Keyword
-- Providing New Names with the as Keyword
-- Re-exporting Names with pub use
-- Eating Some Snacks
-- Using External Packages
-- Using Nested Paths to Clean Up Large use Lists
-- Time To Check Time
-- The Glob Operator
-- Separating Modules into Different Files
-- Home Alone at Day X
-- Summary
+  - Intro
+  - Quick Reference
+  - Defining Modules
+  - Paths for Referring to an Item in the Module Tree
+  - Exposing Paths with the pub Keyword
+  - Making a sausage
+  - Starting Relative Paths with super
+  - Making Structs and Enums Public
+  - Bringing Paths into Scope with the use Keyword
+  - Providing New Names with the as Keyword
+  - Re-exporting Names with pub use
+  - Eating Some Snacks
+  - Using External Packages
+  - Using Nested Paths to Clean Up Large use Lists
+  - Time To Check Time
+  - The Glob Operator
+  - Separating Modules into Different Files
+  - Home Alone at Day X
+  - Summary

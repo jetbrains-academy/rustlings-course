@@ -1,20 +1,20 @@
 type: edu
 custom_name: "Task: The Last Revenge of Exclamations"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 76
-    length: 4
-    placeholder_text: /*TODO*/
-  - offset: 155
-    length: 4
-    placeholder_text: /*TODO*/
-  - offset: 238
-    length: 4
-    placeholder_text: /*TODO*/
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 76
+        length: 4
+        placeholder_text: /*TODO*/
+      - offset: 155
+        length: 4
+        placeholder_text: /*TODO*/
+      - offset: 238
+        length: 4
+        placeholder_text: /*TODO*/
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+References+and+Borrowing+/+The+Last+Revenge+of+Exclamations

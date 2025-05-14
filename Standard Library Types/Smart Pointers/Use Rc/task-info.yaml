@@ -1,29 +1,29 @@
 type: output
 custom_name: "Task: Use Rc"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 1240
-    length: 15
-    placeholder_text: "/* TODO: Fix this */ Rc::new(Sun {})"
-  - offset: 1403
-    length: 15
-    placeholder_text: "/* TODO: Fix this */ Rc::new(Sun {})"
-  - offset: 1568
-    length: 15
-    placeholder_text: "/* TODO: Fix this */ Rc::new(Sun {})"
-  - offset: 2221
-    length: 12
-    placeholder_text: "/* TODO: What else should be dropped? */"
-  - offset: 2317
-    length: 12
-    placeholder_text: "/* TODO: What else should be dropped? */"
-  - offset: 2413
-    length: 14
-    placeholder_text: "/* TODO: What else should be dropped? */"
-- name: Cargo.toml
-  visible: false
-- name: tests/output.txt
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 1240
+        length: 15
+        placeholder_text: "/* TODO: Fix this */ Rc::new(Sun {})"
+      - offset: 1403
+        length: 15
+        placeholder_text: "/* TODO: Fix this */ Rc::new(Sun {})"
+      - offset: 1568
+        length: 15
+        placeholder_text: "/* TODO: Fix this */ Rc::new(Sun {})"
+      - offset: 2221
+        length: 12
+        placeholder_text: "/* TODO: What else should be dropped? */"
+      - offset: 2317
+        length: 12
+        placeholder_text: "/* TODO: What else should be dropped? */"
+      - offset: 2413
+        length: 14
+        placeholder_text: "/* TODO: What else should be dropped? */"
+  - name: Cargo.toml
+    visible: false
+  - name: tests/output.txt
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Smart+Pointers+/+Use+Rc
