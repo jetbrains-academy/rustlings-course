@@ -7,10 +7,14 @@ files:
     visible: false
   - name: images/rustrover_external_linters.png
     visible: false
+    is_binary: true
   - name: images/idea_external_linters.png
     visible: false
+    is_binary: true
   - name: images/idea_external_linters_dark.png
     visible: false
+    is_binary: true
   - name: images/rustrover_external_linters_dark.png
     visible: false
+    is_binary: true
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Introduction+/+Getting+started+/+External+Linter

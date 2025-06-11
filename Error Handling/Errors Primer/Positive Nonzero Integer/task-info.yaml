@@ -1,17 +1,17 @@
 type: edu
 custom_name: "Task: Positive Nonzero Integer"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 265
-    length: 14
-    placeholder_text: /*here could be the expression to compare if the value is appropriate*/
-  - offset: 341
-    length: 142
-    placeholder_text: /*here could be the other arms of the comparison*/
-- name: tests/tests.rs
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 265
+        length: 14
+        placeholder_text: /*here could be the expression to compare if the value is appropriate*/
+      - offset: 341
+        length: 142
+        placeholder_text: /*here could be the other arms of the comparison*/
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Error+Handling+/+Errors+Primer+/+Positive+Nonzero+Integer

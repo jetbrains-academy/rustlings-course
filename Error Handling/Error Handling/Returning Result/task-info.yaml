@@ -1,20 +1,20 @@
 type: edu
 custom_name: "Task: Returning Result"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 46
-    length: 22
-    placeholder_text: Option<String>
-  - offset: 103
-    length: 2
-    placeholder_text: Some
-  - offset: 244
-    length: 57
-    placeholder_text: None
-- name: tests/tests.rs
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 46
+        length: 22
+        placeholder_text: Option<String>
+      - offset: 103
+        length: 2
+        placeholder_text: Some
+      - offset: 244
+        length: 57
+        placeholder_text: None
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Error+Handling+/+Error+Handling+/+Returning+Result

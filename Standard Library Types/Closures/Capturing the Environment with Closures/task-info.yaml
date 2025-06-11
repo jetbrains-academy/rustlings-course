@@ -1,12 +1,12 @@
 type: theory
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 264
-    length: 22
-    placeholder_text: '|| self.most_stocked()'
-- name: Cargo.toml
-  visible: false
-solution_hidden: true
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 264
+        length: 22
+        placeholder_text: '|| self.most_stocked()'
+  - name: Cargo.toml
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Closures+/+Capturing+the+Environment+with+Closures
+solution_hidden: true

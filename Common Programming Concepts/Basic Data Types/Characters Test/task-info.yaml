@@ -1,17 +1,17 @@
 type: edu
 custom_name: "Task: Character Kinds"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 280
-    length: 21
-    placeholder_text: |-
-      // Finish this line like the example! What's your favorite character?
-          // Try a letter, try a number, try a special character, try a character
-          // from a different language than your own, try an emoji!
-- name: tests/tests.rs
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 280
+        length: 21
+        placeholder_text: |-
+          // Finish this line like the example! What's your favorite character?
+              // Try a letter, try a number, try a special character, try a character
+              // from a different language than your own, try an emoji!
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Basic+Data+Types+/+Characters+Test

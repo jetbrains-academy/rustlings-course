@@ -1,21 +1,21 @@
 type: edu
 custom_name: "Task: Count Completed Jobs"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 157
-    length: 43
-    placeholder_text: 'JobStatus { jobs_completed: 0 }/*try using Mutex*/'
-  - offset: 377
-    length: 16
-    placeholder_text: /*you probably would like to lock the value modified in another
-      thread*/
-  - offset: 449
-    length: 16
-    placeholder_text: /*you should lock the status value here*/
-- name: tests/tests.rs
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 157
+        length: 43
+        placeholder_text: "JobStatus { jobs_completed: 0 }/*try using Mutex*/"
+      - offset: 377
+        length: 16
+        placeholder_text: /*you probably would like to lock the value modified in another
+          thread*/
+      - offset: 449
+        length: 16
+        placeholder_text: /*you should lock the status value here*/
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Fearless+Concurrency+/+Shared-State+Concurrency+/+Threads+Task

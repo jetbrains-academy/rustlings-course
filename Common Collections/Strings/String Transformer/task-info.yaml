@@ -1,26 +1,26 @@
 type: edu
 custom_name: "Task: String Transformer"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 189
-    length: 22
-    placeholder_text: /* Write type of input */
-  - offset: 216
-    length: 11
-    placeholder_text: /* Write type of result */
-  - offset: 271
-    length: 348
-    placeholder_text: "// TODO: Complete the function body!"
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 25
-    length: 33
-    placeholder_text: "/* TODO: Complete use declaration */"
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 189
+        length: 22
+        placeholder_text: /* Write type of input */
+      - offset: 216
+        length: 11
+        placeholder_text: /* Write type of result */
+      - offset: 271
+        length: 348
+        placeholder_text: "// TODO: Complete the function body!"
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 25
+        length: 33
+        placeholder_text: "/* TODO: Complete use declaration */"
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Collections+/+Strings+/+String+Transformer

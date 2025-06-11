@@ -1,32 +1,32 @@
 type: edu
 custom_name: "Task: Deal with Division"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 418
-    length: 32
-    placeholder_text: /* TODO */
-  - offset: 490
-    length: 7
-    placeholder_text: /* TODO */
-  - offset: 764
-    length: 31
-    placeholder_text: /* Something goes here */
-  - offset: 917
-    length: 69
-    placeholder_text: /* Something goes here */
-  - offset: 1154
-    length: 31
-    placeholder_text: /* Something goes here */
-  - offset: 1307
-    length: 79
-    placeholder_text: /* Something goes here */
-  - offset: 523
-    length: 78
-    placeholder_text: /* TODO */
-- name: tests/tests.rs
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 418
+        length: 32
+        placeholder_text: /* TODO */
+      - offset: 490
+        length: 7
+        placeholder_text: /* TODO */
+      - offset: 523
+        length: 78
+        placeholder_text: /* TODO */
+      - offset: 764
+        length: 31
+        placeholder_text: /* Something goes here */
+      - offset: 917
+        length: 69
+        placeholder_text: /* Something goes here */
+      - offset: 1154
+        length: 31
+        placeholder_text: /* Something goes here */
+      - offset: 1307
+        length: 79
+        placeholder_text: /* Something goes here */
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Iterators+/+Iterator

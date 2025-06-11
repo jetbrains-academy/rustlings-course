@@ -1,15 +1,15 @@
 type: edu
-custom_name: 'Task: Morning or Evening?'
+custom_name: "Task: Morning or Evening?"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 109
-    length: 19
-    placeholder_text: // Finish the rest of this line like the example! Or make it
-      be false!
-- name: tests/tests.rs
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 109
+        length: 19
+        placeholder_text: // Finish the rest of this line like the example! Or make it
+          be false!
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Basic+Data+Types+/+Boolean+Test

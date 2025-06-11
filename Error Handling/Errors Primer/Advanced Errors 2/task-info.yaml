@@ -1,33 +1,33 @@
 type: edu
 custom_name: "Task: Advanced Errors 2"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 793
-    length: 19
-    placeholder_text: "// TODO: Complete this function"
-  - offset: 822
-    length: 35
-    placeholder_text: |-
-      // TODO: Make ParseClimateError suitable for propagating errors in main.
-      // See hints if you are in trouble.
-  - offset: 1354
-    length: 173
-    placeholder_text: /* Complete the implementation */
-  - offset: 2122
-    length: 19
-    placeholder_text: /* Add a condition */
-  - offset: 2189
-    length: 79
-    placeholder_text: /* Return an error if the city name is empty */
-  - offset: 2281
-    length: 71
-    placeholder_text: /* Return an error if the string is empty */
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: true
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 793
+        length: 19
+        placeholder_text: "// TODO: Complete this function"
+      - offset: 822
+        length: 35
+        placeholder_text: |-
+          // TODO: Make ParseClimateError suitable for propagating errors in main.
+          // See hints if you are in trouble.
+      - offset: 1354
+        length: 173
+        placeholder_text: /* Complete the implementation */
+      - offset: 2122
+        length: 19
+        placeholder_text: /* Add a condition */
+      - offset: 2189
+        length: 79
+        placeholder_text: /* Return an error if the city name is empty */
+      - offset: 2281
+        length: 71
+        placeholder_text: /* Return an error if the string is empty */
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: true
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Error+Handling+/+Errors+Primer+/+Advanced+Errors+2

@@ -1,16 +1,16 @@
 type: edu
 custom_name: "Task: Use as"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 119
-    length: 7
-    placeholder_text: // Something goes here!
-- name: src/main.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 119
+        length: 7
+        placeholder_text: // Something goes here!
+  - name: src/main.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Standard+Library+Types+/+Type+Conversions+/+Using+As

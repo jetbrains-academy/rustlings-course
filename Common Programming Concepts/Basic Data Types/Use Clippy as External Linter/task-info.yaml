@@ -1,12 +1,12 @@
 type: ide
 custom_name: "Task: Use Clippy as External Linter"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 40
-    length: 15
-    placeholder_text: 3.14f32
-- name: Cargo.toml
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 40
+        length: 15
+        placeholder_text: 3.14f32
+  - name: Cargo.toml
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Programming+Concepts+/+Basic+Data+Types+/+Use+Clippy+as+External+Linter

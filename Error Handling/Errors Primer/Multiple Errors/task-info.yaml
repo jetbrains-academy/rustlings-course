@@ -1,16 +1,16 @@
 type: edu
 custom_name: "Task: Multiple Errors"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 153
-    length: 14
-    placeholder_text: ParseIntError
-- name: src/lib.rs
-  visible: true
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 153
+        length: 14
+        placeholder_text: ParseIntError
+  - name: src/lib.rs
+    visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Error+Handling+/+Errors+Primer+/+Multiple+Errors

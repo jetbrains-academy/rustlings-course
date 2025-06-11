@@ -1,16 +1,16 @@
 content:
-- Traits
-- Defining a Trait
-- Implementing a Trait on a Type
-- Default Implementations
-- Calling Methods Without Default Implementations
-- Traits as Parameters
-- Returning Types that Implement Traits
-- Fixing the largest Function with Trait Bounds
-- Using Trait Bounds to Conditionally Implement Methods
-- Trait Bound Syntax
-- String Trait
-- Vec Trait
-- License It
-- Compare Licenses
-- Combine Traits
+  - Traits
+  - Defining a Trait
+  - Implementing a Trait on a Type
+  - Default Implementations
+  - Calling Methods Without Default Implementations
+  - Traits as Parameters
+  - Returning Types that Implement Traits
+  - Fixing the largest Function with Trait Bounds
+  - Using Trait Bounds to Conditionally Implement Methods
+  - Trait Bound Syntax
+  - String Trait
+  - Vec Trait
+  - License It
+  - Compare Licenses
+  - Combine Traits

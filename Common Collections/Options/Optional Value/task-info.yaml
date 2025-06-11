@@ -1,19 +1,19 @@
 type: edu
 custom_name: "Task: Options in pattern matching"
 files:
-- name: src/lib.rs
-  visible: true
-  placeholders:
-  - offset: 174
-    length: 35
-    placeholder_text: word = optional_target
-  - offset: 622
-    length: 55
-    placeholder_text: integer = optional_integers.pop()
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
-- name: runConfigurations/Test.run.xml
-  visible: false
+  - name: src/lib.rs
+    visible: true
+    placeholders:
+      - offset: 174
+        length: 35
+        placeholder_text: word = optional_target
+      - offset: 622
+        length: 55
+        placeholder_text: integer = optional_integers.pop()
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
+  - name: runConfigurations/Test.run.xml
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Common+Collections+/+Options+/+Optional+Value

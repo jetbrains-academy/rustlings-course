@@ -1,9 +1,9 @@
 content:
-- The Match Operator
-- Patterns that Bind to Values
-- Matching with Option
-- Matches Are Exhaustive
-- Catch-all Patterns and the _ Placeholder
-- If Let
-- Implement Match
-- Summary
+  - The Match Operator
+  - Patterns that Bind to Values
+  - Matching with Option
+  - Matches Are Exhaustive
+  - Catch-all Patterns and the _ Placeholder
+  - If Let
+  - Implement Match
+  - Summary

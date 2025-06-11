@@ -1,12 +1,12 @@
 content:
-- Intro
-- Variables and Mutability
-- New Variable Binding
-- Constants
-- Introduce Variable Refactoring
-- Shadowing
-- Variable Type
-- Mutable Variable Binding
-- Value
-- Changing Type
-- Constant Type
+  - Intro
+  - Variables and Mutability
+  - New Variable Binding
+  - Constants
+  - Introduce Variable Refactoring
+  - Shadowing
+  - Variable Type
+  - Mutable Variable Binding
+  - Value
+  - Changing Type
+  - Constant Type

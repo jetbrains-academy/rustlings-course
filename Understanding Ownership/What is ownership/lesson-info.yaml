@@ -1,16 +1,16 @@
 content:
-- Intro
-- Variable Scope
-- Explore Scopes
-- The String Type
-- Build String from Literals
-- Moving Ownership
-- Who Owns the One Ring
-- Clone and Copy
-- Tuples, Clone or Copy
-- Ownership and Functions
-- Return Values and Scope
-- More Exclamations
-- More Exclamations 2
-- More Exclamations with Mutable Argument
-- More Exclamations without Arguments
+  - Intro
+  - Variable Scope
+  - Explore Scopes
+  - The String Type
+  - Build String from Literals
+  - Moving Ownership
+  - Who Owns the One Ring
+  - Clone and Copy
+  - "Tuples, Clone or Copy"
+  - Ownership and Functions
+  - Return Values and Scope
+  - More Exclamations
+  - More Exclamations 2
+  - More Exclamations with Mutable Argument
+  - More Exclamations without Arguments

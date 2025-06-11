@@ -1,20 +1,20 @@
 type: edu
 custom_name: "Task: More Exclamations"
 files:
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 60
-    length: 3
-    placeholder_text: /*insert the necessary keyword here*/
-  - offset: 89
-    length: 5
-    placeholder_text: /*TODO*/
-  - offset: 311
-    length: 3
-    placeholder_text: /*TODO*/
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 60
+        length: 3
+        placeholder_text: /*insert the necessary keyword here*/
+      - offset: 89
+        length: 5
+        placeholder_text: /*TODO*/
+      - offset: 311
+        length: 3
+        placeholder_text: /*TODO*/
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+What+is+ownership+/+More+Exclamations

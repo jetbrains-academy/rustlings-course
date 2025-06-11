@@ -1,17 +1,17 @@
 type: edu
 custom_name: "Task: Times Two"
 files:
-- name: Cargo.toml
-  visible: false
-- name: tests/tests.rs
-  visible: true
-  placeholders:
-  - offset: 151
-    length: 2
-    placeholder_text: /*insert the value we assume to get from the times_two function*/
-  - offset: 228
-    length: 30
-    placeholder_text: /*write an assert for `times_two(-2)`*/
-- name: src/lib.rs
-  visible: true
+  - name: Cargo.toml
+    visible: false
+  - name: tests/tests.rs
+    visible: true
+    placeholders:
+      - offset: 151
+        length: 2
+        placeholder_text: /*insert the value we assume to get from the times_two function*/
+      - offset: 228
+        length: 30
+        placeholder_text: /*write an assert for `times_two(-2)`*/
+  - name: src/lib.rs
+    visible: true
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Writing+Automated+Tests+/+Running+and+Organizing+Tests+/+Times+Two+Tests

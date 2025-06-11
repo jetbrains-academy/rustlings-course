@@ -1,9 +1,9 @@
 content:
-- Intro
-- Creating a Channel
-- Sending Values
-- Receiving Values
-- Channels and Ownership Transference
-- Sending Multiple Values and Seeing the Receiver Waiting
-- Creating Multiple Producers by Cloning the Transmitter
-- Sum All Numbers
+  - Intro
+  - Creating a Channel
+  - Sending Values
+  - Receiving Values
+  - Channels and Ownership Transference
+  - Sending Multiple Values and Seeing the Receiver Waiting
+  - Creating Multiple Producers by Cloning the Transmitter
+  - Sum All Numbers

@@ -1,8 +1,8 @@
 content:
-- Variables
-- Basic Data Types
-- Functions
-- Conditions
-- Variables, Functions, and Conditions Test
-- Tuples and Arrays
-- Repetitions
+  - Variables
+  - Basic Data Types
+  - Functions
+  - Conditions
+  - "Variables, Functions, and Conditions Test"
+  - Tuples and Arrays
+  - Repetitions

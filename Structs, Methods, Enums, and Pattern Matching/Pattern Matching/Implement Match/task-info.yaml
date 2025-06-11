@@ -1,19 +1,19 @@
 type: output
 custom_name: "Task: Implement Match"
 files:
-- name: Cargo.toml
-  visible: false
-- name: src/main.rs
-  visible: true
-  placeholders:
-  - offset: 36
-    length: 79
-    placeholder_text: '// TODO: implement the message variant types based on their
-      usage below'
-  - offset: 614
-    length: 273
-    placeholder_text: '// TODO: create a match expression to process the different
-      message variants'
-- name: tests/output.txt
-  visible: false
+  - name: Cargo.toml
+    visible: false
+  - name: src/main.rs
+    visible: true
+    placeholders:
+      - offset: 36
+        length: 79
+        placeholder_text: "// TODO: implement the message variant types based on their\
+      \ usage below"
+      - offset: 614
+        length: 273
+        placeholder_text: "// TODO: create a match expression to process the different\
+      \ message variants"
+  - name: tests/output.txt
+    visible: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Structs+Methods+Enums+and+Pattern+Matching+/+Pattern+Matching+/+Implement+Match
