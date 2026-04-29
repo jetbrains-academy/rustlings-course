@@ -9,5 +9,5 @@ fn longest2<'a>(x: &str, y: &str) -> &'a str {
 }
 
 fn main() {
-    // put you code here to launch it
+    // put your code here to launch it
 }

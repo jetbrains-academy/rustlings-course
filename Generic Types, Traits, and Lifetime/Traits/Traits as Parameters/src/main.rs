@@ -27,5 +27,5 @@ fn some_function2<T, U>(t: &T, u: &U) -> i32
 { 0 }
 
 fn main() {
-    // put you code here to launch it
+    // put your code here to launch it
 }

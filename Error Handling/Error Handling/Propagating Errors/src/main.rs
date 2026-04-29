@@ -19,5 +19,5 @@ fn read_username_from_file() -> Result<String, io::Error> {
 }
 
 fn main() {
-    // put you code here to launch it
+    // put your code here to launch it
 }

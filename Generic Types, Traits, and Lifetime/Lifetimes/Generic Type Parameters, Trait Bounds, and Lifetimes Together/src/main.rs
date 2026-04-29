@@ -17,5 +17,5 @@ fn longest_with_an_announcement<'a, T>(
 }
 
 fn main() {
-    // put you code here to launch it
+    // put your code here to launch it
 }

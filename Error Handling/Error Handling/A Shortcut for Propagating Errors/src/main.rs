@@ -22,5 +22,5 @@ fn read_username_from_file_3() -> Result<String, io::Error> {
 }
 
 fn main() {
-    // put you code here to launch it
+    // put your code here to launch it
 }
