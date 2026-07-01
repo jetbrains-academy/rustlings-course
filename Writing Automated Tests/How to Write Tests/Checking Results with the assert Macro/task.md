@@ -2,7 +2,7 @@
 
 The `assert!` macro, provided by the standard library, is useful when you want to ensure that some condition in a test evaluates to `true`. We give the `assert!` macro an argument that evaluates to a Boolean. If the value is `true`, `assert!` does nothing and the test passes. If the value is `false`, the `assert!` macro calls the `panic!` macro, which causes the test to fail. Using the `assert!` macro helps us check that our code is functioning in the way we intend.
 
-In the [Associated Functions and Multiple impl Blocks](course://Structs,%20Methods,%20Enums,%20and%20Pattern%20Matching/Structs with Methods/Associated Functions and Multiple impl Blocks) task, we used a `Rectangle` struct and a `can_hold` method, which are repeated here below. Let’s put this code in the _src/lib.rs_ file and write some tests for it using the `assert!` macro.
+In the [Associated Functions and Multiple impl Blocks](course://Structs,+Methods,+Enums,+and+Pattern+Matching/Structs+with+Methods/Associated+Functions+and+Multiple+impl+Blocks) task, we used a `Rectangle` struct and a `can_hold` method, which are repeated here below. Let’s put this code in the _src/lib.rs_ file and write some tests for it using the `assert!` macro.
 
 ```rust
     #[derive(Debug)]

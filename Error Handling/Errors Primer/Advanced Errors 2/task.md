@@ -37,7 +37,7 @@ This code propagates the `ParseClimateError` custom error. To make it suitable f
 impl Error for ParseClimateError {}
 ```
 
-The `Error` (`std::error::Error`) is a trait that represent basic expectations for error values. We'll discuss traits in more details [later in this course](course://Generic%20Types,%20Traits,%20and Lifetime/Traits/Traits).
+The `Error` (`std::error::Error`) is a trait that represent basic expectations for error values. We'll discuss traits in more details [later in this course](course://Generic+Types,+Traits,+and+Lifetime/Traits).
 </div>
 
 <div class="hint">

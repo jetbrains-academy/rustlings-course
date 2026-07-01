@@ -10,4 +10,4 @@ fn main() {
 }
 ```
 
-The main way to use Boolean values is through conditionals, such as an `if` expression. We’ll cover how `if` expressions work in Rust in the ["Conditions"](course://Common Programming Concepts/Conditions/Intro) lesson of this section.
+The main way to use Boolean values is through conditionals, such as an `if` expression. We’ll cover how `if` expressions work in Rust in the ["Conditions"](course://Common+Programming+Concepts/Conditions) lesson of this section.

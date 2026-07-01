@@ -65,7 +65,7 @@ error: could not compile `chapter10` due to 2 previous errors
 The key line in this error is `cannot move out of type [T], a non-copy slice`.
 With our non-generic versions of the `largest` function, we were only trying to
 find the largest `i32` or `char`. As discussed in the “Stack-Only Data:
-Copy” subsection in the [Clone and Copy](course://Understanding Ownership/What is ownership/Clone and Copy) task, types like
+Copy” subsection in the [Clone and Copy](course://Understanding+Ownership/What+is+ownership/Clone+and+Copy) task, types like
 `i32` and `char` that have a known size can be stored on the stack, so they
 implement the `Copy` trait. However, when we made the `largest` function generic,
 it became possible for the `list` parameter to have types in it that don’t

@@ -125,7 +125,7 @@ rect1 is Rectangle {
 Rust has provided a number of traits for us to use with the `derive` annotation
 that can add useful behavior to our custom types. Those traits and their
 behaviors are listed in [Appendix C][app3] of the Rust Book. We’ll cover how to implement these traits
-with custom behavior as well as how to create your own traits in the [Generic Types, Traits, and Lifetime](course://Generic%20Types,%20Traits,%20and%20Lifetime) section.
+with custom behavior as well as how to create your own traits in the [Generic Types, Traits, and Lifetime](course://Generic+Types,+Traits,+and+Lifetime) section.
 
 Our `area` function is very specific: it only computes the area of rectangles.
 It would be helpful to tie this behavior more closely to our `Rectangle`

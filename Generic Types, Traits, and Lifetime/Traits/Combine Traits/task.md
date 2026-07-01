@@ -7,5 +7,5 @@ Don't change any line other than the marked one.
 To ensure a parameter implements multiple traits, use the <code>+ syntax</code>. Try replacing the
 <code>??</code> with <code>impl <> + <></code>.
 
-Learn more [here](course://Generic+Types,+Traits,+and+Lifetime/Traits/Traits as Parameters).
+Learn more [here](course://Generic+Types,+Traits,+and+Lifetime/Traits/Traits+as+Parameters).
 </div>
