@@ -9,7 +9,7 @@ what to do next when our function returns an error.
 Make the tests pass! Read the hints if you are stuck.
 
 <div class="hint">This exercise uses a completed version of <code>PositiveNonzeroInteger</code> from
-<a href="course://Error Handling/Errors Primer/Positive Nonzero Integer"> the previous task</a>.</div>
+<a href="course://Error+Handling/Errors+Primer/Positive+Nonzero+Integer"> the previous task</a>.</div>
 
 <div class="hint">You could create another function inside <code>impl ParsePosNonzeroError</code>.
 

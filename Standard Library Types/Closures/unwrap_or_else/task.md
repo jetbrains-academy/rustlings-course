@@ -1,6 +1,6 @@
 #### Example: `unwrap_or_else`
 
-Let’s look at the definition of the `unwrap_or_else` method on `Option<T>` that we used [earlier](course://Standard Library Types/Closures/Capturing the Environment with Closures):
+Let’s look at the definition of the `unwrap_or_else` method on `Option<T>` that we used [earlier](course://Standard+Library+Types/Closures/Capturing+the+Environment+with+Closures):
 
 ```rust
 impl<T> Option<T> {

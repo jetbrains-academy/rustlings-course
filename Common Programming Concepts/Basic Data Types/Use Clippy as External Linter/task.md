@@ -2,7 +2,7 @@
 
 The `Clippy` tool is a collection of lints to analyze your code
 so you can catch common mistakes and improve your Rust code. 
-To use `Clippy` as an external linter, follow the instructions for [the earlier task](course://Introduction/Getting started/External Linter) but 
+To use `Clippy` as an external linter, follow the instructions for [the earlier task](course://Introduction/Getting+started/External+Linter) but 
 this time select **Clippy** instead of **Cargo Check**.
 
 Check clippy's suggestions and apply them to solve the exercise. 

@@ -50,7 +50,7 @@ be also renamed to `result`.
 
 To do that, you can 
 either press &shortcut:RenameElement; or choose *Refactor -> Rename...* after 
-pointing at the corresponding variable. See also the [task introducing this refactoring](course://Common Programming Concepts/Variables/Introduce Variable Refactoring) if you are in trouble.
+pointing at the corresponding variable. See also the [task introducing this refactoring](course://Common+Programming+Concepts/Variables/Introduce+Variable+Refactoring) if you are in trouble.
 
 ### Step 3: Replacing Duplicated Code Fragment
 

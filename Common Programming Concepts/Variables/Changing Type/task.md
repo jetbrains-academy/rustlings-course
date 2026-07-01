@@ -10,6 +10,6 @@ you may also like to reuse existing variable names because you are just converti
 values to different types like in this exercise.
 
 Fortunately Rust has a powerful solution to this problem: 'Shadowing'!
-You can read more about 'Shadowing' in the [corresponding task](course://Common Programming Concepts/Variables/Shadowing).
+You can read more about 'Shadowing' in the [corresponding task](course://Common+Programming+Concepts/Variables/Shadowing).
 Try to solve this exercise afterwards using this technique.
 </div>

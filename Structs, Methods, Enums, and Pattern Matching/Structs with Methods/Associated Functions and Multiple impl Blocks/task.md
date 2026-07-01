@@ -53,4 +53,4 @@ impl Rectangle {
 
 There’s no reason to separate these methods into multiple `impl` blocks here,
 but this is valid syntax. We’ll see a case in which multiple `impl` blocks are
-useful in the [Generic Types, Traits, and Lifetime](course://Generic%20Types,%20Traits,%20and%20Lifetime) section.
+useful in the [Generic Types, Traits, and Lifetime](course://Generic+Types,+Traits,+and+Lifetime) section.
