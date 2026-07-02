@@ -133,4 +133,4 @@ struct because it won’t work with any other type. Let’s look at how we can
 continue to refactor this code by turning the `area` function into an `area`
 *method* defined on our `Rectangle` type.
 
-[app3]: https://github.com/rust-lang/book/blob/master/src/appendix-03-derivable-traits.md
+[app3]: https://doc.rust-lang.org/book/appendix-03-derivable-traits.html
