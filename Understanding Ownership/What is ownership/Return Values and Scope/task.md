@@ -12,6 +12,8 @@ fn main() {
     let s3 = takes_and_gives_back(s2);  // s2 is moved into
     // takes_and_gives_back, which also
     // moves its return value into s3
+
+    println!("s1={}, s3={}", s1, s3)
 } // Here, s3 goes out of scope and is dropped. s2 goes out of scope but was
 // moved, so nothing happens. s1 goes out of scope and is dropped.
 

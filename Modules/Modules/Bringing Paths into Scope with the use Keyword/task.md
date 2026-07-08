@@ -8,6 +8,8 @@ In the example below, we bring the `crate::front_of_house::hosting` module into 
     mod front_of_house {
         pub mod hosting {
             pub fn add_to_waitlist() {}
+
+            pub fn seat_at_table() {}
         }
     }
 
@@ -30,6 +32,8 @@ You can also bring an item into scope with `use`  and a relative path. The examp
     mod front_of_house {
         pub mod hosting {
             pub fn add_to_waitlist() {}
+
+            pub fn seat_at_table() {}
         }
     }
 
@@ -54,6 +58,8 @@ In the first code snippet, you might have wondered why we specified `use crate::
     mod front_of_house {
         pub mod hosting {
             pub fn add_to_waitlist() {}
+
+            pub fn seat_at_table() {}
         }
     }
 

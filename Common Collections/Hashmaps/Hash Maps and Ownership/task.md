@@ -12,8 +12,8 @@ the hash map will be the owner of those values, as demonstrated below.
 
     let mut map = HashMap::new();
     map.insert(field_name, field_value);
-    // field_name and field_value are invalid at this point, try using them and
-    // see what compiler error you get!
+    // field_name and field_value are invalid at this point, try using them
+    // and see what compiler error you get!
 ```
 
 #### Showing that keys and values are owned by the hash map once they’re inserted

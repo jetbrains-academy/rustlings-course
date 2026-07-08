@@ -21,7 +21,7 @@ in a struct without specifying lifetimes, like this, which won’t work:
  }
 
  fn main() {
-     let user1 = User {
+     let _user = User {
          email: "someone@example.com",
          username: "someusername123",
          active: true,

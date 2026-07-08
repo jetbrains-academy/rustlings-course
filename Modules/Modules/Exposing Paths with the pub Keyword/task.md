@@ -6,6 +6,8 @@ Let’s return to the error in the previous example that told us the `hosting` m
     mod front_of_house {
         pub mod hosting {
             fn add_to_waitlist() {}
+
+            fn seat_at_table() {}
         }
     }
 
@@ -49,6 +51,8 @@ Let’s also make the `add_to_waitlist` function public by adding the `pub` keyw
     mod front_of_house {
         pub mod hosting {
             pub fn add_to_waitlist() {}
+
+            fn seat_at_table() {}
         }
     }
 
