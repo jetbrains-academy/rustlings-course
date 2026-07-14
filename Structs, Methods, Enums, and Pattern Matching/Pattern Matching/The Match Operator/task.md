@@ -8,7 +8,7 @@ kinds of patterns and what they do. The power of `match` comes from the
 expressiveness of the patterns and the fact that the compiler confirms that all
 possible cases are handled.
 
-[book]: https://github.com/rust-lang/book/tree/master/src
+[book]: https://doc.rust-lang.org/stable/book/
 
 Think of a `match` expression as being like a coin-sorting machine: coins slide
 down a track with variously sized holes along it, and each coin falls through

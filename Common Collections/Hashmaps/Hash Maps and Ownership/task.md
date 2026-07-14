@@ -29,4 +29,4 @@ Lifetimes”][validating-references-with-lifetimes]<!-- ignore --> section in
 Chapter 10 of the Rust Book.
 
 [validating-references-with-lifetimes]:
-https://github.com/rust-lang/book/blob/master/src/ch10-03-lifetime-syntax.md
+https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html

@@ -52,7 +52,7 @@ This return type means the call to `File::open` might succeed and return a file 
 
 In the case where `File::open` succeeds, the value in the variable `f` will be an instance of `Ok` that contains a file handle. In the case where it fails, the value in `f` will be an instance of `Err` that contains more information about the kind of error that happened.
 
-We need to add to the code in the code snippet above to take different actions depending on the value `File::open` returns. The following code snippet shows one way to handle the `Result` using a basic tool, the `match` expression that we discussed in ["The Match Operator"](course://Enums/Enums and Pattern Matching/The Match Operator).
+We need to add to the code in the code snippet above to take different actions depending on the value `File::open` returns. The following code snippet shows one way to handle the `Result` using a basic tool, the `match` expression that we discussed in ["The Match Operator"](course://Enums/Enums+and+Pattern+Matching/The+Match+Operator).
 
 ```rust
 use std::fs::File;

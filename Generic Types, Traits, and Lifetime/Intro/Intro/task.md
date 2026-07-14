@@ -9,7 +9,7 @@ without knowing what will be in their place when compiling and running the code.
 Similar to the way a function takes parameters with unknown values to run the
 same code on multiple concrete values, functions can take parameters of some
 generic type instead of a concrete type, like `i32` or `String`. In fact, we’ve
-already used generics in the [Enums](course://Structs,%20Methods,%20Enums,%20and%20Pattern%20Matching/Enums) lesson with `Option<T>`, in "Common Collections" with `Vec<T>`
+already used generics in the [Enums](course://Structs,+Methods,+Enums,+and+Pattern+Matching/Enums) lesson with `Option<T>`, in "Common Collections" with `Vec<T>`
 and `HashMap<K, V>`, and in "Recoverable and Unrecoverable Errors" with `Result<T, E>`. In this section, you’ll
 explore how to define your own types, functions, and methods with generics!
 

@@ -1,7 +1,7 @@
 ## Validating References with Lifetimes
 
 One detail we didn’t discuss in the [“References and
-Borrowing” section of "Move Semantics"](course://Understanding Ownership/References and Borrowing) is
+Borrowing” section of "Move Semantics"](course://Understanding+Ownership/References+and+Borrowing) is
 that every reference in Rust has a *lifetime*, which is the scope for which
 that reference is valid. Most of the time, lifetimes are implicit and
 inferred, just like most of the time, types are inferred. We must annotate

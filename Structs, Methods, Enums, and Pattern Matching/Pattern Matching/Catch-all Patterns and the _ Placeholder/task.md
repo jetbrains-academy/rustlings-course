@@ -56,6 +56,6 @@ fn remove_fancy_hat() {}
 
 Here, we’re telling Rust explicitly that we aren’t going to use any other value that doesn’t match a pattern in an earlier arm, and we don’t want to run any code in this case.
 
-There’s more about patterns and matching that we’ll cover in [Chapter 18][ch18-00-patterns] of the Rust Book. For now, we’re going to move on to the if let syntax, which can be useful in situations where the match expression is a bit wordy.
+There’s more about patterns and matching that we’ll cover in [Chapter 19][ch19-00-patterns] of the Rust Book. For now, we’re going to move on to the if let syntax, which can be useful in situations where the match expression is a bit wordy.
 
-[ch18-00-patterns]: https://github.com/rust-lang/book/blob/master/src/ch18-00-patterns.md
+[ch19-00-patterns]: https://doc.rust-lang.org/book/ch19-00-patterns.html
