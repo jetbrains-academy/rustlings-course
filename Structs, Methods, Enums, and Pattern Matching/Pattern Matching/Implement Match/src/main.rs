@@ -1,6 +1,6 @@
 #[derive(Debug)]
 enum Message {
-    ChangeColor(i32, i32, i32),
+    ChangeColor(u8, u8, u8),
     Echo(String),
     Move{x: u8, y: u8},
     Quit,
@@ -37,7 +37,7 @@ impl State {
 
     fn process(&mut self, message: Message) {
         match message {
-            Message::ChangeColor(r, g, b) => self.change_color((r as u8, g as u8, b as u8)),
+            Message::ChangeColor(r, g, b) => self.change_color((r, g, b)),
             Message::Echo(s) => self.echo(s),
             Message::Move{x, y} => self.move_position(Point{x, y}),
             Message::Quit => self.quit()

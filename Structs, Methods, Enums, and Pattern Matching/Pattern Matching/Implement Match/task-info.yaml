@@ -7,11 +7,11 @@ files:
     visible: true
     placeholders:
       - offset: 36
-        length: 79
+        length: 76
         placeholder_text: "// TODO: implement the message variant types based on their\
       \ usage below"
-      - offset: 614
-        length: 273
+      - offset: 611
+        length: 255
         placeholder_text: "// TODO: create a match expression to process the different\
       \ message variants"
   - name: tests/output.txt
