@@ -17,5 +17,13 @@ fn prints_hello_and_hello1() {
     assert!(actual_as_string.contains(expected_second_line), "The output is missing the line with information about hello1");
 }
 
+#[test]
+fn passes_clone_to_add_exclamation() {
+    let source = include_str!("../src/main.rs");
+    let source_without_whitespace: String = source.chars().filter(|ch| !ch.is_whitespace()).collect();
 
-
+    assert!(
+        source_without_whitespace.contains("add_exclamation(hello"),
+        "Use the `hello` variable in the call to `add_exclamation`."
+    );
+}
