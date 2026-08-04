@@ -25,4 +25,5 @@ fn main() {
     } else {
         count += 1;
     }
+    println!("count is {}", count);
 }

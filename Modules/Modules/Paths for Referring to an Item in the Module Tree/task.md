@@ -15,6 +15,8 @@ Let’s return to the example in the first code snippet in the previous task. Ho
     mod front_of_house {
         mod hosting {
             fn add_to_waitlist() {}
+
+            fn seat_at_table() {}
         }
     }
 

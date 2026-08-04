@@ -41,7 +41,7 @@ concrete type `f32`, meaning we don’t declare any types after `impl`.
 
 ```rust
 impl Point<f32> {
-    fn distance_from_origin(&self) -> f32 {
+    pub fn distance_from_origin(&self) -> f32 {
         (self.x.powi(2) + self.y.powi(2)).sqrt()
     }
 }

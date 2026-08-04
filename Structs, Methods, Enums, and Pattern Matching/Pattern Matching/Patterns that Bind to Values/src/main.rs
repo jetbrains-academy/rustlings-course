@@ -26,4 +26,5 @@ fn value_in_cents(coin: Coin) -> u8 {
 
 fn main() {
     let value = value_in_cents(Coin::Quarter(UsState::Alabama));
+    println!("value={}", value);
 }
