@@ -17,5 +17,15 @@ fn prints_hello1_twice() {
     assert!(actual_as_string.contains(expected_second_line), "The output is missing the line with information about hello1 after adding '!'");
 }
 
+#[test]
+fn passes_hello_to_add_exclamation() {
+    let source = include_str!("../src/main.rs");
+    let source_without_whitespace: String = source.chars().filter(|ch| !ch.is_whitespace()).collect();
+
+    assert!(
+        source_without_whitespace.contains("add_exclamation(hello)"),
+        "Use the `hello` variable in the call to `add_exclamation`."
+    );
+}
 
 
