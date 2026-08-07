@@ -17,5 +17,23 @@ fn prints_hello1_twice() {
     assert!(actual_as_string.contains(expected_second_line), "The output \"Hello!!\" is missing");
 }
 
+#[test]
+fn creates_string_inside_hello_with_exclamation() {
+    let source = include_str!("../src/main.rs");
+    let source_without_whitespace: String = source.chars().filter(|ch| !ch.is_whitespace()).collect();
+
+    assert!(
+        source_without_whitespace.contains("hello_with_exclamation()"),
+        "Call `hello_with_exclamation` without passing any arguments."
+    );
+    assert!(
+        source_without_whitespace.contains("fnhello_with_exclamation()->String"),
+        "`hello_with_exclamation` should not take any arguments — it should create the string itself."
+    );
+    assert!(
+        !source_without_whitespace.contains("lethello="),
+        "Don't create the `hello` string in `main` — create it inside `hello_with_exclamation` instead."
+    );
+}
 
 
