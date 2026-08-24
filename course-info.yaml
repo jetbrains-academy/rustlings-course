@@ -20,7 +20,7 @@ summary: "<p>This course contains small exercises aimed to familiarize you with 
   \ a pull request to this course’s <a href=\"https://github.com/jetbrains-academy/rustlings-course\"\
   >git repo</a>.</p>"
 vendor:
-  name: JetBrains
+  name: JetBrains s.r.o.
   email: support@jetbrains.com
   url: https://www.jetbrains.com/
 programming_language: Rust
@@ -46,4 +46,4 @@ additional_files:
   - name: Cargo.toml
   - name: Cargo.lock
   - name: change-notes.txt
-yaml_version: 5
+yaml_version: 6
